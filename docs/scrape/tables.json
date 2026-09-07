@@ -1,0 +1,1541 @@
+{
+  "generatedAt": "2026-09-07T20:25:01.310Z",
+  "routes": [
+    {
+      "route": "/",
+      "tables": []
+    },
+    {
+      "route": "/um-okkur",
+      "tables": []
+    },
+    {
+      "route": "/thjonusta",
+      "tables": []
+    },
+    {
+      "route": "/hafa-samband",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki",
+      "tables": []
+    },
+    {
+      "route": "/smurkerfi",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar",
+      "tables": []
+    },
+    {
+      "route": "/oryggisrudur",
+      "tables": []
+    },
+    {
+      "route": "/vetrarbunadur",
+      "tables": []
+    },
+    {
+      "route": "/fyrirokumannin",
+      "tables": []
+    },
+    {
+      "route": "/hifi-festibunadur",
+      "tables": []
+    },
+    {
+      "route": "/siubunadur",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/um-beka",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/lilleseth-kjetting",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/gigant",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/pebe",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/hammerglass",
+      "tables": []
+    },
+    {
+      "route": "/vorumerki/bmair",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/fjorhjola-minigrofuvagnar",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagnar",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagnar",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagnar",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velaflutningavagnar",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd2-6x",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-6x",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-8x",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-10x",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-100",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-120",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-400",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml80",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml160",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml210",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18l",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-24",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-27",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd3-13",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-15",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17sb",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-20",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-30hs",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd85",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd100",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd125",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd140-gd140sb",
+      "tables": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd150",
+      "tables": []
+    },
+    {
+      "route": "/hifi-festibunadur/hifikedjur",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "LVÁ/WLL",
+            "Lengd"
+          ],
+          "rows": [
+            [
+              "LR950822",
+              "G80 2-part (8mm)",
+              "2.8t",
+              "3 metrar"
+            ],
+            [
+              "LR950823",
+              "G80 2-part (8mm)",
+              "2.8t",
+              "4 metrar"
+            ],
+            [
+              "LR950824",
+              "G80 2-part (8mm)",
+              "2.8t",
+              "5 metrar"
+            ],
+            [
+              "LR950825",
+              "G80 2-part (8mm)",
+              "2.8t",
+              "6 metrar"
+            ],
+            [
+              "LR950826",
+              "G80 2-part (10mm)",
+              "4.25t",
+              "2 metrar"
+            ],
+            [
+              "LR951022",
+              "G80 2-part (10mm)",
+              "4.25t",
+              "3 metrar"
+            ],
+            [
+              "LR951023",
+              "G80 2-part (10mm)",
+              "4.25t",
+              "4 metrar"
+            ],
+            [
+              "LR951024",
+              "G80 2-part (10mm)",
+              "4.25t",
+              "5 metrar"
+            ],
+            [
+              "LR951025",
+              "G80 2-part (10mm)",
+              "4.25t",
+              "6 metrar"
+            ],
+            [
+              "LR951026",
+              "G80 2-part (13mm)",
+              "7.5t",
+              "2 metrar"
+            ],
+            [
+              "LR951322",
+              "G80 2-part (13mm)",
+              "7.5t",
+              "3 metrar"
+            ],
+            [
+              "LR951323",
+              "G80 2-part (13mm)",
+              "7.5t",
+              "4 metrar"
+            ],
+            [
+              "LR951324",
+              "G80 2-part (13mm)",
+              "7.5t",
+              "5 metrar"
+            ],
+            [
+              "LR951325",
+              "G80 2-part (13mm)",
+              "7.5t",
+              "6 metrar"
+            ],
+            [
+              "LR960822",
+              "G100 2-part (8mm)",
+              "3.55t",
+              "3 metrar"
+            ],
+            [
+              "LR960823",
+              "G100 2-part (8mm)",
+              "3.55t",
+              "4 metrar"
+            ],
+            [
+              "LR960824",
+              "G100 2-part (8mm)",
+              "3.55t",
+              "5 metrar"
+            ],
+            [
+              "LR960825",
+              "G100 2-part (8mm)",
+              "3.55t",
+              "6 metrar"
+            ],
+            [
+              "LR960826",
+              "G100 2-part (10mm)",
+              "5.6t",
+              "2 metrar"
+            ],
+            [
+              "LR961022",
+              "G100 2-part (10mm)",
+              "5.6t",
+              "3 metrar"
+            ],
+            [
+              "LR961023",
+              "G100 2-part (10mm)",
+              "5.6t",
+              "4 metrar"
+            ],
+            [
+              "LR961024",
+              "G100 2-part (10mm)",
+              "5.6t",
+              "5 metrar"
+            ],
+            [
+              "LR961025",
+              "G100 2-part (10mm)",
+              "5.6t",
+              "6 metrar"
+            ],
+            [
+              "LR961026",
+              "G100 2-part (13mm)",
+              "9.5t",
+              "2 metrar"
+            ],
+            [
+              "LR961322",
+              "G100 2-part (13mm)",
+              "9.5t",
+              "3 metrar"
+            ],
+            [
+              "LR961323",
+              "G100 2-part (13mm)",
+              "9.5t",
+              "4 metrar"
+            ],
+            [
+              "LR961324",
+              "G100 2-part (13mm)",
+              "9.5t",
+              "5 metrar"
+            ],
+            [
+              "LR961325",
+              "G100 2-part (13mm)",
+              "9.5t",
+              "6 metrar"
+            ]
+          ],
+          "precedingHeading": "Tveggja arma hífikeðjur"
+        },
+        {
+          "index": 1,
+          "headers": [
+            "Name",
+            "Email",
+            "Role",
+            "Status"
+          ],
+          "rows": [
+            [
+              "Mason Carter",
+              "mason.carter@example.com",
+              "Designer",
+              "Active"
+            ],
+            [
+              "Olivia Lee",
+              "olivia.lee@example.com",
+              "Developer",
+              "Inactive"
+            ],
+            [
+              "Noah Smith",
+              "noah.smith@example.com",
+              "Manager",
+              "Active"
+            ],
+            [
+              "Emma Brown",
+              "emma.brown@example.com",
+              "QA",
+              "Active"
+            ],
+            [
+              "Liam Johnson",
+              "liam.johnson@example.com",
+              "Support",
+              "Inactive"
+            ],
+            [
+              "Sophia Davis",
+              "sophia.davis@example.com",
+              "Designer",
+              "Active"
+            ],
+            [
+              "James Wilson",
+              "james.wilson@example.com",
+              "Developer",
+              "Active"
+            ],
+            [
+              "Ava Martinez",
+              "ava.martinez@example.com",
+              "Manager",
+              "Inactive"
+            ],
+            [
+              "Benjamin Anderson",
+              "benjamin.anderson@example.com",
+              "QA",
+              "Active"
+            ],
+            [
+              "Charlotte Thomas",
+              "charlotte.thomas@example.com",
+              "Support",
+              "Active"
+            ],
+            [
+              "Elijah White",
+              "elijah.white@example.com",
+              "Designer",
+              "Inactive"
+            ],
+            [
+              "Amelia Harris",
+              "amelia.harris@example.com",
+              "Developer",
+              "Active"
+            ]
+          ],
+          "precedingHeading": "Tveggja arma hífikeðjur"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bindikedjur-strekkjarar",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "LVÁ (WLL)",
+            "Lengd"
+          ],
+          "rows": [
+            [
+              "LR950822",
+              "G80 2-part (8mm)",
+              "2,8t",
+              "3 metrar"
+            ],
+            [
+              "LR950823",
+              "G80 2-part (8mm)",
+              "2,8t",
+              "4 metrar"
+            ],
+            [
+              "LR950824",
+              "G80 2-part (8mm)",
+              "2,8t",
+              "5 metrar"
+            ],
+            [
+              "LR950825",
+              "G80 2-part (8mm)",
+              "2,8t",
+              "6 metrar"
+            ],
+            [
+              "LR950826",
+              "G80 2-part (10mm)",
+              "4,25t",
+              "2 metrar"
+            ],
+            [
+              "LR951022",
+              "G80 2-part (10mm)",
+              "4,25t",
+              "3 metrar"
+            ],
+            [
+              "LR951023",
+              "G80 2-part (10mm)",
+              "4,25t",
+              "4 metrar"
+            ],
+            [
+              "LR951024",
+              "G80 2-part (10mm)",
+              "4,25t",
+              "5 metrar"
+            ],
+            [
+              "LR951025",
+              "G80 2-part (10mm)",
+              "4,25t",
+              "6 metrar"
+            ],
+            [
+              "LR951026",
+              "G80 2-part (13mm)",
+              "7,5t",
+              "2 metrar"
+            ],
+            [
+              "LR951322",
+              "G80 2-part (13mm)",
+              "7,5t",
+              "3 metrar"
+            ],
+            [
+              "LR951323",
+              "G80 2-part (13mm)",
+              "7,5t",
+              "4 metrar"
+            ],
+            [
+              "LR951324",
+              "G80 2-part (13mm)",
+              "7,5t",
+              "5 metrar"
+            ],
+            [
+              "LR951325",
+              "G80 2-part (13mm)",
+              "7,5t",
+              "6 metrar"
+            ],
+            [
+              "LR960822",
+              "G100 2-part (8mm)",
+              "3,55t",
+              "3 metrar"
+            ],
+            [
+              "LR960823",
+              "G100 2-part (8mm)",
+              "3,55t",
+              "4 metrar"
+            ],
+            [
+              "LR960824",
+              "G100 2-part (8mm)",
+              "3,55t",
+              "5 metrar"
+            ],
+            [
+              "LR960825",
+              "G100 2-part (8mm)",
+              "3,55t",
+              "6 metrar"
+            ],
+            [
+              "LR960826",
+              "G100 2-part (10mm)",
+              "5,6t",
+              "2 metrar"
+            ],
+            [
+              "LR961022",
+              "G100 2-part (10mm)",
+              "5,6t",
+              "3 metrar"
+            ],
+            [
+              "LR961023",
+              "G100 2-part (10mm)",
+              "5,6t",
+              "4 metrar"
+            ],
+            [
+              "LR961024",
+              "G100 2-part (10mm)",
+              "5,6t",
+              "5 metrar"
+            ],
+            [
+              "LR961025",
+              "G100 2-part (10mm)",
+              "5,6t",
+              "6 metrar"
+            ],
+            [
+              "LR961026",
+              "G100 2-part (13mm)",
+              "9,5t",
+              "2 metrar"
+            ],
+            [
+              "LR961322",
+              "G100 2-part (13mm)",
+              "9,5t",
+              "3 metrar"
+            ],
+            [
+              "LR961323",
+              "G100 2-part (13mm)",
+              "9,5t",
+              "4 metrar"
+            ],
+            [
+              "LR961324",
+              "G100 2-part (13mm)",
+              "9,5t",
+              "5 metrar"
+            ],
+            [
+              "LR961325",
+              "G100 2-part (13mm)",
+              "9,5t",
+              "6 metrar"
+            ],
+            [
+              "LR970822",
+              "G120 2-part (8mm)",
+              "4,25t",
+              "2 metrar"
+            ],
+            [
+              "LR970824",
+              "G120 2-part (8mm)",
+              "4,25t",
+              "4 metrar"
+            ],
+            [
+              "LR971022",
+              "G120 2-part (10mm)",
+              "7,5t",
+              "2 metrar"
+            ],
+            [
+              "LR971024",
+              "G120 2-part (10mm)",
+              "7,5t",
+              "4 metrar"
+            ]
+          ],
+          "precedingHeading": "Leyfilegt vinnuálag (WLL)"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur",
+      "tables": []
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/hringstroffur",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunr.",
+            "Vara",
+            "Lyftigeta",
+            "Lyftihæð"
+          ],
+          "rows": [
+            [
+              "820105",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "0.5 meter"
+            ],
+            [
+              "820110",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "1 meter"
+            ],
+            [
+              "820115",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "1.5 meter"
+            ],
+            [
+              "820120",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "2 metrar"
+            ],
+            [
+              "820125",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "2.5 metrar"
+            ],
+            [
+              "820130",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "3 metrar"
+            ],
+            [
+              "820140",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "4 metrar"
+            ],
+            [
+              "820150",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "5 metrar"
+            ],
+            [
+              "820160",
+              "Hringstroffa fjólublá",
+              "1 tonn",
+              "6 metrar"
+            ],
+            [
+              "820205",
+              "Hringstroffa græn",
+              "2 tonn",
+              "0.5 meter"
+            ],
+            [
+              "820210",
+              "Hringstroffa græn",
+              "2 tonn",
+              "1 meter"
+            ],
+            [
+              "8202100",
+              "Hringstroffa græn",
+              "2 tonn",
+              "10 metrar"
+            ],
+            [
+              "820215",
+              "Hringstroffa græn",
+              "2 tonn",
+              "1.5 meter"
+            ],
+            [
+              "820220",
+              "Hringstroffa græn",
+              "2 tonn",
+              "2 metrar"
+            ],
+            [
+              "820225",
+              "Hringstroffa græn",
+              "2 tonn",
+              "2.5 metrar"
+            ],
+            [
+              "820230",
+              "Hringstroffa græn",
+              "2 tonn",
+              "3 metrar"
+            ],
+            [
+              "820240",
+              "Hringstroffa græn",
+              "2 tonn",
+              "4 metrar"
+            ],
+            [
+              "820250",
+              "Hringstroffa græn",
+              "2 tonn",
+              "5 metrar"
+            ],
+            [
+              "820260",
+              "Hringstroffa græn",
+              "2 tonn",
+              "6 metrar"
+            ],
+            [
+              "820280",
+              "Hringstroffa græn",
+              "2 tonn",
+              "8 metrar"
+            ],
+            [
+              "820310",
+              "Hringstroffa gul",
+              "3 tonn",
+              "1 meter"
+            ],
+            [
+              "820315",
+              "Hringstroffa gul",
+              "3 tonn",
+              "1.5 meter"
+            ],
+            [
+              "820320",
+              "Hringstroffa gul",
+              "3 tonn",
+              "2 metrar"
+            ],
+            [
+              "820325",
+              "Hringstroffa gul",
+              "3 tonn",
+              "2.5 metrar"
+            ],
+            [
+              "820330",
+              "Hringstroffa gul",
+              "3 tonn",
+              "3 metrar"
+            ],
+            [
+              "820340",
+              "Hringstroffa gul",
+              "3 tonn",
+              "4 metrar"
+            ],
+            [
+              "820350",
+              "Hringstroffa gul",
+              "3 tonn",
+              "5 metrar"
+            ],
+            [
+              "820360",
+              "Hringstroffa gul",
+              "3 tonn",
+              "6 metrar"
+            ],
+            [
+              "820515",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "1.5 meter"
+            ],
+            [
+              "820520",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "2 metrar"
+            ],
+            [
+              "820525",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "2.5 metrar"
+            ],
+            [
+              "820530",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "3 metrar"
+            ],
+            [
+              "820540",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "4 metrar"
+            ],
+            [
+              "820550",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "5 metrar"
+            ],
+            [
+              "820560",
+              "Hringstroffa rauð",
+              "5 tonn",
+              "6 metrar"
+            ],
+            [
+              "820660",
+              "Hringstroffa brún",
+              "6 tonn",
+              "6 metrar"
+            ],
+            [
+              "8208100",
+              "Hringstroffa blá",
+              "8 tonn",
+              "10 metrar"
+            ],
+            [
+              "820820",
+              "Hringstroffa blá",
+              "8 tonn",
+              "2 metrar"
+            ],
+            [
+              "820830",
+              "Hringstroffa blá",
+              "8 tonn",
+              "3 metrar"
+            ],
+            [
+              "820840",
+              "Hringstroffa blá",
+              "8 tonn",
+              "4 metrar"
+            ],
+            [
+              "820850",
+              "Hringstroffa blá",
+              "8 tonn",
+              "5 metrar"
+            ],
+            [
+              "820860",
+              "Hringstroffa blá",
+              "8 tonn",
+              "6 metrar"
+            ],
+            [
+              "820880",
+              "Hringstroffa blá",
+              "8 tonn",
+              "8 metrar"
+            ],
+            [
+              "821020",
+              "Hringstroffa appelsínugul",
+              "10 tonn",
+              "2 metrar"
+            ],
+            [
+              "821030",
+              "Hringstroffa appelsínugul",
+              "10 tonn",
+              "3 metrar"
+            ],
+            [
+              "821040",
+              "Hringstroffa appelsínugul",
+              "10 tonn",
+              "4 metrar"
+            ],
+            [
+              "821050",
+              "Hringstroffa appelsínugul",
+              "10 tonn",
+              "5 metrar"
+            ],
+            [
+              "821060",
+              "Hringstroffa appelsínugul",
+              "10 tonn",
+              "6 metrar"
+            ]
+          ],
+          "precedingHeading": "Lengd í boði"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/flatstroffur",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunr.",
+            "Vara",
+            "Lyftigeta",
+            "Lyftihæð"
+          ],
+          "rows": [
+            [
+              "830101",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "1 meter"
+            ],
+            [
+              "830102",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "2 metrar"
+            ],
+            [
+              "830103",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "3 metrar"
+            ],
+            [
+              "830104",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "4 metrar"
+            ],
+            [
+              "830105",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "5 metrar"
+            ],
+            [
+              "830106",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "6 metrar"
+            ],
+            [
+              "830108",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "8 metrar"
+            ],
+            [
+              "830110",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "10 metrar"
+            ],
+            [
+              "830112",
+              "Flatstroffa fjólublá",
+              "1 tonn",
+              "12 metrar"
+            ],
+            [
+              "830201",
+              "Flatstroffa græn",
+              "2 tonn",
+              "1 meter"
+            ],
+            [
+              "830202",
+              "Flatstroffa græn",
+              "2 tonn",
+              "2 metrar"
+            ],
+            [
+              "830203",
+              "Flatstroffa græn",
+              "2 tonn",
+              "3 metrar"
+            ],
+            [
+              "830204",
+              "Flatstroffa græn",
+              "2 tonn",
+              "4 metrar"
+            ],
+            [
+              "830205",
+              "Flatstroffa græn",
+              "2 tonn",
+              "5 metrar"
+            ],
+            [
+              "830206",
+              "Flatstroffa græn",
+              "2 tonn",
+              "6 metrar"
+            ],
+            [
+              "830208",
+              "Flatstroffa græn",
+              "2 tonn",
+              "8 metrar"
+            ],
+            [
+              "830210",
+              "Flatstroffa græn",
+              "2 tonn",
+              "10 metrar"
+            ],
+            [
+              "830212",
+              "Flatstroffa græn",
+              "2 tonn",
+              "12 metrar"
+            ],
+            [
+              "830301",
+              "Flatstroffa gul",
+              "3 tonn",
+              "1 meter"
+            ],
+            [
+              "830302",
+              "Flatstroffa gul",
+              "3 tonn",
+              "2 metrar"
+            ],
+            [
+              "830303",
+              "Flatstroffa gul",
+              "3 tonn",
+              "3 metrar"
+            ],
+            [
+              "830304",
+              "Flatstroffa gul",
+              "3 tonn",
+              "4 metrar"
+            ],
+            [
+              "830305",
+              "Flatstroffa gul",
+              "3 tonn",
+              "5 metrar"
+            ],
+            [
+              "830306",
+              "Flatstroffa gul",
+              "3 tonn",
+              "6 metrar"
+            ],
+            [
+              "830308",
+              "Flatstroffa gul",
+              "3 tonn",
+              "8 metrar"
+            ],
+            [
+              "830310",
+              "Flatstroffa gul",
+              "3 tonn",
+              "10 metrar"
+            ],
+            [
+              "830312",
+              "Flatstroffa gul",
+              "3 tonn",
+              "12 metrar"
+            ],
+            [
+              "830314",
+              "Flatstroffa gul",
+              "3 tonn",
+              "14 metrar"
+            ],
+            [
+              "830501",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "1 meter"
+            ],
+            [
+              "830502",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "2 metrar"
+            ],
+            [
+              "830503",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "3 metrar"
+            ],
+            [
+              "830504",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "4 metrar"
+            ],
+            [
+              "830505",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "5 metrar"
+            ],
+            [
+              "830506",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "6 metrar"
+            ],
+            [
+              "830508",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "8 metrar"
+            ],
+            [
+              "830510",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "10 metrar"
+            ],
+            [
+              "830512",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "12 metrar"
+            ],
+            [
+              "830514",
+              "Flatstroffa rauð",
+              "5 tonn",
+              "14 metrar"
+            ],
+            [
+              "830806",
+              "Flatstroffa blá",
+              "8 tonn",
+              "6 metrar"
+            ],
+            [
+              "830808",
+              "Flatstroffa blá",
+              "8 tonn",
+              "8 metrar"
+            ]
+          ],
+          "precedingHeading": "Lengd í boði"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/drattastroffur",
+      "tables": []
+    },
+    {
+      "route": "/hifi-festibunadur/aukabunadur",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "Burðargeta",
+            "Lengd"
+          ],
+          "rows": [
+            [
+              "TAJ 0,25",
+              "Keðjutalía",
+              "0,25t",
+              "1,5m"
+            ],
+            [
+              "TAJ 0,75",
+              "Keðjutalía",
+              "0,75t",
+              "1,5m"
+            ],
+            [
+              "TAJ 1,5",
+              "Keðjutalía",
+              "1,5t",
+              "1,5m"
+            ],
+            [
+              "TAJ 3,0",
+              "Keðjutalía",
+              "3,0t",
+              "1,5m"
+            ]
+          ],
+          "precedingHeading": "Keðjutalíur"
+        },
+        {
+          "index": 1,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "LVÁ/WLL"
+          ],
+          "rows": [
+            [
+              "DGSL07",
+              "D-lás 7mm",
+              "0,5t"
+            ],
+            [
+              "DGSL09",
+              "D-lás 9mm",
+              "0,75t"
+            ],
+            [
+              "DGSL10",
+              "D-lás 10mm",
+              "1,0t"
+            ],
+            [
+              "DGSL11",
+              "D-lás 11mm",
+              "1,5t"
+            ],
+            [
+              "DGSL13",
+              "D-lás 13mm",
+              "2,0t"
+            ],
+            [
+              "DGSL16",
+              "D-lás 16mm",
+              "3,25t"
+            ],
+            [
+              "DGSL19",
+              "D-lás 19mm",
+              "4,75t"
+            ],
+            [
+              "DGSL22",
+              "D-lás 22mm",
+              "6,5t"
+            ],
+            [
+              "DGSL25",
+              "D-lás 25mm",
+              "8,5t"
+            ],
+            [
+              "DGSL28",
+              "D-lás 28mm",
+              "9,5t"
+            ]
+          ],
+          "precedingHeading": "H-lás"
+        },
+        {
+          "index": 2,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "Burðarþol"
+          ],
+          "rows": [
+            [
+              "10000600",
+              "KROK SIKKERHETSKROK G80 SLK7/8 M/GAFFEL",
+              "2t"
+            ],
+            [
+              "10000602",
+              "KROK SIKKERHETSKROK G80 SLK10 M/GAFFEL",
+              "3,15t"
+            ],
+            [
+              "10000603",
+              "KROK SIKKERHETSKROK G80 SLK13 M/GAFFEL",
+              "5,4t"
+            ],
+            [
+              "10000604",
+              "KROK SIKKERHETSKROK G80 SLK16 M/GAFFEL",
+              "8,0t"
+            ],
+            [
+              "10000700",
+              "KROK SIKKERHETSKROK G100 SLK7/8 M/GAFFEL",
+              "2,5t"
+            ],
+            [
+              "10000702",
+              "KROK SIKKERHETSKROK G100 SLK10 M/GAFFEL",
+              "4,0t"
+            ],
+            [
+              "10000703",
+              "KROK SIKKERHETSKROK G100 SLK13 M/GAFFEL",
+              "6,7t"
+            ],
+            [
+              "10000704",
+              "KROK SIKKERHETSKROK G100 SLK16 M/GAFFEL",
+              "10t"
+            ]
+          ],
+          "precedingHeading": "Öryggiskrókur"
+        },
+        {
+          "index": 3,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "Burðarþol"
+          ],
+          "rows": [
+            [
+              "10000610",
+              "KROK G80 CSK6 M/LEPPE-GAFFEL",
+              "1,12t"
+            ],
+            [
+              "10000630",
+              "KROK G80 CSK7-8 M/LEPPE-GAFFEL",
+              "2t"
+            ],
+            [
+              "10000632",
+              "KROK G80 CSK10 M/LEPPE-GAFFEL",
+              "3,15t"
+            ],
+            [
+              "10000634",
+              "KROK G80 CSK13 M/LEPPE-GAFFEL",
+              "5,4t"
+            ],
+            [
+              "10000635",
+              "KROK G80 CSK16 M/LEPPE-GAFFEL",
+              "8,0t"
+            ],
+            [
+              "10000730",
+              "KROK G100 CSK7-8 M/LEPPE-GAFFEL",
+              "2,5t"
+            ],
+            [
+              "10000732",
+              "KROK G100 CSK10 M/LEPPE-GAFFEL",
+              "4,0t"
+            ],
+            [
+              "10000734",
+              "KROK G100 CSK13 M/LEPPE-GAFFEL",
+              "6,7t"
+            ]
+          ],
+          "precedingHeading": "Kranakrókur lokaður"
+        },
+        {
+          "index": 4,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "Burðarþol"
+          ],
+          "rows": [
+            [
+              "UGK2",
+              "Ásuðukrókur",
+              "2t"
+            ],
+            [
+              "UGK3",
+              "Ásuðukrókur",
+              "3t"
+            ],
+            [
+              "UGK5",
+              "Ásuðukrókur",
+              "5t"
+            ],
+            [
+              "UGK8",
+              "Ásuðukrókur",
+              "8t"
+            ],
+            [
+              "UGK10",
+              "Ásuðukrókur",
+              "10t"
+            ],
+            [
+              "UGK20",
+              "Ásuðukrókur",
+              "20t"
+            ]
+          ],
+          "precedingHeading": "Ásuðukrókur"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bordastrekkjarar",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "Vörunúmer",
+            "Vöruheiti",
+            "Burðarþol",
+            "Lengd"
+          ],
+          "rows": [
+            [
+              "LS105",
+              "Borðastrekkjari 25mm",
+              "1,0t",
+              "0,3m + 4,7m"
+            ],
+            [
+              "LS206",
+              "Borðastrekkjari 35mm",
+              "2,0t",
+              "0,5m + 5,5m"
+            ],
+            [
+              "LS410",
+              "Borðastrekkjari 50mm",
+              "4,0t",
+              "0,5m + 9,5m"
+            ],
+            [
+              "LS410K",
+              "Borðastrekkjari 50mm",
+              "4,0t",
+              "0,5m + 4,5m"
+            ],
+            [
+              "LS510",
+              "Borðastrekkjari 50mm",
+              "5,0t",
+              "0,5m + 9,5m"
+            ]
+          ],
+          "precedingHeading": "Borðastrekkjarar"
+        }
+      ]
+    },
+    {
+      "route": "/404",
+      "tables": []
+    }
+  ]
+}

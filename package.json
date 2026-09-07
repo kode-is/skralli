@@ -12,6 +12,7 @@
     "scrape-svg": "node scripts/scrape-svg.mjs",
     "normalize-scrape": "node scripts/normalize-scrape.mjs",
     "scrape-formatting": "node scripts/scrape-formatting.mjs",
+    "scrape-tables": "node scripts/scrape-tables.mjs",
     "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
