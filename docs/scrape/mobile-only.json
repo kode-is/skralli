@@ -1,0 +1,1134 @@
+{
+  "generatedAt": "2026-09-07T23:20:21.443Z",
+  "routes": [
+    {
+      "route": "/",
+      "mobileOnly": [
+        "481",
+        "131",
+        "7"
+      ],
+      "desktopOnly": [
+        "Skoðaðu úrvalið",
+        "482",
+        "132",
+        "Groeneveld-Beka",
+        "Gigant",
+        "Pebe",
+        "BMair",
+        "Vetrarbúnaður"
+      ]
+    },
+    {
+      "route": "/um-okkur",
+      "mobileOnly": [
+        "131",
+        "7"
+      ],
+      "desktopOnly": [
+        "132",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/thjonusta",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair"
+      ]
+    },
+    {
+      "route": "/hafa-samband",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/smurkerfi",
+      "mobileOnly": [
+        "Við mætum, bilanagreinum",
+        "og gerum við - hvar sem er."
+      ],
+      "desktopOnly": [
+        "Við mætum, bilanagreinum og gerum við",
+        "- hvar sem er.",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/oryggisrudur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vetrarbunadur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/fyrirokumannin",
+      "mobileOnly": [
+        "Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar",
+        "16.800+vsk kr.",
+        "kr."
+      ],
+      "desktopOnly": [
+        "Fyrir",
+        "Vinnubíla - frá 70.629kr m/vsk.",
+        "Vörubíla - 46.872kr m/vsk.",
+        "Vinnuvélar - 43.400kr m/vsk.",
+        "Dráttarvélar - 43.400kr m/vsk.",
+        "Vinnubíla",
+        "Vörubíla",
+        "Vinnuvélar",
+        "Dráttarvélar",
+        "21.700kr m/vsk.",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/siubunadur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/um-beka",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/lilleseth-kjetting",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/gigant",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/pebe",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/hammerglass",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/vorumerki/bmair",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/fjorhjola-minigrofuvagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velaflutningavagnar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd2-6x",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-6x",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-8x",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-10x",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/gw-100",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/gw-120",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/gw-400",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml80",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml160",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml210",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18l",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-24",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-27",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd3-13",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-15",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17sb",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-20",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-30hs",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd85",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd100",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd125",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd140-gd140sb",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd150",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/hifikedjur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bindikedjur-strekkjarar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/hringstroffur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Hífi- og festibúnaður",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/flatstroffur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Hífi- og festibúnaður",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/drattastroffur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Hífi- og festibúnaður",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/aukabunadur",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bordastrekkjarar",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Forsíða",
+        "Vörumerki",
+        "Groeneveld-Beka",
+        "Lilleseth",
+        "Gigant",
+        "Pebe",
+        "Hammerglass",
+        "BMair",
+        "Smurkerfi",
+        "Sturtuvagnar",
+        "Öryggisrúður",
+        "Vetrarbúnaður",
+        "Fyrir ökumanninn",
+        "Hífi- & festibúnaður",
+        "Síubúnaður"
+      ]
+    },
+    {
+      "route": "/404",
+      "mobileOnly": [],
+      "desktopOnly": [
+        "Þjónusta",
+        "Um okkur",
+        "Hafa samband"
+      ]
+    }
+  ]
+}

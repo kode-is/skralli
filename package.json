@@ -13,6 +13,7 @@
     "normalize-scrape": "node scripts/normalize-scrape.mjs",
     "scrape-formatting": "node scripts/scrape-formatting.mjs",
     "scrape-tables": "node scripts/scrape-tables.mjs",
+    "scrape-mobile-diff": "node scripts/scrape-mobile-diff.mjs",
     "verify": "node scripts/verify.mjs",
     "gen-sturtuvagnar": "node scripts/gen-sturtuvagnar.mjs"
   },
