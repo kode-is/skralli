@@ -1,0 +1,540 @@
+{
+  "generatedAt": "2026-09-07T18:37:07.865Z",
+  "routes": [
+    {
+      "route": "/",
+      "svgs": []
+    },
+    {
+      "route": "/um-okkur",
+      "svgs": []
+    },
+    {
+      "route": "/thjonusta",
+      "svgs": []
+    },
+    {
+      "route": "/hafa-samband",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki",
+      "svgs": []
+    },
+    {
+      "route": "/smurkerfi",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div cla"
+        }
+      ]
+    },
+    {
+      "route": "/sturtuvagnar",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        }
+      ]
+    },
+    {
+      "route": "/oryggisrudur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div cla"
+        }
+      ]
+    },
+    {
+      "route": "/vetrarbunadur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        }
+      ]
+    },
+    {
+      "route": "/fyrirokumannin",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/3425485f.svg",
+          "hash": "3425485f",
+          "viewBox": "0 0 68 48",
+          "width": "100%",
+          "height": "100%",
+          "ariaLabel": null,
+          "nearbyText": "Sendu okkur fyrirspurn <a class=\"framer-erOz1 framer-60ZAr framer-vmimwt fr"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div"
+        }
+      ]
+    },
+    {
+      "route": "/siubunadur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1"
+        },
+        {
+          "file": "docs/scrape/svg/3425485f.svg",
+          "hash": "3425485f",
+          "viewBox": "0 0 68 48",
+          "width": "100%",
+          "height": "100%",
+          "ariaLabel": null,
+          "nearbyText": "Fyrir heilbrigt vinnuumhverfi Lofthreinsitæki frá BMair tryggja hreint og heilnæmt andrúmsloft með því að fjarlægja úr loftinu ýmis skaðleg efni eins og ryk, frjókorn, myglugró, bakteríur og önnur men"
+        }
+      ]
+    },
+    {
+      "route": "/vorumerki/um-beka",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki/lilleseth-kjetting",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki/gigant",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki/pebe",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki/hammerglass",
+      "svgs": []
+    },
+    {
+      "route": "/vorumerki/bmair",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/fjorhjola-minigrofuvagnar",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagnar",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagnar",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagnar",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velaflutningavagnar",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd2-6x",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-6x",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-8x",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-10x",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-100",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-120",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/gw-400",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml80",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml160",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml210",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18l",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-24",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-27",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd3-13",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-15",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17sb",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-20",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-30hs",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd85",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd100",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd125",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd140-gd140sb",
+      "svgs": []
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd150",
+      "svgs": []
+    },
+    {
+      "route": "/hifi-festibunadur/hifikedjur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199.98px) max(100vw, 1p"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199.98px) max(100vw, 1p"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bindikedjur-strekkjarar",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"800\" height=\"782\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px), "
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"800\" height=\"782\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px), "
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/hringstroffur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/flatstroffur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/drattastroffur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <div class=\"framer-1pvlyyo\" style=\"background-color:var(--token-95e624c8-467e-4232-b2c7-c62803cd3aae, rgb(0, 83, 128));border-bottom-left-radius:10px;b"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/aukabunadur",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(100vw, 1px), (min-width: 810px) and (max-width: 1199px) max(100vw, 1px),"
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> FAT1T - Tunnukeðja <p class=\"framer-text\" style=\"--font-selector:R0Y7SW50ZXItNTAw;--framer-font-family:&quot;Inter&quot;, &quot;Inter Placeholder&quot;"
+        }
+      ]
+    },
+    {
+      "route": "/hifi-festibunadur/bordastrekkjarar",
+      "svgs": [
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(max(100vw, 1px), max((min(min(100vw, 1200px) - 100px, 1200px) - 19px) / "
+        },
+        {
+          "file": "docs/scrape/svg/b9d9b044.svg",
+          "hash": "b9d9b044",
+          "viewBox": null,
+          "width": null,
+          "height": null,
+          "ariaLabel": null,
+          "nearbyText": "')\" data-framer-background-image-wrapper=\"true\"> <img decoding=\"async\" width=\"1390\" height=\"490\" sizes=\"(min-width: 1200px) max(max(100vw, 1px), max((min(min(100vw, 1200px) - 100px, 1200px) - 19px) / "
+        }
+      ]
+    },
+    {
+      "route": "/404",
+      "svgs": []
+    }
+  ],
+  "unique": [
+    {
+      "hash": "b9d9b044",
+      "file": "docs/scrape/svg/b9d9b044.svg",
+      "usedOn": [
+        "/smurkerfi",
+        "/sturtuvagnar",
+        "/oryggisrudur",
+        "/vetrarbunadur",
+        "/fyrirokumannin",
+        "/hifi-festibunadur",
+        "/siubunadur",
+        "/hifi-festibunadur/hifikedjur",
+        "/hifi-festibunadur/bindikedjur-strekkjarar",
+        "/hifi-festibunadur/stroffur",
+        "/hifi-festibunadur/stroffur/hringstroffur",
+        "/hifi-festibunadur/stroffur/flatstroffur",
+        "/hifi-festibunadur/stroffur/drattastroffur",
+        "/hifi-festibunadur/aukabunadur",
+        "/hifi-festibunadur/bordastrekkjarar"
+      ]
+    },
+    {
+      "hash": "3425485f",
+      "file": "docs/scrape/svg/3425485f.svg",
+      "usedOn": [
+        "/fyrirokumannin",
+        "/siubunadur"
+      ]
+    }
+  ]
+}
