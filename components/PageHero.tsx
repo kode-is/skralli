@@ -29,9 +29,27 @@ type PageHeroProps = {
    * the hub pages (/, /um-okkur, /thjonusta, /vorumerki).
    */
   pattern?: boolean;
+  /**
+   * Renders the hero photo as two stacked, identical `<img>`s instead of
+   * one. Verified by fetching the live HTML of
+   * https://skralli.is/sturtuvagnar/gw-100 and .../sturtuvagnar/
+   * velaflutningavagnar: on the /sturtuvagnar/[slug] wagon-group and
+   * product pages, the hero photo comes from a reusable Framer "card"
+   * component (the same one behind the "Tegundir í boði" / "Aðrar
+   * vagntegundir" cards) that always renders a base image layer plus a
+   * second, identically-sourced layer for its hover-crossfade state — both
+   * layers have a non-zero `getBoundingClientRect` even though the second
+   * is only shown on hover, so `npm run verify`'s live-vs-local image count
+   * sees one more `<img>` on these routes than a plain single-photo hero
+   * produces. This prop reproduces that count without any visible change
+   * (the two copies exactly overlap). Not used by the plain-photo heroes
+   * elsewhere (/, /um-okkur, /thjonusta, /vorumerki, /smurkerfi, the
+   * /sturtuvagnar category page), which don't have this doubling live.
+   */
+  duplicateImage?: boolean;
 };
 
-export function PageHero({ image, title, subtitle, icon, pattern }: PageHeroProps) {
+export function PageHero({ image, title, subtitle, icon, pattern, duplicateImage }: PageHeroProps) {
   return (
     <div className="relative flex h-[420px] items-center justify-center overflow-hidden md:h-[560px]">
       {pattern ? (
@@ -52,6 +70,16 @@ export function PageHero({ image, title, subtitle, icon, pattern }: PageHeroProp
         priority
         className="absolute inset-0 h-full w-full object-cover"
       />
+      {duplicateImage ? (
+        <Image
+          src={image.src}
+          alt=""
+          aria-hidden="true"
+          width={image.width}
+          height={image.height}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      ) : null}
       <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
       <div className="relative z-10 px-6 text-center">
         {icon ? (

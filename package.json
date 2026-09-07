@@ -13,7 +13,8 @@
     "normalize-scrape": "node scripts/normalize-scrape.mjs",
     "scrape-formatting": "node scripts/scrape-formatting.mjs",
     "scrape-tables": "node scripts/scrape-tables.mjs",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "gen-sturtuvagnar": "node scripts/gen-sturtuvagnar.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
