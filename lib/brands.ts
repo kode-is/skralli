@@ -8,14 +8,29 @@
 // Task 8 additionally extends every record with the /vorumerki/[slug] page
 // content, sourced verbatim from docs/scrape/vorumerki__<id>.json: `title`
 // (scraped <title>), `description` (scraped <meta description> — identical
-// across all six), `paragraphs` (the body `text` blocks, in order) and
-// `image` (the single "content"-role image on the page, used as the title
-// band's background). `subheading` covers BMair's only H4 lead-in line —
-// no other brand has one. `site` is kept for reference/future use but the
-// live brand pages don't render it, so /vorumerki/[slug]/page.tsx doesn't
+// across all six), `body` (the page's `text` blocks, in scrape order,
+// reshaped into paragraph/list blocks per the "list"/"bold" annotations
+// added to the scrape JSON — see docs/scrape/formatting.json) and `image`
+// (the single "content"-role image on the page, used as the title band's
+// background). `subheading` covers BMair's only H4 lead-in line — no other
+// brand has one. `site` is kept for reference/future use but the live
+// brand pages don't render it, so /vorumerki/[slug]/page.tsx doesn't
 // either.
 
 import type { Img } from "./types";
+
+/**
+ * One rendered block of a brand page's body copy, built from the scrape's
+ * `text` blocks: consecutive `text` blocks sharing the same `list` index
+ * collapse into one `{ type: "list" }` block (rendered `<ul>`, matching the
+ * live bulleted list — see BMair); a `text` block with `bold: true` becomes
+ * a `{ type: "p", bold: true }` block (rendered with heavier weight,
+ * matching the live page's single bold paragraph on um-beka/pebe/
+ * lilleseth-kjetting).
+ */
+export type BrandBlock =
+  | { type: "p"; text: string; bold?: true }
+  | { type: "list"; items: string[] };
 
 export type Brand = {
   id: string;
@@ -31,10 +46,10 @@ export type Brand = {
   title: string;
   /** Scraped <meta description> for /vorumerki/[slug]. */
   description: string;
-  /** BMair-only H4 lead-in line, rendered above `paragraphs`. */
+  /** BMair-only H4 lead-in line, rendered above `body`. */
   subheading?: string;
-  /** Body copy, verbatim from the scrape's "text" blocks, in order. */
-  paragraphs: string[];
+  /** Body copy, verbatim text, reshaped into paragraph/list blocks. */
+  body: BrandBlock[];
   /** The page's single content image (title band background). */
   image: Img;
 };
@@ -57,9 +72,15 @@ export const brands: Brand[] = [
       width: 512,
       height: 341,
     },
-    paragraphs: [
-      "Gigant sérhæfir sig í framleiðslu á hágæða sturtuvögnum og vetrarbúnaði fyrir verktaka og bændur. Þessi norska hönnun hefur í mörg ár verið meðal söluhæstu sturtuvagna í Noregi og ekki af ástæðulausu. Skralli hefur nú þegar afhent 30 vagna á síðastliðnum tveimur árum og hafa þeir reynst afar vel við íslenskar aðstæður.",
-      "Gigant býður einnig upp á fjölbreytta vetrarlínu sem mætir öllum kröfum sem íslenski veturinn felur í sér, eins og fjölplóga fyrir snjómokstur, skerastál, sanddreyfara og ís- og veghefla aftan í dráttarvélar.",
+    body: [
+      {
+        type: "p",
+        text: "Gigant sérhæfir sig í framleiðslu á hágæða sturtuvögnum og vetrarbúnaði fyrir verktaka og bændur. Þessi norska hönnun hefur í mörg ár verið meðal söluhæstu sturtuvagna í Noregi og ekki af ástæðulausu. Skralli hefur nú þegar afhent 30 vagna á síðastliðnum tveimur árum og hafa þeir reynst afar vel við íslenskar aðstæður.",
+      },
+      {
+        type: "p",
+        text: "Gigant býður einnig upp á fjölbreytta vetrarlínu sem mætir öllum kröfum sem íslenski veturinn felur í sér, eins og fjölplóga fyrir snjómokstur, skerastál, sanddreyfara og ís- og veghefla aftan í dráttarvélar.",
+      },
     ],
   },
   {
@@ -85,11 +106,20 @@ export const brands: Brand[] = [
       width: 512,
       height: 384,
     },
-    paragraphs: [
-      "Hammerglass er leiðandi sænskur framleiðandi í öryggislausnum með hugverkaverndaðri tækni og framleiðir óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður. Skralli býður upp á sérhannaðar öryggislausnir fyrir sveitarfélög og verktaka, þar sem sérstök áhersla er lögð á sprengjuheldar, grjótheldar og rispuþolnar rúður. Lausnirnar eru fullkomnar fyrir strætóskýli, hljóðmúra og aðra opinbera staði þar sem skemmdarverk geta valdið óþarfa kostnaði og viðhaldi.",
+    body: [
+      {
+        type: "p",
+        text: "Hammerglass er leiðandi sænskur framleiðandi í öryggislausnum með hugverkaverndaðri tækni og framleiðir óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður. Skralli býður upp á sérhannaðar öryggislausnir fyrir sveitarfélög og verktaka, þar sem sérstök áhersla er lögð á sprengjuheldar, grjótheldar og rispuþolnar rúður. Lausnirnar eru fullkomnar fyrir strætóskýli, hljóðmúra og aðra opinbera staði þar sem skemmdarverk geta valdið óþarfa kostnaði og viðhaldi.",
+      },
       // "stóiðnaði" (missing "r") is a typo on the live site — kept verbatim.
-      "Hammerglass rúður eru 300 sinnum sterkari en venjulegt gler og bjóða upp á lengri endingartíma, UV-vörn og lágmarks viðhald. Rúðurnar hafa sannað sig í stóiðnaði og á byggingarsvæðum þar sem mikil hætta er á grjóthruni eða þar sem sprengiefni eru notuð til þess að tryggja bæði mannslíf og búnað.",
-      "Skralli býður íslenskum sveitarfélögum, verktökum og fyrirtækjum úrval lausna frá Hammerglass óbrjótanlegt öryggi í samgöngumannvirkjum, ökutækjum og byggingum. Með Hammerglass færðu öruggar og endingargóðar rúður sem henta við íslenskar aðstæður og veita hámarks vernd gegn utanaðkomandi hættum.",
+      {
+        type: "p",
+        text: "Hammerglass rúður eru 300 sinnum sterkari en venjulegt gler og bjóða upp á lengri endingartíma, UV-vörn og lágmarks viðhald. Rúðurnar hafa sannað sig í stóiðnaði og á byggingarsvæðum þar sem mikil hætta er á grjóthruni eða þar sem sprengiefni eru notuð til þess að tryggja bæði mannslíf og búnað.",
+      },
+      {
+        type: "p",
+        text: "Skralli býður íslenskum sveitarfélögum, verktökum og fyrirtækjum úrval lausna frá Hammerglass óbrjótanlegt öryggi í samgöngumannvirkjum, ökutækjum og byggingum. Með Hammerglass færðu öruggar og endingargóðar rúður sem henta við íslenskar aðstæður og veita hámarks vernd gegn utanaðkomandi hættum.",
+      },
     ],
   },
   {
@@ -112,11 +142,21 @@ export const brands: Brand[] = [
       width: 512,
       height: 683,
     },
-    paragraphs: [
-      "Skralli býður upp á alhliða lausnir fyrir sjálfvirk smurkerfi frá Groeneveld-BEKA, hönnuð fyrir vélar, iðnað og allt sem þarfnast reglubundinnar smurningar. Sjálfvirkt smurkerfi tryggir rétta smurningu með réttu magni í alla smurpunkta.",
-      "Skralli er eina fyrirtækið á Íslandi sem sérhæfir sig í þjónustu og viðgerðum á smurkerfum og býður upp á breitt úrval af varahlutum. Teymið býr yfir yfirgripsmikilli þekkingu og áralangri reynslu í smurkerfum. Við vinnum þétt með okkar framleiðendum sem tryggir hágæða lausnir og skjótri afgreiðslu. Við erum með vel útbúna þjónustubíla og tökum að okkur verkefni um land allt.",
-      "Við gerum föst tilboð í allar uppsetningar - hvar sem er á landinu.",
-      "Skralli mælir með MAX-2-LUBE koppafeiti í öll smurkerfi. Koppafeitin hefur einstaklega mikla viðloðun og seigju og er sérlega hentug fyrir kröfur íslensks iðnaðar.",
+    body: [
+      {
+        type: "p",
+        text: "Skralli býður upp á alhliða lausnir fyrir sjálfvirk smurkerfi frá Groeneveld-BEKA, hönnuð fyrir vélar, iðnað og allt sem þarfnast reglubundinnar smurningar. Sjálfvirkt smurkerfi tryggir rétta smurningu með réttu magni í alla smurpunkta.",
+      },
+      {
+        type: "p",
+        text: "Skralli er eina fyrirtækið á Íslandi sem sérhæfir sig í þjónustu og viðgerðum á smurkerfum og býður upp á breitt úrval af varahlutum. Teymið býr yfir yfirgripsmikilli þekkingu og áralangri reynslu í smurkerfum. Við vinnum þétt með okkar framleiðendum sem tryggir hágæða lausnir og skjótri afgreiðslu. Við erum með vel útbúna þjónustubíla og tökum að okkur verkefni um land allt.",
+      },
+      { type: "p", text: "Við gerum föst tilboð í allar uppsetningar - hvar sem er á landinu." },
+      {
+        type: "p",
+        bold: true,
+        text: "Skralli mælir með MAX-2-LUBE koppafeiti í öll smurkerfi. Koppafeitin hefur einstaklega mikla viðloðun og seigju og er sérlega hentug fyrir kröfur íslensks iðnaðar.",
+      },
     ],
   },
   {
@@ -139,12 +179,28 @@ export const brands: Brand[] = [
       width: 415,
       height: 512,
     },
-    paragraphs: [
-      "Lilleseth er traust og rótgróið norskt fjölskyldufyrirtæki með yfir 75 ára reynslu í snjókeðjum ásamt því að bjóða upp á vottaðan hífi- og festibúnað fyrir iðnað og flutninga.",
-      "Snjókeðjurnar frá Lilleseth eru fáanlegar fyrir landbúnað, vinnuvélar og bíla (s.s. vörubíla, strætisvagna, rútur og flutningabíla). Með fjölbreyttum valkostum af keðjum með mörgum útfærslum brodda tryggir Lilleseth hámarks grip, endingu og öryggi við krefjandi vetraraðstæður.",
-      "Fyrir þá sem þurfa á hífibúnaði og festibúnaði að halda, býður Lilleseth upp á vottaðar lausnir sem henta sérstaklega vel til notkunar á byggingarsvæðum eða í kringum fólk, þar sem öryggi er lykilatriði.",
-      "Vörurnar hafa verið prófaðar við ströngustu aðstæður og uppfylla öll skilyrði um öryggi og endingu. Snjókeðjurnar eru einstaklega endingargóðar og mæta öllum þörfum sem íslenskir notendur kunna að hafa, hvort sem er við snjómokstur, landflutninga, landbúnað eða vinnuvélar.",
-      "Með breiðasta úrvalið af snjókeðjum í Noregi, vottaðan hífi- og festibúnað og norska hönnun sem stenst tímans tönn er Lilleseth það merki sem þú getur treyst á.",
+    body: [
+      {
+        type: "p",
+        text: "Lilleseth er traust og rótgróið norskt fjölskyldufyrirtæki með yfir 75 ára reynslu í snjókeðjum ásamt því að bjóða upp á vottaðan hífi- og festibúnað fyrir iðnað og flutninga.",
+      },
+      {
+        type: "p",
+        text: "Snjókeðjurnar frá Lilleseth eru fáanlegar fyrir landbúnað, vinnuvélar og bíla (s.s. vörubíla, strætisvagna, rútur og flutningabíla). Með fjölbreyttum valkostum af keðjum með mörgum útfærslum brodda tryggir Lilleseth hámarks grip, endingu og öryggi við krefjandi vetraraðstæður.",
+      },
+      {
+        type: "p",
+        text: "Fyrir þá sem þurfa á hífibúnaði og festibúnaði að halda, býður Lilleseth upp á vottaðar lausnir sem henta sérstaklega vel til notkunar á byggingarsvæðum eða í kringum fólk, þar sem öryggi er lykilatriði.",
+      },
+      {
+        type: "p",
+        text: "Vörurnar hafa verið prófaðar við ströngustu aðstæður og uppfylla öll skilyrði um öryggi og endingu. Snjókeðjurnar eru einstaklega endingargóðar og mæta öllum þörfum sem íslenskir notendur kunna að hafa, hvort sem er við snjómokstur, landflutninga, landbúnað eða vinnuvélar.",
+      },
+      {
+        type: "p",
+        bold: true,
+        text: "Með breiðasta úrvalið af snjókeðjum í Noregi, vottaðan hífi- og festibúnað og norska hönnun sem stenst tímans tönn er Lilleseth það merki sem þú getur treyst á.",
+      },
     ],
   },
   {
@@ -162,10 +218,20 @@ export const brands: Brand[] = [
       width: 512,
       height: 271,
     },
-    paragraphs: [
-      "PeBe er sænskur framleiðandi sem sérhæfir sig í hágæða sætisáklæðum og gólfmottum fyrir vinnuvélar, vörubíla og atvinnubíla. Lausnirnar eru sérsaumaðar fyrir hvern framleiðanda, sem tryggir fullkomið snið aðlagað að hverju ökutæki. Vörurnar eru úr slitsterku efni sem þolir mikla notkun og veitir bæði þægindi og stílhreint útlit.",
-      "Skralli býður upp á fjölbreytt úrval af sætisáklæðum og gólfmottum fyrir þá sem vilja endingargóðar og stílhreinar lausnir fyrir sínar vinnuvélar, vörubíla eða atvinnubíla. Hafðu samband og við finnum réttu lausnina fyrir þig!",
-      "Skralli hefur einnig þróað skóbakka í samtarfi við PeBe. Bakkarnir eru úr þykku gúmmíi með kanti og eru tilvaldir fyrir ökumanninn vill halda skrifstofunni hreinni.",
+    body: [
+      {
+        type: "p",
+        text: "PeBe er sænskur framleiðandi sem sérhæfir sig í hágæða sætisáklæðum og gólfmottum fyrir vinnuvélar, vörubíla og atvinnubíla. Lausnirnar eru sérsaumaðar fyrir hvern framleiðanda, sem tryggir fullkomið snið aðlagað að hverju ökutæki. Vörurnar eru úr slitsterku efni sem þolir mikla notkun og veitir bæði þægindi og stílhreint útlit.",
+      },
+      {
+        type: "p",
+        text: "Skralli býður upp á fjölbreytt úrval af sætisáklæðum og gólfmottum fyrir þá sem vilja endingargóðar og stílhreinar lausnir fyrir sínar vinnuvélar, vörubíla eða atvinnubíla. Hafðu samband og við finnum réttu lausnina fyrir þig!",
+      },
+      {
+        type: "p",
+        bold: true,
+        text: "Skralli hefur einnig þróað skóbakka í samtarfi við PeBe. Bakkarnir eru úr þykku gúmmíi með kanti og eru tilvaldir fyrir ökumanninn vill halda skrifstofunni hreinni.",
+      },
     ],
   },
   {
@@ -185,13 +251,21 @@ export const brands: Brand[] = [
     },
     subheading:
       "BMair er markaðsleiðandi framleiðandi af lofthreinsitækjum fyrir stjórnenda vinnuvéla í Evrópu.",
-    paragraphs: [
-      "Skralli býður sínum viðskiptavinum nýjustu tækni í þessum geira fyrir bætt vinnuumhverfi af öllu tagi, svosem:",
-      "Endurvinnslu",
-      "Jarðgerð",
-      "Demolition / Niðurrif bygginga",
-      "Flutning og geymslu efna",
-      "Námuvinnslu",
+    body: [
+      {
+        type: "p",
+        text: "Skralli býður sínum viðskiptavinum nýjustu tækni í þessum geira fyrir bætt vinnuumhverfi af öllu tagi, svosem:",
+      },
+      {
+        type: "list",
+        items: [
+          "Endurvinnslu",
+          "Jarðgerð",
+          "Demolition / Niðurrif bygginga",
+          "Flutning og geymslu efna",
+          "Námuvinnslu",
+        ],
+      },
     ],
   },
 ];

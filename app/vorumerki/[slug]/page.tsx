@@ -61,15 +61,28 @@ export default async function BrandPage({
           <Breadcrumb
             items={[{ text: "Vörumerki", href: "/vorumerki" }, { text: brand.name }]}
           />
-          <div className="mt-10 space-y-8 text-base leading-relaxed text-neutral-700">
+          <div className="mt-10 text-base leading-relaxed text-neutral-700">
             {brand.subheading ? (
               <h4 className="text-xl font-bold text-neutral-900 md:text-2xl">
                 {brand.subheading}
               </h4>
             ) : null}
-            {brand.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            {brand.body.map((block, index) =>
+              block.type === "list" ? (
+                <ul key={index} className="mt-4 list-disc space-y-1 pl-5 first:mt-0">
+                  {block.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p
+                  key={index}
+                  className={block.bold ? "mt-8 font-bold first:mt-0" : "mt-8 first:mt-0"}
+                >
+                  {block.text}
+                </p>
+              ),
+            )}
           </div>
         </Container>
       </section>
