@@ -1,0 +1,49 @@
+import type { Metadata } from "next";
+import { PageHero } from "@/components/PageHero";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { Container } from "@/components/Container";
+import { ContactCta } from "@/components/ContactCta";
+import { CATEGORY_ICONS } from "@/components/CategoryIcons";
+import { IntroSection } from "@/components/oryggisrudur/IntroSection";
+import { StrengthsSection } from "@/components/oryggisrudur/StrengthsSection";
+import { UseCasesSection } from "@/components/oryggisrudur/UseCasesSection";
+
+// docs/scrape/oryggisrudur.json — same <title>/<meta description> as every
+// other route on the live site.
+export const metadata: Metadata = {
+  title: "Skralli - Þinn samstarfsaðili",
+  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+};
+
+// docs/scrape/oryggisrudur.json block 2: same photo as the home page's
+// "Quick fixes" category card (lib/categories.ts). Scraped at a 512x384
+// thumbnail; the actual downloaded file is 4032x3024 (same 4:3 aspect), so
+// that's what's passed to next/image to avoid the small-thumbnail
+// distortion noted on the /thjonusta hero (see components/smurkerfi's
+// HERO_IMAGE comment for the same fix).
+const HERO_IMAGE = { src: "/images/home/24-a996c2c4.jpg", alt: "Quick fixes", width: 4032, height: 3024 };
+
+const ExpandIcon = CATEGORY_ICONS.oryggisrudur;
+
+export default function OryggisrudurPage() {
+  return (
+    <main>
+      <PageHero
+        image={HERO_IMAGE}
+        title="Öryggisrúður"
+        subtitle="Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður"
+        icon={ExpandIcon ? <ExpandIcon className="h-6 w-6" /> : null}
+        pattern
+      />
+      <div className="bg-white pt-8">
+        <Container>
+          <Breadcrumb items={[{ text: "Öryggisrúður" }]} />
+        </Container>
+      </div>
+      <IntroSection />
+      <StrengthsSection />
+      <UseCasesSection />
+      <ContactCta />
+    </main>
+  );
+}
