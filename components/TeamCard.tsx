@@ -22,7 +22,17 @@ export function TeamCard({ image, name, role, email, phone, variant = "compact" 
   if (variant === "profile") {
     return (
       <div className="flex flex-col">
-        <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl bg-neutral-100">
+        {/*
+         * Pixel-measured against docs/reference/um-okkur.desktop.jpg (team grid,
+         * ~393x400px per card): the photo box renders effectively square via
+         * object-cover, regardless of each source photo's native aspect ratio
+         * (people portraits are 393x261 landscape; Kormákur's placeholder is
+         * 393x409) — so the box uses aspect-square, not the source ratio.
+         * Text sits inside the photo container, bottom-anchored over a dark
+         * gradient scrim, matching the reference exactly (white text on the
+         * image, no white gap below it).
+         */}
+        <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-neutral-100">
           <Image
             src={image.src}
             alt={image.alt || name}
@@ -30,28 +40,32 @@ export function TeamCard({ image, name, role, email, phone, variant = "compact" 
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover"
           />
-        </div>
-        <div className="mt-4">
-          {role ? (
-            <h6 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-              {role}
-            </h6>
-          ) : null}
-          <h3 className="mt-1 text-lg font-bold text-neutral-900">{name}</h3>
-          {email || phone ? (
-            <div className="mt-1 flex items-center justify-between gap-3">
-              {email ? (
-                <h6 className="truncate text-xs uppercase tracking-wide text-neutral-500">
-                  {email}
-                </h6>
-              ) : null}
-              {phone ? (
-                <h6 className="shrink-0 text-xs uppercase tracking-wide text-neutral-500">
-                  {phone}
-                </h6>
-              ) : null}
-            </div>
-          ) : null}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+          />
+          <div className="absolute inset-x-0 bottom-0 p-4">
+            {role ? (
+              <h6 className="text-xs font-semibold uppercase tracking-wide text-white/70">
+                {role}
+              </h6>
+            ) : null}
+            <h3 className="mt-1 text-lg font-bold text-white">{name}</h3>
+            {email || phone ? (
+              <div className="mt-1 flex items-center justify-between gap-3">
+                {email ? (
+                  <h6 className="truncate text-xs uppercase tracking-wide text-white/70">
+                    {email}
+                  </h6>
+                ) : null}
+                {phone ? (
+                  <h6 className="shrink-0 text-xs uppercase tracking-wide text-white/70">
+                    {phone}
+                  </h6>
+                ) : null}
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     );

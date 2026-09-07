@@ -23,7 +23,11 @@ export function AboutIntro() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           {IMAGES.map((image, index) => (
-            <div key={index} className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl"
+              style={{ aspectRatio: `${image.width} / ${image.height}` }}
+            >
               <Image
                 src={image.src}
                 alt={image.alt}

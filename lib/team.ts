@@ -18,7 +18,7 @@ export type Member = {
   name: string;
   email?: string;
   phone?: string;
-  image?: Img;
+  image: Img;
 };
 
 export const team: Member[] = [

@@ -10,6 +10,26 @@ const TEXT =
   "Okkar markmið er að skapa traust og ánægju viðskiptavina. Við einsetjum okkur að fylgja þér alla leið og tryggja að þú fáir það sem þú þarfnast til að ná sem mestum árangri.";
 const CHECKLIST = site.motto.split(" - ");
 
+// Dimensions from docs/asset-manifest.json (the scrape's recorded source size
+// for each downloaded image).
+const MAIN_IMAGE = {
+  src: "/images/um-okkur/04-ab45b0b4.jpeg",
+  alt: "Interior work",
+  width: 514,
+  height: 686,
+};
+// Source is 228x407 (aspect ~0.56, a tall portrait crop), but
+// docs/reference/um-okkur.desktop.jpg pixel-measures this overlapping
+// thumbnail's rendered box at ~240x325px (aspect ~0.74) — the live site
+// crops it to roughly the same 3:4 box as the main photo, not to its native
+// aspect ratio. Kept as a named, documented constant rather than an
+// unexplained "hand-eyeballed" class.
+const OVERLAY_IMAGE = {
+  src: "/images/um-okkur/05-baa00a71.jpg",
+  alt: "Bedroom work",
+  aspectRatio: "3 / 4",
+};
+
 function CheckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
@@ -28,20 +48,26 @@ export function GoalsSection() {
   return (
     <section className="bg-white pb-16 md:pb-20">
       <Container className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-sm md:mx-0">
+        <div
+          className="relative mx-auto w-full max-w-sm md:mx-0"
+          style={{ aspectRatio: `${MAIN_IMAGE.width} / ${MAIN_IMAGE.height}` }}
+        >
           <div className="absolute inset-0 overflow-hidden rounded-2xl">
             <Image
-              src="/images/um-okkur/04-ab45b0b4.jpeg"
-              alt="Interior work"
+              src={MAIN_IMAGE.src}
+              alt={MAIN_IMAGE.alt}
               fill
               sizes="(min-width: 768px) 33vw, 80vw"
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-8 -right-8 aspect-[3/4] w-2/5 overflow-hidden rounded-2xl ring-4 ring-white">
+          <div
+            className="absolute -bottom-8 -right-8 w-2/5 overflow-hidden rounded-2xl ring-4 ring-white"
+            style={{ aspectRatio: OVERLAY_IMAGE.aspectRatio }}
+          >
             <Image
-              src="/images/um-okkur/05-baa00a71.jpg"
-              alt="Bedroom work"
+              src={OVERLAY_IMAGE.src}
+              alt={OVERLAY_IMAGE.alt}
               fill
               sizes="(min-width: 768px) 15vw, 35vw"
               className="object-cover"

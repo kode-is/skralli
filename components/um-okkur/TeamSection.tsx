@@ -24,9 +24,7 @@ export function TeamSection() {
               role={member.role}
               email={member.email}
               phone={member.phone}
-              image={
-                member.image ?? { src: "/images/um-okkur/12-25d30121.png", alt: "", width: 393, height: 409 }
-              }
+              image={member.image}
             />
           ))}
         </div>
