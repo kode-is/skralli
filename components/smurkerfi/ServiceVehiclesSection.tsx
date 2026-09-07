@@ -33,18 +33,6 @@ const NEXT_ARROW: Img = { src: "/images/smurkerfi/36-192ac70b.svg", alt: "Next A
 const REPAIR_KIT_IMAGE: Img = { src: "/images/smurkerfi/37-f322c560.jpeg", alt: "", width: 569, height: 759 };
 const SUBSCRIPTION_IMAGE: Img = { src: "/images/smurkerfi/38-131a47c4.jpeg", alt: "", width: 570, height: 759 };
 
-// docs/scrape/inline-svg.json records this repeating diagonal-stripe pattern
-// (docs/scrape/svg/b9d9b044.svg, decoded to public/images/smurkerfi/
-// pattern-b9d9b044.svg) twice for this route with no other candidate
-// section in the scrape, so both info-card text panels below use it as a
-// subtle repeating texture (it's a low-opacity 20% gray shape, easy to miss
-// in a compressed screenshot).
-const PATTERN_STYLE = {
-  backgroundColor: "#f0f4fa",
-  backgroundImage: "url(/images/smurkerfi/pattern-b9d9b044.svg)",
-  backgroundRepeat: "repeat" as const,
-};
-
 export function ServiceVehiclesSection() {
   return (
     <section className="bg-white py-16 md:py-20">
@@ -73,7 +61,7 @@ export function ServiceVehiclesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-6" style={PATTERN_STYLE}>
+            <div className="p-6">
               <h3 className="text-lg font-bold text-neutral-900">Viðgerðatöskur</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 Viðgerðatöskur sérsniðnar að þínum þörfum. Allt sem þú þarft til þess að sinna
@@ -93,7 +81,7 @@ export function ServiceVehiclesSection() {
                 className="object-cover"
               />
             </div>
-            <div className="p-6" style={PATTERN_STYLE}>
+            <div className="p-6">
               <h3 className="text-lg font-bold text-neutral-900">Koppafeiti í áskrift</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 Við sendum þér koppafeiti reglulega eða komum sjálfir og fyllum á - allt eftir

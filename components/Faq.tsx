@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 export type FaqItem = { question: string; answer: string };
 
@@ -25,12 +25,17 @@ function ToggleIcon({ open }: { open: boolean }) {
 
 function FaqRow({ item }: { item: FaqItem }) {
   const [isOpen, setIsOpen] = useState(false);
+  const rowId = useId();
+  const questionId = `faq-q-${rowId}`;
+  const answerId = `faq-a-${rowId}`;
 
   return (
     <div>
       <button
         type="button"
+        id={questionId}
         aria-expanded={isOpen}
+        aria-controls={answerId}
         onClick={() => setIsOpen((open) => !open)}
         className="flex w-full items-center gap-4 px-6 py-5 text-left"
       >
@@ -38,7 +43,12 @@ function FaqRow({ item }: { item: FaqItem }) {
         <span className="font-semibold text-neutral-900">{item.question}</span>
       </button>
       {isOpen ? (
-        <div className="whitespace-pre-line pb-5 pl-9 pr-6 text-sm leading-relaxed text-neutral-600">
+        <div
+          id={answerId}
+          role="region"
+          aria-labelledby={questionId}
+          className="whitespace-pre-line pb-5 pl-9 pr-6 text-sm leading-relaxed text-neutral-600"
+        >
           {item.answer}
         </div>
       ) : null}

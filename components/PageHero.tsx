@@ -13,11 +13,37 @@ type PageHeroProps = {
    * visual and optional; omit it for hero variants that don't have one.
    */
   icon?: ReactNode;
+  /**
+   * Subtle repeating diagonal-stripe texture (docs/scrape/svg/b9d9b044.svg).
+   * Verified against a live fetch of https://skralli.is/smurkerfi: the SVG
+   * is set as a `background-image` on a `position:absolute;inset:0` div
+   * that is the *first* child of the hero section (Framer calls it
+   * "Service Title") — i.e. it's this hero band's own background, painted
+   * behind the black tint overlay and the full-bleed photo, not a
+   * background on the two info cards further down the page. Because the
+   * photo is opaque and covers the hero edge-to-edge, the texture ends up
+   * fully hidden behind it in normal rendering on the live site too — this
+   * prop reproduces that same (near-invisible) layering. `docs/scrape/
+   * inline-svg.json` only lists this pattern for a subset of routes
+   * (service/category pages like /smurkerfi), so it's opt-in and unused by
+   * the hub pages (/, /um-okkur, /thjonusta, /vorumerki).
+   */
+  pattern?: boolean;
 };
 
-export function PageHero({ image, title, subtitle, icon }: PageHeroProps) {
+export function PageHero({ image, title, subtitle, icon, pattern }: PageHeroProps) {
   return (
     <div className="relative flex h-[420px] items-center justify-center overflow-hidden md:h-[560px]">
+      {pattern ? (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url(/images/smurkerfi/pattern-b9d9b044.svg)",
+            backgroundRepeat: "repeat",
+          }}
+        />
+      ) : null}
       <Image
         src={image.src}
         alt={image.alt}

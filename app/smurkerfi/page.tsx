@@ -34,6 +34,7 @@ export default function SmurkerfiPage() {
         title="Smurkerfi"
         subtitle="BEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað"
         icon={DropletIcon ? <DropletIcon className="h-6 w-6" /> : null}
+        pattern
       />
       <div className="bg-white pt-8">
         <Container>
