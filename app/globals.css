@@ -8,3 +8,23 @@
   --color-accent-yellow: #FAC748;
   --container-site: 1200px;
 }
+
+/* Brand strip marquee (BrandStrip.tsx): the track renders three identical
+   copies of the logo list back to back (matching the live site, which keeps
+   three sets of logos in the DOM), so translating by exactly -33.3333%
+   (one copy's width) loops seamlessly. */
+@keyframes marquee {
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-play-state: paused;
+  }
+}

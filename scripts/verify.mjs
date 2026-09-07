@@ -12,6 +12,8 @@ async function capture(page, url) {
   await page.goto(url, { waitUntil: "networkidle" });
   await page.waitForTimeout(600);
   await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 80)); } });
+  // Framer's stat counters animate on scroll-into-view; give them time to settle.
+  await page.waitForTimeout(3000);
   // expand accordions the same way as scrape.mjs
   await expandAccordions(page);
   await page.waitForTimeout(400);
