@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: var(--font-now), system-ui, sans-serif;
+  --color-brand-dark: #005380;
+  --color-brand-mid: #01A8DC;
+  --color-brand-light: #83D4F3;
+  --color-accent-green: #0A8754;
+  --color-accent-yellow: #FAC748;
+}
