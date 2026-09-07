@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Container } from "@/components/Container";
 import { brands } from "@/lib/brands";
 
 // Native SVG/PNG dimensions for each brand-strip logo (docs/scrape/home.json
@@ -16,32 +17,32 @@ const LOGO_SIZE: Record<string, { width: number; height: number }> = {
 export function BrandStrip() {
   return (
     <div className="relative -mt-10 md:-mt-14 z-10">
-      <div
-        className="overflow-hidden rounded-2xl bg-brand-dark py-6 shadow-lg md:py-8 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
-      >
-        <div className="flex w-max animate-marquee items-center gap-16 md:gap-24">
-          {[0, 1, 2].map((copy) =>
-            brands.map((brand) => {
-              const size = LOGO_SIZE[brand.id];
-              return (
-                <div
-                  key={`${copy}-${brand.id}`}
-                  className="flex shrink-0 items-center justify-center"
-                  aria-hidden={copy > 0 || undefined}
-                >
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    width={size.width}
-                    height={size.height}
-                    className="h-7 w-auto object-contain md:h-9"
-                  />
-                </div>
-              );
-            }),
-          )}
+      <Container>
+        <div className="overflow-hidden rounded-2xl bg-brand-dark py-6 shadow-lg md:py-8">
+          <div className="flex w-max animate-marquee items-center gap-16 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] md:gap-24">
+            {[0, 1, 2].map((copy) =>
+              brands.map((brand) => {
+                const size = LOGO_SIZE[brand.id];
+                return (
+                  <div
+                    key={`${copy}-${brand.id}`}
+                    className="flex shrink-0 items-center justify-center"
+                    aria-hidden={copy > 0 || undefined}
+                  >
+                    <Image
+                      src={brand.logo}
+                      alt={brand.name}
+                      width={size.width}
+                      height={size.height}
+                      className="h-7 w-auto object-contain md:h-9"
+                    />
+                  </div>
+                );
+              }),
+            )}
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

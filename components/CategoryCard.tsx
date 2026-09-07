@@ -13,7 +13,7 @@ export function CategoryCard({ category }: { category: Category }) {
           src={category.image.src}
           alt={category.image.alt}
           fill
-          sizes="(min-width: 768px) 33vw, 100vw"
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition duration-300 group-hover:scale-105"
         />
       </div>
