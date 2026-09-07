@@ -59,23 +59,28 @@
     },
     {
       "type": "text",
-      "text": "Endurvinnslu"
+      "text": "Endurvinnslu",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Jarðgerð"
+      "text": "Jarðgerð",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Demolition / Niðurrif bygginga"
+      "text": "Demolition / Niðurrif bygginga",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Flutning og geymslu efna"
+      "text": "Flutning og geymslu efna",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Námuvinnslu"
+      "text": "Námuvinnslu",
+      "list": 0
     },
     {
       "type": "heading",

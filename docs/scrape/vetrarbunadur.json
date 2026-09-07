@@ -68,15 +68,18 @@
     },
     {
       "type": "text",
-      "text": "Vinnuvélar"
+      "text": "Vinnuvélar",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Vörubílar"
+      "text": "Vörubílar",
+      "list": 0
     },
     {
       "type": "text",
-      "text": "Dráttarvélar"
+      "text": "Dráttarvélar",
+      "list": 0
     },
     {
       "type": "heading",
@@ -85,15 +88,18 @@
     },
     {
       "type": "text",
-      "text": "Flatkantur / fírkant"
+      "text": "Flatkantur / fírkant",
+      "list": 1
     },
     {
       "type": "text",
-      "text": "U-broddar"
+      "text": "U-broddar",
+      "list": 1
     },
     {
       "type": "text",
-      "text": "Gaddar"
+      "text": "Gaddar",
+      "list": 1
     },
     {
       "type": "heading",
@@ -106,19 +112,23 @@
     },
     {
       "type": "text",
-      "text": "Keðjuefni"
+      "text": "Keðjuefni",
+      "list": 2
     },
     {
       "type": "text",
-      "text": "Viðgerðahlekkir"
+      "text": "Viðgerðahlekkir",
+      "list": 2
     },
     {
       "type": "text",
-      "text": "Strekkjarar"
+      "text": "Strekkjarar",
+      "list": 2
     },
     {
       "type": "text",
-      "text": "Verkfæri / keðjutangir"
+      "text": "Verkfæri / keðjutangir",
+      "list": 2
     },
     {
       "type": "heading",
@@ -166,35 +176,43 @@
     },
     {
       "type": "text",
-      "text": "Volvo BM krókar"
+      "text": "Volvo BM krókar",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "L-30 krókar (minni Volvo BM krókar)"
+      "text": "L-30 krókar (minni Volvo BM krókar)",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "2 x blikkljós"
+      "text": "2 x blikkljós",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "2x LED ljós á hornum"
+      "text": "2x LED ljós á hornum",
+      "list": 4
     },
     {
       "type": "text",
-      "text": "2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi"
+      "text": "2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
+      "list": 3
     },
     {
       "type": "text",
-      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað"
+      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
+      "list": 4
     },
     {
       "type": "text",
-      "text": "Stjórnbox fyrir superswing"
+      "text": "Stjórnbox fyrir superswing",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)"
+      "text": "2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)",
+      "list": 3
     },
     {
       "type": "heading",
@@ -220,15 +238,18 @@
     },
     {
       "type": "text",
-      "text": "3ja punkta festing"
+      "text": "3ja punkta festing",
+      "list": 4
     },
     {
       "type": "text",
-      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað"
+      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
+      "list": 4
     },
     {
       "type": "text",
-      "text": "2x LED ljós á hornum"
+      "text": "2x LED ljós á hornum",
+      "list": 4
     },
     {
       "type": "text",
@@ -236,23 +257,28 @@
     },
     {
       "type": "text",
-      "text": "Stjórnbox fyrir superswing"
+      "text": "Stjórnbox fyrir superswing",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "Volvo BM krókar"
+      "text": "Volvo BM krókar",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "L-30 krókar (minni Volvo BM krókar)"
+      "text": "L-30 krókar (minni Volvo BM krókar)",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "2 x blikkljós"
+      "text": "2 x blikkljós",
+      "list": 5
     },
     {
       "type": "text",
-      "text": "2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi"
+      "text": "2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
+      "list": 5
     },
     {
       "type": "heading",

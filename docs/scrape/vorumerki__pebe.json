@@ -58,7 +58,8 @@
     },
     {
       "type": "text",
-      "text": "Skralli hefur einnig þróað skóbakka í samtarfi við PeBe. Bakkarnir eru úr þykku gúmmíi með kanti og eru tilvaldir fyrir ökumanninn vill halda skrifstofunni hreinni."
+      "text": "Skralli hefur einnig þróað skóbakka í samtarfi við PeBe. Bakkarnir eru úr þykku gúmmíi með kanti og eru tilvaldir fyrir ökumanninn vill halda skrifstofunni hreinni.",
+      "bold": true
     },
     {
       "type": "heading",

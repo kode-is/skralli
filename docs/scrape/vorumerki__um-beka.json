@@ -62,7 +62,8 @@
     },
     {
       "type": "text",
-      "text": "Skralli mælir með MAX-2-LUBE koppafeiti í öll smurkerfi. Koppafeitin hefur einstaklega mikla viðloðun og seigju og er sérlega hentug fyrir kröfur íslensks iðnaðar."
+      "text": "Skralli mælir með MAX-2-LUBE koppafeiti í öll smurkerfi. Koppafeitin hefur einstaklega mikla viðloðun og seigju og er sérlega hentug fyrir kröfur íslensks iðnaðar.",
+      "bold": true
     },
     {
       "type": "heading",

@@ -58,23 +58,28 @@
     },
     {
       "type": "text",
-      "text": "Fyrir"
+      "text": "Fyrir",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Vinnubíla - frá 70.629kr m/vsk."
+      "text": "Vinnubíla - frá 70.629kr m/vsk.",
+      "list": 1
     },
     {
       "type": "text",
-      "text": "Vörubíla - 46.872kr m/vsk."
+      "text": "Vörubíla - 46.872kr m/vsk.",
+      "list": 1
     },
     {
       "type": "text",
-      "text": "Vinnuvélar - 43.400kr m/vsk."
+      "text": "Vinnuvélar - 43.400kr m/vsk.",
+      "list": 1
     },
     {
       "type": "text",
-      "text": "Dráttarvélar - 43.400kr m/vsk."
+      "text": "Dráttarvélar - 43.400kr m/vsk.",
+      "list": 1
     },
     {
       "type": "image",
@@ -555,19 +560,23 @@
     },
     {
       "type": "text",
-      "text": "Fyrir"
+      "text": "Fyrir",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Vinnubíla"
+      "text": "Vinnubíla",
+      "list": 3
     },
     {
       "type": "text",
-      "text": "Vörubíla"
+      "text": "Vörubíla",
+      "list": 3
     },
     {
       "type": "text",
-      "text": "Vinnuvélar"
+      "text": "Vinnuvélar",
+      "list": 3
     },
     {
       "type": "text",
@@ -575,7 +584,8 @@
     },
     {
       "type": "text",
-      "text": "21.700kr m/vsk."
+      "text": "21.700kr m/vsk.",
+      "bold": true
     },
     {
       "type": "image",
@@ -625,7 +635,8 @@
     },
     {
       "type": "text",
-      "text": "Hafðu samband til að vita meira um úrvalið fyrir þína vél."
+      "text": "Hafðu samband til að vita meira um úrvalið fyrir þína vél.",
+      "bold": true
     },
     {
       "type": "heading",

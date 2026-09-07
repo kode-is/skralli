@@ -89,19 +89,23 @@
     },
     {
       "type": "text",
-      "text": "Vörunúmer"
+      "text": "Vörunúmer",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Vöruheiti"
+      "text": "Vöruheiti",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "LVÁ/WLL"
+      "text": "LVÁ/WLL",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Lengd"
+      "text": "Lengd",
+      "bold": true
     },
     {
       "type": "text",
@@ -565,11 +569,13 @@
     },
     {
       "type": "text",
-      "text": "LVÁ/WLL"
+      "text": "LVÁ/WLL",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Lengd"
+      "text": "Lengd",
+      "bold": true
     },
     {
       "type": "text",

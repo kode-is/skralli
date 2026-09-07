@@ -82,15 +82,18 @@
     },
     {
       "type": "text",
-      "text": "Vara"
+      "text": "Vara",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Lyftigeta"
+      "text": "Lyftigeta",
+      "bold": true
     },
     {
       "type": "text",
-      "text": "Lyftihæð"
+      "text": "Lyftihæð",
+      "bold": true
     },
     {
       "type": "text",

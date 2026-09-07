@@ -1,0 +1,645 @@
+{
+  "generatedAt": "2026-09-07T20:05:08.737Z",
+  "routes": [
+    {
+      "route": "/",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/um-okkur",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/thjonusta",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/hafa-samband",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/vorumerki",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/smurkerfi",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/oryggisrudur",
+      "lists": [],
+      "strong": [
+        "óbrjótanlegt öryggi",
+        "endingargóðar rúður",
+        "hámarks vernd"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/vetrarbunadur",
+      "lists": [
+        [
+          "Vinnuvélar",
+          "Vörubílar",
+          "Dráttarvélar"
+        ],
+        [
+          "Flatkantur / fírkant",
+          "U-broddar",
+          "Gaddar"
+        ],
+        [
+          "Keðjuefni",
+          "Viðgerðahlekkir",
+          "Strekkjarar",
+          "Verkfæri / keðjutangir"
+        ],
+        [
+          "Volvo BM krókar",
+          "L-30 krókar (minni Volvo BM krókar)",
+          "2 x blikkljós",
+          "2x LED ljós á hornum",
+          "2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
+          "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
+          "Stjórnbox fyrir superswing",
+          "2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)"
+        ],
+        [
+          "3ja punkta festing",
+          "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
+          "2x LED ljós á hornum"
+        ],
+        [
+          "Stjórnbox fyrir superswing",
+          "Volvo BM krókar",
+          "L-30 krókar (minni Volvo BM krókar)",
+          "2 x blikkljós",
+          "2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi"
+        ]
+      ],
+      "strong": [],
+      "annotated": {
+        "list": 26,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/fyrirokumannin",
+      "lists": [
+        [
+          "Vinnubíla - frá 70.629kr m/vsk.",
+          "Vörubíla - 46.872kr m/vsk.",
+          "Vinnuvélar - 43.400kr m/vsk.",
+          "Dráttarvélar - 43.400kr m/vsk."
+        ],
+        [
+          "Vinnubíla - frá 70.629kr m/vsk.",
+          "Vörubíla - 46.872kr m/vsk.",
+          "Vinnuvélar - 43.400kr m/vsk.",
+          "Dráttarvélar - 43.400kr m/vsk."
+        ],
+        [
+          "Vinnubíla",
+          "Vörubíla",
+          "Vinnuvélar",
+          "Dráttarvélar21.700kr m/vsk."
+        ],
+        [
+          "Vinnubíla",
+          "Vörubíla",
+          "Vinnuvélar",
+          "Dráttarvélar21.700kr m/vsk."
+        ]
+      ],
+      "strong": [
+        "Fyrir",
+        "Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar",
+        "Fyrir",
+        "Fyrir",
+        "21.700kr m/vsk.",
+        "Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar",
+        "Fyrir",
+        "21.700kr m/vsk.",
+        "Hafðu samband til að vita meira um úrvalið fyrir þína vél."
+      ],
+      "annotated": {
+        "list": 7,
+        "bold": 4
+      }
+    },
+    {
+      "route": "/hifi-festibunadur",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/siubunadur",
+      "lists": [],
+      "strong": [
+        "þínu umhverfi",
+        "þínu umhverfi"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/vorumerki/um-beka",
+      "lists": [],
+      "strong": [
+        "Skralli mælir með MAX-2-LUBE koppafeiti í öll smurkerfi. Koppafeitin hefur einstaklega mikla viðloðun og seigju og er sérlega hentug fyrir kröfur íslensks iðnaðar."
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 1
+      }
+    },
+    {
+      "route": "/vorumerki/lilleseth-kjetting",
+      "lists": [],
+      "strong": [
+        "Með breiðasta úrvalið af snjókeðjum í Noregi, vottaðan hífi- og festibúnað og norska hönnun sem stenst tímans tönn er Lilleseth það merki sem þú getur treyst á."
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 1
+      }
+    },
+    {
+      "route": "/vorumerki/gigant",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/vorumerki/pebe",
+      "lists": [],
+      "strong": [
+        "Skralli hefur einnig þróað skóbakka í samtarfi við PeBe. Bakkarnir eru úr þykku gúmmíi með kanti og eru tilvaldir fyrir ökumanninn vill halda skrifstofunni hreinni."
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 1
+      }
+    },
+    {
+      "route": "/vorumerki/hammerglass",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/vorumerki/bmair",
+      "lists": [
+        [
+          "Endurvinnslu",
+          "Jarðgerð",
+          "Demolition / Niðurrif bygginga",
+          "Flutning og geymslu efna",
+          "Námuvinnslu"
+        ]
+      ],
+      "strong": [],
+      "annotated": {
+        "list": 5,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/fjorhjola-minigrofuvagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velaflutningavagnar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd2-6x",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-6x",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-8x",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/hjolagrofuvagn-gd3-10x",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/gw-100",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/gw-120",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/gw-400",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml80",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml160",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-ml210",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-18l",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-24",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/velavagn-gll4-27",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd3-13",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-15",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-17sb",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-20",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/verktakavagn-gd4-30hs",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd85",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd100",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd125",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd140-gd140sb",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/sturtuvagnar/landbunadarvagn-gd150",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/hifikedjur",
+      "lists": [],
+      "strong": [
+        "Vörunúmer",
+        "Vöruheiti",
+        "LVÁ/WLL",
+        "Lengd"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 6
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/bindikedjur-strekkjarar",
+      "lists": [],
+      "strong": [
+        "Vörunúmer",
+        "Vöruheiti",
+        "LVÁ (WLL)",
+        "Lengd"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 4
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/hringstroffur",
+      "lists": [],
+      "strong": [
+        "Vörunr",
+        "Vara",
+        "Lyftigeta",
+        "Lyftihæð"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 3
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/flatstroffur",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/stroffur/drattastroffur",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/aukabunadur",
+      "lists": [],
+      "strong": [
+        "Vörunúmer",
+        "Vöruheiti",
+        "Burðargeta",
+        "Lengd",
+        "Vörunúmer",
+        "Vöruheiti",
+        "LVÁ/WLL",
+        "Vörunúmer",
+        "Vöruheiti",
+        "Burðarþol",
+        "Vörunúmer",
+        "Vöruheiti",
+        "Burðarþol",
+        "Vörunúmer",
+        "Vöruheiti",
+        "Burðarþol"
+      ],
+      "annotated": {
+        "list": 0,
+        "bold": 16
+      }
+    },
+    {
+      "route": "/hifi-festibunadur/bordastrekkjarar",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    },
+    {
+      "route": "/404",
+      "lists": [],
+      "strong": [],
+      "annotated": {
+        "list": 0,
+        "bold": 0
+      }
+    }
+  ]
+}
