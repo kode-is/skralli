@@ -27,4 +27,10 @@
   .animate-marquee {
     animation-play-state: paused;
   }
+
+  /* Home hero background video (components/home/Hero.tsx): keep the still
+     poster image visible instead of an autoplaying video. */
+  .hero-video {
+    display: none;
+  }
 }

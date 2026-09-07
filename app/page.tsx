@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { StepsSection } from "@/components/home/StepsSection";
 import { CategoriesSection } from "@/components/home/CategoriesSection";
 import { AdvisorySection } from "@/components/home/AdvisorySection";
-import { StatsSection } from "@/components/home/StatsSection";
+import { StatsSection } from "@/components/StatsSection";
 import { BrandsSection } from "@/components/home/BrandsSection";
 
 export const metadata: Metadata = {
