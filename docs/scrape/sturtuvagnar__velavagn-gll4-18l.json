@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar__velaflutningavagnar/07-bf266b5d.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/TjvRAtLKBb9Jrcm31PUS5VHsJ4.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar__velaflutningavagnar/07-bf266b5d.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Vélavagn GLL4-18L"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -84,10 +67,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -218,10 +197,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

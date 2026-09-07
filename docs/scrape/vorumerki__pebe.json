@@ -27,10 +27,6 @@
       "text": "Pebe"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "../"
@@ -38,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Vörumerki"
     },
     {
       "type": "link",
@@ -77,10 +69,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -211,10 +199,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

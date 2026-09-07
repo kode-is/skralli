@@ -27,10 +27,6 @@
       "text": "Hringstroffur"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "../../"
@@ -40,10 +36,6 @@
       "text": ">"
     },
     {
-      "type": "text",
-      "text": "Hífi- og festibúnaður"
-    },
-    {
       "type": "link",
       "text": "Hífi- og festibúnaður",
       "href": "../../hifi-festibunadur"
@@ -51,10 +43,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Stroffur"
     },
     {
       "type": "link",
@@ -881,10 +869,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -1015,10 +999,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../../"
-    },
     {
       "text": "Heim",
       "href": "../../"

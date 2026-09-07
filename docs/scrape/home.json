@@ -232,10 +232,6 @@
       "text": "Lýstu fyrir okkur þínum þörfum og okkar sérfræðingar munu finna bestu lausnina."
     },
     {
-      "type": "text",
-      "text": "Senda fyrirspurn →"
-    },
-    {
       "type": "link",
       "text": "Senda fyrirspurn →",
       "href": "./hafa-samband"
@@ -255,10 +251,6 @@
       "text": "Eftir að hafa greint allar þarfir munum við bjóða fast verð í verkið."
     },
     {
-      "type": "text",
-      "text": "Fá fast verð →"
-    },
-    {
       "type": "link",
       "text": "Fá fast verð →",
       "href": "./hafa-samband"
@@ -276,10 +268,6 @@
     {
       "type": "text",
       "text": "Í samvinnu við þig finnum við tíma í ísetninguna."
-    },
-    {
-      "type": "text",
-      "text": "Finna tíma →"
     },
     {
       "type": "link",
@@ -304,10 +292,6 @@
       "type": "link",
       "text": "Skoðaðu úrvalið",
       "href": "./thjonusta"
-    },
-    {
-      "type": "text",
-      "text": "Skoðaðu úrvalið"
     },
     {
       "type": "text",
@@ -567,10 +551,6 @@
       "href": "./vorumerki"
     },
     {
-      "type": "text",
-      "text": "Skoða nánar"
-    },
-    {
       "type": "link",
       "text": "HammerglassSkoða nánar →",
       "href": "./vorumerki/hammerglass"
@@ -768,10 +748,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

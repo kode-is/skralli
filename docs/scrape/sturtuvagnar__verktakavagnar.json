@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar/04-76280b19.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/Vm1DrHkJdSg0Q9nfQ0xcpRFVoQE.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar/04-76280b19.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Verktakavagnar"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -200,10 +183,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -334,10 +313,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

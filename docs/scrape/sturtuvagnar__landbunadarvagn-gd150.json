@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar__landbunadarvagnar/07-1b890124.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/1oYdBGBx8GyXUzMl2NxEstD4E.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar__landbunadarvagnar/07-1b890124.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Landbúnaðarvagn GD150"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -84,10 +67,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -218,10 +197,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

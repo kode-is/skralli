@@ -35,18 +35,10 @@
       "type": "link",
       "text": "Heim",
       "href": "./"
-    },
-    {
-      "type": "text",
-      "text": "Heim"
     }
   ],
   "footer": [],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

@@ -27,10 +27,6 @@
       "text": "Hafa Samband"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "./"
@@ -177,10 +173,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

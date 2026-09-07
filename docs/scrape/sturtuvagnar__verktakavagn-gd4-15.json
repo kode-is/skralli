@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar__verktakavagnar/04-52c63e09.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/gSOjCyKyIURZH6zw3qxGZnZy048.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar__verktakavagnar/04-52c63e09.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Verktakavagn GD4-15"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -84,10 +67,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -218,10 +197,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

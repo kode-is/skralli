@@ -27,10 +27,6 @@
       "text": "Þjónustur"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "./"
@@ -213,10 +209,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -347,10 +339,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

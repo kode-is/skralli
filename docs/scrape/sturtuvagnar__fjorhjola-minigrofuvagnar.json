@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar/03-fbea7ee5.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/ytaAUbgOg75YW7VyLxiaFKILH8.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar/03-fbea7ee5.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Fjórhjóla- og minigröfuvagnar"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -150,10 +133,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -284,10 +263,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

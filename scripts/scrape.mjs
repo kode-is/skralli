@@ -3,6 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { ROUTES, LIVE, routeToFile } from "./routes.mjs";
+import { normalizeBlocks, normalizeNav } from "./lib/normalize.mjs";
 
 const OUT_JSON = "docs/scrape";
 const OUT_REF = "docs/reference";
@@ -147,6 +148,15 @@ async function scrapeRoute(browser, route) {
     await expandAccordions(page);
 
     const data = await extractPage(page);
+    // Drop duplicate text/link and consecutive same-src image blocks (the
+    // walker independently records an anchor's own `link` block and its
+    // inner text node's `text` block, and sometimes the same image both as
+    // a foreground <img> and a CSS background), and empty-text nav entries
+    // (e.g. the logo link), before downloading images or writing JSON — see
+    // scripts/lib/normalize.mjs.
+    data.blocks = normalizeBlocks(data.blocks);
+    data.footer = normalizeBlocks(data.footer);
+    data.nav = normalizeNav(data.nav);
 
     // download images (blocks + footer), rewrite local paths
     const routeDir = routeToFile(route);

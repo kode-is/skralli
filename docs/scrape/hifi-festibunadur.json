@@ -31,10 +31,6 @@
       "text": "Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "./"
@@ -60,10 +56,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     },
     {
       "type": "image",
@@ -178,10 +170,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -312,10 +300,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

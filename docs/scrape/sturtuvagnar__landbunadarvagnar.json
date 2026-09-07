@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar/05-468e8526.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/etiew3elV8yr1mHkofcR3mbsLFk.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar/05-468e8526.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Landbúnaðarvagnar"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -182,10 +165,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -316,10 +295,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

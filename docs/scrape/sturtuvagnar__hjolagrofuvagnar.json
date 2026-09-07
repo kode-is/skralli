@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar/06-dece8e00.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/o4uQMR71agzX8hE5P3oaVBpguQ.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar/06-dece8e00.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Hjólagröfuvagnar"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -168,10 +151,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -302,10 +281,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

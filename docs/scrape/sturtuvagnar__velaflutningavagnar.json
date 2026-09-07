@@ -22,22 +22,9 @@
       "local": "/images/sturtuvagnar/07-e61a69c9.jpg"
     },
     {
-      "type": "image",
-      "src": "https://framerusercontent.com/images/9Z0oDC1rMdGfTWkASwcI499UKKk.jpg",
-      "alt": "",
-      "width": 1440,
-      "height": 1440,
-      "role": "content",
-      "local": "/images/sturtuvagnar/07-e61a69c9.jpg"
-    },
-    {
       "type": "heading",
       "level": 1,
       "text": "Vélaflutningavagnar"
-    },
-    {
-      "type": "text",
-      "text": "Forsíða"
     },
     {
       "type": "link",
@@ -47,10 +34,6 @@
     {
       "type": "text",
       "text": ">"
-    },
-    {
-      "type": "text",
-      "text": "Sturtuvagnar"
     },
     {
       "type": "link",
@@ -214,10 +197,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "../hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -348,10 +327,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "../"
-    },
     {
       "text": "Heim",
       "href": "../"

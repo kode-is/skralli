@@ -31,10 +31,6 @@
       "text": "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi"
     },
     {
-      "type": "text",
-      "text": "Forsíða"
-    },
-    {
       "type": "link",
       "text": "Forsíða",
       "href": "./"
@@ -60,10 +56,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     },
     {
       "type": "image",
@@ -144,10 +136,6 @@
       "href": "./hafa-samband"
     },
     {
-      "type": "text",
-      "text": "Hafa samband"
-    },
-    {
       "type": "image",
       "src": "https://framerusercontent.com/images/rtji797UJ38GpCTlnmY1I2r8pJY.png",
       "alt": "",
@@ -169,10 +157,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     },
     {
       "type": "image",
@@ -198,10 +182,6 @@
       "href": "./hafa-samband"
     },
     {
-      "type": "text",
-      "text": "Hafa samband"
-    },
-    {
       "type": "image",
       "src": "https://framerusercontent.com/images/ReriwAELrQceWV8ISkUHiNBrCGU.png",
       "alt": "",
@@ -223,10 +203,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     },
     {
       "type": "image",
@@ -252,10 +228,6 @@
       "href": "./hafa-samband"
     },
     {
-      "type": "text",
-      "text": "Hafa samband"
-    },
-    {
       "type": "image",
       "src": "https://framerusercontent.com/images/oFl40O4f68PTpoj5B087JTlNM.png",
       "alt": "",
@@ -279,10 +251,6 @@
       "href": "./hafa-samband"
     },
     {
-      "type": "text",
-      "text": "Hafa samband"
-    },
-    {
       "type": "heading",
       "level": 3,
       "text": "Sendu okkur fyrirspurn"
@@ -291,10 +259,6 @@
       "type": "link",
       "text": "Hafa samband",
       "href": "./hafa-samband"
-    },
-    {
-      "type": "text",
-      "text": "Hafa samband"
     }
   ],
   "footer": [
@@ -425,10 +389,6 @@
     }
   ],
   "nav": [
-    {
-      "text": "",
-      "href": "./"
-    },
     {
       "text": "Heim",
       "href": "./"

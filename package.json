@@ -9,6 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "scrape": "node scripts/scrape.mjs",
+    "normalize-scrape": "node scripts/normalize-scrape.mjs",
     "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
