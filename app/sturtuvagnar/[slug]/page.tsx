@@ -53,7 +53,6 @@ export default async function SturtuvagnarSlugPage({
         image={record.heroImage}
         title={record.title}
         icon={isGroup(record) ? <TrailerIcon className="h-6 w-6" /> : undefined}
-        duplicateImage
       />
       <div className="bg-white pt-8">
         <Container>

@@ -29,7 +29,35 @@ async function capture(page, url) {
   await page.waitForTimeout(400);
   return page.evaluate(() => ({
     text: document.body.innerText,
-    images: [...document.images].filter(i => i.getBoundingClientRect().width > 0).length,
+    // Count unique visible image sources, not raw <img> tags: Framer renders
+    // some photos twice (e.g. a hover-crossfade layer stacked on the base
+    // image, or marquee tracks that duplicate their items for a seamless
+    // loop) — those duplicates are never additional content, so counting
+    // raw tags makes the live page's count drift from an equivalent,
+    // non-duplicating local recreation. A plain `src.split("?")[0]` is not
+    // enough to key on, though: Next.js's built-in image optimizer proxies
+    // every local raster image through the same "/_next/image" path and
+    // encodes the real file in a `url` query param, so a naive query-strip
+    // collapsed every local image to that one path (verified: it dropped
+    // e.g. "/" from img=22/22 raw tags to img=22/6 unique-by-path-only,
+    // while the live/Framer CDN already puts the real filename in the path
+    // and only varies size via query params). Unwrap that proxy first.
+    images: new Set(
+      [...document.images]
+        .filter(i => i.getBoundingClientRect().width > 0)
+        .map(i => {
+          const src = i.currentSrc || i.src;
+          try {
+            const u = new URL(src, location.href);
+            if (u.pathname === "/_next/image" && u.searchParams.has("url")) {
+              return decodeURIComponent(u.searchParams.get("url"));
+            }
+            return u.origin + u.pathname;
+          } catch {
+            return src.split("?")[0];
+          }
+        })
+    ).size,
   }));
 }
 
