@@ -1,0 +1,801 @@
+{
+  "route": "/",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli aðstoðar þig við að finna réttu lausnina fyrir þig. Hvort sem það er að finna lausn fyrir smurtæki eða finna rétta sætisáklæðið, Við getum aðstoðað þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/yVPGJcowKMAwRfKq0xeuFpRCt8.png",
+      "alt": "",
+      "width": 1440,
+      "height": 807,
+      "role": "content",
+      "local": "/images/home/01-087a3e5c.png"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Þinn\nsamstarfsaðili"
+    },
+    {
+      "type": "text",
+      "text": "Sölu- og þjónustuaðili fyrir vinnuvélar, landbúnað og stóriðju"
+    },
+    {
+      "type": "link",
+      "text": "skralli@skralli.is",
+      "href": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "link",
+      "text": "+354 862 4046",
+      "href": null
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "+354 862 4046"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0mWA8u9GPYRxd69FDRIzaOdzd5o.svg",
+      "alt": "",
+      "width": 380,
+      "height": 96,
+      "role": "content",
+      "local": "/images/home/02-3e0cd936.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LyeKzSNQNhnpVgMVxUzPJgl0o4.svg",
+      "alt": "",
+      "width": 497,
+      "height": 60,
+      "role": "content",
+      "local": "/images/home/03-288ddb43.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NmYQclZ8tZYnzKTruUbuqX1w74.png",
+      "alt": "",
+      "width": 500,
+      "height": 47,
+      "role": "content",
+      "local": "/images/home/04-6904d068.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ak5S8KvSSBK2eicH1SGyzxFqxRQ.png",
+      "alt": "",
+      "width": 100,
+      "height": 37,
+      "role": "content",
+      "local": "/images/home/05-17eb54cf.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0TuN8HuMJ09OmTjxhZoqAhhaPs.svg",
+      "alt": "",
+      "width": 260,
+      "height": 129,
+      "role": "content",
+      "local": "/images/home/06-79588ec3.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ojC90HpK5OCar1ixrkd1TjErU.svg",
+      "alt": "",
+      "width": 300,
+      "height": 80,
+      "role": "content",
+      "local": "/images/home/07-882f4f17.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0mWA8u9GPYRxd69FDRIzaOdzd5o.svg",
+      "alt": "",
+      "width": 380,
+      "height": 96,
+      "role": "content",
+      "local": "/images/home/02-3e0cd936.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LyeKzSNQNhnpVgMVxUzPJgl0o4.svg",
+      "alt": "",
+      "width": 497,
+      "height": 60,
+      "role": "content",
+      "local": "/images/home/03-288ddb43.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NmYQclZ8tZYnzKTruUbuqX1w74.png",
+      "alt": "",
+      "width": 500,
+      "height": 47,
+      "role": "content",
+      "local": "/images/home/04-6904d068.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ak5S8KvSSBK2eicH1SGyzxFqxRQ.png",
+      "alt": "",
+      "width": 100,
+      "height": 37,
+      "role": "content",
+      "local": "/images/home/05-17eb54cf.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0TuN8HuMJ09OmTjxhZoqAhhaPs.svg",
+      "alt": "",
+      "width": 260,
+      "height": 129,
+      "role": "content",
+      "local": "/images/home/06-79588ec3.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ojC90HpK5OCar1ixrkd1TjErU.svg",
+      "alt": "",
+      "width": 300,
+      "height": 80,
+      "role": "content",
+      "local": "/images/home/07-882f4f17.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0mWA8u9GPYRxd69FDRIzaOdzd5o.svg",
+      "alt": "",
+      "width": 380,
+      "height": 96,
+      "role": "content",
+      "local": "/images/home/02-3e0cd936.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LyeKzSNQNhnpVgMVxUzPJgl0o4.svg",
+      "alt": "",
+      "width": 497,
+      "height": 60,
+      "role": "content",
+      "local": "/images/home/03-288ddb43.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NmYQclZ8tZYnzKTruUbuqX1w74.png",
+      "alt": "",
+      "width": 500,
+      "height": 47,
+      "role": "content",
+      "local": "/images/home/04-6904d068.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ak5S8KvSSBK2eicH1SGyzxFqxRQ.png",
+      "alt": "",
+      "width": 100,
+      "height": 37,
+      "role": "content",
+      "local": "/images/home/05-17eb54cf.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0TuN8HuMJ09OmTjxhZoqAhhaPs.svg",
+      "alt": "",
+      "width": 260,
+      "height": 129,
+      "role": "content",
+      "local": "/images/home/06-79588ec3.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ojC90HpK5OCar1ixrkd1TjErU.svg",
+      "alt": "",
+      "width": 300,
+      "height": 80,
+      "role": "content",
+      "local": "/images/home/07-882f4f17.svg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Okkar þjónusta við smurkerfi"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "text",
+      "text": "Lýstu fyrir okkur þínum þörfum og okkar sérfræðingar munu finna bestu lausnina."
+    },
+    {
+      "type": "text",
+      "text": "Senda fyrirspurn →"
+    },
+    {
+      "type": "link",
+      "text": "Senda fyrirspurn →",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Fáðu fast verð í verkið"
+    },
+    {
+      "type": "text",
+      "text": "Eftir að hafa greint allar þarfir munum við bjóða fast verð í verkið."
+    },
+    {
+      "type": "text",
+      "text": "Fá fast verð →"
+    },
+    {
+      "type": "link",
+      "text": "Fá fast verð →",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Hvenær hentar þér?"
+    },
+    {
+      "type": "text",
+      "text": "Í samvinnu við þig finnum við tíma í ísetninguna."
+    },
+    {
+      "type": "text",
+      "text": "Finna tíma →"
+    },
+    {
+      "type": "link",
+      "text": "Finna tíma →",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/c0EZxtMucSR6UOSZk2TBnWsqr4.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "role": "background",
+      "local": "/images/home/20-463dd036.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Okkar vöruframboð"
+    },
+    {
+      "type": "link",
+      "text": "Skoðaðu úrvalið",
+      "href": "./thjonusta"
+    },
+    {
+      "type": "text",
+      "text": "Skoðaðu úrvalið"
+    },
+    {
+      "type": "text",
+      "text": "Við leggjum áherslu á vörugæði og framúrskarandi þjónustu."
+    },
+    {
+      "type": "link",
+      "text": "SíubúnaðurLofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi",
+      "href": "./siubunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/GKqfNWoRSDmyPSCHZZ03b7aBM.png",
+      "alt": "",
+      "width": 512,
+      "height": 238,
+      "role": "content",
+      "local": "/images/home/21-212e4fb5.png"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "SmurkerfiBEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað",
+      "href": "./smurkerfi"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/qEria6r6zEgvoCPRd4lWIdizOg.jpeg",
+      "alt": "Smurkerfi",
+      "width": 512,
+      "height": 473,
+      "role": "content",
+      "local": "/images/home/22-d2d92984.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "BEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað"
+    },
+    {
+      "type": "link",
+      "text": "SturtuvagnarSlitsterkir sturtuvagnar framleiddir í Noregi og með 5 ára ábyrgð",
+      "href": "./sturtuvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/zzVgK7lMDVKpggOyyA2M3sBM2w.jpeg",
+      "alt": "Snjókeðjur, Hlífi- & festibúnaður",
+      "width": 512,
+      "height": 341,
+      "role": "content",
+      "local": "/images/home/23-16722dae.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Slitsterkir sturtuvagnar framleiddir í Noregi og með 5 ára ábyrgð"
+    },
+    {
+      "type": "link",
+      "text": "ÖryggisrúðurÓbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður",
+      "href": "./oryggisrudur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/dsvstJS7dwPEtao7HZD7iWPhU4.jpg",
+      "alt": "Quick fixes",
+      "width": 512,
+      "height": 384,
+      "role": "content",
+      "local": "/images/home/24-a996c2c4.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður"
+    },
+    {
+      "type": "link",
+      "text": "Hífi- & festibúnaðurVottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu",
+      "href": "./hifi-festibunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/kyY51GlMxsukAlfvxa7XP4yQNjI.png",
+      "alt": "Quick fixes",
+      "width": 418,
+      "height": 512,
+      "role": "content",
+      "local": "/images/home/25-cf51054e.png"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
+    },
+    {
+      "type": "link",
+      "text": "Fyrir ökumanninnSætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki",
+      "href": "./fyrirokumannin"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/4p1qp9xwCrh9XiFw9WLdbo8eI.jpeg",
+      "alt": "Sætisáklæði",
+      "width": 512,
+      "height": 683,
+      "role": "content",
+      "local": "/images/home/26-94902b25.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Sætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Fagmannleg ráðgjöf"
+    },
+    {
+      "type": "text",
+      "text": "Við erum traustir ráðgjafar og höfum aðstoðað fjölda fyrirtækja og einstaklinga við að finna notuð tæki og búnað erlendis. Teymið okkar býr yfir áratuga reynslu og sér um ferlið frá upphafi til enda."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/7wfvaOHfGguDFsmRRXUz5vA97b4.jpg",
+      "alt": "",
+      "width": 136,
+      "height": 90,
+      "role": "content",
+      "local": "/images/home/27-d812c419.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/x4uzeN7UMeol8XbItqNf2TTeQnI.jpg",
+      "alt": "",
+      "width": 136,
+      "height": 90,
+      "role": "content",
+      "local": "/images/home/28-23d4abab.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q4AjdmMZ05wdyytlKNsZQpMXpk.jpg",
+      "alt": "",
+      "width": 136,
+      "height": 90,
+      "role": "content",
+      "local": "/images/home/29-ad270c68.jpg"
+    },
+    {
+      "type": "text",
+      "text": "Villi"
+    },
+    {
+      "type": "text",
+      "text": "Örvar"
+    },
+    {
+      "type": "text",
+      "text": "Þórir"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hafa samband"
+    },
+    {
+      "type": "text",
+      "text": "483"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Ísett smurkefi"
+    },
+    {
+      "type": "text",
+      "text": "133"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Innflutt tæki"
+    },
+    {
+      "type": "text",
+      "text": "4"
+    },
+    {
+      "type": "text",
+      "text": "klst"
+    },
+    {
+      "type": "text",
+      "text": "Fyrirspurnum svarað innan"
+    },
+    {
+      "type": "text",
+      "text": "4"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Vörumerki"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Kynntu þér vörumerkin okkar"
+    },
+    {
+      "type": "text",
+      "text": "Við bjóðum eingöngu upp á vörur frá þekktum og viðurkenndum aðilum"
+    },
+    {
+      "type": "link",
+      "text": "Skoða nánar",
+      "href": "./vorumerki"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar"
+    },
+    {
+      "type": "link",
+      "text": "HammerglassSkoða nánar →",
+      "href": "./vorumerki/hammerglass"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hBfaFUARsQKBTXqj99bacRRKo.png",
+      "alt": "Hammerglass",
+      "width": 220,
+      "height": 171,
+      "role": "content",
+      "local": "/images/home/30-51b0fe1c.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "Groeneveld-BEKASkoða nánar →",
+      "href": "./vorumerki/um-beka"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/uSZZtTEijnsMn8w4zniHIvlr3bk.svg",
+      "alt": "Groenevald-BEKA logo",
+      "width": 264,
+      "height": 288,
+      "role": "content",
+      "local": "/images/home/31-8e2b1073.svg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Groeneveld-BEKA"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "LillesethSkoða nánar →",
+      "href": "./vorumerki/lilleseth-kjetting"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/231O6hSGLKosMZhHpdmZRO0kw6g.png",
+      "alt": "Lilleseth Kjetting",
+      "width": 220,
+      "height": 150,
+      "role": "content",
+      "local": "/images/home/32-4354a44e.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/home.desktop.jpg",
+    "mobile": "docs/reference/home.mobile.jpg"
+  }
+}

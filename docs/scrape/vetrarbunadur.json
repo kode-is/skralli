@@ -1,0 +1,433 @@
+{
+  "route": "/vetrarbunadur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/uPMrk2CQY8uKwpfxMMrXc3mtn4Q.jpeg",
+      "alt": "",
+      "width": 384,
+      "height": 512,
+      "role": "content",
+      "local": "/images/thjonusta/08-e6009210.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Snjókeðjur, snjóplógar og vængjaskóflur í miklu úrvali"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "link",
+      "text": "Allt í íslenska veturinnSkralli býður upp á breiða línu af vetrarbúnaði svo ökumaðurinn komist í gegnum veturinn - Hvort sem þú ferðist um ótroðnar slóðir eða sért ryðja veginn fyrir aðra.SnjókeðjurLilleseth er norskt rótgróið fjölskyldufyrirtæki stofnað 1947 og sérhæfir sig í snjókeðjum fyrir bíla og tæki af öllum gerðum. Allar keðjur eru sérsniðnar og einfaldar í uppsetningu og eru því sérstaklega þægilegar í notkun.VinnuvélarVörubílarDráttarvélarGerðir broddaFlatkantur / fírkantU-broddarGaddarAukahlutirVið bjóðum upp á breitt úrval af varahlutum og verkfærum fyrir snjókeðjur.KeðjuefniViðgerðahlekkirStrekkjararVerkfæri / keðjutangirSnjóplógarGigant býður upp á tvær týpur af fjölplógum, HSV og LSV. Sammerkt með þeim báðum er útsláttarbúnaður á skerablaði er úr HARDOX ásamt því að allir boltar og öxlar eru úr ryðfríu stáli. LSV er fyrir minni vélar, nettur og þægilegur og hægt að fá með sama búnaði og stærri HSV plógarnir.HSV kemur með öllu því sem verktakinn óskar sér og hentar til dæmis vel á stóra traktóra og milli og meðalstórar hjólaskóflur.LSV fjölplógurLSV er 91,5 cm á hæð og kemur í breiddunum 200cm, 250cm og 280cm. Eru með veltibúnaði og 30 gráðu vinnuvinkil á vængjum. 3ja punkta og SMS festing hluti af staðalbúnaði.Fáanlegur aukabúnaður:Volvo BM krókarL-30 krókar (minni Volvo BM krókar)2 x blikkljós2x LED ljós á hornum2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagiSuperswing - Hægt sé að stilla plóg sem skekkjanlegt beint blaðStjórnbox fyrir superswing2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)Snjóplógur HSVHSV er 122 cm á hæð og kemur í breiddunum 280cm, 320cm og 360cm. Þessir plógar eru með veltibúnað og 35 gráðu vinnuvinkil á vængjum. HSV er gerður til þess að standast væntingar jafnvel kröfuhörðustu verktaka.Staðalbúnaður:3ja punkta festingSuperswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað2x LED ljós á hornumFáanlegur aukabúnaður:Stjórnbox fyrir superswingVolvo BM krókarL-30 krókar (minni Volvo BM krókar)2 x blikkljós2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
+      "href": "./"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Allt í íslenska veturinn"
+    },
+    {
+      "type": "text",
+      "text": "Skralli býður upp á breiða línu af vetrarbúnaði svo ökumaðurinn komist í gegnum veturinn - Hvort sem þú ferðist um ótroðnar slóðir eða sért ryðja veginn fyrir aðra."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Snjókeðjur"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth er norskt rótgróið fjölskyldufyrirtæki stofnað 1947 og sérhæfir sig í snjókeðjum fyrir bíla og tæki af öllum gerðum. Allar keðjur eru sérsniðnar og einfaldar í uppsetningu og eru því sérstaklega þægilegar í notkun."
+    },
+    {
+      "type": "text",
+      "text": "Vinnuvélar"
+    },
+    {
+      "type": "text",
+      "text": "Vörubílar"
+    },
+    {
+      "type": "text",
+      "text": "Dráttarvélar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Gerðir brodda"
+    },
+    {
+      "type": "text",
+      "text": "Flatkantur / fírkant"
+    },
+    {
+      "type": "text",
+      "text": "U-broddar"
+    },
+    {
+      "type": "text",
+      "text": "Gaddar"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Aukahlutir"
+    },
+    {
+      "type": "text",
+      "text": "Við bjóðum upp á breitt úrval af varahlutum og verkfærum fyrir snjókeðjur."
+    },
+    {
+      "type": "text",
+      "text": "Keðjuefni"
+    },
+    {
+      "type": "text",
+      "text": "Viðgerðahlekkir"
+    },
+    {
+      "type": "text",
+      "text": "Strekkjarar"
+    },
+    {
+      "type": "text",
+      "text": "Verkfæri / keðjutangir"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Snjóplógar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aaRGxQz0guAHZkCooGUHBRdNogM.webp",
+      "alt": "",
+      "width": 1440,
+      "height": 681,
+      "role": "content",
+      "local": "/images/vetrarbunadur/02-c1a583fc.webp"
+    },
+    {
+      "type": "text",
+      "text": "Gigant býður upp á tvær týpur af fjölplógum, HSV og LSV. Sammerkt með þeim báðum er útsláttarbúnaður á skerablaði er úr HARDOX ásamt því að allir boltar og öxlar eru úr ryðfríu stáli. LSV er fyrir minni vélar, nettur og þægilegur og hægt að fá með sama búnaði og stærri HSV plógarnir."
+    },
+    {
+      "type": "text",
+      "text": "HSV kemur með öllu því sem verktakinn óskar sér og hentar til dæmis vel á stóra traktóra og milli og meðalstórar hjólaskóflur."
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "LSV fjölplógur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/PpA5FPnEibaLjr2VE0qQwLMkk.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/vetrarbunadur/03-3c6d3d08.jpg"
+    },
+    {
+      "type": "text",
+      "text": "LSV er 91,5 cm á hæð og kemur í breiddunum 200cm, 250cm og 280cm. Eru með veltibúnaði og 30 gráðu vinnuvinkil á vængjum. 3ja punkta og SMS festing hluti af staðalbúnaði."
+    },
+    {
+      "type": "text",
+      "text": "Fáanlegur aukabúnaður:"
+    },
+    {
+      "type": "text",
+      "text": "Volvo BM krókar"
+    },
+    {
+      "type": "text",
+      "text": "L-30 krókar (minni Volvo BM krókar)"
+    },
+    {
+      "type": "text",
+      "text": "2 x blikkljós"
+    },
+    {
+      "type": "text",
+      "text": "2x LED ljós á hornum"
+    },
+    {
+      "type": "text",
+      "text": "2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi"
+    },
+    {
+      "type": "text",
+      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað"
+    },
+    {
+      "type": "text",
+      "text": "Stjórnbox fyrir superswing"
+    },
+    {
+      "type": "text",
+      "text": "2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Snjóplógur HSV"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/5mGjg2aEeQWP0VnHhsxIEAfHPWE.webp",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/vetrarbunadur/04-b60cdacb.webp"
+    },
+    {
+      "type": "text",
+      "text": "HSV er 122 cm á hæð og kemur í breiddunum 280cm, 320cm og 360cm. Þessir plógar eru með veltibúnað og 35 gráðu vinnuvinkil á vængjum. HSV er gerður til þess að standast væntingar jafnvel kröfuhörðustu verktaka."
+    },
+    {
+      "type": "text",
+      "text": "Staðalbúnaður:"
+    },
+    {
+      "type": "text",
+      "text": "3ja punkta festing"
+    },
+    {
+      "type": "text",
+      "text": "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað"
+    },
+    {
+      "type": "text",
+      "text": "2x LED ljós á hornum"
+    },
+    {
+      "type": "text",
+      "text": "Fáanlegur aukabúnaður:"
+    },
+    {
+      "type": "text",
+      "text": "Stjórnbox fyrir superswing"
+    },
+    {
+      "type": "text",
+      "text": "Volvo BM krókar"
+    },
+    {
+      "type": "text",
+      "text": "L-30 krókar (minni Volvo BM krókar)"
+    },
+    {
+      "type": "text",
+      "text": "2 x blikkljós"
+    },
+    {
+      "type": "text",
+      "text": "2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/vetrarbunadur.desktop.jpg",
+    "mobile": "docs/reference/vetrarbunadur.mobile.jpg"
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "route": "/smurkerfi",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/qEria6r6zEgvoCPRd4lWIdizOg.jpeg",
+      "alt": "Smurkerfi",
+      "width": 512,
+      "height": 473,
+      "role": "content",
+      "local": "/images/home/22-d2d92984.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "BEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/WqOe7CLwVt7SNZdhjis1sjiOIiA.png",
+      "alt": "",
+      "width": 1200,
+      "height": 799,
+      "role": "content",
+      "local": "/images/smurkerfi/02-0914980d.png"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Sjálfvirk smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Heildstæð lausn fyrir vinnuvélar, landbúnað, stóriðju og matvælaframleiðslu. Sjálfvirk smurkerfi sjá til þess að viðhalda réttu magni af feiti í öllum smurpunktum á meðan vélin er í gangi og því engar áhyggjur af því að vera ekki að smyrja nógu oft."
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Sjálfvirk smurkerfi minnka viðhald og lengja líftíma vélarinnar."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/VGc7uL8BWIY6kXp81TcDzBiE.jpeg",
+      "alt": "Dælur",
+      "width": 383,
+      "height": 511,
+      "role": "content",
+      "local": "/images/smurkerfi/03-c89d7570.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Dælur"
+    },
+    {
+      "type": "text",
+      "text": "Beka og Groeneveld smurdælur fyrir öll notkunarsvið."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/fc5wv4Xcqy0SVwzGUl2lqzR7KiE.jpeg",
+      "alt": "Koppafeiti",
+      "width": 383,
+      "height": 511,
+      "role": "content",
+      "local": "/images/smurkerfi/04-e1cf3aba.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Koppafeiti"
+    },
+    {
+      "type": "text",
+      "text": "MAX-2-LUBE (NLG2) með einstaklega mikla viðloðun og breitt hitasvið."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/7d6HnxwN2RKz7eTkJq2dy7qQ7x4.png",
+      "alt": "Fleygafeiti",
+      "width": 383,
+      "height": 383,
+      "role": "content",
+      "local": "/images/smurkerfi/05-56c71eb7.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fleygafeiti"
+    },
+    {
+      "type": "text",
+      "text": "Gæða feiti fyrir flestar gerðir fleyga"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6ss1QDlFK7NE1r2W7Vvm7D8H4.png",
+      "alt": "",
+      "width": 383,
+      "height": 383,
+      "role": "content",
+      "local": "/images/smurkerfi/06-77b497b7.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BEKA deiliblokkir"
+    },
+    {
+      "type": "text",
+      "text": "Smurblokkir sem einfalt er að sníða að magni og fjölda smurpunkta fyrir hvert tæki."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/1zi1xNABQvfDT7WZZHMlGtK9g.png",
+      "alt": "Groeneveld skammtarar",
+      "width": 383,
+      "height": 255,
+      "role": "content",
+      "local": "/images/smurkerfi/07-771eb8cc.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Groeneveld skammtarar"
+    },
+    {
+      "type": "text",
+      "text": "Sérsniðnir skammtarar að þörfum hvers tækis."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ykv8X9hizYyyIga4fy5akkW4K4o.png",
+      "alt": "Fittings",
+      "width": 383,
+      "height": 383,
+      "role": "content",
+      "local": "/images/smurkerfi/08-ea5c5980.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fittings"
+    },
+    {
+      "type": "text",
+      "text": "Breiðasta lagerúrval landsins af fittings fyrir 4mm, 5mm, 6mm og 8mm lagnir og enda."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/VHvdvoWg0jUweLaiKx6ZXzLeM.png",
+      "alt": "",
+      "width": 383,
+      "height": 383,
+      "role": "content",
+      "local": "/images/smurkerfi/09-a521d77e.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fylltar slöngur"
+    },
+    {
+      "type": "text",
+      "text": "Fylltar slöngur úr nylon eða gúmmí. Stærðir frá 4, 5, 6 eða 8 mm."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/c0EZxtMucSR6UOSZk2TBnWsqr4.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "role": "background",
+      "local": "/images/home/20-463dd036.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Spurt & Svarað"
+    },
+    {
+      "type": "text",
+      "text": "Hvaða feiti á að nota í smurkerfi?"
+    },
+    {
+      "type": "text",
+      "text": "Skralli mælir með MAX-2-LUBE (NLG2) koppafeiti fyrir flest notkunarsvið - í smurkerfi sem og smursprautur.\nFyrir fleyga mælum við með MAX-2-LUBE fleygafeiti."
+    },
+    {
+      "type": "text",
+      "text": "Þjónustið þið smurkerfi frá öðrum framleiðendum?"
+    },
+    {
+      "type": "text",
+      "text": "Við erum sérfræðingar í smurkerfum og veitum fyrsta flokks þjónustu og ráðgjöf alveg óháð framleiðanda. Við eigum stórt úrval af varahlutum á lager fyrir flestar gerðir smurkerfa en sérhæfum okkur í Groeneveld-BEKA."
+    },
+    {
+      "type": "text",
+      "text": "Má nota sömu feiti á mismunandi kerfi (Beka, Groeneveld eða Lincoln)?"
+    },
+    {
+      "type": "text",
+      "text": "Já! MAX-2-LUBE er koppafeiti með einstaklega mikla viðloðun - sem er nákvæmlega það sem smurkerfi vilja. Hana má nota í öll smurkerfi alveg óháð framleiðanda."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XCR27SzcCiazxqVGJawAXAawIQ.jpeg",
+      "alt": "Kitchen installation",
+      "width": 1024,
+      "height": 1365,
+      "role": "content",
+      "local": "/images/smurkerfi/11-398b7a7e.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/43iFlcJ5Czi0AC52cidSOQjerA.jpg",
+      "alt": "Bathroom renovation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/12-ea960e01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/J5NDVLuF1SxIXfUlr9ebyYZKZU.jpg",
+      "alt": "Plumbing",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/13-ff6a4cca.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/bddJqJeRh6Xv1YynU5zEHGyswtc.jpg",
+      "alt": "Skralli og grafa",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/14-2234de63.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NFbq4RES5sue5eT1Z7itImqvA.jpg",
+      "alt": "Kitchen remodeling",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/15-a810ffe2.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/wLDqgZ7VOEvLmwQkKwQOvaOdw.jpg",
+      "alt": "Shower installation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/16-4447d960.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XCR27SzcCiazxqVGJawAXAawIQ.jpeg",
+      "alt": "Kitchen installation",
+      "width": 1024,
+      "height": 1365,
+      "role": "content",
+      "local": "/images/smurkerfi/11-398b7a7e.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/43iFlcJ5Czi0AC52cidSOQjerA.jpg",
+      "alt": "Bathroom renovation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/12-ea960e01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/J5NDVLuF1SxIXfUlr9ebyYZKZU.jpg",
+      "alt": "Plumbing",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/13-ff6a4cca.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/bddJqJeRh6Xv1YynU5zEHGyswtc.jpg",
+      "alt": "Skralli og grafa",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/14-2234de63.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NFbq4RES5sue5eT1Z7itImqvA.jpg",
+      "alt": "Kitchen remodeling",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/15-a810ffe2.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/wLDqgZ7VOEvLmwQkKwQOvaOdw.jpg",
+      "alt": "Shower installation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/16-4447d960.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XCR27SzcCiazxqVGJawAXAawIQ.jpeg",
+      "alt": "Kitchen installation",
+      "width": 1024,
+      "height": 1365,
+      "role": "content",
+      "local": "/images/smurkerfi/11-398b7a7e.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/43iFlcJ5Czi0AC52cidSOQjerA.jpg",
+      "alt": "Bathroom renovation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/12-ea960e01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/J5NDVLuF1SxIXfUlr9ebyYZKZU.jpg",
+      "alt": "Plumbing",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/13-ff6a4cca.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/bddJqJeRh6Xv1YynU5zEHGyswtc.jpg",
+      "alt": "Skralli og grafa",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/14-2234de63.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NFbq4RES5sue5eT1Z7itImqvA.jpg",
+      "alt": "Kitchen remodeling",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/15-a810ffe2.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/wLDqgZ7VOEvLmwQkKwQOvaOdw.jpg",
+      "alt": "Shower installation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/16-4447d960.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XCR27SzcCiazxqVGJawAXAawIQ.jpeg",
+      "alt": "Kitchen installation",
+      "width": 1024,
+      "height": 1365,
+      "role": "content",
+      "local": "/images/smurkerfi/11-398b7a7e.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/43iFlcJ5Czi0AC52cidSOQjerA.jpg",
+      "alt": "Bathroom renovation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/12-ea960e01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/J5NDVLuF1SxIXfUlr9ebyYZKZU.jpg",
+      "alt": "Plumbing",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/13-ff6a4cca.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/bddJqJeRh6Xv1YynU5zEHGyswtc.jpg",
+      "alt": "Skralli og grafa",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/14-2234de63.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NFbq4RES5sue5eT1Z7itImqvA.jpg",
+      "alt": "Kitchen remodeling",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/15-a810ffe2.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/wLDqgZ7VOEvLmwQkKwQOvaOdw.jpg",
+      "alt": "Shower installation",
+      "width": 1024,
+      "height": 768,
+      "role": "content",
+      "local": "/images/smurkerfi/16-4447d960.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+      "alt": "Back Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/35-8ea812bc.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+      "alt": "Next Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/36-192ac70b.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Vel útbúnir þjónustubílar"
+    },
+    {
+      "type": "text",
+      "text": "Við mætum, bilanagreinum og gerum við"
+    },
+    {
+      "type": "text",
+      "text": "- hvar sem er."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ZrAFvnNOyAFTc0nqA0lqUBR8M.jpeg",
+      "alt": "",
+      "width": 569,
+      "height": 759,
+      "role": "content",
+      "local": "/images/smurkerfi/37-f322c560.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Viðgerðatöskur"
+    },
+    {
+      "type": "text",
+      "text": "Viðgerðatöskur sérsniðnar að þínum þörfum. Allt sem þú þarft til þess að sinna viðhaldi á þínu smurkerfi. Þegar eitthvað klárast hefur þú einfaldlega samband og við fyllum á."
+    },
+    {
+      "type": "link",
+      "text": "Koppafeiti í áskriftVið sendum þér koppafeiti reglulega eða komum sjálfir og fyllum á - allt eftir þínum óskum.",
+      "href": null
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LIm3dGdyz5C2srJVaZKBJMVHOPc.jpeg",
+      "alt": "",
+      "width": 570,
+      "height": 759,
+      "role": "content",
+      "local": "/images/smurkerfi/38-131a47c4.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Koppafeiti í áskrift"
+    },
+    {
+      "type": "text",
+      "text": "Við sendum þér koppafeiti reglulega eða komum sjálfir og fyllum á - allt eftir þínum óskum."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/smurkerfi.desktop.jpg",
+    "mobile": "docs/reference/smurkerfi.mobile.jpg"
+  }
+}

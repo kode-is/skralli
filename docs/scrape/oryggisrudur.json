@@ -1,0 +1,357 @@
+{
+  "route": "/oryggisrudur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/dsvstJS7dwPEtao7HZD7iWPhU4.jpg",
+      "alt": "Quick fixes",
+      "width": 512,
+      "height": 384,
+      "role": "content",
+      "local": "/images/home/24-a996c2c4.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/0wQN06FOfJKZVtV42Ztvow3mY0E.jpg",
+      "alt": "Hammerglass hljóðvistarveggir",
+      "width": 1199,
+      "height": 775,
+      "role": "content",
+      "local": "/images/oryggisrudur/02-d5004001.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hammerglass er málið!"
+    },
+    {
+      "type": "text",
+      "text": "Skralli býður íslenskum sveitarfélögum, verktökum og fyrirtækjum óbrjótanlegt öryggi í samgöngumannvirkjum, ökutækjum og byggingum. Með Hammerglass færðu öruggar og endingargóðar rúður sem henta við íslenskar aðstæður og veita hámarks vernd gegn utanaðkomandi hættum."
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/c0EZxtMucSR6UOSZk2TBnWsqr4.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "role": "background",
+      "local": "/images/home/20-463dd036.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Styrkleikar Hammerglass"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "300 sinnum sterkara en gler"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Alveg gegnsætt"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Viðhaldslítið"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "UV- og rispuþolið"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Brennur ekki, sjálfslökkvandi"
+    },
+    {
+      "type": "link",
+      "text": "Taktu skrefið",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Taktu skrefið"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Óbrjótanlegt. Eldhamlandi. Hljóðdempandi."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/Acw6iWiMRuroZlJHlip1LTr8UU.jpg",
+      "alt": "Dælur",
+      "width": 383,
+      "height": 247,
+      "role": "content",
+      "local": "/images/oryggisrudur/04-26b92505.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vinnuvélar"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass tryggir öryggi ökumannsins á vinnusvæðum þar sem hætta er á grjóthruni eða þungum hlutum í lausu lofti."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/h5hoOcGPfYQq5MOlLtPkltMAJ8.jpg",
+      "alt": "Hammerglass verslanir",
+      "width": 383,
+      "height": 247,
+      "role": "content",
+      "local": "/images/oryggisrudur/05-d1d8270c.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fasteignir/verslanir"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass gluggarúður fyrir verslanir og almenningsstaði þar sem hætta er á innbrotum eða skemmdarverkum."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YyPZfqBlZp9XF5RGJsXFXS8U0TY.webp",
+      "alt": "Fleygafeiti",
+      "width": 383,
+      "height": 246,
+      "role": "content",
+      "local": "/images/oryggisrudur/06-b051e3ca.webp"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Innviðir"
+    },
+    {
+      "type": "text",
+      "text": "Rúður í hljóðmúra, skjólveggi og strætóskýli sem lágmarka viðhald og hámarka öryggi."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/oryggisrudur.desktop.jpg",
+    "mobile": "docs/reference/oryggisrudur.mobile.jpg"
+  }
+}

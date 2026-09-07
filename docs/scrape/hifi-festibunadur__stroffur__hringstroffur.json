@@ -1,0 +1,1049 @@
+{
+  "route": "/hifi-festibunadur/stroffur/hringstroffur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/n4AqC1i7xI6CRQAshMqOmpPXE.jpg",
+      "alt": "",
+      "width": 1439,
+      "height": 507,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__stroffur/02-07f1d253.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Hringstroffur"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "../../"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- og festibúnaður"
+    },
+    {
+      "type": "link",
+      "text": "Hífi- og festibúnaður",
+      "href": "../../hifi-festibunadur"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Stroffur"
+    },
+    {
+      "type": "link",
+      "text": "Stroffur",
+      "href": "../stroffur"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffur"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hringstroffur"
+    },
+    {
+      "type": "text",
+      "text": "Tveggja laga hringstroffur. Stroffurnar eru með öryggisstuðul upp á 7:1. Lengdin er gefin upp í lyftihæð, þannig að 2 metra hringstroffa er 4 metrar að ummáli."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Þyngdarþol í boði"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Lengd í boði"
+    },
+    {
+      "type": "text",
+      "text": "Vörunr."
+    },
+    {
+      "type": "text",
+      "text": "Vara"
+    },
+    {
+      "type": "text",
+      "text": "Lyftigeta"
+    },
+    {
+      "type": "text",
+      "text": "Lyftihæð"
+    },
+    {
+      "type": "text",
+      "text": "820105"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "0.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820110"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1 meter"
+    },
+    {
+      "type": "text",
+      "text": "820115"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820120"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820125"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2.5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820130"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820140"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820150"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820160"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa fjólublá"
+    },
+    {
+      "type": "text",
+      "text": "1 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820205"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "0.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820210"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1 meter"
+    },
+    {
+      "type": "text",
+      "text": "8202100"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "10 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820215"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820220"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820225"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2.5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820230"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820240"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820250"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820260"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820280"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa græn"
+    },
+    {
+      "type": "text",
+      "text": "2 tonn"
+    },
+    {
+      "type": "text",
+      "text": "8 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820310"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1 meter"
+    },
+    {
+      "type": "text",
+      "text": "820315"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820320"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820325"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2.5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820330"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820340"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820350"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820360"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa gul"
+    },
+    {
+      "type": "text",
+      "text": "3 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820515"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "1.5 meter"
+    },
+    {
+      "type": "text",
+      "text": "820520"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820525"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2.5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820530"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820540"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820550"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820560"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa rauð"
+    },
+    {
+      "type": "text",
+      "text": "5 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820660"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa brún"
+    },
+    {
+      "type": "text",
+      "text": "6 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "8208100"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "10 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820820"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820830"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820840"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820850"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820860"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "text",
+      "text": "820880"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa blá"
+    },
+    {
+      "type": "text",
+      "text": "8 tonn"
+    },
+    {
+      "type": "text",
+      "text": "8 metrar"
+    },
+    {
+      "type": "text",
+      "text": "821020"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa appelsínugul"
+    },
+    {
+      "type": "text",
+      "text": "10 tonn"
+    },
+    {
+      "type": "text",
+      "text": "2 metrar"
+    },
+    {
+      "type": "text",
+      "text": "821030"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa appelsínugul"
+    },
+    {
+      "type": "text",
+      "text": "10 tonn"
+    },
+    {
+      "type": "text",
+      "text": "3 metrar"
+    },
+    {
+      "type": "text",
+      "text": "821040"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa appelsínugul"
+    },
+    {
+      "type": "text",
+      "text": "10 tonn"
+    },
+    {
+      "type": "text",
+      "text": "4 metrar"
+    },
+    {
+      "type": "text",
+      "text": "821050"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa appelsínugul"
+    },
+    {
+      "type": "text",
+      "text": "10 tonn"
+    },
+    {
+      "type": "text",
+      "text": "5 metrar"
+    },
+    {
+      "type": "text",
+      "text": "821060"
+    },
+    {
+      "type": "text",
+      "text": "Hringstroffa appelsínugul"
+    },
+    {
+      "type": "text",
+      "text": "10 tonn"
+    },
+    {
+      "type": "text",
+      "text": "6 metrar"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "../../hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "../../"
+    },
+    {
+      "text": "Heim",
+      "href": "../../"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "../../thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "../../um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "../../hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa",
+    "#e0e0e0"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/hifi-festibunadur__stroffur__hringstroffur.desktop.jpg",
+    "mobile": "docs/reference/hifi-festibunadur__stroffur__hringstroffur.mobile.jpg"
+  }
+}

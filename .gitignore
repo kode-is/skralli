@@ -48,3 +48,4 @@ next-env.d.ts
 
 # scratch (not committed)
 .superpowers/
+scrape.log

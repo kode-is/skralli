@@ -1,0 +1,517 @@
+{
+  "route": "/um-okkur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/8NvFyueXdNo0Kz1IgEwVtOJ12E.png",
+      "alt": "UM OKKur",
+      "width": 1440,
+      "height": 642,
+      "role": "content",
+      "local": "/images/um-okkur/01-143b289f.png"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Við trúum á gæði og fagmennsku."
+    },
+    {
+      "type": "text",
+      "text": "Við leggjum okkur fram við að veita fyrsta flokks þjónustu og skapa jákvæða upplifun fyrir viðskiptavini okkar. Sérhver lausn er sérsniðin til að mæta þínum þörfum og veita áreiðanlegar niðurstöður. Samheldni og fagmennska eru lykilatriði í okkar starfi."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/k9ogIITzpHhumW6YwYDASzdDHM.jpeg",
+      "alt": "Aðstaða",
+      "width": 270,
+      "height": 360,
+      "role": "content",
+      "local": "/images/um-okkur/02-c7059e7f.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/JNcWxTpH8H7QRlHQ7XGSzZNlUa0.jpeg",
+      "alt": "Aðstaða",
+      "width": 270,
+      "height": 360,
+      "role": "content",
+      "local": "/images/um-okkur/03-9b3d1db5.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/I9d5AmtvNGR0O1Isnp7Dj47Ztu0.jpeg",
+      "alt": "Interior work",
+      "width": 514,
+      "height": 686,
+      "role": "content",
+      "local": "/images/um-okkur/04-ab45b0b4.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/eJKkmK56cUwUc3ppp11cRHvOvTY.jpg",
+      "alt": "Bedroom work",
+      "width": 228,
+      "height": 407,
+      "role": "content",
+      "local": "/images/um-okkur/05-baa00a71.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Markmið okkar."
+    },
+    {
+      "type": "text",
+      "text": "Okkar markmið er að skapa traust og ánægju viðskiptavina. Við einsetjum okkur að fylgja þér alla leið og tryggja að þú fáir það sem þú þarfnast til að ná sem mestum árangri."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Samvinna"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "483"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Ísett smurkefi"
+    },
+    {
+      "type": "text",
+      "text": "133"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Innflutt tæki"
+    },
+    {
+      "type": "text",
+      "text": "4"
+    },
+    {
+      "type": "text",
+      "text": "klst"
+    },
+    {
+      "type": "text",
+      "text": "Fyrirspurnum svarað innan"
+    },
+    {
+      "type": "text",
+      "text": "4"
+    },
+    {
+      "type": "text",
+      "text": "+"
+    },
+    {
+      "type": "text",
+      "text": "Vörumerki"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Teymið okkar"
+    },
+    {
+      "type": "text",
+      "text": "Hjá okkur starfar öflugt teymi fagfólks sem er tilbúið að takast á við hvers konar áskoranir. Við leggjum metnað okkar í að tryggja hámarks gæði og þjónustu."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/7wfvaOHfGguDFsmRRXUz5vA97b4.jpg",
+      "alt": "Alex Peterson",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/home/27-d812c419.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Framkvæmdastjóri"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vilmundur Theodórsson"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "villi@skralli.is"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "779 1886"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/x4uzeN7UMeol8XbItqNf2TTeQnI.jpg",
+      "alt": "Örvar S. Haraldsson",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/home/28-23d4abab.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Sölustjóri"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Örvar S. Haraldsson"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "orvar@skralli.is"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "862 4046"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q4AjdmMZ05wdyytlKNsZQpMXpk.jpg",
+      "alt": "Hlynur Ísak",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/home/29-ad270c68.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Lagerstjóri"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Þórir Ágúst Þórðarson"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "thorir@skralli.is"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "862 4044"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/HIn3eEpc2lnJtNTWWsjTtnBz0.jpg",
+      "alt": "",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/um-okkur/09-1fa8df66.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Þjónustufulltrúi"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Adam Orri Guðmundsson"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/I4rorspMwYQMvY7xuIoRHRL2dv4.jpg",
+      "alt": "",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/um-okkur/10-99c4fe50.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Markaðssvið"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hlynur Ísak Vilmundarson"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "hlynur@skralli.is"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "776 4836"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/wyqc6ua0XdMwtBkpO8UPLgJv9Mc.jpg",
+      "alt": "",
+      "width": 393,
+      "height": 261,
+      "role": "content",
+      "local": "/images/um-okkur/11-1411f97b.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Verkstæði"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Steinar Ingi"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/N6K8cYe4lIqOBku5kimxwoiZTE8.png",
+      "alt": "",
+      "width": 393,
+      "height": 409,
+      "role": "content",
+      "local": "/images/um-okkur/12-25d30121.png"
+    },
+    {
+      "type": "heading",
+      "level": 6,
+      "text": "Verkstæði"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Kormákur"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/um-okkur.desktop.jpg",
+    "mobile": "docs/reference/um-okkur.mobile.jpg"
+  }
+}

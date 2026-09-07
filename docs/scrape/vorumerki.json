@@ -1,0 +1,357 @@
+{
+  "route": "/vorumerki",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/1Ptru14JfwQjxzPOIuvvTnUgM.jpg",
+      "alt": "Discover",
+      "width": 1440,
+      "height": 960,
+      "role": "content",
+      "local": "/images/vorumerki/01-a24654d1.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Vörumerki"
+    },
+    {
+      "type": "link",
+      "text": "BMairSkoða nánar →",
+      "href": "./vorumerki/bmair"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NIfpoYJRoFFHg0bjD6mGaSR83pc.png",
+      "alt": "",
+      "width": 386,
+      "height": 272,
+      "role": "content",
+      "local": "/images/vorumerki/02-949edfd3.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "HammerglassSkoða nánar →",
+      "href": "./vorumerki/hammerglass"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hBfaFUARsQKBTXqj99bacRRKo.png",
+      "alt": "Hammerglass",
+      "width": 386,
+      "height": 300,
+      "role": "content",
+      "local": "/images/home/30-51b0fe1c.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "Groeneveld-BEKASkoða nánar →",
+      "href": "./vorumerki/um-beka"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/uSZZtTEijnsMn8w4zniHIvlr3bk.svg",
+      "alt": "Groenevald-BEKA logo",
+      "width": 264,
+      "height": 288,
+      "role": "content",
+      "local": "/images/home/31-8e2b1073.svg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Groeneveld-BEKA"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "LillesethSkoða nánar →",
+      "href": "./vorumerki/lilleseth-kjetting"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/231O6hSGLKosMZhHpdmZRO0kw6g.png",
+      "alt": "Lilleseth Kjetting",
+      "width": 386,
+      "height": 264,
+      "role": "content",
+      "local": "/images/home/32-4354a44e.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "GigantSkoða nánar →",
+      "href": "./vorumerki/gigant"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ETon8kCnNceLx5tW7zdLj6ejT0.png",
+      "alt": "",
+      "width": 386,
+      "height": 386,
+      "role": "content",
+      "local": "/images/vorumerki/06-4fb3378a.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "link",
+      "text": "PebeSkoða nánar →",
+      "href": "./vorumerki/pebe"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/lpLc6CJGCUE0lApJvARzkMp4Cp0.png",
+      "alt": "",
+      "width": 386,
+      "height": 272,
+      "role": "content",
+      "local": "/images/vorumerki/07-e213d0ba.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Skoða nánar →"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#f0f4fa",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/vorumerki.desktop.jpg",
+    "mobile": "docs/reference/vorumerki.mobile.jpg"
+  }
+}

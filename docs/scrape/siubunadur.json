@@ -1,0 +1,458 @@
+{
+  "route": "/siubunadur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/GKqfNWoRSDmyPSCHZZ03b7aBM.png",
+      "alt": "",
+      "width": 512,
+      "height": 238,
+      "role": "content",
+      "local": "/images/home/21-212e4fb5.png"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Fyrir heilbrigt vinnuumhverfi"
+    },
+    {
+      "type": "text",
+      "text": "Lofthreinsitæki frá BMair tryggja hreint og heilnæmt andrúmsloft með því að fjarlægja úr loftinu ýmis skaðleg efni eins og ryk, frjókorn, myglugró, bakteríur og önnur mengandi efni. Við bjóðum einnig upp á margar tegundir filtera fyrir mismunandi þarfir, svo sem HEPA síur, kolsíur og aðrar sérhæfðar síur sem tryggja að loftgæðin séu alltaf í hámarki."
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/c0EZxtMucSR6UOSZk2TBnWsqr4.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "role": "background",
+      "local": "/images/home/20-463dd036.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hvar hentar BMair?"
+    },
+    {
+      "type": "text",
+      "text": "Sérhver grein hefur sín efni sem hafa áhrif á loftgæði og heilsu vélamanna."
+    },
+    {
+      "type": "text",
+      "text": "Við höfum búnaðinn sem hentar þínu umhverfi best, hvort sem það er:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Endurvinnsla"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Jarðgerð"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Flutningar og geymsla"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Niðurrif bygginga"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Námuvinnsla"
+    },
+    {
+      "type": "text",
+      "text": "Ert þú eða þitt starfsfólk að vinna í menguðu umhverfi?"
+    },
+    {
+      "type": "text",
+      "text": "Fáðu tilboð strax í dag og taktu stjórn á loftgæðunum."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/KY0WMOgyzjSednGPRsRLzy2R0bc.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/03-d4358019.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair Protector"
+    },
+    {
+      "type": "text",
+      "text": "Þetta er grunnpakkinn í nýja kerfi BMair. BMair Protector er sjálfstæð eining sem veitir framúrskarandi ryksíun. \n    ―    Virkar bæði lárétt og lóðrétt \n    ―    Fyrir mjög rykug vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/rtji797UJ38GpCTlnmY1I2r8pJY.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/04-1dfe8cc8.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair Protector Plus X"
+    },
+    {
+      "type": "text",
+      "text": "BMair Protector Plus X er fullbúið loftsíukerfi fyrir hámarks ryk- og gassíun.    \n―    Hentar til áfestingar á þak vinnuvélar   \n ―    Fyrir mjög krefjandi vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/zDpfCgtRTtEgpLoeYnc9BDzmvzg.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/05-15ce78e5.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair MAO-3C Cab Guard"
+    },
+    {
+      "type": "text",
+      "text": "Sérhannað fyrir vinnuumhverfi þar sem þörf er á sífellt snjallari kerfum. Í þessum fyrirferðalitla pakka er sérsniðin HEPA filter með óviðjafnanlega síunargetu.    \n―    Hentar til áfestingar á bretti eða hlífar vinnuvéla    \n―    Fyrir öll vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ReriwAELrQceWV8ISkUHiNBrCGU.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/06-258363ea.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair F20"
+    },
+    {
+      "type": "text",
+      "text": "Fyrirferðalítið en öflugt loftsíunartæki sem hentar á flestar gerðir vinnuvéla. Þrátt fyrir netta stærð er það mikil síunargeta HEPA filtersins sem einkennir BMair F20.    \n―    Hentar til áfestingar á bretti eða hlífar vinnuvéla\n―    Fyrir öll vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/u2nXbXe8MzduUfZVdy17CWVn2DA.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/07-7c6d1b13.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair F33"
+    },
+    {
+      "type": "text",
+      "text": "BMair F33 gjörbylti baráttunni gegn skaðlegu lofti fyrir stjórnendur vinnuvéla með sínu stálhúsi hannað fyrir mest krefjandi aðstæður.\n    ―    Hentar til áfestingar á bretti eða hlífar\n    ―    Fyrir mjög krefjandi vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/oFl40O4f68PTpoj5B087JTlNM.png",
+      "alt": "",
+      "width": 390,
+      "height": 418,
+      "role": "content",
+      "local": "/images/siubunadur/08-5d01b6c5.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "BMair F33-R"
+    },
+    {
+      "type": "text",
+      "text": "BMair F33-R gjörbylti baráttunni gegn skaðlegu lofti fyrir stjórnendur vinnuvéla með sínu straumlínulagaða stálhúsi hannað fyrir þök vinnuvéla. \n    ―    Hentar til áfestingar á þak vinnuvélar\n    ―    Fyrir mjög krefjandi vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/siubunadur.desktop.jpg",
+    "mobile": "docs/reference/siubunadur.mobile.jpg"
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "route": "/hifi-festibunadur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/kyY51GlMxsukAlfvxa7XP4yQNjI.png",
+      "alt": "Quick fixes",
+      "width": 418,
+      "height": 512,
+      "role": "content",
+      "local": "/images/home/25-cf51054e.png"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
+    },
+    {
+      "type": "text",
+      "text": "Forsíða"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Lyftu þungt með Lilleseth."
+    },
+    {
+      "type": "text",
+      "text": "Skralli er með gott úrval af viðurkenndum hífibúnaði frá Lilleseth Kjetting AS. Keðjur með Grade 80 og Grade 100 og margt fleira."
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/DRbNWK6QiYMmw5Y41Cn47zrKDs.webp",
+      "alt": "",
+      "width": 1200,
+      "height": 1372,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/02-bf8db647.webp"
+    },
+    {
+      "type": "link",
+      "text": "Hífikeðjur",
+      "href": "./hifi-festibunadur/hifikedjur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hxjUuguW7GjFv2DwRxWpWcUWLYA.jpg",
+      "alt": "",
+      "width": 386,
+      "height": 135,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/03-9bc801b8.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hífikeðjur"
+    },
+    {
+      "type": "link",
+      "text": "Bindikeðjur og strekkjarar",
+      "href": "./hifi-festibunadur/bindikedjur-strekkjarar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/N8wgoMtlzsyowFEHPsWFRdlxuM.png",
+      "alt": "",
+      "width": 386,
+      "height": 377,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/04-dd0c6f76.png"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Bindikeðjur og strekkjarar"
+    },
+    {
+      "type": "link",
+      "text": "Aukabúnaður til hífinga",
+      "href": "./hifi-festibunadur/aukabunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/KaDZWDftJywYXCxQBBqnFFc2so.jpg",
+      "alt": "",
+      "width": 386,
+      "height": 135,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/05-865d4540.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Aukabúnaður til hífinga"
+    },
+    {
+      "type": "link",
+      "text": "Stroffur",
+      "href": "./hifi-festibunadur/stroffur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q782GArqB4nxoNbcDiMaMnPNPLY.jpg",
+      "alt": "",
+      "width": 386,
+      "height": 135,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/06-1c399280.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Stroffur"
+    },
+    {
+      "type": "link",
+      "text": "Borðastrekkjarar",
+      "href": "./hifi-festibunadur/bordastrekkjarar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/iehFCWSizhZv7XOEU6XuEPKhI.jpg",
+      "alt": "",
+      "width": 386,
+      "height": 135,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/07-d5932744.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Borðastrekkjarar"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "",
+      "href": "./"
+    },
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/hifi-festibunadur.desktop.jpg",
+    "mobile": "docs/reference/hifi-festibunadur.mobile.jpg"
+  }
+}
