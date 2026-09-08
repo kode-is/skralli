@@ -11,20 +11,20 @@ export function Header() {
       <Container className="flex items-center justify-between py-6 md:py-8">
         <Link href="/" aria-label="Skralli - Forsíða">
           <Image
-            src="/logos/skralli-white-on-transparent.png"
+            src="/logos/skralli-header.png"
             alt="Skralli"
             width={537}
             height={146}
             priority
-            className="h-8 w-auto md:h-10"
+            className="h-8 w-auto md:h-12"
           />
         </Link>
 
         {/* Nav + CTA are grouped so the hover panel can anchor (right-0)
             to this group's right edge — i.e. the "Hafa samband" button's
             right edge — instead of centring under the "Þjónusta" word. */}
-        <div className="relative hidden items-center gap-8 md:flex">
-          <nav aria-label="Aðalvalmynd" className="flex items-center gap-8">
+        <div className="relative ml-auto hidden items-center gap-x-10 md:flex">
+          <nav aria-label="Aðalvalmynd" className="flex items-center gap-x-[30px]">
             {nav.map((item) =>
               item.text === "Þjónusta" ? (
                 <ServicesMenu key={item.href} href={item.href} text={item.text} />
@@ -32,7 +32,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-white/90 transition hover:text-white"
+                  className="text-base font-normal text-white transition hover:text-white/80"
                 >
                   {item.text}
                 </Link>
