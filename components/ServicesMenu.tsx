@@ -103,9 +103,8 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
       </button>
 
       {open ? (
-        <div
+        <nav
           id={panelId}
-          role="menu"
           aria-label={servicesMenu.heading}
           className="absolute right-0 top-full z-50 mt-6 w-[850px] rounded-[15px] bg-white px-10 pt-[30px] pb-10"
         >
@@ -116,12 +115,11 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
             </div>
             <div className="flex gap-x-9">
               {servicesMenu.columns.map((column, index) => (
-                <ul key={index} role="none" className="w-[200px] space-y-[11px]">
+                <ul key={index} className="w-[200px] space-y-[11px]">
                   {column.map((link) => (
-                    <li key={link.href} role="none">
+                    <li key={link.href}>
                       <Link
                         href={link.href}
-                        role="menuitem"
                         onClick={() => closeNow(false)}
                         className="block text-base font-normal text-[#444] transition hover:text-brand-dark"
                       >
@@ -133,7 +131,7 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
               ))}
             </div>
           </div>
-        </div>
+        </nav>
       ) : null}
     </div>
   );
