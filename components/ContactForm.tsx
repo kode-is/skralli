@@ -8,6 +8,12 @@ type ContactFormProps = {
   /** The live /hafa-samband form has a phone field; the home page one doesn't. */
   showPhone?: boolean;
   submitLabel: string;
+  /**
+   * Prefills the message field (e.g. a product inquiry card's "Fyrirspurn um
+   * <product>" default) — the visitor can still edit or clear it like any
+   * other field, it's just the textarea's initial value.
+   */
+  defaultMessage?: string;
 };
 
 const SUCCESS_TEXT =
@@ -23,11 +29,11 @@ const ERROR_MESSAGE_TO_FIELD: Record<string, "nafn" | "netfang" | "skilabod"> = 
   "Vinsamlegast skrifaðu skilaboð.": "skilabod",
 };
 
-export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps) {
+export function ContactForm({ showPhone = false, submitLabel, defaultMessage }: ContactFormProps) {
   const [nafn, setNafn] = useState("");
   const [netfang, setNetfang] = useState("");
   const [simi, setSimi] = useState("");
-  const [skilabod, setSkilabod] = useState("");
+  const [skilabod, setSkilabod] = useState(defaultMessage ?? "");
   const [website, setWebsite] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);

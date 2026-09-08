@@ -1,5 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import { FeatureCard } from "@/components/FeatureCard";
-import type { WagonBlock } from "@/lib/sturtuvagnar";
+import { wagons, type WagonBlock } from "@/lib/sturtuvagnar";
 import type { Img } from "@/lib/types";
 
 type Section = { heading: string; items: WagonBlock[] };
@@ -24,10 +26,11 @@ const HEADING_CLASSES = "text-center text-3xl font-bold text-neutral-900 md:text
  * renders — data-driven, not group-vs-product special-cased:
  *  - no items (both H2s on every product page) -> heading only
  *  - text items ("Um X" intro paragraphs on group pages) -> heading + copy
- *  - heading3/text pairs ("Tegundir í boði" on group pages) -> heading + an
- *    unlinked FeatureCard grid, pairing each H3+text with the next image
- *    from `images` in order (controller ruling: the live group pages don't
- *    link these cards to the product pages, so neither does this).
+ *  - heading3/text pairs ("Tegundir í boði" on group pages) -> heading + a
+ *    FeatureCard grid, pairing each H3+text with the next image from
+ *    `images` in order. Each card links to its matching Wagon's product
+ *    page (matched by title, which is exactly how scripts/gen-sturtuvagnar.mjs
+ *    ties a card to its product) — mockup 1 (Sturtuvagnar product pages).
  */
 export function WagonSections({ blocks, images }: { blocks: WagonBlock[]; images: Img[] }) {
   const sections = splitIntoSections(blocks);
@@ -72,14 +75,45 @@ export function WagonSections({ blocks, images }: { blocks: WagonBlock[]; images
           <div key={section.heading} className="mt-16 first:mt-0">
             <h2 className={HEADING_CLASSES}>{section.heading}</h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {cards.map((card) => (
-                <FeatureCard
-                  key={card.heading}
-                  heading={card.heading}
-                  text={card.text}
-                  image={card.image}
-                />
-              ))}
+              {cards.map((card) => {
+                const wagon = wagons.find((w) => w.title === card.heading);
+                if (!wagon) {
+                  // Defensive fallback only — scripts/gen-sturtuvagnar.mjs
+                  // fails the build if a card ever has no matching product.
+                  return (
+                    <FeatureCard
+                      key={card.heading}
+                      heading={card.heading}
+                      text={card.text}
+                      image={card.image}
+                    />
+                  );
+                }
+                return (
+                  <Link
+                    key={card.heading}
+                    href={`/sturtuvagnar/${wagon.slug}`}
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
+                  >
+                    <div
+                      className="relative w-full overflow-hidden"
+                      style={{ aspectRatio: `${card.image.width} / ${card.image.height}` }}
+                    >
+                      <Image
+                        src={card.image.src}
+                        alt={card.image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-neutral-900">{card.heading}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{card.text}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         );

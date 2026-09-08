@@ -6,8 +6,11 @@ import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { TrailerIcon } from "@/components/sturtuvagnar/TrailerIcon";
 import { WagonSections } from "@/components/sturtuvagnar/WagonSections";
+import { ProductIntro } from "@/components/sturtuvagnar/ProductIntro";
+import { FeatureTiles } from "@/components/sturtuvagnar/FeatureTiles";
+import { SiblingProducts } from "@/components/sturtuvagnar/SiblingProducts";
 import { pageMetadata } from "@/lib/seo";
-import { wagonGroups, wagons, type WagonGroup, type Wagon } from "@/lib/sturtuvagnar";
+import { wagonGroups, wagons, groupFeatures, type WagonGroup, type Wagon } from "@/lib/sturtuvagnar";
 
 type PageParams = { slug: string };
 
@@ -52,25 +55,70 @@ export default async function SturtuvagnarSlugPage({
   const record = findRecord(slug);
   if (!record) notFound();
 
+  if (isGroup(record)) {
+    return (
+      <main id="main">
+        <PageHero
+          image={record.heroImage}
+          title={record.title}
+          icon={<TrailerIcon className="h-6 w-6" />}
+        />
+        <div className="bg-white pt-8">
+          <Container>
+            <Breadcrumb
+              items={[{ text: "Sturtuvagnar", href: "/sturtuvagnar" }, { text: record.title }]}
+            />
+          </Container>
+        </div>
+        <section className="bg-white py-10 md:py-14">
+          <Container>
+            <WagonSections blocks={record.blocks} images={record.images} />
+          </Container>
+        </section>
+        <ContactCta />
+      </main>
+    );
+  }
+
+  // `record` is a product (Wagon) from here — mockup 1 (design/Main.tpl.html)
+  // fills these in with content already carried by lib/sturtuvagnar.ts
+  // (see scripts/gen-sturtuvagnar.mjs): the product's own blurb, its
+  // group's "Um X" paragraphs, sibling products, and (hjólagröfuvagnar
+  // only) the shared feature tiles.
+  const group = wagonGroups.find((candidate) => candidate.id === record.groupId);
+  if (!group) notFound();
+
+  // Mockup's hero subtitle is the first sentence of the blurb (e.g. "Fyrir
+  // allt frá 10 tonna gröfum") — text up to the first period, generically,
+  // not a hardcoded per-product string.
+  const heroSubtitle = record.blurb.split(".")[0].trim();
+
+  const siblings = group.products
+    .filter((productSlug) => productSlug !== record.slug)
+    .map((productSlug) => wagons.find((w) => w.slug === productSlug))
+    .filter((w): w is Wagon => Boolean(w));
+
+  const features = groupFeatures[group.id];
+
   return (
     <main id="main">
-      <PageHero
-        image={record.heroImage}
-        title={record.title}
-        icon={isGroup(record) ? <TrailerIcon className="h-6 w-6" /> : undefined}
-      />
+      <PageHero image={record.heroImage} title={record.title} subtitle={heroSubtitle} />
       <div className="bg-white pt-8">
         <Container>
           <Breadcrumb
-            items={[{ text: "Sturtuvagnar", href: "/sturtuvagnar" }, { text: record.title }]}
+            items={[
+              { text: "Sturtuvagnar", href: "/sturtuvagnar" },
+              { text: group.title, href: `/sturtuvagnar/${group.slug}` },
+              { text: record.title },
+            ]}
           />
         </Container>
       </div>
-      <section className="bg-white py-10 md:py-14">
-        <Container>
-          <WagonSections blocks={record.blocks} images={record.images} />
-        </Container>
-      </section>
+      <ProductIntro product={record} group={group} />
+      {features ? (
+        <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
+      ) : null}
+      <SiblingProducts group={group} siblings={siblings} />
       <ContactCta />
     </main>
   );
