@@ -1,9 +1,10 @@
 import { Container } from "@/components/Container";
 
 // docs/scrape/siubunadur.json blocks 14-18: five bare H3s with no body copy
-// or images in the scrape, shown as a row of plain white pill tiles
-// (docs/reference/siubunadur.desktop.jpg) rather than an equal-width grid —
-// they wrap naturally at their own content width.
+// or images in the scrape, shown as plain white pill tiles in a 3-column
+// grid (docs/reference/siubunadur.desktop.jpg — row 1 has 3 equal-width
+// tiles, the last 2 wrap into row 2 under columns 1-2), one column per row
+// on mobile (docs/reference/siubunadur.mobile.jpg).
 const SUITABILITY = [
   "Endurvinnsla",
   "Jarðgerð",
@@ -26,7 +27,7 @@ export function SuitabilitySection() {
           <strong className="font-semibold text-neutral-900">þínu umhverfi</strong> best, hvort
           sem það er:
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {SUITABILITY.map((item) => (
             <div key={item} className="rounded-2xl bg-white px-6 py-4 shadow-sm">
               <h3 className="text-base font-semibold text-neutral-900">{item}</h3>

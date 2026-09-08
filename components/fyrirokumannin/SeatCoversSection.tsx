@@ -43,8 +43,17 @@ export function SeatCoversSection() {
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Veldu tau eða leðurlíki.
           </p>
-          <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
-          <BulletList items={PRICE_LIST} className="mt-3" />
+          <div className="hidden md:block">
+            <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
+            <BulletList items={PRICE_LIST} className="mt-3" />
+          </div>
+          {/* docs/scrape/mobile-only.json's /fyrirokumannin entry: at phone
+              widths the live site replaces this per-vehicle price list (and
+              FloorMatsSection's) with one condensed line — verbatim text
+              from that scrape, not a design guess. */}
+          <p className="mt-6 text-sm font-semibold text-neutral-900 md:hidden">
+            Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
+          </p>
         </div>
         <Carousel images={CAROUSEL_IMAGES} prevArrow={PREV_ARROW} nextArrow={NEXT_ARROW} />
       </Container>

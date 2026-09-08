@@ -27,7 +27,14 @@ function PhoneIcon() {
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[600px] items-end overflow-hidden pb-16 pt-32 md:min-h-[760px] md:pb-24 md:pt-40">
+    // `flex flex-col justify-end` anchors the text block to the bottom of the
+    // tall background image (docs/reference/home.desktop.jpg), matching the
+    // live site. Container needs an explicit `w-full` here: as a flex item
+    // its own `mx-auto` margins would otherwise win the cross-axis alignment
+    // (CSS gives auto margins priority over stretch), shrinking it to its
+    // content's width and centering that narrow box instead of filling the
+    // section so the text lands at the standard left margin.
+    <section className="relative isolate flex min-h-[600px] flex-col justify-end overflow-hidden pb-16 pt-32 md:min-h-[760px] md:pb-24 md:pt-40">
       <Image
         src="/images/home/01-087a3e5c.png"
         alt=""
@@ -54,7 +61,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/65 via-black/15 to-black/40" aria-hidden="true" />
 
-      <Container>
+      <Container className="w-full">
         <h1 className="max-w-xl whitespace-pre-line text-4xl font-bold leading-[1.1] text-white md:text-6xl">
           {"Þinn\nsamstarfsaðili"}
         </h1>

@@ -87,7 +87,14 @@ function TableBlock({ table, headingId }: { table: HifiTable; headingId: string 
  * hringstroffur/flatstroffur's "Lengd í boði" — see HifiSections below). */
 function RangeBar({ range }: { range: { min: string; max: string } }) {
   return (
-    <div className="relative mb-1 h-4 w-full max-w-[220px]">
+    // Height is h-10 rather than a bar-height-only h-4: the min/max labels
+    // below the track are positioned absolutely (`top-4`), so they don't
+    // contribute to this box's own layout height — without a container tall
+    // enough to contain them too, a sibling immediately below (the "…í boði"
+    // spec table entries render this right above their table, e.g.
+    // bindikedjur-strekkjarar's "Leyfilegt vinnuálag (WLL)") overlapped the
+    // labels instead of sitting below them.
+    <div className="relative mb-1 h-10 w-full max-w-[220px]">
       <div className="absolute left-0 right-0 top-0 h-1 -translate-y-1/2 rounded-full bg-neutral-200" />
       <div className="absolute left-[15%] right-[15%] top-0 h-1 -translate-y-1/2 rounded-full bg-[#0b5c8a]" />
       <div className="absolute left-[15%] top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0b5c8a]" />
@@ -102,24 +109,75 @@ function RangeBar({ range }: { range: { min: string; max: string } }) {
   );
 }
 
+/** A plain "Grade 80"-style pill: a white rounded card with just the label. */
+function Pill({ entry }: { entry: Entry }) {
+  return (
+    <div className="rounded-2xl bg-white px-6 py-4 text-center shadow-sm">
+      <p className="font-semibold text-neutral-900">{entry.heading}</p>
+    </div>
+  );
+}
+
+/** A "… í boði" / "(WLL)" range entry: a centered label over its bar, with
+ * no card background — docs/reference/hifi-festibunadur__hifikedjur.desktop.jpg
+ * and .../bindikedjur-strekkjarar.desktop.jpg both show these sitting
+ * directly on the section background, unlike the plain `Pill`s beside them. */
+function RangeEntry({ entry }: { entry: Entry }) {
+  return (
+    <div className="text-center">
+      <p className="font-semibold text-neutral-900">{entry.heading}</p>
+      <div className="mx-auto mt-5 flex justify-center">
+        <RangeBar range={entry.range!} />
+      </div>
+    </div>
+  );
+}
+
 /** Bare H3s with no body text and no matching table (e.g. "Grade 80",
  * "Lengdir í boði"). The live site pairs some of these (every "… í boði"
  * heading and "Leyfilegt vinnuálag (WLL)") with an interactive min/max range
  * slider; `entry.range` (lib/hifi.ts, sourced from the live SSR HTML — see
- * scripts/gen-hifi.mjs's RANGE_LABELS) renders it via `RangeBar`. Entries
- * with no range (e.g. "Grade 80") render as a plain heading pill, unchanged. */
+ * scripts/gen-hifi.mjs's RANGE_LABELS) renders it via `RangeBar`. Both
+ * hifikedjur's and bindikedjur-strekkjarar's references lay a mix of plain
+ * pills and range entries out in two columns — plain pills (white cards) on
+ * the left, range bars (no card) on the right — collapsing to one column
+ * per group on mobile. A group of only one kind (e.g. flatstroffur's lone
+ * "Þyngdarþol í boði") just stacks by itself, unchanged. */
 function PillRow({ entries }: { entries: Entry[] }) {
+  const plain = entries.filter((entry) => !entry.range);
+  const ranged = entries.filter((entry) => entry.range);
+
+  if (plain.length && ranged.length) {
+    return (
+      <div className="grid gap-8 md:grid-cols-2 md:items-start">
+        <div className="mx-auto flex w-full max-w-md flex-col gap-3">
+          {plain.map((entry) => (
+            <Pill key={entry.heading} entry={entry} />
+          ))}
+        </div>
+        <div className="mx-auto flex w-full max-w-md flex-col gap-8">
+          {ranged.map((entry) => (
+            <RangeEntry key={entry.heading} entry={entry} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (ranged.length) {
+    return (
+      <div className="mx-auto flex max-w-md flex-col gap-8">
+        {ranged.map((entry) => (
+          <RangeEntry key={entry.heading} entry={entry} />
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto flex max-w-md flex-col gap-3">
-      {entries.map((entry) => (
-        <div key={entry.heading} className="rounded-2xl bg-white px-6 py-4 text-center shadow-sm">
-          <p className="font-semibold text-neutral-900">{entry.heading}</p>
-          {entry.range ? (
-            <div className="mx-auto mt-5">
-              <RangeBar range={entry.range} />
-            </div>
-          ) : null}
-        </div>
+      {plain.map((entry) => (
+        <Pill key={entry.heading} entry={entry} />
       ))}
     </div>
   );

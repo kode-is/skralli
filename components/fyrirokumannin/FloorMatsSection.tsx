@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { Carousel } from "@/components/Carousel";
 import { BulletList } from "@/components/BulletList";
+import { DotDivider } from "@/components/DotDivider";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/fyrirokumannin.json blocks 45-75: a second photo carousel
@@ -39,22 +40,30 @@ export function FloorMatsSection() {
             Slitsterkar gólfmottur sem þola mikla notkun. Sérsniðið að gólfinu í hverju tæki og
             renna þannig ekki til líkt og alhliða gólfmottur eiga til að gera.
           </p>
-          <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
-          <BulletList items={ITEMS} className="mt-3" />
-          <p className="mt-4 text-sm font-semibold text-neutral-900">21.700kr m/vsk.</p>
+          <div className="hidden md:block">
+            <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
+            <BulletList items={ITEMS} className="mt-3" />
+            <p className="mt-4 text-sm font-semibold text-neutral-900">21.700kr m/vsk.</p>
+          </div>
+          {/* docs/scrape/mobile-only.json's /fyrirokumannin entry: at phone
+              widths the live site collapses both this section's and
+              SeatCoversSection's per-vehicle "Fyrir" lists into one
+              condensed line, and this price into "16.800+vsk kr." — verbatim
+              text from that scrape, not a design guess. */}
+          <div className="md:hidden">
+            <p className="mt-6 text-sm font-semibold text-neutral-900">
+              Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
+            </p>
+            <p className="mt-4 text-sm font-semibold text-neutral-900">16.800+vsk kr.</p>
+          </div>
         </div>
         <div className="md:order-first">
           <Carousel images={CAROUSEL_IMAGES} prevArrow={PREV_ARROW} nextArrow={NEXT_ARROW} />
         </div>
       </Container>
 
-      {/* docs/scrape/fyrirokumannin.json block 75: decorative dot pattern
-          divider (same asset/treatment as components/smurkerfi/FeaturesSection.tsx). */}
-      <div
-        aria-hidden="true"
-        className="mt-16 h-20 w-full bg-repeat opacity-10"
-        style={{ backgroundImage: "url(/images/home/20-463dd036.svg)" }}
-      />
+      {/* docs/scrape/fyrirokumannin.json block 75. */}
+      <DotDivider />
     </section>
   );
 }
