@@ -20,10 +20,7 @@ export function ChildCards({ items }: { items: ChildCard[] }) {
           href={item.href}
           className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
         >
-          <div
-            className="relative w-full overflow-hidden"
-            style={{ aspectRatio: `${item.image.width} / ${item.image.height}` }}
-          >
+          <div className="relative aspect-[5/4] w-full overflow-hidden">
             <Image
               src={item.image.src}
               alt={item.image.alt}

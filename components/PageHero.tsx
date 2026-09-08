@@ -71,10 +71,10 @@ export function PageHero({
       <Image
         src={image.src}
         alt={image.alt}
-        width={image.width}
-        height={image.height}
+        fill
         priority
-        className="absolute inset-0 h-full w-full object-cover"
+        sizes="100vw"
+        className="object-cover"
       />
       <div className={`absolute inset-0 ${overlayClassName}`} aria-hidden="true" />
       <div className={`relative z-10 ${contentClassName}`}>
