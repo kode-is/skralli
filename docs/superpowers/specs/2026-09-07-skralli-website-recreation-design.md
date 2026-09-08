@@ -39,7 +39,7 @@ work is explicitly out of scope here.
   `/vetrarbunadur`, `/fyrirokumannin`, `/hifi-festibunadur`, `/siubunadur`
 - Brand pages: `/vorumerki/{um-beka,lilleseth-kjetting,gigant,pebe,hammerglass,bmair}`
 - Sturtuvagnar: 5 group pages (`fjorhjola-minigrofuvagnar`, `verktakavagnar`,
-  `landbunadarvagnar`, `hjolagrofuvagnar`, `velaflutningavagnar`) and 29
+  `landbunadarvagnar`, `hjolagrofuvagnar`, `velaflutningavagnar`) and 25
   product pages (`hjolagrofuvagn-gd2-6x` … `landbunadarvagn-gd150`)
 - Hífi- og festibúnaður: `hifikedjur`, `bindikedjur-strekkjarar`, `stroffur`,
   `stroffur/{hringstroffur,flatstroffur,drattastroffur}`, `aukabunadur`,
@@ -79,7 +79,7 @@ lib/
   site.ts               company details, nav, social links
   brands.ts             6 brand pages
   categories.ts         7 category pages
-  sturtuvagnar.ts       groups + 29 products (specs, images, text)
+  sturtuvagnar.ts       groups + 25 products (specs, images, text)
   hifi.ts               hífi- og festibúnaður tree
   email/client.ts       lazy Resend client (pattern from bera-wallet)
 public/
