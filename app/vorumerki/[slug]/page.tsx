@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
+import { pageMetadata } from "@/lib/seo";
 import { brands } from "@/lib/brands";
 
 type BrandPageParams = { slug: string };
@@ -20,7 +21,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const brand = brands.find((item) => item.id === slug);
   if (!brand) return {};
-  return { title: brand.title, description: brand.description };
+  return pageMetadata({ title: brand.title, description: brand.description, path: brand.href });
 }
 
 export default async function BrandPage({

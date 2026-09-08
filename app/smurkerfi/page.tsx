@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
@@ -11,10 +11,11 @@ import { ServiceVehiclesSection } from "@/components/smurkerfi/ServiceVehiclesSe
 
 // docs/scrape/smurkerfi.json — same <title>/<meta description> as every
 // other route on the live site (confirmed against the server-rendered HTML).
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Skralli - Þinn samstarfsaðili",
   description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-};
+  path: "/smurkerfi",
+});
 
 // docs/scrape/smurkerfi.json block 1: same photo as the home page's
 // "Smurkerfi" category card (lib/categories.ts), used full-bleed as the

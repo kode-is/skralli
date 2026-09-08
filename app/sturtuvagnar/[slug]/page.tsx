@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { TrailerIcon } from "@/components/sturtuvagnar/TrailerIcon";
 import { WagonSections } from "@/components/sturtuvagnar/WagonSections";
+import { pageMetadata } from "@/lib/seo";
 import { wagonGroups, wagons, type WagonGroup, type Wagon } from "@/lib/sturtuvagnar";
 
 type PageParams = { slug: string };
@@ -35,7 +36,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const record = findRecord(slug);
   if (!record) return {};
-  return { title: record.pageTitle, description: record.description };
+  return pageMetadata({
+    title: record.pageTitle,
+    description: record.description,
+    path: `/sturtuvagnar/${record.slug}`,
+  });
 }
 
 export default async function SturtuvagnarSlugPage({

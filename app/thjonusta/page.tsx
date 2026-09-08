@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
@@ -8,10 +8,11 @@ import { categories } from "@/lib/categories";
 
 // docs/scrape/thjonusta.json — same <title>/<meta description> as every
 // other route on the live site (confirmed against the server-rendered HTML).
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Skralli - Þinn samstarfsaðili",
   description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-};
+  path: "/thjonusta",
+});
 
 // docs/scrape/thjonusta.json block 1: the scraper recorded this hero image
 // at a 512x341 thumbnail size, far smaller than every other full-bleed hero

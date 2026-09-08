@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
@@ -10,10 +10,11 @@ import { PlowsSection } from "@/components/vetrarbunadur/PlowsSection";
 
 // docs/scrape/vetrarbunadur.json — same <title>/<meta description> as every
 // other route on the live site.
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Skralli - Þinn samstarfsaðili",
   description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-};
+  path: "/vetrarbunadur",
+});
 
 // docs/scrape/vetrarbunadur.json block 1 (same photo used as the
 // /thjonusta hero — docs/scrape/thjonusta.json). Scraped at a 384x512

@@ -1,5 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+// docs/scrape/404.json — same site-wide <title>/<meta description> as every
+// other route on the live site.
+export const metadata = pageMetadata({
+  title: "Skralli - Þinn samstarfsaðili",
+  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  path: "/404",
+});
 
 export default function NotFound() {
   return (

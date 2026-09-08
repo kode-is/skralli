@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
@@ -9,10 +9,11 @@ import { brands } from "@/lib/brands";
 
 // docs/scrape/vorumerki.json — same <title>/<meta description> as every
 // other route on the live site (confirmed against the server-rendered HTML).
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Skralli - Þinn samstarfsaðili",
   description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-};
+  path: "/vorumerki",
+});
 
 // docs/scrape/vorumerki.json card order: BMair, Hammerglass, Groeneveld-BEKA,
 // Lilleseth, Gigant, Pebe — different from lib/brands.ts's own order (which

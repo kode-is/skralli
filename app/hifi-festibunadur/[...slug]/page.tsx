@@ -7,6 +7,7 @@ import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
 import { HifiSections } from "@/components/hifi/HifiSections";
+import { pageMetadata } from "@/lib/seo";
 import { hifiPages, type HifiPage } from "@/lib/hifi";
 
 // Site-wide <title>/<meta description> pattern: every hífi- og festibúnaður
@@ -52,7 +53,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = findPage(slug);
   if (!page) return {};
-  return { title: PAGE_TITLE, description: page.description };
+  return pageMetadata({
+    title: PAGE_TITLE,
+    description: page.description,
+    path: `/hifi-festibunadur/${page.path.join("/")}`,
+  });
 }
 
 export default async function HifiSlugPage({ params }: { params: Promise<PageParams> }) {
