@@ -16,6 +16,13 @@ const SUCCESS_TEXT =
 const fieldClass =
   "w-full rounded-md border border-transparent bg-[#f0f4fa] px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-brand-dark focus:outline-none";
 
+// Map validation error messages to field names for aria-invalid/aria-describedby
+const ERROR_MESSAGE_TO_FIELD: Record<string, "nafn" | "netfang" | "skilabod"> = {
+  "Vinsamlegast fylltu út nafn.": "nafn",
+  "Vinsamlegast sláðu inn gilt netfang.": "netfang",
+  "Vinsamlegast skrifaðu skilaboð.": "skilabod",
+};
+
 export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps) {
   const [nafn, setNafn] = useState("");
   const [netfang, setNetfang] = useState("");
@@ -46,11 +53,17 @@ export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps
   }
 
   if (success) {
-    return <p className="text-sm font-medium text-neutral-900">{SUCCESS_TEXT}</p>;
+    return (
+      <div role="status" aria-live="polite">
+        <p className="text-sm font-medium text-neutral-900">{SUCCESS_TEXT}</p>
+      </div>
+    );
   }
 
   const onChange = (setter: (v: string) => void) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setter(e.target.value);
+
+  const errorField = error ? ERROR_MESSAGE_TO_FIELD[error] : null;
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
@@ -76,6 +89,8 @@ export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps
             value={nafn}
             onChange={onChange(setNafn)}
             className={fieldClass}
+            aria-invalid={errorField === "nafn"}
+            aria-describedby={errorField === "nafn" ? "contact-error-message" : undefined}
           />
         </div>
         <div>
@@ -91,6 +106,8 @@ export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps
             value={netfang}
             onChange={onChange(setNetfang)}
             className={fieldClass}
+            aria-invalid={errorField === "netfang"}
+            aria-describedby={errorField === "netfang" ? "contact-error-message" : undefined}
           />
         </div>
       </div>
@@ -123,6 +140,8 @@ export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps
           value={skilabod}
           onChange={onChange(setSkilabod)}
           className={fieldClass}
+          aria-invalid={errorField === "skilabod"}
+          aria-describedby={errorField === "skilabod" ? "contact-error-message" : undefined}
         />
       </div>
       <div aria-hidden="true" className="sr-only">
@@ -137,7 +156,9 @@ export function ContactForm({ showPhone = false, submitLabel }: ContactFormProps
           onChange={onChange(setWebsite)}
         />
       </div>
-      {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
+      <div role="status" aria-live="polite" className="min-h-[1.5rem]">
+        {error ? <p id="contact-error-message" className="text-sm font-medium text-red-600">{error}</p> : null}
+      </div>
       <button
         type="submit"
         disabled={isPending}
