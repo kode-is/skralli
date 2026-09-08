@@ -32,14 +32,17 @@
 // this generic matching handles without per-route branches:
 //  - hifikedjur's live page repeats its 28-row "Tveggja arma hífikeðjur"
 //    table a second time with typo'd headers ("Vorunumer"/"Voruheiti") plus
-//    a "Page 1 of 1" pagination line — a duplicate/mobile-only rendering of
-//    the same widget (confirmed against docs/reference/
-//    hifi-festibunadur__hifikedjur.mobile.jpg, where it shows a
-//    search/filter/export table beneath the real one; it's absent on the
-//    desktop screenshot, so it never reaches verify.mjs's 1440px capture
-//    either way). Every occurrence *after* the first is dropped entirely
-//    (data verified identical to the first), including a trailing
-//    "Page N of M" line.
+//    a "Page 1 of 1" pagination line — a duplicate rendering of the same
+//    widget via a Framer "Table" component (search box, column filters,
+//    "Export CSV", Previous/Next pagination). This widget IS visible at
+//    1440px — confirmed against both docs/reference/
+//    hifi-festibunadur__hifikedjur.desktop.jpg (below the real table) and
+//    its .mobile.jpg — but is deliberately not reproduced here (a Framer
+//    template widget wrapped around already-rendered data, not unique
+//    content; see scripts/verify.mjs's matching comment for the
+//    IGNORE_MISSING entries its chrome/header labels require). Every
+//    occurrence *after* the first is dropped entirely (data verified
+//    identical to the first), including a trailing "Page N of M" line.
 //  - hifikedjur's tables.json also lists a second "table" with headers
 //    Name/Email/Role/Status — Framer's Table component's built-in demo
 //    dataset, left on the live page unconfigured. It never appears in this
@@ -58,6 +61,11 @@
 // trailing the earlier table, one leading the later one) — see
 // collectTableImages() below.
 //
+// Several routes pair a bare "… í boði" / "(WLL)" H3 heading with an
+// interactive min/max range-slider widget (e.g. hifikedjur's "Lengdir í
+// boði" shows "2 metrar" — "6 metrar") — see RANGE_LABELS below for how
+// their endpoint labels are sourced.
+//
 // Run: node scripts/gen-hifi.mjs  (or `npm run gen-hifi`)
 
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -75,6 +83,43 @@ const CTA_HEADING = "Sendu okkur fyrirspurn";
 const PLACEHOLDER_HEADERS = JSON.stringify(["Name", "Email", "Role", "Status"]);
 // Children of /hifi-festibunadur/stroffur, in on-page card order.
 const STROFFUR_CHILDREN = ["hringstroffur", "flatstroffur", "drattastroffur"];
+
+// The min/max endpoint labels of each route's "… í boði" / "(WLL)" range
+// sliders (module comment above). These numbers are drawn by an interactive
+// Framer widget and never appear as scrape text anywhere in docs/scrape/
+// hifi-festibunadur__*.json, so they can't be extracted the way the rest of
+// this script's data is. Rather than add a network fetch to the build
+// (fragile: depends on the live site staying reachable and unchanged at
+// build time), this is a static map of the verbatim strings, each sourced
+// once by fetching that route's own SSR HTML —
+//   curl -sL -A "Mozilla/5.0" https://skralli.is/hifi-festibunadur/<route>
+// — and reading the two `white-space:nowrap` label <div>s that immediately
+// follow the heading's slider markup in the response (min label, then max).
+// Verified 2026-09-08; see task-12-report.md's "Fix round 1" section for
+// the exact curl output each value was read from. Keyed by route (not
+// heading text alone) since "Þyngdarþol í boði" / "Lengd í boði" repeat
+// across routes with different values.
+const RANGE_LABELS = {
+  "/hifi-festibunadur/hifikedjur": {
+    "Lengdir í boði": { min: "2 metrar", max: "6 metrar" },
+    "Leyfilegt vinnuálag (WLL)": { min: "2.8 tonn", max: "10.6 tonn" },
+  },
+  "/hifi-festibunadur/bindikedjur-strekkjarar": {
+    "Þyngdarþol í boði": { min: "4 tonn", max: "21 tonn" },
+    "Stærðir í boði": { min: "6 mm", max: "16 mm" },
+    "Breidd í boði": { min: "6 mm", max: "13 mm" },
+    "Lengd í boði": { min: "2 metrar", max: "6 metrar" },
+    "Leyfilegt vinnuálag (WLL)": { min: "4.0 tonn", max: "21.6 tonn" },
+  },
+  "/hifi-festibunadur/stroffur/hringstroffur": {
+    "Þyngdarþol í boði": { min: "1 tonn", max: "10 tonn" },
+    "Lengd í boði": { min: "0.5 metrar", max: "10 metrar" },
+  },
+  "/hifi-festibunadur/stroffur/flatstroffur": {
+    "Þyngdarþol í boði": { min: "1 tonn", max: "8 tonn" },
+    "Lengd í boði": { min: "1 metrar", max: "14 metrar" },
+  },
+};
 
 function toImg(block) {
   return { src: block.local, alt: block.alt || "", width: block.width, height: block.height };
@@ -273,13 +318,19 @@ function parseFile(file) {
   // itself (e.g. "./stroffur/hringstroffur"), matching a static export where
   // each route is a sibling file one level up from a nested page — resolve
   // them to real root-relative site paths.
+  const routeRangeLabels = RANGE_LABELS[route] || {};
   const hifiBlocks = body
     .filter((b) => b.type === "heading" || b.type === "text" || b.type === "link")
     .map((b) =>
       b.type === "link"
         ? { type: "link", text: b.text, href: b.href.replace(/^\.\//, "/hifi-festibunadur/") }
         : b.type === "heading"
-          ? { type: "heading", level: b.level, text: b.text }
+          ? {
+              type: "heading",
+              level: b.level,
+              text: b.text,
+              ...(routeRangeLabels[b.text] ? { range: routeRangeLabels[b.text] } : {}),
+            }
           : { type: "text", text: b.text },
     );
   const images = body.filter((b) => b.type === "image").map(toImg);
@@ -315,6 +366,17 @@ if (totalTables !== 10 || totalRows !== 189) {
   throw new Error(`Expected 10 tables / 189 rows total, got ${totalTables} tables / ${totalRows} rows`);
 }
 
+// Every RANGE_LABELS[route][heading] must have actually matched a heading
+// block on that route, or it's a stale/typo'd entry silently doing nothing.
+for (const [route, headings] of Object.entries(RANGE_LABELS)) {
+  const page = hifiPages.find((p) => `/hifi-festibunadur/${p.path.join("/")}` === route);
+  if (!page) throw new Error(`RANGE_LABELS has unknown route "${route}"`);
+  for (const heading of Object.keys(headings)) {
+    const found = page.blocks.some((b) => b.type === "heading" && b.text === heading && b.range);
+    if (!found) throw new Error(`RANGE_LABELS["${route}"]["${heading}"] never matched a heading block`);
+  }
+}
+
 const banner = `// GENERATED FILE — do not edit by hand.
 // Run \`npm run gen-hifi\` (scripts/gen-hifi.mjs) to regenerate from
 // docs/scrape/hifi-festibunadur__*.json (8 sub-page files) and
@@ -325,13 +387,22 @@ const banner = `// GENERATED FILE — do not edit by hand.
 import type { Img } from "./types";
 
 export type HifiBlock =
-  | { type: "heading"; level: number; text: string }
+  | {
+      type: "heading";
+      level: number;
+      text: string;
+      /** Min/max endpoint labels of the live page's range-slider widget for
+       * this heading (see RANGE_LABELS in scripts/gen-hifi.mjs) — present
+       * only on the handful of "… í boði" / "(WLL)" headings that have one. */
+      range?: { min: string; max: string };
+    }
   | { type: "text"; text: string }
   | { type: "link"; text: string; href: string };
 
 /** A product-spec table (docs/scrape/tables.json), keyed to the heading
- * (H2 or H3) it sits under in \`blocks\`. \`images\` (aukabunadur only) are
- * the product photo(s) shown alongside this table on the live page. */
+ * (H2 or H3) it sits under in \`blocks\`. \`images\`, when present, are the
+ * product photo(s) shown alongside this table on the live page (aukabunadur's
+ * five tables and bordastrekkjarar's own table all have one; the others don't). */
 export type HifiTable = {
   heading: string;
   headers: string[];

@@ -41,15 +41,17 @@ const hifikedjurPlaceholderPatterns = (() => {
 // hífikeðjur" table a second time as a Framer "Table" widget (search box,
 // column filters, "Export CSV", Previous/Next pagination) with the same
 // data but two header labels stripped of their Icelandic diacritics
-// ("Vörunúmer" -> "Vorunumer", "Vöruheiti" -> "Voruheiti") — confirmed via
-// docs/reference/hifi-festibunadur__hifikedjur.mobile.jpg, where it's the
-// second table shown, and reproduced here (scripts/gen-hifi.mjs drops this
-// duplicate's row data entirely — see that script's module comment). The
-// row *data* never shows up as missing here since it's identical to the
-// real table's, already rendered once; only the widget's own header labels
-// and fixed chrome do. Every string below is either derived from the real
-// table's headers (nothing hardcoded) or is generic UI chrome inherent to
-// this Framer widget, not scraped content.
+// ("Vörunúmer" -> "Vorunumer", "Vöruheiti" -> "Voruheiti"). This widget IS
+// visible at 1440px — confirmed against both docs/reference/
+// hifi-festibunadur__hifikedjur.desktop.jpg (below the real table) and its
+// .mobile.jpg — but is deliberately not reproduced here, being a Framer
+// template widget wrapped around already-rendered data, not unique content
+// (scripts/gen-hifi.mjs drops this duplicate's row data entirely — see that
+// script's module comment). The row *data* never shows up as missing here
+// since it's identical to the real table's, already rendered once; only the
+// widget's own header labels and fixed chrome do. Every string below is
+// either derived from the real table's headers (nothing hardcoded) or is
+// generic UI chrome inherent to this Framer widget, not scraped content.
 const hifikedjurWidgetPatterns = (() => {
   const real = hifiTable("/hifi-festibunadur/hifikedjur", 0);
   const headerVariants = real.headers.flatMap((h) => [h, stripDiacritics(h)]);
@@ -69,27 +71,15 @@ const hifikedjurWidgetPatterns = (() => {
 //
 // Several /hifi-festibunadur/* routes pair a bare "X í boði" heading with an
 // interactive min/max range slider widget (e.g. "Lengdir í boði" showing
-// "2 metrar" — "6 metrar") — see components/hifi/HifiSections.tsx's PillRow
-// comment. The slider's own numeric endpoint labels are drawn by that
-// widget, not present as text anywhere in the scrape (docs/scrape/
-// hifi-festibunadur__*.json), so HifiSections renders the heading only.
-// Most endpoints happen to coincide with a real spec-table cell value
-// already rendered elsewhere on the same page (e.g. hringstroffur's slider
-// shows "1 tonn", which is also a real Lyftigeta value) and so never
-// surface here at all; the handful that don't are listed per route below,
-// each confirmed against that route's actual scrape data.
+// "2 metrar" — "6 metrar"). Their endpoint labels are now rendered directly
+// (components/hifi/HifiSections.tsx's PillRow, sourced from lib/hifi.ts's
+// per-heading `range` — see scripts/gen-hifi.mjs's RANGE_LABELS for how
+// those verbatim strings were read off the live page), so none of them need
+// an IGNORE_MISSING entry any more (Task 12 fix round 1).
 const IGNORE_MISSING = {
   "/": [/^\d{1,3}$/],
   "/um-okkur": [/^\d{1,3}$/],
-  "/hifi-festibunadur/hifikedjur": [
-    ...hifikedjurPlaceholderPatterns,
-    ...hifikedjurWidgetPatterns,
-    // "Leyfilegt vinnuálag (WLL)" slider — its 10.6 tonn max exceeds every
-    // row in this page's own "Tveggja arma hífikeðjur" table (max 9.5t),
-    // so it isn't derivable from any data this page has.
-    exact("2.8 tonn"),
-    exact("10.6 tonn"),
-  ],
+  "/hifi-festibunadur/hifikedjur": [...hifikedjurPlaceholderPatterns, ...hifikedjurWidgetPatterns],
   "/hifi-festibunadur/bindikedjur-strekkjarar": [
     // The live breadcrumb's current-page crumb reads "Hífikeðjur" — a
     // copy-paste leftover from the hífikeðjur page this one was cloned
@@ -97,23 +87,7 @@ const IGNORE_MISSING = {
     // block 8 scrapes this exact text). The [...slug] page derives the
     // breadcrumb from the real page title instead of reproducing the bug.
     exact("Hífikeðjur"),
-    // "Þyngdarþol í boði", "Stærðir í boði", "Breidd í boði" and "Leyfilegt
-    // vinnuálag (WLL)" sliders — none of these five endpoints match a cell
-    // in this page's own table (max 7,5t for the G120 rows actually
-    // scraped, vs. the WLL slider's 21,6 tonn).
-    exact("4 tonn"),
-    exact("21 tonn"),
-    exact("6 mm"),
-    exact("16 mm"),
-    exact("13 mm"),
-    exact("4.0 tonn"),
-    exact("21.6 tonn"),
   ],
-  // "Lengd í boði" slider min label — its "0.5 metrar"/"1 metrar" (plural)
-  // don't match either page's own table cells, which use "meter" for the
-  // shortest lift height (e.g. hringstroffur's "0.5 meter", singular).
-  "/hifi-festibunadur/stroffur/hringstroffur": [exact("0.5 metrar")],
-  "/hifi-festibunadur/stroffur/flatstroffur": [exact("1 metrar")],
 };
 
 // A browser's innerText joins adjacent cells of a real <table> row with a

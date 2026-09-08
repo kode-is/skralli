@@ -1,6 +1,11 @@
 type SpecTableProps = {
   headers: string[];
   rows: string[][];
+  /** id of the heading (H2/H3) immediately above this table, wired via
+   * `aria-labelledby` so the table has an accessible name without a visible
+   * `<caption>` — a caption's text would duplicate the heading's text in the
+   * page's innerText and read as "extra" content to scripts/verify.mjs. */
+  ariaLabelledBy?: string;
 };
 
 /**
@@ -14,10 +19,10 @@ type SpecTableProps = {
  * background #f7f7f8); no zebra striping, matching the reference
  * screenshots' plain white rows.
  */
-export function SpecTable({ headers, rows }: SpecTableProps) {
+export function SpecTable({ headers, rows, ariaLabelledBy }: SpecTableProps) {
   return (
     <div className="overflow-x-auto rounded-2xl border border-[#e0e0e0]">
-      <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+      <table aria-labelledby={ariaLabelledBy} className="w-full min-w-[560px] border-collapse text-left text-sm">
         <thead className="bg-[#f7f7f8]">
           <tr>
             {headers.map((header) => (

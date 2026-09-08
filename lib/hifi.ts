@@ -8,13 +8,22 @@
 import type { Img } from "./types";
 
 export type HifiBlock =
-  | { type: "heading"; level: number; text: string }
+  | {
+      type: "heading";
+      level: number;
+      text: string;
+      /** Min/max endpoint labels of the live page's range-slider widget for
+       * this heading (see RANGE_LABELS in scripts/gen-hifi.mjs) — present
+       * only on the handful of "… í boði" / "(WLL)" headings that have one. */
+      range?: { min: string; max: string };
+    }
   | { type: "text"; text: string }
   | { type: "link"; text: string; href: string };
 
 /** A product-spec table (docs/scrape/tables.json), keyed to the heading
- * (H2 or H3) it sits under in `blocks`. `images` (aukabunadur only) are
- * the product photo(s) shown alongside this table on the live page. */
+ * (H2 or H3) it sits under in `blocks`. `images`, when present, are the
+ * product photo(s) shown alongside this table on the live page (aukabunadur's
+ * five tables and bordastrekkjarar's own table all have one; the others don't). */
 export type HifiTable = {
   heading: string;
   headers: string[];
@@ -465,12 +474,20 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Þyngdarþol í boði"
+        "text": "Þyngdarþol í boði",
+        "range": {
+          "min": "4 tonn",
+          "max": "21 tonn"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Stærðir í boði"
+        "text": "Stærðir í boði",
+        "range": {
+          "min": "6 mm",
+          "max": "16 mm"
+        }
       },
       {
         "type": "heading",
@@ -495,17 +512,29 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Breidd í boði"
+        "text": "Breidd í boði",
+        "range": {
+          "min": "6 mm",
+          "max": "13 mm"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Lengd í boði"
+        "text": "Lengd í boði",
+        "range": {
+          "min": "2 metrar",
+          "max": "6 metrar"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Leyfilegt vinnuálag (WLL)"
+        "text": "Leyfilegt vinnuálag (WLL)",
+        "range": {
+          "min": "4.0 tonn",
+          "max": "21.6 tonn"
+        }
       }
     ],
     "images": [],
@@ -888,12 +917,20 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Lengdir í boði"
+        "text": "Lengdir í boði",
+        "range": {
+          "min": "2 metrar",
+          "max": "6 metrar"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Leyfilegt vinnuálag (WLL)"
+        "text": "Leyfilegt vinnuálag (WLL)",
+        "range": {
+          "min": "2.8 tonn",
+          "max": "10.6 tonn"
+        }
       },
       {
         "type": "heading",
@@ -1265,12 +1302,20 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Þyngdarþol í boði"
+        "text": "Þyngdarþol í boði",
+        "range": {
+          "min": "1 tonn",
+          "max": "8 tonn"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Lengd í boði"
+        "text": "Lengd í boði",
+        "range": {
+          "min": "1 metrar",
+          "max": "14 metrar"
+        }
       }
     ],
     "images": [],
@@ -1555,12 +1600,20 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Þyngdarþol í boði"
+        "text": "Þyngdarþol í boði",
+        "range": {
+          "min": "1 tonn",
+          "max": "10 tonn"
+        }
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Lengd í boði"
+        "text": "Lengd í boði",
+        "range": {
+          "min": "0.5 metrar",
+          "max": "10 metrar"
+        }
       }
     ],
     "images": [],
