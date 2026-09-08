@@ -14,7 +14,7 @@ export function AdvisorySection() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr] md:gap-16">
           <div>
-            <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Fagmannleg ráðgjöf</h2>
+            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Fagmannleg ráðgjöf</h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
               Við erum traustir ráðgjafar og höfum aðstoðað fjölda fyrirtækja og einstaklinga við
               að finna notuð tæki og búnað erlendis. Teymið okkar býr yfir áratuga reynslu og sér
@@ -28,7 +28,7 @@ export function AdvisorySection() {
           </div>
 
           <div className="rounded-2xl bg-[#f0f4fa] p-8 md:p-10">
-            <h3 className="text-center text-xl font-bold text-neutral-900">Hafa samband</h3>
+            <h3 className="text-center font-ui text-xl font-semibold text-neutral-900">Hafa samband</h3>
             <div className="mt-6">
               <ContactForm submitLabel="Senda" />
             </div>

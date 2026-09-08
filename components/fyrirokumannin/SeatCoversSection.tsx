@@ -33,7 +33,7 @@ export function SeatCoversSection() {
     <section className="bg-white py-14 md:py-16">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Sætisáklæði</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Sætisáklæði</h2>
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Vönduð sætisáklæði, sérsniðin fyrir hvern framleiðanda. Stílhrein og nákvæm hönnun sem
             sér til þess að efnið færist ekki til þegar er verið að fara oft inn í og úr

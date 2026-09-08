@@ -29,7 +29,7 @@ export function StepsSection() {
   return (
     <section className="relative overflow-hidden bg-white pt-16 md:pt-24">
       <Container>
-        <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">
+        <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">
           Okkar þjónusta við smurkerfi
         </h3>
         <div className="mt-10 grid gap-6 md:grid-cols-3">

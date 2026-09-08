@@ -24,7 +24,7 @@ export default function NotFound() {
         overlayClassName="bg-black/55"
         contentClassName="flex flex-col items-center gap-6 px-6 text-center text-white"
       >
-        <h1 className="text-7xl font-bold md:text-8xl">404</h1>
+        <h1 className="text-7xl font-semibold md:text-8xl">404</h1>
         <h2 className="max-w-xl text-lg font-medium md:text-xl">
           Síðan sem þú ert að leita að er ekki til eða hefur verið færð. Vinsamlegast farðu
           aftur á heimasíðuna.

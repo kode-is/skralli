@@ -26,7 +26,7 @@ export function IntroSection() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">{HEADING}</h2>
+            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
               {TEXT}
             </p>

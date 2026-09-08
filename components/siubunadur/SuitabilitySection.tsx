@@ -17,7 +17,7 @@ export function SuitabilitySection() {
   return (
     <section className="bg-[#f0f4fa] py-16 md:py-20">
       <Container>
-        <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Hvar hentar BMair?</h2>
+        <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Hvar hentar BMair?</h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
           Sérhver grein hefur sín efni sem hafa áhrif á loftgæði og heilsu vélamanna.
         </p>
@@ -30,7 +30,7 @@ export function SuitabilitySection() {
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {SUITABILITY.map((item) => (
             <div key={item} className="rounded-2xl bg-white px-6 py-4 shadow-sm">
-              <h3 className="text-base font-semibold text-neutral-900">{item}</h3>
+              <h3 className="font-ui text-base font-semibold text-neutral-900">{item}</h3>
             </div>
           ))}
         </div>

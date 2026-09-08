@@ -26,7 +26,7 @@ export function CategoryCard({ category }: { category: Category }) {
         ) : null}
       </div>
       <div className="p-6 pt-8">
-        <h5 className="text-lg font-bold text-neutral-900">{category.title}</h5>
+        <h5 className="font-ui text-lg font-semibold text-neutral-900">{category.title}</h5>
         <p className="mt-2 text-sm text-neutral-600">{category.blurb}</p>
       </div>
     </Link>

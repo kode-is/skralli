@@ -7,7 +7,7 @@ export function OtherGroupsSection() {
   return (
     <section className="bg-white py-16 md:py-20">
       <Container>
-        <h2 className="text-center text-3xl font-bold text-neutral-900 md:text-4xl">
+        <h2 className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">
           Aðrar vagntegundir
         </h2>
         <div className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2">
@@ -35,7 +35,7 @@ export function OtherGroupsSection() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-neutral-900">{group.title}</h3>
+                <h3 className="font-ui text-lg font-semibold text-neutral-900">{group.title}</h3>
               </div>
             </Link>
           ))}

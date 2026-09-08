@@ -25,7 +25,7 @@ export function BrandsSection() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
           <div>
-            <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
               Kynntu þér vörumerkin okkar
             </h2>
             <p className="mt-4 max-w-sm text-sm text-neutral-600 md:text-base">
@@ -56,7 +56,7 @@ export function BrandsSection() {
                     className="h-14 w-auto shrink-0 object-contain"
                   />
                   <div>
-                    <h3 className="text-lg font-bold text-neutral-900">{brand.name}</h3>
+                    <h3 className="font-ui text-lg font-semibold text-neutral-900">{brand.name}</h3>
                     <Link
                       href={brand.href}
                       className="mt-1 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"

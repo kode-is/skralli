@@ -20,7 +20,7 @@ export function SiblingProducts({
     <section className="bg-white py-14 md:py-16">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Tegundir í boði</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Tegundir í boði</h2>
           <Link
             href={`/sturtuvagnar/${group.slug}`}
             className="text-[15px] font-medium text-brand-dark transition hover:underline"
@@ -45,7 +45,7 @@ export function SiblingProducts({
                 />
               </div>
               <div className="flex flex-col gap-2 p-5">
-                <h3 className="text-lg font-bold text-neutral-900">{wagon.title}</h3>
+                <h3 className="font-ui text-lg font-semibold text-neutral-900">{wagon.title}</h3>
                 <p className="text-sm leading-relaxed text-neutral-600">{wagon.blurb}</p>
                 <span className="mt-1 text-sm font-semibold text-brand-dark">
                   Skoða nánar →

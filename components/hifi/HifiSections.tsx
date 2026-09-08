@@ -5,8 +5,8 @@ import { SpecTable } from "@/components/SpecTable";
 import type { HifiBlock, HifiTable } from "@/lib/hifi";
 import type { Img } from "@/lib/types";
 
-const H2_CENTERED = "text-center text-3xl font-bold text-neutral-900 md:text-4xl";
-const H2_LEFT = "text-3xl font-bold text-neutral-900 md:text-4xl";
+const H2_CENTERED = "text-center text-3xl font-semibold text-neutral-900 md:text-4xl";
+const H2_LEFT = "text-3xl font-semibold text-neutral-900 md:text-4xl";
 
 type Entry = { heading: string; range?: { min: string; max: string }; body: string[] };
 type Section = { heading?: string; lead: string[]; entries: Entry[] };
@@ -113,7 +113,7 @@ function RangeBar({ range }: { range: { min: string; max: string } }) {
 function Pill({ entry }: { entry: Entry }) {
   return (
     <div className="rounded-2xl bg-white px-6 py-4 text-center shadow-sm">
-      <p className="font-semibold text-neutral-900">{entry.heading}</p>
+      <p className="font-ui font-semibold text-neutral-900">{entry.heading}</p>
     </div>
   );
 }

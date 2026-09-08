@@ -10,7 +10,7 @@ export function CategoriesSection() {
     <section className="bg-[#f0f4fa] py-16 md:py-24">
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Okkar vöruframboð</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Okkar vöruframboð</h2>
           <div className="flex flex-col gap-4 md:items-end">
             <Link
               href="/thjonusta"

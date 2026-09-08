@@ -16,7 +16,7 @@ export function AboutIntro() {
     <section className="bg-white pt-12 pb-16 md:pt-16 md:pb-20">
       <Container className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">{HEADING}</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
             {TEXT}
           </p>

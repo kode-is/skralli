@@ -10,7 +10,7 @@ export function IntroSection() {
   return (
     <section className="bg-white pt-10 pb-4 md:pt-14">
       <Container>
-        <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Allt í íslenska veturinn</h2>
+        <h2 className="font-ui text-3xl font-semibold text-neutral-900 md:text-4xl">Allt í íslenska veturinn</h2>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-neutral-600 md:text-base">
           Skralli býður upp á breiða línu af vetrarbúnaði svo ökumaðurinn komist í gegnum veturinn -
           Hvort sem þú ferðist um ótroðnar slóðir eða sért ryðja veginn fyrir aðra.

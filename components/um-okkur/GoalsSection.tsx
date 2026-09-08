@@ -76,7 +76,7 @@ export function GoalsSection() {
         </div>
 
         <div className="mt-8 md:mt-0">
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">{HEADING}</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
             {TEXT}
           </p>
@@ -86,7 +86,7 @@ export function GoalsSection() {
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-dark text-white">
                   <CheckIcon className="h-3 w-3" />
                 </span>
-                <h4 className="font-semibold text-neutral-900">{item}</h4>
+                <h4 className="font-ui font-semibold text-neutral-900">{item}</h4>
               </li>
             ))}
           </ul>

@@ -138,7 +138,7 @@ export function MobileMenu({ nav }: MobileMenuProps) {
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                className="inline-flex items-center gap-1.5 text-lg font-medium text-neutral-900"
+                className="inline-flex items-center gap-1.5 font-ui text-lg font-medium text-neutral-900"
               >
                 {item.text}
                 {item.text === "Þjónusta" ? (

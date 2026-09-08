@@ -31,7 +31,7 @@ export function FeatureCard({ heading, text, image }: FeatureCardProps) {
         </div>
       ) : null}
       <div className="p-6">
-        <h3 className="text-lg font-bold text-neutral-900">{heading}</h3>
+        <h3 className="font-ui text-lg font-semibold text-neutral-900">{heading}</h3>
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">{text}</p>
       </div>
     </div>

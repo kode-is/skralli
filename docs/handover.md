@@ -25,6 +25,7 @@ Branch: `site-recreation`, PR: https://github.com/kode-is/skralli/pull/1
 
 ## Done
 
+- 2026-09-08 Fonts switched to the live site's Figtree / Inter / Satoshi (self-hosted), replacing NowAlt at Einar's request.
 - 2026-09-08 Header: "Þjónusta" hover menu, clean logo at live size, nav beside the button, mobile menu as floating card (PR commits `0de29f2`…`135eb3e`).
 - 2026-09-08 Page container widened to the live 1240 px content width (pending push).
 - 2026-09-08 Empty product pages filled in: all 25 Sturtuvagnar product pages now built from mockup 1 (design/Main.tpl.html) — product blurb + group "Um X" copy, the two Gigant/warranty pills, an inquiry card that prefills the message with the product name, the seven feature tiles (hjólagröfuvagnar products only), and linked sibling-product cards. The group pages' own "Tegundir í boði" cards are now clickable through to these pages too. No new copy was written — everything comes from the existing scrape data.

@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 export function InquiryCard({ productTitle }: { productTitle: string }) {
   return (
     <div className="flex flex-col gap-3.5 rounded-2xl border border-[#e0e0e0] bg-white p-7 shadow-sm">
-      <h3 className="text-xl font-bold text-neutral-900">Fá tilboð í {productTitle}</h3>
+      <h3 className="font-ui text-xl font-semibold text-neutral-900">Fá tilboð í {productTitle}</h3>
       <p className="text-sm leading-relaxed text-neutral-600">
         Við bjóðum fast verð í verkið. Vörunafnið fylgir fyrirspurninni sjálfkrafa.
       </p>

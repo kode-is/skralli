@@ -55,7 +55,7 @@ export default function VorumerkiPage() {
                     ) : null}
                   </div>
                   <div className="mt-6 rounded-2xl bg-[#f0f4fa] p-6">
-                    <h3 className="text-lg font-bold text-neutral-900">{brand.name}</h3>
+                    <h3 className="font-ui text-lg font-semibold text-neutral-900">{brand.name}</h3>
                     <Link
                       href={brand.href}
                       className="mt-2 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"

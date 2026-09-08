@@ -3,7 +3,7 @@ import { InquiryCard } from "@/components/sturtuvagnar/InquiryCard";
 import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 
 const PILL_CLASSES =
-  "inline-flex items-center rounded-full bg-[#f0f4fa] px-3.5 py-2 text-sm font-medium text-brand-dark";
+  "inline-flex items-center rounded-full bg-[#f0f4fa] px-3.5 py-2 font-ui text-sm font-medium text-brand-dark";
 
 // Mockup 1's "Um <product>" two-column section: the product's own blurb
 // (from its group's "Tegundir í boði" card) followed by the group's "Um X"
@@ -17,7 +17,7 @@ export function ProductIntro({ product, group }: { product: Wagon; group: WagonG
     <section className="bg-white py-14 md:py-16">
       <Container className="grid gap-10 md:grid-cols-2 md:items-start md:gap-16">
         <div className="flex flex-col gap-5">
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Um {product.title}</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Um {product.title}</h2>
           {paragraphs.map((paragraph, index) => (
             <p key={index} className="text-base leading-relaxed text-neutral-700">
               {paragraph}

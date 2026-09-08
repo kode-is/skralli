@@ -30,7 +30,7 @@ export function ChildCards({ items }: { items: ChildCard[] }) {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-bold text-neutral-900">{item.title}</h3>
+            <h3 className="font-ui text-lg font-semibold text-neutral-900">{item.title}</h3>
           </div>
         </Link>
       ))}

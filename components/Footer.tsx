@@ -31,11 +31,14 @@ function InstagramIcon() {
 function FooterLinkColumn({ column, className }: { column: FooterColumn; className?: string }) {
   return (
     <div className={className}>
-      <h4 className="mb-4 font-bold text-neutral-900">{column.heading}</h4>
+      <h4 className="mb-4 font-ui font-semibold text-neutral-900">{column.heading}</h4>
       <ul className="space-y-3">
         {column.links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="text-sm text-neutral-600 transition hover:text-brand-dark">
+            <Link
+              href={link.href}
+              className="font-ui text-sm text-neutral-600 transition hover:text-brand-dark"
+            >
               {link.text}
             </Link>
           </li>
@@ -67,7 +70,7 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="font-semibold text-neutral-900">{site.motto}</p>
+            <p className="font-ui text-neutral-900">{site.motto}</p>
             <div className="space-y-1 text-sm text-neutral-600">
               <p>{site.address}</p>
               <p>{site.kennitala}</p>

@@ -35,7 +35,7 @@ export function FloorMatsSection() {
     <section className="bg-white pb-16 md:pb-20">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Gólfmottur</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Gólfmottur</h2>
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Slitsterkar gólfmottur sem þola mikla notkun. Sérsniðið að gólfinu í hverju tæki og
             renna þannig ekki til líkt og alhliða gólfmottur eiga til að gera.

@@ -88,7 +88,7 @@ export function PageHero({
                 {icon}
               </div>
             ) : null}
-            <h1 className="text-4xl font-bold text-white md:text-6xl">{title}</h1>
+            <h1 className="text-4xl font-semibold text-white md:text-6xl">{title}</h1>
             {subtitle ? (
               <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg">
                 {subtitle}

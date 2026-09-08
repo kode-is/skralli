@@ -62,7 +62,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/65 via-black/15 to-black/40" aria-hidden="true" />
 
       <Container className="w-full">
-        <h1 className="max-w-xl whitespace-pre-line text-4xl font-bold leading-[1.1] text-white md:text-6xl">
+        <h1 className="max-w-xl whitespace-pre-line text-4xl font-semibold leading-[1.1] text-white md:text-6xl">
           {"Þinn\nsamstarfsaðili"}
         </h1>
         <p className="mt-4 max-w-sm text-sm text-white/90 md:text-base">

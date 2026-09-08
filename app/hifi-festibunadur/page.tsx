@@ -84,7 +84,7 @@ export default function HifiFestibunadurPage() {
       <section className="bg-white py-10 md:py-14">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
-            <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">Lyftu þungt með Lilleseth.</h3>
+            <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">Lyftu þungt með Lilleseth.</h3>
             <p className="mt-4 max-w-md text-base leading-relaxed text-neutral-600">
               Skralli er með gott úrval af viðurkenndum hífibúnaði frá Lilleseth Kjetting AS. Keðjur með Grade 80
               og Grade 100 og margt fleira.

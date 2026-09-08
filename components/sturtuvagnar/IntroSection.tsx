@@ -23,7 +23,7 @@ export function IntroSection() {
     <section className="bg-white py-16 md:py-20">
       <Container className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">{HEADING}</h3>
+          <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">{HEADING}</h3>
           <p className="mt-4 text-base leading-relaxed text-neutral-600">{TEXT}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/hafa-samband" className={BUTTON_CLASSES}>

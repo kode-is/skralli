@@ -20,7 +20,7 @@ export function IntroSection() {
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <YouTubeEmbed videoId="K1e7uMqRDRw" params="v=K1e7uMqRDRw" title="Síubúnaður frá BMair" />
         <div>
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
             Fyrir heilbrigt vinnuumhverfi
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">

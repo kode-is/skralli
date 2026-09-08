@@ -6,7 +6,7 @@ export function ContactCta() {
   return (
     <section className="bg-brand-dark">
       <Container className="flex flex-col items-start gap-6 py-10 md:flex-row md:items-center md:justify-between md:py-12">
-        <h3 className="text-2xl font-bold text-white md:text-3xl">
+        <h3 className="text-2xl font-semibold text-white md:text-3xl">
           Sendu okkur fyrirspurn
         </h3>
         <Link

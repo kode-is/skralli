@@ -18,7 +18,7 @@ function splitIntoSections(blocks: WagonBlock[]): Section[] {
   return sections;
 }
 
-const HEADING_CLASSES = "text-center text-3xl font-bold text-neutral-900 md:text-4xl";
+const HEADING_CLASSES = "text-center text-3xl font-semibold text-neutral-900 md:text-4xl";
 
 /**
  * Renders a WagonGroup/Wagon's `blocks` + `images` (lib/sturtuvagnar.ts).
@@ -108,7 +108,7 @@ export function WagonSections({ blocks, images }: { blocks: WagonBlock[]; images
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-lg font-bold text-neutral-900">{card.heading}</h3>
+                      <h3 className="font-ui text-lg font-semibold text-neutral-900">{card.heading}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-neutral-600">{card.text}</p>
                     </div>
                   </Link>

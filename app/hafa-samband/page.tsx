@@ -26,7 +26,7 @@ export default function HafaSambandPage() {
       </div>
       <section className="bg-white py-16 md:py-24">
         <Container>
-          <h2 className="text-center text-3xl font-bold text-neutral-900 md:text-4xl">
+          <h2 className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">
             Sendu okkur fyrirspurn!
           </h2>
           <div className="mx-auto mt-10 max-w-xl">

@@ -50,7 +50,7 @@ export function TeamCard({ image, name, role, email, phone, variant = "compact" 
                 {role}
               </h6>
             ) : null}
-            <h3 className="mt-1 text-lg font-bold text-white">{name}</h3>
+            <h3 className="mt-1 font-ui text-lg font-semibold text-white">{name}</h3>
             {email || phone ? (
               <div className="mt-1 flex items-center justify-between gap-3">
                 {email ? (

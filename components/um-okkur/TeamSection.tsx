@@ -11,7 +11,7 @@ export function TeamSection() {
     <section className="bg-white py-16 md:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">Teymið okkar</h2>
+          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Teymið okkar</h2>
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">{TEXT}</p>
         </div>
 

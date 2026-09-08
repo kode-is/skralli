@@ -32,7 +32,7 @@ export function IntroSection() {
           />
         </div>
         <div>
-          <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">Hammerglass er málið!</h3>
+          <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">Hammerglass er málið!</h3>
           {/* Partial bold from docs/scrape/formatting.json's "strong" list
               for this route: three phrases inside this one paragraph. */}
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">

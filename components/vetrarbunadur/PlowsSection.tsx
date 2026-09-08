@@ -54,7 +54,7 @@ export function PlowsSection() {
   return (
     <section className="bg-white py-10 md:py-14">
       <Container className="max-w-3xl">
-        <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">Snjóplógar</h3>
+        <h3 className="font-ui text-2xl font-semibold text-neutral-900 md:text-3xl">Snjóplógar</h3>
         <ImageBlock image={PLOWS_IMAGE} />
         <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
           Gigant býður upp á tvær týpur af fjölplógum, HSV og LSV. Sammerkt með þeim báðum er
@@ -67,7 +67,7 @@ export function PlowsSection() {
           og milli og meðalstórar hjólaskóflur.
         </p>
 
-        <h5 className="mt-10 text-lg font-bold text-neutral-900">LSV fjölplógur</h5>
+        <h5 className="mt-10 font-ui text-lg font-semibold text-neutral-900">LSV fjölplógur</h5>
         <ImageBlock image={LSV_IMAGE} />
         <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
           LSV er 91,5 cm á hæð og kemur í breiddunum 200cm, 250cm og 280cm. Eru með veltibúnaði og
@@ -76,7 +76,7 @@ export function PlowsSection() {
         <p className="mt-4 text-sm font-semibold text-neutral-900">Fáanlegur aukabúnaður:</p>
         <BulletList items={LSV_ACCESSORIES} className="mt-3" />
 
-        <h5 className="mt-10 text-lg font-bold text-neutral-900">Snjóplógur HSV</h5>
+        <h5 className="mt-10 font-ui text-lg font-semibold text-neutral-900">Snjóplógur HSV</h5>
         <ImageBlock image={HSV_IMAGE} />
         <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
           HSV er 122 cm á hæð og kemur í breiddunum 280cm, 320cm og 360cm. Þessir plógar eru með

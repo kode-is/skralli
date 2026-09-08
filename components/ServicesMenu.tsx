@@ -110,8 +110,8 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
         >
           <div className="flex gap-x-20">
             <div className="w-[227px]">
-              <h6 className="text-base font-semibold text-black">{servicesMenu.heading}</h6>
-              <p className="mt-3 text-sm font-normal text-[#444]">{servicesMenu.description}</p>
+              <h6 className="font-ui text-base font-semibold text-black">{servicesMenu.heading}</h6>
+              <p className="mt-3 font-ui text-sm font-normal text-[#444]">{servicesMenu.description}</p>
             </div>
             <div className="flex gap-x-9">
               {servicesMenu.columns.map((column, index) => (
@@ -121,7 +121,7 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
                       <Link
                         href={link.href}
                         onClick={() => closeNow(false)}
-                        className="block text-base font-normal text-[#444] transition hover:text-brand-dark"
+                        className="block font-ui text-base font-normal text-[#444] transition hover:text-brand-dark"
                       >
                         {link.text}
                       </Link>

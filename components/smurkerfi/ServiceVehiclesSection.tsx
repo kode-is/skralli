@@ -71,7 +71,7 @@ export function ServiceVehiclesSection() {
             label="Vel útbúnir þjónustubílar"
           />
           <div>
-            <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
               Vel útbúnir þjónustubílar
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
@@ -93,7 +93,7 @@ export function ServiceVehiclesSection() {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-lg font-bold text-neutral-900">Viðgerðatöskur</h3>
+              <h3 className="font-ui text-lg font-semibold text-neutral-900">Viðgerðatöskur</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 Viðgerðatöskur sérsniðnar að þínum þörfum. Allt sem þú þarft til þess að sinna
                 viðhaldi á þínu smurkerfi. Þegar eitthvað klárast hefur þú einfaldlega samband og
@@ -113,7 +113,7 @@ export function ServiceVehiclesSection() {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-lg font-bold text-neutral-900">Koppafeiti í áskrift</h3>
+              <h3 className="font-ui text-lg font-semibold text-neutral-900">Koppafeiti í áskrift</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 Við sendum þér koppafeiti reglulega eða komum sjálfir og fyllum á - allt eftir
                 þínum óskum.

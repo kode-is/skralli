@@ -74,7 +74,7 @@ export function ProductsSection() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-neutral-900 md:text-3xl">{product.heading}</h3>
+                <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">{product.heading}</h3>
                 <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-neutral-600 md:text-base">
                   {product.text}
                 </p>

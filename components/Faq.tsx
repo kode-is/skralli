@@ -40,7 +40,7 @@ function FaqRow({ item }: { item: FaqItem }) {
         className="flex w-full items-center gap-4 px-6 py-5 text-left"
       >
         <ToggleIcon open={isOpen} />
-        <span className="font-semibold text-neutral-900">{item.question}</span>
+        <span className="font-ui font-semibold text-neutral-900">{item.question}</span>
       </button>
       {isOpen ? (
         <div

@@ -25,7 +25,7 @@ export function FaqSection() {
   return (
     <section className="bg-[#f0f4fa] py-16 md:py-20">
       <Container>
-        <h2 className="text-center text-3xl font-bold text-neutral-900 md:text-4xl">
+        <h2 className="text-center font-ui text-3xl font-bold text-neutral-900 md:text-4xl">
           Spurt & Svarað
         </h2>
         <div className="mx-auto mt-10 max-w-3xl">
