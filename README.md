@@ -1,7 +1,10 @@
 # Skralli
 
-Static Next.js recreation of skralli.is (Icelandic B2B site), using the NowAlt font
-and a brand Tailwind theme.
+Static Next.js recreation of skralli.is (Icelandic B2B site). Typography matches
+the live site: Figtree (site default), Inter (card/table/footer text), and
+Satoshi (the animated stat numbers), all self-hosted via `next/font` — see
+`app/fonts.ts`. The client's NowAlt font files remain in `assets/fonts/` for
+reference/brand use but are no longer wired into the site.
 
 ## Development
 
