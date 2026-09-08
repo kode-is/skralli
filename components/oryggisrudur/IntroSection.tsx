@@ -17,7 +17,7 @@ const BUTTON_CLASSES =
 
 export function IntroSection() {
   return (
-    <section className="bg-white pt-10 pb-16 md:pt-14 md:pb-20">
+    <section className="bg-white pt-10 md:pt-14">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div
           className="relative w-full overflow-hidden rounded-2xl shadow-md"
@@ -51,7 +51,7 @@ export function IntroSection() {
       </Container>
 
       {/* docs/scrape/oryggisrudur.json block 12. */}
-      <DotDivider />
+      <DotDivider className="mt-[60px] md:mt-[28px]" />
     </section>
   );
 }

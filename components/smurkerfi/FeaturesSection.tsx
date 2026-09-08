@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { DotDivider } from "@/components/DotDivider";
 import { FeatureCard } from "@/components/FeatureCard";
 import type { Img } from "@/lib/types";
 
@@ -51,7 +52,7 @@ const FEATURES: Feature[] = [
 
 export function FeaturesSection() {
   return (
-    <section className="bg-white pb-16 md:pb-20">
+    <section className="bg-white">
       <Container>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature) => (
@@ -66,13 +67,8 @@ export function FeaturesSection() {
       </Container>
 
       {/* Decorative dot pattern (docs/scrape/smurkerfi.json block 34, a 0x0
-          CSS background rather than a visible <img> — same asset and
-          treatment as components/home/StepsSection.tsx). */}
-      <div
-        aria-hidden="true"
-        className="mt-16 h-28 w-full bg-repeat opacity-70 md:h-32"
-        style={{ backgroundImage: "url(/images/home/20-463dd036.svg)" }}
-      />
+          CSS background rather than a visible <img>); live gap above: 60/50 px. */}
+      <DotDivider className="mt-[60px] md:mt-[50px]" />
     </section>
   );
 }

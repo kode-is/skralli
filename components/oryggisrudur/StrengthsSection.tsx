@@ -15,7 +15,7 @@ const STRENGTHS = [
 
 export function StrengthsSection() {
   return (
-    <section className="bg-[#f0f4fa] py-16 md:py-20">
+    <section className="bg-[#f0f4fa] pt-[63px] pb-16 md:pt-[75px] md:pb-20">
       <Container>
         <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Styrkleikar Hammerglass</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">

@@ -23,7 +23,7 @@ const ITEMS = [
 
 export function FaqSection() {
   return (
-    <section className="bg-[#f0f4fa] py-16 md:py-20">
+    <section className="bg-[#f0f4fa] pt-[60px] pb-16 md:pt-[100px] md:pb-20">
       <Container>
         <h2 className="text-center font-ui text-3xl font-bold text-neutral-900 md:text-4xl">
           Spurt & Svarað

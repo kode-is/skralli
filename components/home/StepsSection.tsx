@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { DotDivider } from "@/components/DotDivider";
 import { StepCard } from "@/components/StepCard";
 
 const STEPS = [
@@ -40,12 +41,8 @@ export function StepsSection() {
       </Container>
 
       {/* Decorative dot pattern (docs/scrape/home.json block 39, a 0x0 CSS
-          background rather than a visible <img>). */}
-      <div
-        aria-hidden="true"
-        className="mt-16 h-28 w-full bg-repeat opacity-70 md:h-32"
-        style={{ backgroundImage: "url(/images/home/20-463dd036.svg)" }}
-      />
+          background rather than a visible <img>); live gap above: 75/68 px. */}
+      <DotDivider className="mt-[75px] md:mt-[68px]" />
     </section>
   );
 }

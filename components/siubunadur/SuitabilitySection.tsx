@@ -15,7 +15,7 @@ const SUITABILITY = [
 
 export function SuitabilitySection() {
   return (
-    <section className="bg-[#f0f4fa] py-16 md:py-20">
+    <section className="bg-[#f0f4fa] pt-[105px] pb-16 md:pt-[125px] md:pb-20">
       <Container>
         <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Hvar hentar BMair?</h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">

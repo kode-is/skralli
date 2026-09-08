@@ -16,7 +16,7 @@ const BUTTON_CLASSES =
 // docs/reference/siubunadur.desktop.jpg.
 export function IntroSection() {
   return (
-    <section className="bg-white pt-10 pb-16 md:pt-14 md:pb-20">
+    <section className="bg-white pt-10 md:pt-14">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <YouTubeEmbed videoId="K1e7uMqRDRw" params="v=K1e7uMqRDRw" title="Síubúnaður frá BMair" />
         <div>
@@ -36,7 +36,7 @@ export function IntroSection() {
       </Container>
 
       {/* docs/scrape/siubunadur.json block 10. */}
-      <DotDivider />
+      <DotDivider className="mt-[60px]" />
     </section>
   );
 }

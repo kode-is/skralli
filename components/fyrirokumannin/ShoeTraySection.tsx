@@ -5,14 +5,15 @@ import type { Img } from "@/lib/types";
 
 // docs/scrape/fyrirokumannin.json blocks 76-80.
 const IMAGE: Img = { src: "/images/fyrirokumannin/55-d2881ae9.jpg", alt: "", width: 305, height: 279 };
+// Live renders this image in a 305 × 254 box (full width on mobile), not at its intrinsic ratio.
 
 const BUTTON_CLASSES =
   "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid";
 
 export function ShoeTraySection() {
   return (
-    <section className="bg-[#f0f4fa] py-16 md:py-20">
-      <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+    <section className="bg-[#f0f4fa] pt-[30px] pb-16 md:pb-20">
+      <Container className="grid items-center gap-6 md:grid-cols-2 md:gap-16">
         <div>
           <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">
             Ekki vaða inn á skítugum skónum
@@ -26,8 +27,8 @@ export function ShoeTraySection() {
           </Link>
         </div>
         <div
-          className="relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl shadow-sm"
-          style={{ aspectRatio: `${IMAGE.width} / ${IMAGE.height}` }}
+          className="relative order-first mx-auto w-full overflow-hidden rounded-2xl shadow-sm md:order-none md:w-[305px]"
+          style={{ aspectRatio: "305 / 254" }}
         >
           <Image
             src={IMAGE.src}

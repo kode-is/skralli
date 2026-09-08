@@ -32,7 +32,7 @@ const ITEMS = ["Vinnubíla", "Vörubíla", "Vinnuvélar", "Dráttarvélar"];
 
 export function FloorMatsSection() {
   return (
-    <section className="bg-white pb-16 md:pb-20">
+    <section className="bg-white">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Gólfmottur</h2>
@@ -68,7 +68,7 @@ export function FloorMatsSection() {
       </Container>
 
       {/* docs/scrape/fyrirokumannin.json block 75. */}
-      <DotDivider />
+      <DotDivider className="mt-[60px]" />
     </section>
   );
 }
