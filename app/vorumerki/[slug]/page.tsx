@@ -49,7 +49,7 @@ export default async function BrandPage({
           <Breadcrumb
             items={[{ text: "Vörumerki", href: "/vorumerki" }, { text: brand.name }]}
           />
-          <div className="mt-10 text-base leading-relaxed text-neutral-700">
+          <div className="mt-10 font-ui text-base leading-relaxed text-neutral-700">
             {brand.subheading ? (
               <h4 className="font-ui text-xl font-semibold text-neutral-900 md:text-2xl">
                 {brand.subheading}
@@ -65,7 +65,7 @@ export default async function BrandPage({
               ) : (
                 <p
                   key={index}
-                  className={block.bold ? "mt-8 font-semibold first:mt-0" : "mt-8 first:mt-0"}
+                  className={block.bold ? "mt-8 font-bold first:mt-0" : "mt-8 first:mt-0"}
                 >
                   {block.text}
                 </p>
