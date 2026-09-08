@@ -25,9 +25,14 @@ const orderedBrands = INDEX_ORDER.map((id) => brands.find((brand) => brand.id ==
 
 export default function VorumerkiPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
-        image={{ src: "/images/vorumerki/01-a24654d1.jpg", alt: "Discover", width: 1440, height: 960 }}
+        image={{
+          src: "/images/vorumerki/01-a24654d1.jpg",
+          alt: "Ísjakar á lygnu vatni í rökkri",
+          width: 1440,
+          height: 960,
+        }}
         title="Vörumerki"
       />
       <section className="bg-white py-16 md:py-20">

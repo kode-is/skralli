@@ -24,7 +24,7 @@ export const metadata = pageMetadata({
 // /smurkerfi.
 const HERO_IMAGE = {
   src: "/images/home/23-16722dae.jpeg",
-  alt: "Snjókeðjur, Hlífi- & festibúnaður",
+  alt: "Traktor að losa svartan Gigant sturtuvagn í snjó",
   width: 6000,
   height: 4000,
 };
@@ -33,7 +33,7 @@ const CubeIcon = CATEGORY_ICONS.sturtuvagnar;
 
 export default function SturtuvagnarPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Sturtuvagnar"

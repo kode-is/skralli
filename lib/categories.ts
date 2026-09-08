@@ -39,7 +39,7 @@ export const categories: Category[] = [
     href: "/sturtuvagnar",
     image: {
       src: "/images/home/23-16722dae.jpeg",
-      alt: "Snjókeðjur, Hlífi- & festibúnaður",
+      alt: "Traktor að losa svartan Gigant sturtuvagn í snjó",
       width: 512,
       height: 341,
     },
@@ -50,7 +50,12 @@ export const categories: Category[] = [
     title: "Öryggisrúður",
     blurb: "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður",
     href: "/oryggisrudur",
-    image: { src: "/images/home/24-a996c2c4.jpg", alt: "Quick fixes", width: 512, height: 384 },
+    image: {
+      src: "/images/home/24-a996c2c4.jpg",
+      alt: "Starfsmaður Skralla að setja upp Hammerglass-rúðu",
+      width: 512,
+      height: 384,
+    },
     onHome: true,
   },
   {
@@ -58,7 +63,12 @@ export const categories: Category[] = [
     title: "Hífi- & festibúnaður",
     blurb: "Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu",
     href: "/hifi-festibunadur",
-    image: { src: "/images/home/25-cf51054e.png", alt: "Quick fixes", width: 418, height: 512 },
+    image: {
+      src: "/images/home/25-cf51054e.png",
+      alt: "Hífibúnaður og keðjur á sýningarvegg Lilleseth",
+      width: 418,
+      height: 512,
+    },
     onHome: true,
   },
   {

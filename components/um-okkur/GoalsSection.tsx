@@ -14,7 +14,7 @@ const CHECKLIST = site.motto.split(" - ");
 // for each downloaded image).
 const MAIN_IMAGE = {
   src: "/images/um-okkur/04-ab45b0b4.jpeg",
-  alt: "Interior work",
+  alt: "Nærmynd af stýrishúsi og slöngum vinnuvélar",
   width: 514,
   height: 686,
 };
@@ -26,7 +26,7 @@ const MAIN_IMAGE = {
 // unexplained "hand-eyeballed" class.
 const OVERLAY_IMAGE = {
   src: "/images/um-okkur/05-baa00a71.jpg",
-  alt: "Bedroom work",
+  alt: "Starfsmaður Skralla við Lokotrack-vinnsluvél á námusvæði",
   aspectRatio: "3 / 4",
 };
 

@@ -16,13 +16,18 @@ export const metadata = pageMetadata({
   path: "/hifi-festibunadur",
 });
 
-// docs/scrape/hifi-festibunadur.json block 1: same "Quick fixes"-alt photo
-// as the home page's hífi- & festibúnaður category card (lib/categories.ts),
+// docs/scrape/hifi-festibunadur.json block 1: same photo as the home page's
+// hífi- & festibúnaður category card (lib/categories.ts),
 // scraped at a 418x512 thumbnail; the actual downloaded file is 2825x3460
 // (same aspect ratio), so that's what's passed to next/image — same
 // small-thumbnail-distortion fix as the /oryggisrudur and /smurkerfi heroes
 // (see components/smurkerfi's HERO_IMAGE comment).
-const HERO_IMAGE = { src: "/images/home/25-cf51054e.png", alt: "Quick fixes", width: 2825, height: 3460 };
+const HERO_IMAGE = {
+  src: "/images/home/25-cf51054e.png",
+  alt: "Hífibúnaður og keðjur á sýningarvegg Lilleseth",
+  width: 2825,
+  height: 3460,
+};
 
 const LILLESETH_IMAGE = {
   src: "/images/hifi-festibunadur/02-bf8db647.webp",
@@ -63,7 +68,7 @@ const HifiIcon = CATEGORY_ICONS["hifi-festibunadur"];
 
 export default function HifiFestibunadurPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Hífi- & festibúnaður"

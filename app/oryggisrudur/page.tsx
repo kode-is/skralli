@@ -17,18 +17,23 @@ export const metadata = pageMetadata({
 });
 
 // docs/scrape/oryggisrudur.json block 2: same photo as the home page's
-// "Quick fixes" category card (lib/categories.ts). Scraped at a 512x384
+// Öryggisrúður category card (lib/categories.ts). Scraped at a 512x384
 // thumbnail; the actual downloaded file is 4032x3024 (same 4:3 aspect), so
 // that's what's passed to next/image to avoid the small-thumbnail
 // distortion noted on the /thjonusta hero (see components/smurkerfi's
 // HERO_IMAGE comment for the same fix).
-const HERO_IMAGE = { src: "/images/home/24-a996c2c4.jpg", alt: "Quick fixes", width: 4032, height: 3024 };
+const HERO_IMAGE = {
+  src: "/images/home/24-a996c2c4.jpg",
+  alt: "Starfsmaður Skralla að setja upp Hammerglass-rúðu",
+  width: 4032,
+  height: 3024,
+};
 
 const ExpandIcon = CATEGORY_ICONS.oryggisrudur;
 
 export default function OryggisrudurPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Öryggisrúður"

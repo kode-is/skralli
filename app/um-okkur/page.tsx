@@ -18,9 +18,14 @@ export const metadata = pageMetadata({
 
 export default function UmOkkurPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
-        image={{ src: "/images/um-okkur/01-143b289f.png", alt: "UM OKKur", width: 1440, height: 642 }}
+        image={{
+          src: "/images/um-okkur/01-143b289f.png",
+          alt: "Starfsmenn Skralla að vinna í vinnuvél",
+          width: 1440,
+          height: 642,
+        }}
         title="Um okkur"
       />
       <div className="bg-white pt-6">

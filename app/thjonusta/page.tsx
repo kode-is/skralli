@@ -22,14 +22,14 @@ export const metadata = pageMetadata({
 // instead of the scraped box size.
 const HERO_IMAGE = {
   src: "/images/thjonusta/01-d13aa3c1.jpg",
-  alt: "Kitchen fixes",
+  alt: "Reykjavík og snævi þakin fjöll í rökkri",
   width: 1440,
   height: 960,
 };
 
 export default function ThjonustaPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero image={HERO_IMAGE} title="Þjónustur" />
       <section className="bg-[#f0f4fa] py-16 md:py-20">
         <Container>

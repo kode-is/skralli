@@ -8,15 +8,41 @@ import type { Img } from "@/lib/types";
 // arrow icons, positioned in the "Vel útbúnir þjónustubílar" section
 // alongside its heading and tagline (docs/reference/smurkerfi.desktop.jpg
 // shows this exact photo — with prev/next chevrons and dot pagination —
-// where the scrape places the carousel blocks). Alt texts kept verbatim,
-// including the odd stock-template leftovers ("Kitchen installation" etc.).
+// where the scrape places the carousel blocks). Alt texts describe what's
+// actually in each photo (replacing the scrape's stock-template leftovers
+// like "Kitchen installation" — see task-16 final fix wave report).
 const CAROUSEL_IMAGES: Img[] = [
-  { src: "/images/smurkerfi/11-398b7a7e.jpeg", alt: "Kitchen installation", width: 1024, height: 1365 },
-  { src: "/images/smurkerfi/12-ea960e01.jpg", alt: "Bathroom renovation", width: 1024, height: 768 },
-  { src: "/images/smurkerfi/13-ff6a4cca.jpg", alt: "Plumbing", width: 1024, height: 768 },
+  {
+    src: "/images/smurkerfi/11-398b7a7e.jpeg",
+    alt: "Opið vélarrými vinnuvélar með smurkerfi uppsettu",
+    width: 1024,
+    height: 1365,
+  },
+  {
+    src: "/images/smurkerfi/12-ea960e01.jpg",
+    alt: "Beltagrafa með verkfæri og smurkerfishluti á jörðu",
+    width: 1024,
+    height: 768,
+  },
+  {
+    src: "/images/smurkerfi/13-ff6a4cca.jpg",
+    alt: "Beltagrafa og þjónustubíll Skralla á athafnasvæði",
+    width: 1024,
+    height: 768,
+  },
   { src: "/images/smurkerfi/14-2234de63.jpg", alt: "Skralli og grafa", width: 1024, height: 768 },
-  { src: "/images/smurkerfi/15-a810ffe2.jpg", alt: "Kitchen remodeling", width: 1024, height: 768 },
-  { src: "/images/smurkerfi/16-4447d960.jpg", alt: "Shower installation", width: 1024, height: 768 },
+  {
+    src: "/images/smurkerfi/15-a810ffe2.jpg",
+    alt: "Stór CAT-vinnuvél við þjónustubíl Skralla",
+    width: 1024,
+    height: 768,
+  },
+  {
+    src: "/images/smurkerfi/16-4447d960.jpg",
+    alt: "CAT-vinnuvél með skóflu og þjónustubílar Skralla",
+    width: 1024,
+    height: 768,
+  },
 ];
 
 const PREV_ARROW: Img = { src: "/images/smurkerfi/35-8ea812bc.svg", alt: "Back Arrow", width: 40, height: 40 };
@@ -38,7 +64,12 @@ export function ServiceVehiclesSection() {
     <section className="bg-white py-16 md:py-20">
       <Container>
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <Carousel images={CAROUSEL_IMAGES} prevArrow={PREV_ARROW} nextArrow={NEXT_ARROW} />
+          <Carousel
+            images={CAROUSEL_IMAGES}
+            prevArrow={PREV_ARROW}
+            nextArrow={NEXT_ARROW}
+            label="Vel útbúnir þjónustubílar"
+          />
           <div>
             <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">
               Vel útbúnir þjónustubílar
