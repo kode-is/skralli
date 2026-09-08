@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { DotDivider } from "@/components/DotDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 const BUTTON_CLASSES =
@@ -34,13 +35,8 @@ export function IntroSection() {
         </div>
       </Container>
 
-      {/* docs/scrape/siubunadur.json block 10: decorative dot pattern
-          divider (same asset/treatment as components/smurkerfi/FeaturesSection.tsx). */}
-      <div
-        aria-hidden="true"
-        className="mt-16 h-20 w-full bg-repeat opacity-10"
-        style={{ backgroundImage: "url(/images/home/20-463dd036.svg)" }}
-      />
+      {/* docs/scrape/siubunadur.json block 10. */}
+      <DotDivider />
     </section>
   );
 }

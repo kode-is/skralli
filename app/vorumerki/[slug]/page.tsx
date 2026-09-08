@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
+import { PageHero } from "@/components/PageHero";
 import { pageMetadata } from "@/lib/seo";
 import { brands } from "@/lib/brands";
 
@@ -36,22 +36,9 @@ export default async function BrandPage({
   return (
     <main>
       {/* Title band: the page's single content image as a full-bleed
-          background, matching the reference screenshots — not PageHero,
-          which is 420/560px tall; these bands measure 438/479px. */}
-      <div className="relative flex h-[438px] items-center justify-center overflow-hidden md:h-[479px]">
-        <Image
-          src={brand.image.src}
-          alt={brand.image.alt}
-          width={brand.image.width}
-          height={brand.image.height}
-          priority
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
-        <h1 className="relative z-10 px-6 text-center text-4xl font-bold text-white md:text-6xl">
-          {brand.name}
-        </h1>
-      </div>
+          background, matching the reference screenshots — PageHero's
+          default height is 420/560px; these bands measure 438/479px. */}
+      <PageHero image={brand.image} title={brand.name} height="h-[438px] md:h-[479px]" />
       {/* Every reference screenshot shows a large, near-constant gap of
           ~140px (mobile) / ~210px (desktop) between the last paragraph and
           the ContactCta band, regardless of how much copy a brand has (it's

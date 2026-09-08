@@ -4,7 +4,8 @@ import type { Img } from "@/lib/types";
 
 type PageHeroProps = {
   image: Img;
-  title: string;
+  /** Required unless `children` supplies custom content instead. */
+  title?: string;
   subtitle?: string;
   /**
    * Small decorative badge shown above the title (e.g. a category glyph from
@@ -29,11 +30,34 @@ type PageHeroProps = {
    * the hub pages (/, /um-okkur, /thjonusta, /vorumerki).
    */
   pattern?: boolean;
+  /**
+   * Hero band height, as Tailwind classes. Defaults to the standard
+   * category-page hero (420/560px). vorumerki/[slug]'s title band
+   * (438/479px) and not-found's full-viewport band pass their own instead
+   * of duplicating this component's image+overlay markup.
+   */
+  height?: string;
+  /** Tint overlay classes. Defaults to the standard `bg-black/50`; not-found's is a touch darker. */
+  overlayClassName?: string;
+  /** Content wrapper classes, in front of the overlay. Defaults to a centered block; not-found's needs a vertical flex stack instead. */
+  contentClassName?: string;
+  /** Custom content, replacing the default title/subtitle/icon block (not-found's 404 heading + copy + link). `title` is unused when this is set. */
+  children?: ReactNode;
 };
 
-export function PageHero({ image, title, subtitle, icon, pattern }: PageHeroProps) {
+export function PageHero({
+  image,
+  title,
+  subtitle,
+  icon,
+  pattern,
+  height = "h-[420px] md:h-[560px]",
+  overlayClassName = "bg-black/50",
+  contentClassName = "px-6 text-center",
+  children,
+}: PageHeroProps) {
   return (
-    <div className="relative flex h-[420px] items-center justify-center overflow-hidden md:h-[560px]">
+    <div className={`relative flex ${height} items-center justify-center overflow-hidden`}>
       {pattern ? (
         <div
           aria-hidden="true"
@@ -52,22 +76,26 @@ export function PageHero({ image, title, subtitle, icon, pattern }: PageHeroProp
         priority
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
-      <div className="relative z-10 px-6 text-center">
-        {icon ? (
-          <div
-            aria-hidden="true"
-            className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-dark text-white"
-          >
-            {icon}
-          </div>
-        ) : null}
-        <h1 className="text-4xl font-bold text-white md:text-6xl">{title}</h1>
-        {subtitle ? (
-          <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg">
-            {subtitle}
-          </p>
-        ) : null}
+      <div className={`absolute inset-0 ${overlayClassName}`} aria-hidden="true" />
+      <div className={`relative z-10 ${contentClassName}`}>
+        {children ?? (
+          <>
+            {icon ? (
+              <div
+                aria-hidden="true"
+                className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-dark text-white"
+              >
+                {icon}
+              </div>
+            ) : null}
+            <h1 className="text-4xl font-bold text-white md:text-6xl">{title}</h1>
+            {subtitle ? (
+              <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg">
+                {subtitle}
+              </p>
+            ) : null}
+          </>
+        )}
       </div>
     </div>
   );

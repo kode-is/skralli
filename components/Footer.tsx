@@ -97,7 +97,7 @@ export function Footer() {
             </div>
             <Image
               src="/images/home/34-5f7b6ec9.jpg"
-              alt="Fyrirmyndarfyrirtæki 2025 - Viðskiptablaðið og Keldan"
+              alt="Fyrirmyndarfyrirtæki í rekstri 2025 — Viðskiptablaðið / Keldan"
               width={151}
               height={106}
               className="mt-2"

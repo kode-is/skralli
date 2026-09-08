@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { DotDivider } from "@/components/DotDivider";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/oryggisrudur.json blocks 8-11.
@@ -49,13 +50,8 @@ export function IntroSection() {
         </div>
       </Container>
 
-      {/* docs/scrape/oryggisrudur.json block 12: decorative dot pattern
-          divider (same asset/treatment as components/smurkerfi/FeaturesSection.tsx). */}
-      <div
-        aria-hidden="true"
-        className="mt-16 h-20 w-full bg-repeat opacity-10"
-        style={{ backgroundImage: "url(/images/home/20-463dd036.svg)" }}
-      />
+      {/* docs/scrape/oryggisrudur.json block 12. */}
+      <DotDivider />
     </section>
   );
 }
