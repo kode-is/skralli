@@ -19,7 +19,7 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Aðalvalmynd" className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
             <Link
               key={item.href}

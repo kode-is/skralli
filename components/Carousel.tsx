@@ -16,6 +16,12 @@ type CarouselProps = {
    * without needing true seamless infinite scrolling.
    */
   repeat?: number;
+  /**
+   * Accessible name for the carousel region (e.g. the section's own
+   * heading text) — assistive tech announces this alongside the
+   * `aria-roledescription="carousel"` role.
+   */
+  label: string;
 };
 
 /**
@@ -25,7 +31,7 @@ type CarouselProps = {
  * instant slide change since the position transition is skipped via
  * motion-reduce.
  */
-export function Carousel({ images, prevArrow, nextArrow, repeat = 4 }: CarouselProps) {
+export function Carousel({ images, prevArrow, nextArrow, repeat = 4, label }: CarouselProps) {
   const slides = Array.from({ length: repeat }, () => images).flat();
   const [index, setIndex] = useState(0);
 
@@ -33,13 +39,26 @@ export function Carousel({ images, prevArrow, nextArrow, repeat = 4 }: CarouselP
   const goNext = () => setIndex((current) => (current + 1) % slides.length);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-neutral-100">
+    <div
+      role="group"
+      aria-roledescription="carousel"
+      aria-label={label}
+      className="relative overflow-hidden rounded-2xl bg-neutral-100"
+    >
       <div
         className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((image, i) => (
-          <div key={i} className="relative aspect-[16/9] w-full shrink-0">
+          <div
+            key={i}
+            className="relative aspect-[16/9] w-full shrink-0"
+            // Only the first copy of the repeated slide set is real content;
+            // the rest exist purely to fill out the live site's
+            // infinite-scroll illusion and would otherwise be announced as
+            // duplicate images by assistive tech.
+            aria-hidden={i >= images.length ? "true" : undefined}
+          >
             <Image
               src={image.src}
               alt={image.alt}

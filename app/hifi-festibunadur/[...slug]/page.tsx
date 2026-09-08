@@ -72,7 +72,7 @@ export default async function HifiSlugPage({ params }: { params: Promise<PagePar
   breadcrumbItems.push({ text: page.title });
 
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={page.heroImage!}
         title={page.title}

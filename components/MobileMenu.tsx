@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { navCta } from "@/lib/site";
 
 type NavItem = { text: string; href: string };
@@ -22,10 +22,10 @@ export function MobileMenu({ nav }: MobileMenuProps) {
   // Escape closes the menu, Tab/Shift+Tab is trapped inside the open panel
   // (a full-screen overlay covering the header/page behind it), and opening
   // moves focus onto the panel's own close button.
-  function close() {
+  const close = useCallback(() => {
     setOpen(false);
     toggleButtonRef.current?.focus();
-  }
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -54,6 +54,17 @@ export function MobileMenu({ nav }: MobileMenuProps) {
 
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open, close]);
+
+  // Lock background scroll while the full-screen panel is open, restoring
+  // whatever the body's own overflow was set to beforehand.
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open]);
 
   return (

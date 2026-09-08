@@ -55,7 +55,12 @@ export function SeatCoversSection() {
             Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
           </p>
         </div>
-        <Carousel images={CAROUSEL_IMAGES} prevArrow={PREV_ARROW} nextArrow={NEXT_ARROW} />
+        <Carousel
+          images={CAROUSEL_IMAGES}
+          prevArrow={PREV_ARROW}
+          nextArrow={NEXT_ARROW}
+          label="Sætisáklæði"
+        />
       </Container>
     </section>
   );

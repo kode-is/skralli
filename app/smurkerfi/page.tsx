@@ -29,7 +29,7 @@ const DropletIcon = CATEGORY_ICONS.smurkerfi;
 
 export default function SmurkerfiPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Smurkerfi"

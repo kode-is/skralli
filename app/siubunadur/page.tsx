@@ -26,7 +26,7 @@ const WindIcon = CATEGORY_ICONS.siubunadur;
 
 export default function SiubunadurPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Síubúnaður"

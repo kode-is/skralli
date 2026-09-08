@@ -34,7 +34,7 @@ export default async function BrandPage({
   if (!brand) notFound();
 
   return (
-    <main>
+    <main id="main">
       {/* Title band: the page's single content image as a full-bleed
           background, matching the reference screenshots — PageHero's
           default height is 420/560px; these bands measure 438/479px. */}

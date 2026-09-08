@@ -28,7 +28,7 @@ const SnowflakeIcon = CATEGORY_ICONS.vetrarbunadur;
 
 export default function VetrarbunadurPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Vetrarbúnaður"

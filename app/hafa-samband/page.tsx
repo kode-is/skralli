@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 
 export default function HafaSambandPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={{ src: "/images/hafa-samband/01-7ea80875.jpeg", alt: "Vinir við vegin", width: 512, height: 341 }}
         title="Hafa Samband"

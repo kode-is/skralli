@@ -33,7 +33,7 @@ const CarIcon = CATEGORY_ICONS.fyrirokumannin;
 
 export default function FyrirOkumanninPage() {
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={HERO_IMAGE}
         title="Fyrir ökumanninn"

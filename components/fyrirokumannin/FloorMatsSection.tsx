@@ -58,7 +58,12 @@ export function FloorMatsSection() {
           </div>
         </div>
         <div className="md:order-first">
-          <Carousel images={CAROUSEL_IMAGES} prevArrow={PREV_ARROW} nextArrow={NEXT_ARROW} />
+          <Carousel
+            images={CAROUSEL_IMAGES}
+            prevArrow={PREV_ARROW}
+            nextArrow={NEXT_ARROW}
+            label="Gólfmottur"
+          />
         </div>
       </Container>
 

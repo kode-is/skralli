@@ -53,7 +53,7 @@ export default async function SturtuvagnarSlugPage({
   if (!record) notFound();
 
   return (
-    <main>
+    <main id="main">
       <PageHero
         image={record.heroImage}
         title={record.title}

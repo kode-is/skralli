@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 
 export default function Home() {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <BrandStrip />
       <StepsSection />
