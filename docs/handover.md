@@ -22,9 +22,12 @@ Branch: `site-recreation`, PR: https://github.com/kode-is/skralli/pull/1
 - Unique title and description per category and brand page (21 routes share the site title).
 - Serve the hero video only on desktop, or a shorter compressed loop.
 - The Bindikeðjur "Bindikeðjur" section on live lays two ranges side by side; the new site stacks them.
+- Layout pass: a few sections still differ from live in inner spacing (e.g. the Skóbakkar block on Fyrir ökumanninn: live indents the text column and uses a 36 px heading). Say the word and Claude will run the same page-by-page pixel comparison used for the dot bands and category cards.
 
 ## Done
 
+- 2026-09-08 Dot bands redrawn to the live treatment (48 px tile, opacity 0.1, 100/75 px tall, flush with the next section) on all five pages; the sections that follow now start at the live offsets.
+- 2026-09-08 Home category cards rebuilt to the live geometry; the icon badge sits in front of the card body again, straddling the image edge.
 - 2026-09-08 Fonts switched to the live site's Figtree / Inter / Satoshi (self-hosted), replacing NowAlt at Einar's request; every family/weight was measured on the live pages and applied per element.
 - 2026-09-08 Header: "Þjónusta" hover menu, clean logo at live size, nav beside the button, mobile menu as floating card (PR commits `0de29f2`…`135eb3e`).
 - 2026-09-08 Page container widened to the live 1240 px content width.
