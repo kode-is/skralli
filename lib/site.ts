@@ -26,6 +26,27 @@ export const nav = [
 
 export const navCta = { text: "Hafa samband", href: "/hafa-samband" } as const;
 
+// Desktop hover panel under the "Þjónusta" nav item (Header.tsx /
+// ServicesMenu.tsx). Order and hrefs measured on the live site; note this
+// differs from the display order in lib/categories.ts.
+export const servicesMenu = {
+  heading: "Þjónusta",
+  description: "Okkar metnaður felst í vörugæðum og framúrskarandi þjónustu.",
+  columns: [
+    [
+      { text: "Smurkerfi", href: "/smurkerfi" },
+      { text: "Sturtuvagnar", href: "/sturtuvagnar" },
+      { text: "Öryggisrúður", href: "/oryggisrudur" },
+      { text: "Síubúnaður", href: "/siubunadur" },
+    ],
+    [
+      { text: "Fyrir ökumanninn", href: "/fyrirokumannin" },
+      { text: "Hífi- & festibúnaður", href: "/hifi-festibunadur" },
+      { text: "Vetrarbúnaður", href: "/vetrarbunadur" },
+    ],
+  ],
+} as const;
+
 export const footerColumns = [
   {
     heading: "Fyrirtækið",

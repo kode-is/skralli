@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
 import { MobileMenu } from "./MobileMenu";
+import { ServicesMenu } from "./ServicesMenu";
 import { nav, navCta } from "@/lib/site";
 
 export function Header() {
@@ -19,35 +20,33 @@ export function Header() {
           />
         </Link>
 
-        <nav aria-label="Aðalvalmynd" className="hidden items-center gap-8 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center gap-1 text-sm text-white/90 transition hover:text-white"
-            >
-              {item.text}
-              {item.text === "Þjónusta" ? (
-                <svg viewBox="0 0 12 8" fill="none" className="h-2.5 w-2.5" aria-hidden="true">
-                  <path
-                    d="M1 1.5L6 6.5L11 1.5"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ) : null}
-            </Link>
-          ))}
-        </nav>
+        {/* Nav + CTA are grouped so the hover panel can anchor (right-0)
+            to this group's right edge — i.e. the "Hafa samband" button's
+            right edge — instead of centring under the "Þjónusta" word. */}
+        <div className="relative hidden items-center gap-8 md:flex">
+          <nav aria-label="Aðalvalmynd" className="flex items-center gap-8">
+            {nav.map((item) =>
+              item.text === "Þjónusta" ? (
+                <ServicesMenu key={item.href} href={item.href} text={item.text} />
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-white/90 transition hover:text-white"
+                >
+                  {item.text}
+                </Link>
+              ),
+            )}
+          </nav>
 
-        <Link
-          href={navCta.href}
-          className="hidden items-center justify-center rounded-md border border-white/70 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-brand-dark md:inline-flex"
-        >
-          {navCta.text}
-        </Link>
+          <Link
+            href={navCta.href}
+            className="inline-flex items-center justify-center rounded-md border border-white/70 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-brand-dark"
+          >
+            {navCta.text}
+          </Link>
+        </div>
 
         <MobileMenu nav={nav.map((item) => ({ text: item.text, href: item.href }))} />
       </Container>
