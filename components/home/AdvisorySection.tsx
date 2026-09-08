@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Container } from "@/components/Container";
+import { ContactForm } from "@/components/ContactForm";
 import { TeamCard } from "@/components/TeamCard";
 
 const TEAM = [
@@ -27,13 +27,11 @@ export function AdvisorySection() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center rounded-2xl bg-[#f0f4fa] p-10 text-center md:p-12">
-            <Link
-              href="/hafa-samband"
-              className="inline-flex items-center justify-center rounded-md bg-brand-dark px-8 py-4 text-base font-semibold text-white transition hover:bg-brand-mid"
-            >
-              Hafa samband
-            </Link>
+          <div className="rounded-2xl bg-[#f0f4fa] p-8 md:p-10">
+            <h3 className="text-center text-xl font-bold text-neutral-900">Hafa samband</h3>
+            <div className="mt-6">
+              <ContactForm submitLabel="Senda" />
+            </div>
           </div>
         </div>
       </Container>
