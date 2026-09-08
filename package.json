@@ -15,7 +15,8 @@
     "scrape-tables": "node scripts/scrape-tables.mjs",
     "scrape-mobile-diff": "node scripts/scrape-mobile-diff.mjs",
     "verify": "node scripts/verify.mjs",
-    "gen-sturtuvagnar": "node scripts/gen-sturtuvagnar.mjs"
+    "gen-sturtuvagnar": "node scripts/gen-sturtuvagnar.mjs",
+    "gen-hifi": "node scripts/gen-hifi.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
