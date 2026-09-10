@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import type { Img } from "@/lib/types";
+import { Container } from "@/components/Container";
 
 type PageHeroProps = {
   image: Img;
@@ -43,6 +44,14 @@ type PageHeroProps = {
   contentClassName?: string;
   /** Custom content, replacing the default title/subtitle/icon block (not-found's 404 heading + copy + link). `title` is unused when this is set. */
   children?: ReactNode;
+  /**
+   * design.dc.html 1a/1b/1c ("Kostur A"): a breadcrumb rendered as an
+   * absolutely positioned bar flush with the hero's bottom edge, above the
+   * tint overlay and the title/subtitle content. Pass
+   * `<Breadcrumb variant="hero" items={...} />`. Omit for every hero that
+   * isn't a sturtuvagnar product/group page.
+   */
+  breadcrumb?: ReactNode;
 };
 
 export function PageHero({
@@ -55,6 +64,7 @@ export function PageHero({
   overlayClassName = "bg-black/50",
   contentClassName = "px-6 text-center",
   children,
+  breadcrumb,
 }: PageHeroProps) {
   return (
     <div className={`relative flex ${height} items-center justify-center overflow-hidden`}>
@@ -88,7 +98,9 @@ export function PageHero({
                 {icon}
               </div>
             ) : null}
-            <h1 className="text-4xl font-semibold text-white md:text-6xl">{title}</h1>
+            <h1 className="text-[44px] leading-[1.05] font-semibold text-white md:text-[70px] md:leading-[1.02]">
+              {title}
+            </h1>
             {subtitle ? (
               <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg">
                 {subtitle}
@@ -97,6 +109,11 @@ export function PageHero({
           </>
         )}
       </div>
+      {breadcrumb ? (
+        <div className="absolute inset-x-0 bottom-0 z-20 flex h-12 items-center border-t border-white/[.16] bg-[rgba(0,26,40,.55)] backdrop-blur-[6px] md:h-14">
+          <Container>{breadcrumb}</Container>
+        </div>
+      ) : null}
     </div>
   );
 }

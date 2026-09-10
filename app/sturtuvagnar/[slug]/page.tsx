@@ -62,14 +62,13 @@ export default async function SturtuvagnarSlugPage({
           image={record.heroImage}
           title={record.title}
           icon={<TrailerIcon className="h-6 w-6" />}
-        />
-        <div className="bg-white pt-8">
-          <Container>
+          breadcrumb={
             <Breadcrumb
+              variant="hero"
               items={[{ text: "Sturtuvagnar", href: "/sturtuvagnar" }, { text: record.title }]}
             />
-          </Container>
-        </div>
+          }
+        />
         <section className="bg-white py-10 md:py-14">
           <Container>
             <WagonSections blocks={record.blocks} images={record.images} />
@@ -102,18 +101,23 @@ export default async function SturtuvagnarSlugPage({
 
   return (
     <main id="main">
-      <PageHero image={record.heroImage} title={record.title} subtitle={heroSubtitle} />
-      <div className="bg-white pt-8">
-        <Container>
+      <PageHero
+        image={record.heroImage}
+        title={record.title}
+        subtitle={heroSubtitle}
+        height="h-[400px] md:h-[520px]"
+        overlayClassName="bg-gradient-to-b from-[#001A28]/15 via-[#001A28]/45 via-55% to-[#001A28]/[.78]"
+        breadcrumb={
           <Breadcrumb
+            variant="hero"
             items={[
               { text: "Sturtuvagnar", href: "/sturtuvagnar" },
               { text: group.title, href: `/sturtuvagnar/${group.slug}` },
               { text: record.title },
             ]}
           />
-        </Container>
-      </div>
+        }
+      />
       <ProductIntro product={record} group={group} />
       {features ? (
         <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
