@@ -95,8 +95,9 @@ export default async function SturtuvagnarSlugPage({
   // not a hardcoded per-product string.
   const heroSubtitle = record.blurb.split(".")[0].trim();
 
-  const siblings = group.products
-    .filter((productSlug) => productSlug !== record.slug)
+  // SiblingProducts (design.dc.html 1a/1e "Tegundir í boði") renders the
+  // WHOLE group, current product included, in the group's own card order.
+  const groupProducts = group.products
     .map((productSlug) => wagons.find((w) => w.slug === productSlug))
     .filter((w): w is Wagon => Boolean(w));
 
@@ -125,7 +126,7 @@ export default async function SturtuvagnarSlugPage({
         <FactStrip product={record} group={group} />
         <ProductIntro product={record} group={group} />
         {features ? <ProductFeatureTiles heading={features.heading} items={features.items} /> : null}
-        <SiblingProducts group={group} siblings={siblings} />
+        <SiblingProducts group={group} products={groupProducts} currentSlug={record.slug} />
         <ContactCta />
         <MobileQuoteBar product={record} />
       </main>
