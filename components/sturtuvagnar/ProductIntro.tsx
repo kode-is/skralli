@@ -15,8 +15,8 @@ export function ProductIntro({ product, group }: { product: Wagon; group: WagonG
   const lastAboutIndex = group.about.length - 1;
 
   return (
-    <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[120px]">
-      <Container className="grid gap-10 md:grid-cols-[1fr_400px] md:items-start md:gap-20">
+    <section className="pt-[28px] pb-[60px] md:pt-[100px] md:pb-[120px]">
+      <Container className="grid gap-y-[60px] md:grid-cols-[1fr_400px] md:items-start md:gap-20">
         <div>
           <h2 className="mb-5 text-[32px] leading-[1.1] font-semibold text-[#171717] md:mb-7 md:text-[50px] md:leading-[1.06]">
             Um {product.title}
@@ -39,7 +39,7 @@ export function ProductIntro({ product, group }: { product: Wagon; group: WagonG
             <span className={`${PILL_BASE} bg-[#EAF6F0] text-accent-green`}>5 ára ábyrgð</span>
           </div>
         </div>
-        <div className="order-first mb-[60px] md:order-none md:sticky md:top-6 md:mb-0">
+        <div className="order-first md:order-none md:sticky md:top-6">
           <InquiryCard productTitle={product.title} />
         </div>
       </Container>

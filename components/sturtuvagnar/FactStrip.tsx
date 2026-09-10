@@ -9,6 +9,23 @@ import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 // full-width row at the end. N varies per product (4, 5 or 6 — see
 // lib/product-facts.ts), so the desktop column count is threaded through a
 // CSS custom property rather than a hardcoded Tailwind class.
+//
+// design.dc.html 1b merges "Framleiðandi" and "Framleitt í" below `md`
+// (phones show one "Gigant · Noregi" cell, no separate origin cell) so the
+// 2-column grid never has an empty trailing slot: `productFacts` still
+// returns its fixed 6-entry order (lib/product-facts.ts's tests pin it),
+// this component just hides the "Framleitt í" cell and swaps in the merged
+// value below `md`, and reorders the visible mobile cells via `order-*`
+// (Stærð, Sturtuhalli, Framleiðandi, Ábyrgð, then Flokkur full-width) while
+// every cell resets to `md:order-none` so the desktop row keeps the
+// original array order.
+const MOBILE_ORDER: Record<string, string> = {
+  "Stærð": "order-1 md:order-none",
+  Sturtuhalli: "order-2 md:order-none",
+  "Framleiðandi": "order-3 md:order-none",
+  "Ábyrgð": "order-4 md:order-none",
+};
+
 export function FactStrip({ product, group }: { product: Wagon; group: WagonGroup }) {
   const facts = productFacts(product, group);
   const lastIndex = facts.length - 1;
@@ -21,6 +38,8 @@ export function FactStrip({ product, group }: { product: Wagon; group: WagonGrou
       >
         {facts.map((fact, index) => {
           const isFlokkur = fact.label === "Flokkur";
+          const isFramleittI = fact.label === "Framleitt í";
+          const isFramleidandi = fact.label === "Framleiðandi";
           const dividerClass =
             index === 0
               ? "md:pr-6"
@@ -31,7 +50,9 @@ export function FactStrip({ product, group }: { product: Wagon; group: WagonGrou
           return (
             <div
               key={fact.label}
-              className={`${dividerClass} ${
+              className={`${dividerClass} ${MOBILE_ORDER[fact.label] ?? ""} ${
+                isFramleittI ? "hidden md:block" : ""
+              } ${
                 isFlokkur
                   ? "order-last col-span-2 border-t border-[#E3E9F2] pt-3.5 md:order-none md:col-span-1 md:border-t-0 md:pt-0"
                   : ""
@@ -45,7 +66,14 @@ export function FactStrip({ product, group }: { product: Wagon; group: WagonGrou
                   fact.tone === "green" ? "text-accent-green" : "text-[#171717]"
                 }`}
               >
-                {fact.value}
+                {isFramleidandi ? (
+                  <>
+                    <span className="md:hidden">Gigant · Noregi</span>
+                    <span className="hidden md:inline">{fact.value}</span>
+                  </>
+                ) : (
+                  fact.value
+                )}
               </div>
             </div>
           );

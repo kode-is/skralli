@@ -113,8 +113,11 @@ function SiblingCard({
 // total size (n = products.length), per the brief's ruling: n == 2 (one
 // sibling; unreached by today's 5 real groups of 3/4/5/6/7, but kept since
 // it's in the spec) renders just that one sibling as a wide horizontal
-// card; n <= 4 uses a 3-column grid of normal cards; n >= 5 switches to a
-// 4-column grid of compact, blurb-less cards. Mobile is always one column.
+// card; n == 3 uses a 3-column grid of normal cards; n >= 4 switches to a
+// 4-column grid of compact, blurb-less cards. Today's real groups: 3
+// (fjórhjóla-/minigröfuvagnar), 4 (hjólagröfuvagnar) -> one row of 4, 5
+// (landbúnaðarvagnar) -> 4+1, 6 (verktakavagnar) -> 4+2, 7
+// (vélaflutningavagnar) -> 4+3. Mobile is always one column.
 export function SiblingProducts({
   group,
   products,
@@ -143,8 +146,8 @@ export function SiblingProducts({
     );
   }
 
-  const variant: CardVariant = n >= 5 ? "compact" : "normal";
-  const gridClass = n >= 5 ? "md:grid-cols-4 md:gap-5" : "md:grid-cols-3 md:gap-7";
+  const variant: CardVariant = n >= 4 ? "compact" : "normal";
+  const gridClass = n >= 4 ? "md:grid-cols-4 md:gap-5" : "md:grid-cols-3 md:gap-7";
 
   return (
     <section className="bg-[#F0F4FA] py-[60px] md:py-[110px]">

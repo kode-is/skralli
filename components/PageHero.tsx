@@ -111,7 +111,7 @@ export function PageHero({
       </div>
       {breadcrumb ? (
         <div className="absolute inset-x-0 bottom-0 z-20 flex h-12 items-center border-t border-white/[.16] bg-[rgba(0,26,40,.55)] backdrop-blur-[6px] md:h-14">
-          <Container>{breadcrumb}</Container>
+          <Container className="w-full">{breadcrumb}</Container>
         </div>
       ) : null}
     </div>
