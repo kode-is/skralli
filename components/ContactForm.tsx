@@ -98,7 +98,7 @@ export function ContactForm({
             ✓
           </div>
           <h3 className="font-sans text-[22px] font-semibold text-[#171717]">Fyrirspurn móttekin</h3>
-          <p className="mt-2 font-ui text-sm text-[#444444]">{SUCCESS_TEXT}</p>
+          <p className="mt-2 font-ui text-[13px] leading-[1.55] text-[#444444]">{SUCCESS_TEXT}</p>
         </div>
       );
     }

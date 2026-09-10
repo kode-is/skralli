@@ -9,21 +9,27 @@ import { useInquiry } from "./InquiryContext";
 // card, which only shows once expanded; at md+ the toggle row is gone and
 // the card is always shown (InquiryContext's `expanded` only ever matters
 // below md). The same state is shared with MobileQuoteBar so its sticky
-// "Fá tilboð" button opens this exact card instead of a second form —
-// whichever trigger flips `expanded` to true, this effect scrolls the card
-// into view and focuses its first field (a plain requestAnimationFrame
+// "Fá tilboð" button opens this exact card instead of a second form — but
+// only THAT trigger should scroll/focus, not a manual tap on this card's
+// own header, so this effect keys off `focusRequest` (bumped only by
+// MobileQuoteBar) rather than `expanded` itself: a ref remembers the last
+// `focusRequest` it acted on, so a header tap (which changes `expanded`
+// but not `focusRequest`) is a no-op here (a plain requestAnimationFrame
 // chain in the click handler proved unreliable off-screen/backgrounded, so
 // this reacts to the committed DOM instead of guessing at paint timing).
 export function InquiryCard({ productTitle }: { productTitle: string }) {
-  const { expanded, setExpanded } = useInquiry();
+  const { expanded, setExpanded, focusRequest } = useInquiry();
   const cardRef = useRef<HTMLDivElement>(null);
+  const handledFocusRequest = useRef(0);
 
   useEffect(() => {
     if (!expanded) return;
+    if (focusRequest === handledFocusRequest.current) return;
+    handledFocusRequest.current = focusRequest;
     const card = cardRef.current;
     card?.scrollIntoView({ behavior: "smooth", block: "start" });
     card?.querySelector<HTMLInputElement | HTMLTextAreaElement>("input, textarea")?.focus();
-  }, [expanded]);
+  }, [expanded, focusRequest]);
 
   return (
     <div>

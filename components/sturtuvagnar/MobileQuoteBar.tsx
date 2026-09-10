@@ -8,11 +8,12 @@ import { useInquiry } from "./InquiryContext";
 // child of <main> on product pages so `sticky bottom-0` pins it to the
 // viewport bottom only while <main> is on screen — the footer scrolls up
 // over it once the page bottoms out, which is the design's intent (hence
-// `sticky`, never `fixed`). Its button just flips the shared expanded flag;
-// InquiryCard's own effect (reacting to that flag) handles scrolling its
-// card into view and focusing the first field, since it owns that DOM.
+// `sticky`, never `fixed`). Its button expands the shared card and bumps
+// `focusRequest` so InquiryCard's effect knows to scroll into view and
+// focus the first field — a manual tap on the card's own collapsed header
+// only calls `setExpanded`, so it expands in place without stealing scroll.
 export function MobileQuoteBar({ product }: { product: Wagon }) {
-  const { setExpanded } = useInquiry();
+  const { setExpanded, requestFocus } = useInquiry();
   const size = productSize(product.blurb);
   const factsLine = [size, "5 ára ábyrgð"].filter(Boolean).join(" · ");
 
@@ -24,7 +25,10 @@ export function MobileQuoteBar({ product }: { product: Wagon }) {
       </div>
       <button
         type="button"
-        onClick={() => setExpanded(true)}
+        onClick={() => {
+          setExpanded(true);
+          requestFocus();
+        }}
         className="bg-brand-dark px-6 py-4 text-base font-semibold text-white hover:bg-brand-mid"
       >
         Fá tilboð
