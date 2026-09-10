@@ -2,33 +2,44 @@ import { Container } from "@/components/Container";
 import { InquiryCard } from "@/components/sturtuvagnar/InquiryCard";
 import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 
-const PILL_CLASSES =
-  "inline-flex items-center rounded-full bg-[#f0f4fa] px-3.5 py-2 font-ui text-sm font-medium text-brand-dark";
+const PILL_BASE =
+  "inline-flex items-center rounded-full px-3.5 py-[9px] font-ui text-[13px] font-medium md:px-4 md:py-2.5 md:text-sm";
 
-// Mockup 1's "Um <product>" two-column section: the product's own blurb
-// (from its group's "Tegundir í boði" card) followed by the group's "Um X"
-// paragraphs (docs/scrape/sturtuvagnar__<group>.json) and the two pills
-// sourced from the /sturtuvagnar category subtitle; the inquiry card sits
-// alongside it, sticky on desktop so it stays visible while reading.
+// design.dc.html 1a/1b "Um <product>": the product's own blurb followed by
+// its group's "Um X" paragraphs and the two fact pills, with the sticky
+// inquiry card alongside it on desktop. On mobile the card moves to the
+// top of the section via CSS `order` (not a second render — InquiryCard's
+// own collapsed/expanded state, shared through InquiryContext, is the same
+// instance the sticky MobileQuoteBar opens).
 export function ProductIntro({ product, group }: { product: Wagon; group: WagonGroup }) {
-  const paragraphs = [product.blurb, ...group.about];
+  const lastAboutIndex = group.about.length - 1;
 
   return (
-    <section className="bg-white py-14 md:py-16">
-      <Container className="grid gap-10 md:grid-cols-2 md:items-start md:gap-16">
-        <div className="flex flex-col gap-5">
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Um {product.title}</h2>
-          {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-base leading-relaxed text-neutral-700">
+    <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[120px]">
+      <Container className="grid gap-10 md:grid-cols-[1fr_400px] md:items-start md:gap-20">
+        <div>
+          <h2 className="mb-5 text-[32px] leading-[1.1] font-semibold text-[#171717] md:mb-7 md:text-[50px] md:leading-[1.06]">
+            Um {product.title}
+          </h2>
+          <p className="mb-4 max-w-[640px] text-pretty text-[17px] leading-[1.6] text-[#171717] md:mb-[22px] md:text-lg">
+            {product.blurb}
+          </p>
+          {group.about.map((paragraph, index) => (
+            <p
+              key={index}
+              className={`max-w-[640px] text-pretty text-base leading-[1.65] text-[#444444] md:text-[17px] md:leading-[1.68] ${
+                index === lastAboutIndex ? "mb-6 md:mb-8" : "mb-3.5 md:mb-5"
+              }`}
+            >
               {paragraph}
             </p>
           ))}
-          <div className="mt-2 flex flex-wrap items-center gap-3">
-            <span className={PILL_CLASSES}>Gigant · framleitt í Noregi</span>
-            <span className={PILL_CLASSES}>5 ára ábyrgð</span>
+          <div className="flex flex-wrap gap-2 md:gap-2.5">
+            <span className={`${PILL_BASE} bg-[#F0F4FA] text-brand-dark`}>Gigant · framleitt í Noregi</span>
+            <span className={`${PILL_BASE} bg-[#EAF6F0] text-accent-green`}>5 ára ábyrgð</span>
           </div>
         </div>
-        <div className="md:sticky md:top-8">
+        <div className="order-first mb-[60px] md:order-none md:sticky md:top-6 md:mb-0">
           <InquiryCard productTitle={product.title} />
         </div>
       </Container>

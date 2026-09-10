@@ -8,6 +8,8 @@ import { TrailerIcon } from "@/components/sturtuvagnar/TrailerIcon";
 import { WagonSections } from "@/components/sturtuvagnar/WagonSections";
 import { FactStrip } from "@/components/sturtuvagnar/FactStrip";
 import { ProductIntro } from "@/components/sturtuvagnar/ProductIntro";
+import { InquiryProvider } from "@/components/sturtuvagnar/InquiryContext";
+import { MobileQuoteBar } from "@/components/sturtuvagnar/MobileQuoteBar";
 import { FeatureTiles } from "@/components/sturtuvagnar/FeatureTiles";
 import { SiblingProducts } from "@/components/sturtuvagnar/SiblingProducts";
 import { pageMetadata } from "@/lib/seo";
@@ -101,31 +103,34 @@ export default async function SturtuvagnarSlugPage({
   const features = groupFeatures[group.id];
 
   return (
-    <main id="main">
-      <PageHero
-        image={record.heroImage}
-        title={record.title}
-        subtitle={heroSubtitle}
-        height="h-[400px] md:h-[520px]"
-        overlayClassName="bg-gradient-to-b from-[#001A28]/15 via-[#001A28]/45 via-55% to-[#001A28]/[.78]"
-        breadcrumb={
-          <Breadcrumb
-            variant="hero"
-            items={[
-              { text: "Sturtuvagnar", href: "/sturtuvagnar" },
-              { text: group.title, href: `/sturtuvagnar/${group.slug}` },
-              { text: record.title },
-            ]}
-          />
-        }
-      />
-      <FactStrip product={record} group={group} />
-      <ProductIntro product={record} group={group} />
-      {features ? (
-        <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
-      ) : null}
-      <SiblingProducts group={group} siblings={siblings} />
-      <ContactCta />
-    </main>
+    <InquiryProvider>
+      <main id="main">
+        <PageHero
+          image={record.heroImage}
+          title={record.title}
+          subtitle={heroSubtitle}
+          height="h-[400px] md:h-[520px]"
+          overlayClassName="bg-gradient-to-b from-[#001A28]/15 via-[#001A28]/45 via-55% to-[#001A28]/[.78]"
+          breadcrumb={
+            <Breadcrumb
+              variant="hero"
+              items={[
+                { text: "Sturtuvagnar", href: "/sturtuvagnar" },
+                { text: group.title, href: `/sturtuvagnar/${group.slug}` },
+                { text: record.title },
+              ]}
+            />
+          }
+        />
+        <FactStrip product={record} group={group} />
+        <ProductIntro product={record} group={group} />
+        {features ? (
+          <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
+        ) : null}
+        <SiblingProducts group={group} siblings={siblings} />
+        <ContactCta />
+        <MobileQuoteBar product={record} />
+      </main>
+    </InquiryProvider>
   );
 }

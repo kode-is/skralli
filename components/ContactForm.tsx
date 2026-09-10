@@ -14,6 +14,16 @@ type ContactFormProps = {
    * other field, it's just the textarea's initial value.
    */
   defaultMessage?: string;
+  /**
+   * "default" (the only variant that existed before) renders exactly as
+   * before — verified byte-for-byte against the live home page and
+   * /hafa-samband, so its branch below must never change. "card" is the
+   * product-redesign's inquiry-card styling (design.dc.html 1a/1d): visible
+   * labels, filled/focus-ring inputs, a square full-width submit button,
+   * and an inline error under the invalid field instead of a bottom-only
+   * message.
+   */
+  variant?: "default" | "card";
 };
 
 const SUCCESS_TEXT =
@@ -29,7 +39,21 @@ const ERROR_MESSAGE_TO_FIELD: Record<string, "nafn" | "netfang" | "skilabod"> = 
   "Vinsamlegast skrifaðu skilaboð.": "skilabod",
 };
 
-export function ContactForm({ showPhone = false, submitLabel, defaultMessage }: ContactFormProps) {
+const CARD_LABEL_CLASS = "mb-1.5 block font-ui text-xs font-semibold text-[#171717]";
+
+const CARD_FIELD_BASE =
+  "w-full rounded-md border bg-[#F0F4FA] font-ui text-[15px] text-[#171717] placeholder:text-neutral-500 outline-none focus:border-brand-mid focus:bg-white focus:ring-[3px] focus:ring-brand-mid/[.18]";
+
+function cardFieldClass(hasError: boolean, extra: string) {
+  return `${CARD_FIELD_BASE} ${extra} ${hasError ? "border-[#C0392B] bg-[#FFF7F7]" : "border-[#E3E9F2]"}`;
+}
+
+export function ContactForm({
+  showPhone = false,
+  submitLabel,
+  defaultMessage,
+  variant = "default",
+}: ContactFormProps) {
   const [nafn, setNafn] = useState("");
   const [netfang, setNetfang] = useState("");
   const [simi, setSimi] = useState("");
@@ -58,7 +82,26 @@ export function ContactForm({ showPhone = false, submitLabel, defaultMessage }: 
     });
   }
 
+  const onChange = (setter: (v: string) => void) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setter(e.target.value);
+
+  const errorField = error ? ERROR_MESSAGE_TO_FIELD[error] : null;
+
   if (success) {
+    if (variant === "card") {
+      return (
+        <div role="status" aria-live="polite">
+          <div
+            aria-hidden="true"
+            className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF6F0] font-ui text-lg font-bold text-accent-green"
+          >
+            ✓
+          </div>
+          <h3 className="font-sans text-[22px] font-semibold text-[#171717]">Fyrirspurn móttekin</h3>
+          <p className="mt-2 font-ui text-sm text-[#444444]">{SUCCESS_TEXT}</p>
+        </div>
+      );
+    }
     return (
       <div role="status" aria-live="polite">
         <p className="text-sm font-medium text-neutral-900">{SUCCESS_TEXT}</p>
@@ -66,10 +109,125 @@ export function ContactForm({ showPhone = false, submitLabel, defaultMessage }: 
     );
   }
 
-  const onChange = (setter: (v: string) => void) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setter(e.target.value);
+  if (variant === "card") {
+    // The bottom live region stays mounted at all times (so screen readers
+    // keep hearing updates the same way the default variant's does) but is
+    // visually hidden whenever the current error is field-specific, because
+    // that message is duplicated — visibly, decoratively — right under the
+    // offending field instead.
+    const hasFieldError = Boolean(errorField);
 
-  const errorField = error ? ERROR_MESSAGE_TO_FIELD[error] : null;
+    return (
+      <form onSubmit={handleSubmit} noValidate className="space-y-4">
+        <div className="space-y-4">
+          <div>
+            <label htmlFor="contact-nafn" className={CARD_LABEL_CLASS}>
+              Nafn
+            </label>
+            <input
+              id="contact-nafn"
+              name="name"
+              type="text"
+              autoComplete="name"
+              value={nafn}
+              onChange={onChange(setNafn)}
+              className={cardFieldClass(errorField === "nafn", "h-[46px] px-3.5")}
+              aria-invalid={errorField === "nafn"}
+              aria-describedby={errorField === "nafn" ? "contact-error-message" : undefined}
+            />
+            {errorField === "nafn" ? (
+              <p aria-hidden="true" className="mt-1.5 font-ui text-xs font-medium text-[#C0392B]">
+                {error}
+              </p>
+            ) : null}
+          </div>
+          <div>
+            <label htmlFor="contact-netfang" className={CARD_LABEL_CLASS}>
+              Netfang
+            </label>
+            <input
+              id="contact-netfang"
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={netfang}
+              onChange={onChange(setNetfang)}
+              className={cardFieldClass(errorField === "netfang", "h-[46px] px-3.5")}
+              aria-invalid={errorField === "netfang"}
+              aria-describedby={errorField === "netfang" ? "contact-error-message" : undefined}
+            />
+            {errorField === "netfang" ? (
+              <p aria-hidden="true" className="mt-1.5 font-ui text-xs font-medium text-[#C0392B]">
+                {error}
+              </p>
+            ) : null}
+          </div>
+        </div>
+        {showPhone ? (
+          <div>
+            <label htmlFor="contact-simi" className={CARD_LABEL_CLASS}>
+              Símanúmer
+            </label>
+            <input
+              id="contact-simi"
+              name="phoneNumber"
+              type="tel"
+              autoComplete="tel"
+              value={simi}
+              onChange={onChange(setSimi)}
+              className={cardFieldClass(false, "h-[46px] px-3.5")}
+            />
+          </div>
+        ) : null}
+        <div>
+          <label htmlFor="contact-skilabod" className={CARD_LABEL_CLASS}>
+            Skilaboð
+          </label>
+          <textarea
+            id="contact-skilabod"
+            name="message"
+            rows={4}
+            value={skilabod}
+            onChange={onChange(setSkilabod)}
+            className={cardFieldClass(errorField === "skilabod", "h-[92px] resize-none px-3.5 py-3")}
+            aria-invalid={errorField === "skilabod"}
+            aria-describedby={errorField === "skilabod" ? "contact-error-message" : undefined}
+          />
+          {errorField === "skilabod" ? (
+            <p aria-hidden="true" className="mt-1.5 font-ui text-xs font-medium text-[#C0392B]">
+              {error}
+            </p>
+          ) : null}
+        </div>
+        <div aria-hidden="true" className="sr-only">
+          <label htmlFor="contact-website">Vefsíða (ekki fylla út)</label>
+          <input
+            id="contact-website"
+            name="website"
+            type="text"
+            autoComplete="off"
+            tabIndex={-1}
+            value={website}
+            onChange={onChange(setWebsite)}
+          />
+        </div>
+        <div role="status" aria-live="polite" className={hasFieldError ? "sr-only" : "min-h-[1.5rem]"}>
+          {error ? (
+            <p id="contact-error-message" className="font-ui text-xs font-medium text-[#C0392B]">
+              {error}
+            </p>
+          ) : null}
+        </div>
+        <button
+          type="submit"
+          disabled={isPending}
+          className="w-full rounded-none bg-brand-dark px-[30px] py-5 text-base font-semibold text-white transition hover:bg-brand-mid disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {isPending ? "Sendi..." : submitLabel}
+        </button>
+      </form>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
