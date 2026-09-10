@@ -10,7 +10,7 @@ import { FactStrip } from "@/components/sturtuvagnar/FactStrip";
 import { ProductIntro } from "@/components/sturtuvagnar/ProductIntro";
 import { InquiryProvider } from "@/components/sturtuvagnar/InquiryContext";
 import { MobileQuoteBar } from "@/components/sturtuvagnar/MobileQuoteBar";
-import { FeatureTiles } from "@/components/sturtuvagnar/FeatureTiles";
+import { ProductFeatureTiles } from "@/components/sturtuvagnar/ProductFeatureTiles";
 import { SiblingProducts } from "@/components/sturtuvagnar/SiblingProducts";
 import { pageMetadata } from "@/lib/seo";
 import { wagonGroups, wagons, groupFeatures, type WagonGroup, type Wagon } from "@/lib/sturtuvagnar";
@@ -124,9 +124,7 @@ export default async function SturtuvagnarSlugPage({
         />
         <FactStrip product={record} group={group} />
         <ProductIntro product={record} group={group} />
-        {features ? (
-          <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
-        ) : null}
+        {features ? <ProductFeatureTiles heading={features.heading} items={features.items} /> : null}
         <SiblingProducts group={group} siblings={siblings} />
         <ContactCta />
         <MobileQuoteBar product={record} />
