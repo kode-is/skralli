@@ -76,6 +76,17 @@ const hifikedjurWidgetPatterns = (() => {
 // per-heading `range` — see scripts/gen-hifi.mjs's RANGE_LABELS for how
 // those verbatim strings were read off the live page), so none of them need
 // an IGNORE_MISSING entry any more (Task 12 fix round 1).
+// product-redesign task: every sturtuvagnar product/group page now renders
+// PageHero's hero-edge breadcrumb (Breadcrumb variant="hero"), which uses
+// "›" as its separator instead of the plain breadcrumb's "&gt;" (>) — see
+// components/Breadcrumb.tsx. The live site (and our own other 13 routes
+// using the plain variant) still uses ">", so it now shows up as "missing"
+// on these 30 routes even though the breadcrumb itself is fully present,
+// just with a different, intentionally redesigned glyph.
+const sturtuvagnarHeroBreadcrumbIgnored = Object.fromEntries(
+  ROUTES.filter((r) => r.startsWith("/sturtuvagnar/")).map((r) => [r, [exact(">")]]),
+);
+
 const IGNORE_MISSING = {
   "/": [/^\d{1,3}$/],
   "/um-okkur": [/^\d{1,3}$/],
@@ -88,6 +99,7 @@ const IGNORE_MISSING = {
     // breadcrumb from the real page title instead of reproducing the bug.
     exact("Hífikeðjur"),
   ],
+  ...sturtuvagnarHeroBreadcrumbIgnored,
 };
 
 // A browser's innerText joins adjacent cells of a real <table> row with a
