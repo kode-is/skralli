@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { TrailerIcon } from "@/components/sturtuvagnar/TrailerIcon";
 import { WagonSections } from "@/components/sturtuvagnar/WagonSections";
+import { FactStrip } from "@/components/sturtuvagnar/FactStrip";
 import { ProductIntro } from "@/components/sturtuvagnar/ProductIntro";
 import { FeatureTiles } from "@/components/sturtuvagnar/FeatureTiles";
 import { SiblingProducts } from "@/components/sturtuvagnar/SiblingProducts";
@@ -118,6 +119,7 @@ export default async function SturtuvagnarSlugPage({
           />
         }
       />
+      <FactStrip product={record} group={group} />
       <ProductIntro product={record} group={group} />
       {features ? (
         <FeatureTiles heading={features.heading} items={features.items} desktopColumns={4} />
