@@ -1,0 +1,355 @@
+{
+  "route": "/sturtuvagnar/velaflutningavagnar",
+  "title": "Vélaflutningavagnar - Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9Z0oDC1rMdGfTWkASwcI499UKKk.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar/07-e61a69c9.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Vélaflutningavagnar"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "../"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "link",
+      "text": "Sturtuvagnar",
+      "href": "../sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Vélaflutningavagnar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Um vélavagna"
+    },
+    {
+      "type": "text",
+      "text": "Gigant vélavagnar eru hannaðir og smíðaðir með áreiðanleika efst í huga. Vagnarnir koma með öllum þeim festipunktum og akkerum sem vélamanninn gæti dreymt um. Þeir eru búnir styrktri grind og extra sterkri fjöðrun sem tryggir örugga lestun og mjúkan flutning. Vagnarnir eru allir sandblásnir og lakkaðir með tvíþættu lakki fyrir hámarks vörn gegn slitskemmdum."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tegundir í boði"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XQVaxPB0DT0dkYrOfEK2iIQp2M.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/03-8f824b7e.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn ML80"
+    },
+    {
+      "type": "text",
+      "text": "Minnsti vélavagninn frá Gigant. Þessi lipri og netti vagn er fullkominn fyrir þá sem þurfa öflugann og stöðugan vagn í minni verkefni."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/pWseduB46D5NgCWAYBRsihX1CM.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/04-c648de43.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn ML160"
+    },
+    {
+      "type": "text",
+      "text": "Fullkominn vélavagn fyrir þá sem kunna að meta einfaldleika og skilvirkni. Með 16 tonna burðargetu og nóg af festipunktum er þetta vagn sem hentar vel í flest verk."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OY2GBjJkgPpMqpgIcxx4xAco0Gc.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/05-74778fd7.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn ML210"
+    },
+    {
+      "type": "text",
+      "text": "Stærsti vélavagninn í ML seríunni af einfaldari vélavögnum. Stór og hagkvæmur vélavagn sem getur borið allt að 23 tonna þunga vél."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/7S3zq8V0JKdtzGNUtafLpxfWQA.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/06-b6580a67.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn GLL4-18"
+    },
+    {
+      "type": "text",
+      "text": "Tveggja öxla vagn með öllu því sem alvöru vagni ber að hafa. 20,5 tonna skráð burðargeta en þessi vagn getur léttilega borið meira en það."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/TjvRAtLKBb9Jrcm31PUS5VHsJ4.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/07-bf266b5d.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn GLL4-18L"
+    },
+    {
+      "type": "text",
+      "text": "Lengri útgáfa af GLL4-18. Sami 40 mm eikarbotninn og 20 tonna burðargeta. Fullkominn vagn fyrir þá sem þurfa aðeins meira pláss."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/PL6OTLltGzMu6EYm4Tt2iHeBd1o.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/08-09e513a1.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn GLL4-24"
+    },
+    {
+      "type": "text",
+      "text": "Sterkbyggður og afkastamikill vagn sem ber það sem þú þarft að flytja - og aðeins meira. Ramminn er smíðaður fyrir mun meira en það sem vagninn er skráður fyrir og gerður til að þola það sem þú setur á hann."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/NEv9Tj0c1slrWQqy4heVAghxEos.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__velaflutningavagnar/09-346d121d.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélavagn GLL4-27"
+    },
+    {
+      "type": "text",
+      "text": "3 öxlar, 40mm eikarbotn, 8 metra langur, fullt af festipunktum og yfir 28 tonna burðargeta - hér er erfitt að finna eitthvað sem vantar."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "../"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "../thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "../um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/sturtuvagnar__velaflutningavagnar.desktop.jpg",
+    "mobile": "docs/reference/sturtuvagnar__velaflutningavagnar.mobile.jpg"
+  }
+}

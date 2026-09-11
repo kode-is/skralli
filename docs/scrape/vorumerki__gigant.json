@@ -1,0 +1,223 @@
+{
+  "route": "/vorumerki/gigant",
+  "title": "Gigant — Skralli",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/MR7T3Tp0hywsMkuUTBiSNwZoP8.jpg",
+      "alt": "",
+      "width": 512,
+      "height": 341,
+      "role": "content",
+      "local": "/images/vorumerki__gigant/01-04305ffd.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Gigant"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "../"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "link",
+      "text": "Vörumerki",
+      "href": "../vorumerki"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Gigant sérhæfir sig í framleiðslu á hágæða sturtuvögnum og vetrarbúnaði fyrir verktaka og bændur. Þessi norska hönnun hefur í mörg ár verið meðal söluhæstu sturtuvagna í Noregi og ekki af ástæðulausu. Skralli hefur nú þegar afhent 30 vagna á síðastliðnum tveimur árum og hafa þeir reynst afar vel við íslenskar aðstæður."
+    },
+    {
+      "type": "text",
+      "text": "Gigant býður einnig upp á fjölbreytta vetrarlínu sem mætir öllum kröfum sem íslenski veturinn felur í sér, eins og fjölplóga fyrir snjómokstur, skerastál, sanddreyfara og ís- og veghefla aftan í dráttarvélar."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "../"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "../thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "../um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/vorumerki__gigant.desktop.jpg",
+    "mobile": "docs/reference/vorumerki__gigant.mobile.jpg"
+  }
+}

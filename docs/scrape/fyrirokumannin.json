@@ -1,0 +1,806 @@
+{
+  "route": "/fyrirokumannin",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/4p1qp9xwCrh9XiFw9WLdbo8eI.jpeg",
+      "alt": "Sætisáklæði",
+      "width": 512,
+      "height": 683,
+      "role": "content",
+      "local": "/images/home/26-94902b25.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Sætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Sætisáklæði"
+    },
+    {
+      "type": "text",
+      "text": "Vönduð sætisáklæði, sérsniðin fyrir hvern framleiðanda. Stílhrein og nákvæm hönnun sem sér til þess að efnið færist ekki til þegar er verið að fara oft inn í og úr ökutækinu. Áklæðin gera ráð fyrir því hvort sætin séu með loftpúða, höfuðpúða eða innbyggð borð."
+    },
+    {
+      "type": "text",
+      "text": "Veldu tau eða leðurlíki."
+    },
+    {
+      "type": "text",
+      "text": "Fyrir",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vinnubíla - frá 70.629kr m/vsk.",
+      "list": 1
+    },
+    {
+      "type": "text",
+      "text": "Vörubíla - 46.872kr m/vsk.",
+      "list": 1
+    },
+    {
+      "type": "text",
+      "text": "Vinnuvélar - 43.400kr m/vsk.",
+      "list": 1
+    },
+    {
+      "type": "text",
+      "text": "Dráttarvélar - 43.400kr m/vsk.",
+      "list": 1
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q7RDWMBAPIGncoLB7EPLy47HjE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/02-a5d3e9bb.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6ybWTRvqHSLeUMDG3Uj2BbgHm8.jpg",
+      "alt": "",
+      "width": 3543,
+      "height": 5315,
+      "role": "content",
+      "local": "/images/fyrirokumannin/03-9926b7eb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9p6fv3qD5NCw1aCrPGqaWiRrTjc.jpeg",
+      "alt": "",
+      "width": 2736,
+      "height": 3648,
+      "role": "content",
+      "local": "/images/fyrirokumannin/04-826b8643.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hGYjm2ZidGgHgLgXWkhSXEtyiE.jpeg",
+      "alt": "",
+      "width": 2653,
+      "height": 3441,
+      "role": "content",
+      "local": "/images/fyrirokumannin/05-aed3f052.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/d599wCzekh3iSEzhYuncKYtE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/06-33611083.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/a7NaBG3APViqDvGjZ3Ubs9C9iAg.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/07-cb83398b.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/FbWy8M2VwLZ5JrWUBO18SmXNE.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/08-1d1531ef.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q7RDWMBAPIGncoLB7EPLy47HjE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/02-a5d3e9bb.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6ybWTRvqHSLeUMDG3Uj2BbgHm8.jpg",
+      "alt": "",
+      "width": 3543,
+      "height": 5315,
+      "role": "content",
+      "local": "/images/fyrirokumannin/03-9926b7eb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9p6fv3qD5NCw1aCrPGqaWiRrTjc.jpeg",
+      "alt": "",
+      "width": 2736,
+      "height": 3648,
+      "role": "content",
+      "local": "/images/fyrirokumannin/04-826b8643.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hGYjm2ZidGgHgLgXWkhSXEtyiE.jpeg",
+      "alt": "",
+      "width": 2653,
+      "height": 3441,
+      "role": "content",
+      "local": "/images/fyrirokumannin/05-aed3f052.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/d599wCzekh3iSEzhYuncKYtE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/06-33611083.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/a7NaBG3APViqDvGjZ3Ubs9C9iAg.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/07-cb83398b.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/FbWy8M2VwLZ5JrWUBO18SmXNE.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/08-1d1531ef.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q7RDWMBAPIGncoLB7EPLy47HjE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/02-a5d3e9bb.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6ybWTRvqHSLeUMDG3Uj2BbgHm8.jpg",
+      "alt": "",
+      "width": 3543,
+      "height": 5315,
+      "role": "content",
+      "local": "/images/fyrirokumannin/03-9926b7eb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9p6fv3qD5NCw1aCrPGqaWiRrTjc.jpeg",
+      "alt": "",
+      "width": 2736,
+      "height": 3648,
+      "role": "content",
+      "local": "/images/fyrirokumannin/04-826b8643.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hGYjm2ZidGgHgLgXWkhSXEtyiE.jpeg",
+      "alt": "",
+      "width": 2653,
+      "height": 3441,
+      "role": "content",
+      "local": "/images/fyrirokumannin/05-aed3f052.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/d599wCzekh3iSEzhYuncKYtE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/06-33611083.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/a7NaBG3APViqDvGjZ3Ubs9C9iAg.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/07-cb83398b.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/FbWy8M2VwLZ5JrWUBO18SmXNE.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/08-1d1531ef.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/q7RDWMBAPIGncoLB7EPLy47HjE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/02-a5d3e9bb.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6ybWTRvqHSLeUMDG3Uj2BbgHm8.jpg",
+      "alt": "",
+      "width": 3543,
+      "height": 5315,
+      "role": "content",
+      "local": "/images/fyrirokumannin/03-9926b7eb.jpg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9p6fv3qD5NCw1aCrPGqaWiRrTjc.jpeg",
+      "alt": "",
+      "width": 2736,
+      "height": 3648,
+      "role": "content",
+      "local": "/images/fyrirokumannin/04-826b8643.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/hGYjm2ZidGgHgLgXWkhSXEtyiE.jpeg",
+      "alt": "",
+      "width": 2653,
+      "height": 3441,
+      "role": "content",
+      "local": "/images/fyrirokumannin/05-aed3f052.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/d599wCzekh3iSEzhYuncKYtE4.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/06-33611083.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/a7NaBG3APViqDvGjZ3Ubs9C9iAg.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/07-cb83398b.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/FbWy8M2VwLZ5JrWUBO18SmXNE.jpeg",
+      "alt": "",
+      "width": 3024,
+      "height": 4032,
+      "role": "content",
+      "local": "/images/fyrirokumannin/08-1d1531ef.jpeg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+      "alt": "Back Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/35-8ea812bc.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+      "alt": "Next Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/36-192ac70b.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XhweHQ50VGOSjPYEYXeGCyuq9EI.png",
+      "alt": "",
+      "width": 6000,
+      "height": 4000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/32-b915af96.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/rJ913kAN42eTHVGd2tnED2uycg.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/33-ae952cb3.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LU3oaMh8EhaO23JO5ipyIfSCU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/34-5dae7337.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9sRDuw9fu9jCDDJ1DKEILYLYI.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/35-b9bddba2.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/mnzIijymtXTteji3W18aR9ZJbNU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/36-c679b572.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XhweHQ50VGOSjPYEYXeGCyuq9EI.png",
+      "alt": "",
+      "width": 6000,
+      "height": 4000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/32-b915af96.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/rJ913kAN42eTHVGd2tnED2uycg.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/33-ae952cb3.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LU3oaMh8EhaO23JO5ipyIfSCU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/34-5dae7337.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9sRDuw9fu9jCDDJ1DKEILYLYI.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/35-b9bddba2.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/mnzIijymtXTteji3W18aR9ZJbNU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/36-c679b572.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XhweHQ50VGOSjPYEYXeGCyuq9EI.png",
+      "alt": "",
+      "width": 6000,
+      "height": 4000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/32-b915af96.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/rJ913kAN42eTHVGd2tnED2uycg.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/33-ae952cb3.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LU3oaMh8EhaO23JO5ipyIfSCU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/34-5dae7337.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9sRDuw9fu9jCDDJ1DKEILYLYI.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/35-b9bddba2.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/mnzIijymtXTteji3W18aR9ZJbNU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/36-c679b572.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/XhweHQ50VGOSjPYEYXeGCyuq9EI.png",
+      "alt": "",
+      "width": 6000,
+      "height": 4000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/32-b915af96.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/rJ913kAN42eTHVGd2tnED2uycg.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/33-ae952cb3.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/LU3oaMh8EhaO23JO5ipyIfSCU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/34-5dae7337.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9sRDuw9fu9jCDDJ1DKEILYLYI.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/35-b9bddba2.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/mnzIijymtXTteji3W18aR9ZJbNU.png",
+      "alt": "",
+      "width": 4000,
+      "height": 6000,
+      "role": "content",
+      "local": "/images/fyrirokumannin/36-c679b572.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+      "alt": "Back Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/35-8ea812bc.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+      "alt": "Next Arrow",
+      "width": 40,
+      "height": 40,
+      "role": "content",
+      "local": "/images/smurkerfi/36-192ac70b.svg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Gólfmottur"
+    },
+    {
+      "type": "text",
+      "text": "Slitsterkar gólfmottur sem þola mikla notkun. Sérsniðið að gólfinu í hverju tæki og renna þannig ekki til líkt og alhliða gólfmottur eiga til að gera."
+    },
+    {
+      "type": "text",
+      "text": "Fyrir",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vinnubíla",
+      "list": 3
+    },
+    {
+      "type": "text",
+      "text": "Vörubíla",
+      "list": 3
+    },
+    {
+      "type": "text",
+      "text": "Vinnuvélar",
+      "list": 3
+    },
+    {
+      "type": "text",
+      "text": "Dráttarvélar"
+    },
+    {
+      "type": "text",
+      "text": "21.700kr m/vsk.",
+      "bold": true
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/c0EZxtMucSR6UOSZk2TBnWsqr4.svg",
+      "alt": "",
+      "width": 0,
+      "height": 0,
+      "role": "background",
+      "local": "/images/home/20-463dd036.svg"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/iZ497yutpxlQmMrBZmi9a6nOus.jpg",
+      "alt": "",
+      "width": 305,
+      "height": 279,
+      "role": "content",
+      "local": "/images/fyrirokumannin/55-d2881ae9.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ekki vaða inn á skítugum skónum"
+    },
+    {
+      "type": "text",
+      "text": "Í samstarfi við PeBe höfum við þróað sérútbúna skóbakka úr þykku gúmmíi með kanti."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "8.060kr m/vsk."
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ljósabúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Sérsniðnir ljósabogar frá Svíþjóð fyrir hús og ballest á vinnuvélar og dráttarvélar."
+    },
+    {
+      "type": "text",
+      "text": "Hafðu samband til að vita meira um úrvalið fyrir þína vél.",
+      "bold": true
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/fyrirokumannin.desktop.jpg",
+    "mobile": "docs/reference/fyrirokumannin.mobile.jpg"
+  }
+}

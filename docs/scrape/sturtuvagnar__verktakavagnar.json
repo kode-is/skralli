@@ -1,0 +1,341 @@
+{
+  "route": "/sturtuvagnar/verktakavagnar",
+  "title": "Verktakavagnar - Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/Vm1DrHkJdSg0Q9nfQ0xcpRFVoQE.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar/04-76280b19.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Verktakavagnar"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "../"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "link",
+      "text": "Sturtuvagnar",
+      "href": "../sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Verktakavagnar"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Um verktakavagna"
+    },
+    {
+      "type": "text",
+      "text": "Verktakalínan kynnir það besta af því besta þegar kemur að sturtuvögnum frá Gigant. Sturtuvagnar með burðargetu frá 13 upp í 30 tonn. Vagnarnir eru þróaður í nánu sambandi við bæði viðskiptavini og samstarfsaðila til að koma til móts við þá allra kröfuhörðustu. Vagnarnir eru einstaklega slitsterkir og koma búnir með fjölda af einkennandi staðalbúnaði ásamt því að hafa stórt úrval af aukabúnaði í boði."
+    },
+    {
+      "type": "text",
+      "text": "Okkar viðskiptavinir hafa í árabil hrósað bæði stöðugleika og fjölhæfni vagnana - við elskum þá og okkur grunar að þú munir gera það líka."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tegundir í boði"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/4RVRBxUohJHiMPPfURDMPdn0lQI.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/03-3b32cbaa.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD3-13"
+    },
+    {
+      "type": "text",
+      "text": "þetta er minnsti verktakavagninn frá Gigant, en hér er ekkert sem vantar. 13 tonna burðargeta, sterkur staðalbúnaður og úrval af aukabúnaði veitir mikinn sveigjanleika."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/gSOjCyKyIURZH6zw3qxGZnZy048.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/04-52c63e09.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD4-15"
+    },
+    {
+      "type": "text",
+      "text": "Hinn fullkomni millivegur? GD4-15 er mest selgdi Gigant sturtuvagninn í þessari línu einkenndur af háu burðarþoli og lágri hæð."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/FyKwwEwautDsHexaMbAzLtpF9c.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/05-2b5a425a.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD4-17"
+    },
+    {
+      "type": "text",
+      "text": "Afkastamikill sturtuvagn sem sinnir sínu bæði í fjöbreittum landbúnaðarverkum og við þunga flutninga."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/fJPcHTZgcIstmFc3H3g6xUrjJ8Q.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/06-11b07009.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD4-17SB"
+    },
+    {
+      "type": "text",
+      "text": "Einstakur vagn sem sameinar hlutverk sturtuvagns og vélavagns. Hleðsluplan vagnsins færist 1,5 meter aftur svo hægt er að keyra upp á hann."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/fugSdRZvEscFP8AvBjEXSrIS8c.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 1440,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/07-2a595009.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD4-20"
+    },
+    {
+      "type": "text",
+      "text": "Risa 2 öxla vagn sem fer létt með jafnvel mest krefjandi verekfnin. Vagninn er skráður með 19 tonna burðargetu en getur sturtað allt að 50 tonnum."
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/JS5LTEgTUUoGRHyBCjcPEVizQo.jpg",
+      "alt": "",
+      "width": 1440,
+      "height": 681,
+      "role": "content",
+      "local": "/images/sturtuvagnar__verktakavagnar/08-5e05cfbf.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagn GD4-30HS"
+    },
+    {
+      "type": "text",
+      "text": "Stærsti sturtuvagninn sem Gigant framleiðir. 30 tonna vagn sem hannaður er til að þola allt sem þú getur hugsað þér að setja í hann."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "../"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "../thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "../um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/sturtuvagnar__verktakavagnar.desktop.jpg",
+    "mobile": "docs/reference/sturtuvagnar__verktakavagnar.mobile.jpg"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "route": "/404",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/suEIx9ZEFnvi1sBJGxIGIOF7o.jpg",
+      "alt": "Handyman working",
+      "width": 1440,
+      "height": 959,
+      "role": "content",
+      "local": "/images/404/01-d1eed4a4.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "404"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Síðan sem þú ert að leita að er ekki til eða hefur verið færð. Vinsamlegast farðu aftur á heimasíðuna."
+    },
+    {
+      "type": "link",
+      "text": "Heim",
+      "href": "./"
+    }
+  ],
+  "footer": [],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/404.desktop.jpg",
+    "mobile": "docs/reference/404.mobile.jpg"
+  }
+}

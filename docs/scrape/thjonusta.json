@@ -1,0 +1,368 @@
+{
+  "route": "/thjonusta",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/tdq2Jm0yxaBk2sqx5EZulEmsHA.jpg",
+      "alt": "Kitchen fixes",
+      "width": 512,
+      "height": 341,
+      "role": "content",
+      "local": "/images/thjonusta/01-d13aa3c1.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Þjónustur"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Þjónustur"
+    },
+    {
+      "type": "link",
+      "text": "SíubúnaðurLofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi",
+      "href": "./siubunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/GKqfNWoRSDmyPSCHZZ03b7aBM.png",
+      "alt": "",
+      "width": 512,
+      "height": 238,
+      "role": "content",
+      "local": "/images/home/21-212e4fb5.png"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi"
+    },
+    {
+      "type": "link",
+      "text": "SmurkerfiBEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað",
+      "href": "./smurkerfi"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/qEria6r6zEgvoCPRd4lWIdizOg.jpeg",
+      "alt": "Smurkerfi",
+      "width": 512,
+      "height": 473,
+      "role": "content",
+      "local": "/images/home/22-d2d92984.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "BEKA-MAX og Groeneveld smurkerfi í allar tegundir tækja og iðnað"
+    },
+    {
+      "type": "link",
+      "text": "SturtuvagnarSlitsterkir sturtuvagnar framleiddir í Noregi og með 5 ára ábyrgð",
+      "href": "./sturtuvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/zzVgK7lMDVKpggOyyA2M3sBM2w.jpeg",
+      "alt": "Snjókeðjur, Hlífi- & festibúnaður",
+      "width": 512,
+      "height": 341,
+      "role": "content",
+      "local": "/images/home/23-16722dae.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Slitsterkir sturtuvagnar framleiddir í Noregi og með 5 ára ábyrgð"
+    },
+    {
+      "type": "link",
+      "text": "ÖryggisrúðurÓbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður",
+      "href": "./oryggisrudur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/dsvstJS7dwPEtao7HZD7iWPhU4.jpg",
+      "alt": "Quick fixes",
+      "width": 512,
+      "height": 384,
+      "role": "content",
+      "local": "/images/home/24-a996c2c4.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður"
+    },
+    {
+      "type": "link",
+      "text": "Hífi- & festibúnaðurVottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu",
+      "href": "./hifi-festibunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/kyY51GlMxsukAlfvxa7XP4yQNjI.png",
+      "alt": "Quick fixes",
+      "width": 418,
+      "height": 512,
+      "role": "content",
+      "local": "/images/home/25-cf51054e.png"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
+    },
+    {
+      "type": "link",
+      "text": "Fyrir ökumanninnSætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki",
+      "href": "./fyrirokumannin"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/4p1qp9xwCrh9XiFw9WLdbo8eI.jpeg",
+      "alt": "Sætisáklæði",
+      "width": 512,
+      "height": 683,
+      "role": "content",
+      "local": "/images/home/26-94902b25.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Sætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki"
+    },
+    {
+      "type": "link",
+      "text": "VetrarbúnaðurSnjókeðjur, snjóplógar og vængjaskóflur í miklu úrvali",
+      "href": "./vetrarbunadur"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/uPMrk2CQY8uKwpfxMMrXc3mtn4Q.jpeg",
+      "alt": "",
+      "width": 384,
+      "height": 512,
+      "role": "content",
+      "local": "/images/thjonusta/08-e6009210.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 5,
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Snjókeðjur, snjóplógar og vængjaskóflur í miklu úrvali"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#f0f4fa",
+    "#005380"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/thjonusta.desktop.jpg",
+    "mobile": "docs/reference/thjonusta.mobile.jpg"
+  }
+}

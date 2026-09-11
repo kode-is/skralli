@@ -1,0 +1,868 @@
+{
+  "route": "/hifi-festibunadur/aukabunadur",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/KaDZWDftJywYXCxQBBqnFFc2so.jpg",
+      "alt": "",
+      "width": 1439,
+      "height": 507,
+      "role": "content",
+      "local": "/images/hifi-festibunadur/05-865d4540.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Aukabúnaður til hífinga"
+    },
+    {
+      "type": "text",
+      "text": "Vottaður aukabúnaður fyrir hífingar af öllum stærðum og gerðum."
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "../"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "link",
+      "text": "Hífi- og festibúnaður",
+      "href": "../hifi-festibunadur"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Aukabúnaður til hífinga"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ýmislegt"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/P7l5F8bdMb6egGZ33rhV37M6VQ.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 350,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/02-6d00818a.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "LR9608K - Tromluakkeri"
+    },
+    {
+      "type": "text",
+      "text": "2.0 tonn"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/P7l5F8bdMb6egGZ33rhV37M6VQ.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 350,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/02-6d00818a.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "LR9613K - Tromluakkeri"
+    },
+    {
+      "type": "text",
+      "text": "5.3 tonn"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "FAT1T - Tunnukeðja"
+    },
+    {
+      "type": "text",
+      "text": "1.0 tonn"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/3yZL7I1pus7j0PYueNVfRovwhgM.png",
+      "alt": "",
+      "width": 540,
+      "height": 190,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/04-d6d4c255.png"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Keðjutalíur"
+    },
+    {
+      "type": "text",
+      "text": "Vörunúmer",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vöruheiti",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Burðargeta",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Lengd",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "TAJ 0,25"
+    },
+    {
+      "type": "text",
+      "text": "Keðjutalía"
+    },
+    {
+      "type": "text",
+      "text": "0,25t"
+    },
+    {
+      "type": "text",
+      "text": "1,5m"
+    },
+    {
+      "type": "text",
+      "text": "TAJ 0,75"
+    },
+    {
+      "type": "text",
+      "text": "Keðjutalía"
+    },
+    {
+      "type": "text",
+      "text": "0,75t"
+    },
+    {
+      "type": "text",
+      "text": "1,5m"
+    },
+    {
+      "type": "text",
+      "text": "TAJ 1,5"
+    },
+    {
+      "type": "text",
+      "text": "Keðjutalía"
+    },
+    {
+      "type": "text",
+      "text": "1,5t"
+    },
+    {
+      "type": "text",
+      "text": "1,5m"
+    },
+    {
+      "type": "text",
+      "text": "TAJ 3,0"
+    },
+    {
+      "type": "text",
+      "text": "Keðjutalía"
+    },
+    {
+      "type": "text",
+      "text": "3,0t"
+    },
+    {
+      "type": "text",
+      "text": "1,5m"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "H-lás"
+    },
+    {
+      "type": "text",
+      "text": "Vörunúmer",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vöruheiti",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "LVÁ/WLL",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "DGSL07"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 7mm"
+    },
+    {
+      "type": "text",
+      "text": "0,5t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL09"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 9mm"
+    },
+    {
+      "type": "text",
+      "text": "0,75t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL10"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 10mm"
+    },
+    {
+      "type": "text",
+      "text": "1,0t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL11"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 11mm"
+    },
+    {
+      "type": "text",
+      "text": "1,5t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL13"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 13mm"
+    },
+    {
+      "type": "text",
+      "text": "2,0t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL16"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 16mm"
+    },
+    {
+      "type": "text",
+      "text": "3,25t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL19"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 19mm"
+    },
+    {
+      "type": "text",
+      "text": "4,75t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL22"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 22mm"
+    },
+    {
+      "type": "text",
+      "text": "6,5t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL25"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 25mm"
+    },
+    {
+      "type": "text",
+      "text": "8,5t"
+    },
+    {
+      "type": "text",
+      "text": "DGSL28"
+    },
+    {
+      "type": "text",
+      "text": "D-lás 28mm"
+    },
+    {
+      "type": "text",
+      "text": "9,5t"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/J1nCFhHNzWjVPXlPrx2ubQAm05g.png",
+      "alt": "",
+      "width": 540,
+      "height": 190,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/05-266d3aa9.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/20VlrPUgHlHX0Te08EACMAvZsU.png",
+      "alt": "",
+      "width": 540,
+      "height": 540,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/06-4ffc22e3.png"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Öryggiskrókur"
+    },
+    {
+      "type": "text",
+      "text": "Vörunúmer",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vöruheiti",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Burðarþol",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "10000600"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G80 SLK7/8 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "2t"
+    },
+    {
+      "type": "text",
+      "text": "10000602"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G80 SLK10 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "3,15t"
+    },
+    {
+      "type": "text",
+      "text": "10000603"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G80 SLK13 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "5,4t"
+    },
+    {
+      "type": "text",
+      "text": "10000604"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G80 SLK16 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "8,0t"
+    },
+    {
+      "type": "text",
+      "text": "10000700"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G100 SLK7/8 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "2,5t"
+    },
+    {
+      "type": "text",
+      "text": "10000702"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G100 SLK10 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "4,0t"
+    },
+    {
+      "type": "text",
+      "text": "10000703"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G100 SLK13 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "6,7t"
+    },
+    {
+      "type": "text",
+      "text": "10000704"
+    },
+    {
+      "type": "text",
+      "text": "KROK SIKKERHETSKROK G100 SLK16 M/GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "10t"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Kranakrókur lokaður"
+    },
+    {
+      "type": "text",
+      "text": "Vörunúmer",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vöruheiti",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Burðarþol",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "10000610"
+    },
+    {
+      "type": "text",
+      "text": "KROK G80 CSK6 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "1,12t"
+    },
+    {
+      "type": "text",
+      "text": "10000630"
+    },
+    {
+      "type": "text",
+      "text": "KROK G80 CSK7-8 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "2t"
+    },
+    {
+      "type": "text",
+      "text": "10000632"
+    },
+    {
+      "type": "text",
+      "text": "KROK G80 CSK10 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "3,15t"
+    },
+    {
+      "type": "text",
+      "text": "10000634"
+    },
+    {
+      "type": "text",
+      "text": "KROK G80 CSK13 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "5,4t"
+    },
+    {
+      "type": "text",
+      "text": "10000635"
+    },
+    {
+      "type": "text",
+      "text": "KROK G80 CSK16 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "8,0t"
+    },
+    {
+      "type": "text",
+      "text": "10000730"
+    },
+    {
+      "type": "text",
+      "text": "KROK G100 CSK7-8 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "2,5t"
+    },
+    {
+      "type": "text",
+      "text": "10000732"
+    },
+    {
+      "type": "text",
+      "text": "KROK G100 CSK10 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "4,0t"
+    },
+    {
+      "type": "text",
+      "text": "10000734"
+    },
+    {
+      "type": "text",
+      "text": "KROK G100 CSK13 M/LEPPE-GAFFEL"
+    },
+    {
+      "type": "text",
+      "text": "6,7t"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/Ajk0FwZUi5mVF8hRIY4BYqqJA.png",
+      "alt": "",
+      "width": 540,
+      "height": 540,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/07-c8a42628.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/gXs3MtW98bIc9bQ3TCgmMkVSRY.png",
+      "alt": "",
+      "width": 540,
+      "height": 540,
+      "role": "content",
+      "local": "/images/hifi-festibunadur__aukabunadur/08-f55806ee.png"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "Vörunúmer",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Vöruheiti",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "Burðarþol",
+      "bold": true
+    },
+    {
+      "type": "text",
+      "text": "UGK2"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "2t"
+    },
+    {
+      "type": "text",
+      "text": "UGK3"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "3t"
+    },
+    {
+      "type": "text",
+      "text": "UGK5"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "5t"
+    },
+    {
+      "type": "text",
+      "text": "UGK8"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "8t"
+    },
+    {
+      "type": "text",
+      "text": "UGK10"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "10t"
+    },
+    {
+      "type": "text",
+      "text": "UGK20"
+    },
+    {
+      "type": "text",
+      "text": "Ásuðukrókur"
+    },
+    {
+      "type": "text",
+      "text": "20t"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "../"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "../thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "../um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "../hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/hifi-festibunadur__aukabunadur.desktop.jpg",
+    "mobile": "docs/reference/hifi-festibunadur__aukabunadur.mobile.jpg"
+  }
+}

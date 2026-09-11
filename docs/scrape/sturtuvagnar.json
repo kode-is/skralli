@@ -1,0 +1,379 @@
+{
+  "route": "/sturtuvagnar",
+  "title": "Skralli - Þinn samstarfsaðili",
+  "description": "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/YeLYeO2kcImR31MZujfETOHou5U.png",
+      "alt": "",
+      "width": 179,
+      "height": 48,
+      "role": "logo",
+      "local": "/images/home/00-fa707b94.png"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/zzVgK7lMDVKpggOyyA2M3sBM2w.jpeg",
+      "alt": "Snjókeðjur, Hlífi- & festibúnaður",
+      "width": 512,
+      "height": 341,
+      "role": "content",
+      "local": "/images/home/23-16722dae.jpeg"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Slitsterkir sturtuvagnar framleiddir í Noregi og með 5 ára ábyrgð"
+    },
+    {
+      "type": "link",
+      "text": "Forsíða",
+      "href": "./"
+    },
+    {
+      "type": "text",
+      "text": ">"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vertu lipur með Gigant."
+    },
+    {
+      "type": "text",
+      "text": "Hjólagröfuvagnarnir frá Gigant eru einstaklega sterkir og liprir aftan í hjólagröfum. Útbúnir sérstöku bremsukerfi sem bremsar á lægri þrýstingi en venjulegur vagn, eða max 110 börum. Hjólagröfur bremsa á u.þ.b. 50-90 börum, en ekki þeim 160-180 börum sem dráttarvélar nota. Þetta lágmarkar álag á drifbúnaðinn."
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    },
+    {
+      "type": "link",
+      "text": "Sjá hjólagröfuvagna",
+      "href": "./sturtuvagnar/hjolagrofuvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/i27cABrkYb80XJQJrPIUsd9C7CY.jpg",
+      "alt": "",
+      "width": 1200,
+      "height": 900,
+      "role": "content",
+      "local": "/images/sturtuvagnar/02-5d9ed090.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Af hverju hjólagröfuvagn frá Gigant?"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sérhannað bremsukerfi"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hardox 500 TUF"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sveigður framgafl"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vökvavör"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "LED-ljós"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verkfærakassi"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "10 gata felgur"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Aðrar vagntegundir"
+    },
+    {
+      "type": "link",
+      "text": "Fjórhjóla- og minigröfuvagnar",
+      "href": "./sturtuvagnar/fjorhjola-minigrofuvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/ytaAUbgOg75YW7VyLxiaFKILH8.jpg",
+      "alt": "",
+      "width": 587,
+      "height": 587,
+      "role": "content",
+      "local": "/images/sturtuvagnar/03-fbea7ee5.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fjórhjóla- og minigröfuvagnar"
+    },
+    {
+      "type": "link",
+      "text": "Verktakavagnar",
+      "href": "./sturtuvagnar/verktakavagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/Vm1DrHkJdSg0Q9nfQ0xcpRFVoQE.jpg",
+      "alt": "",
+      "width": 587,
+      "height": 587,
+      "role": "content",
+      "local": "/images/sturtuvagnar/04-76280b19.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Verktakavagnar"
+    },
+    {
+      "type": "link",
+      "text": "Landbúnaðarvagnar",
+      "href": "./sturtuvagnar/landbunadarvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/etiew3elV8yr1mHkofcR3mbsLFk.jpg",
+      "alt": "",
+      "width": 587,
+      "height": 587,
+      "role": "content",
+      "local": "/images/sturtuvagnar/05-468e8526.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Landbúnaðarvagnar"
+    },
+    {
+      "type": "link",
+      "text": "Hjólagröfuvagnar",
+      "href": "./sturtuvagnar/hjolagrofuvagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/o4uQMR71agzX8hE5P3oaVBpguQ.jpg",
+      "alt": "",
+      "width": 587,
+      "height": 587,
+      "role": "content",
+      "local": "/images/sturtuvagnar/06-dece8e00.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Hjólagröfuvagnar"
+    },
+    {
+      "type": "link",
+      "text": "Vélaflutningavagnar",
+      "href": "./sturtuvagnar/velaflutningavagnar"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/9Z0oDC1rMdGfTWkASwcI499UKKk.jpg",
+      "alt": "",
+      "width": 587,
+      "height": 587,
+      "role": "content",
+      "local": "/images/sturtuvagnar/07-e61a69c9.jpg"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Vélaflutningavagnar"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Sendu okkur fyrirspurn"
+    },
+    {
+      "type": "link",
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "footer": [
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/OPXGlFUatTGAIecVuVwBtRj1tg.png",
+      "alt": "",
+      "width": 186,
+      "height": 50,
+      "role": "logo",
+      "local": "/images/home/33-115cef44.png"
+    },
+    {
+      "type": "text",
+      "text": "Samvinna - Þjónusta - Áreiðanleiki"
+    },
+    {
+      "type": "text",
+      "text": "Móhella 3F, 221 Hafnarfjörður"
+    },
+    {
+      "type": "text",
+      "text": "Kt. 580821-1460"
+    },
+    {
+      "type": "text",
+      "text": "Símanúmer: 862 4046"
+    },
+    {
+      "type": "text",
+      "text": "skralli@skralli.is"
+    },
+    {
+      "type": "text",
+      "text": "Opnunartími: Mán - Fös 08 - 16"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Fyrirtækið"
+    },
+    {
+      "type": "text",
+      "text": "Heim"
+    },
+    {
+      "type": "text",
+      "text": "Um okkur"
+    },
+    {
+      "type": "text",
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Hafa samband"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Vörumerki"
+    },
+    {
+      "type": "text",
+      "text": "Groeneveld-Beka"
+    },
+    {
+      "type": "text",
+      "text": "Lilleseth"
+    },
+    {
+      "type": "text",
+      "text": "Gigant"
+    },
+    {
+      "type": "text",
+      "text": "Pebe"
+    },
+    {
+      "type": "text",
+      "text": "Hammerglass"
+    },
+    {
+      "type": "text",
+      "text": "BMair"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Þjónusta"
+    },
+    {
+      "type": "text",
+      "text": "Smurkerfi"
+    },
+    {
+      "type": "text",
+      "text": "Sturtuvagnar"
+    },
+    {
+      "type": "text",
+      "text": "Öryggisrúður"
+    },
+    {
+      "type": "text",
+      "text": "Vetrarbúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Fyrir ökumanninn"
+    },
+    {
+      "type": "text",
+      "text": "Hífi- & festibúnaður"
+    },
+    {
+      "type": "text",
+      "text": "Síubúnaður"
+    },
+    {
+      "type": "image",
+      "src": "https://framerusercontent.com/images/aEWaySVZit4U7QdjYFn8DRhsnac.jpg",
+      "alt": "",
+      "width": 151,
+      "height": 106,
+      "role": "logo",
+      "local": "/images/home/34-5f7b6ec9.jpg"
+    }
+  ],
+  "nav": [
+    {
+      "text": "Heim",
+      "href": "./"
+    },
+    {
+      "text": "Þjónusta",
+      "href": "./thjonusta"
+    },
+    {
+      "text": "Um okkur",
+      "href": "./um-okkur"
+    },
+    {
+      "text": "Hafa samband",
+      "href": "./hafa-samband"
+    }
+  ],
+  "colors": [
+    "#000000",
+    "#005380",
+    "#f0f4fa"
+  ],
+  "screenshots": {
+    "desktop": "docs/reference/sturtuvagnar.desktop.jpg",
+    "mobile": "docs/reference/sturtuvagnar.mobile.jpg"
+  }
+}

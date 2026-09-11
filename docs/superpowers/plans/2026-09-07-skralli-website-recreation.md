@@ -723,7 +723,7 @@ export type Img = { src: string; alt: string; width: number; height: number };
 export type WagonGroup = { id: string; slug: string; title: string; heroImage: Img; blocks: { type: "heading"|"text"; level?: number; text: string }[]; images: Img[] };
 export type Wagon = { id: string; slug: string; title: string; groupId: string; heroImage: Img; blocks: WagonGroup["blocks"]; images: Img[] };
 export const wagonGroups: WagonGroup[]; // fjorhjola-minigrofuvagnar, verktakavagnar, landbunadarvagnar, hjolagrofuvagnar, velaflutningavagnar
-export const wagons: Wagon[];           // 29 products, groupId inferred from title prefix (Hjólagröfuvagn→hjolagrofuvagnar, Verktakavagn→verktakavagnar, Landbúnaðarvagn→landbunadarvagnar, Vélavagn→velaflutningavagnar, GW-*→fjorhjola-minigrofuvagnar)
+export const wagons: Wagon[];           // 25 products, groupId inferred from title prefix (Hjólagröfuvagn→hjolagrofuvagnar, Verktakavagn→verktakavagnar, Landbúnaðarvagn→landbunadarvagnar, Vélavagn→velaflutningavagnar, GW-*→fjorhjola-minigrofuvagnar)
 ```
 
 - [ ] **Step 1: Generate data**: write a one-off script `scripts/gen-sturtuvagnar.mjs` that reads the 34 scrape JSONs and emits `lib/sturtuvagnar.ts` (title from H1, hero from first background/content image, remaining blocks verbatim). Commit the generator too.
