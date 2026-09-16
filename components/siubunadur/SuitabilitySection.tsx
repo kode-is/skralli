@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/siubunadur.json blocks 14-18: five bare H3s with no body copy
 // or images in the scrape, shown as plain white pill tiles in a 3-column
@@ -17,10 +18,12 @@ export function SuitabilitySection() {
   return (
     <section className="bg-[#f0f4fa] pt-[105px] pb-16 md:pt-[125px] md:pb-20">
       <Container>
-        <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Hvar hentar BMair?</h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
+        <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+          Hvar hentar BMair?
+        </Reveal>
+        <Reveal as="p" delay={0.1} className="mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
           Sérhver grein hefur sín efni sem hafa áhrif á loftgæði og heilsu vélamanna.
-        </p>
+        </Reveal>
         {/* Partial bold from docs/scrape/formatting.json's "strong" list. */}
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-600 md:text-base">
           Við höfum búnaðinn sem hentar{" "}

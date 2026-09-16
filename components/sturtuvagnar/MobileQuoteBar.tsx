@@ -29,7 +29,7 @@ export function MobileQuoteBar({ product }: { product: Wagon }) {
           setExpanded(true);
           requestFocus();
         }}
-        className="bg-brand-dark px-6 py-4 text-base font-semibold text-white hover:bg-brand-mid"
+        className="bg-brand-dark px-6 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-brand-mid"
       >
         Fá tilboð
       </button>

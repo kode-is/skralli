@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { DotDivider } from "@/components/DotDivider";
 import { FeatureCard } from "@/components/FeatureCard";
+import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 type Feature = { heading: string; text: string; image: Img };
@@ -54,16 +55,13 @@ export function FeaturesSection() {
   return (
     <section className="bg-white">
       <Container>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature) => (
-            <FeatureCard
-              key={feature.heading}
-              heading={feature.heading}
-              text={feature.text}
-              image={feature.image}
-            />
+            <StaggerItem key={feature.heading}>
+              <FeatureCard heading={feature.heading} text={feature.text} image={feature.image} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
 
       {/* Decorative dot pattern (docs/scrape/smurkerfi.json block 34, a 0x0

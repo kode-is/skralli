@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { FeatureCard } from "@/components/FeatureCard";
 import { SpecTable } from "@/components/SpecTable";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import type { HifiBlock, HifiTable } from "@/lib/hifi";
 import type { Img } from "@/lib/types";
 
@@ -189,11 +190,13 @@ function PillRow({ entries }: { entries: Entry[] }) {
  * optional — matching aukabunadur's imageless "FAT1T" product). */
 function CardGrid({ entries, images }: { entries: Entry[]; images: Img[] }) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {entries.map((entry, i) => (
-        <FeatureCard key={entry.heading} heading={entry.heading} text={entry.body.join(" ")} image={images[i]} />
+        <StaggerItem key={entry.heading}>
+          <FeatureCard heading={entry.heading} text={entry.body.join(" ")} image={images[i]} />
+        </StaggerItem>
       ))}
-    </div>
+    </Stagger>
   );
 }
 
@@ -264,9 +267,9 @@ export function HifiSections({
             const headingId = slugify(entry.heading);
             nodes.push(
               <div key={entry.heading} className="space-y-4">
-                <h3 id={headingId} className={H2_LEFT}>
+                <Reveal as="h3" id={headingId} className={H2_LEFT}>
                   {entry.heading}
-                </h3>
+                </Reveal>
                 {entry.range ? <RangeBar range={entry.range} /> : null}
                 {entry.body.map((text, i) => (
                   <p key={i} className="max-w-3xl text-base leading-relaxed text-neutral-700">
@@ -292,9 +295,9 @@ export function HifiSections({
         return (
           <div key={sectionIndex} className="mt-16 first:mt-0">
             {section.heading ? (
-              <h2 id={sectionHeadingId} className={sectionTable ? H2_LEFT : H2_CENTERED}>
+              <Reveal as="h2" id={sectionHeadingId} className={sectionTable ? H2_LEFT : H2_CENTERED}>
                 {section.heading}
-              </h2>
+              </Reveal>
             ) : null}
             {section.lead.length ? (
               <div className="mx-auto mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-neutral-700">

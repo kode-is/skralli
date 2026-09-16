@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { Carousel } from "@/components/Carousel";
 import { BulletList } from "@/components/BulletList";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/fyrirokumannin.json blocks 7-44: heading/copy/price-list on
@@ -33,13 +34,15 @@ export function SeatCoversSection() {
     <section className="bg-white py-14 md:py-16">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Sætisáklæði</h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            Sætisáklæði
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Vönduð sætisáklæði, sérsniðin fyrir hvern framleiðanda. Stílhrein og nákvæm hönnun sem
             sér til þess að efnið færist ekki til þegar er verið að fara oft inn í og úr
             ökutækinu. Áklæðin gera ráð fyrir því hvort sætin séu með loftpúða, höfuðpúða eða
             innbyggð borð.
-          </p>
+          </Reveal>
           <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Veldu tau eða leðurlíki.
           </p>

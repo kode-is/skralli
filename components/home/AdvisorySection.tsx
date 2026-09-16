@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { ContactForm } from "@/components/ContactForm";
 import { TeamCard } from "@/components/TeamCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const TEAM = [
   { name: "Villi", image: { src: "/images/home/27-d812c419.jpg", alt: "Villi", width: 136, height: 90 } },
@@ -14,17 +15,25 @@ export function AdvisorySection() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr] md:gap-16">
           <div>
-            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Fagmannleg ráðgjöf</h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
+            <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+              Fagmannleg ráðgjöf
+            </Reveal>
+            <Reveal
+              as="p"
+              delay={0.1}
+              className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base"
+            >
               Við erum traustir ráðgjafar og höfum aðstoðað fjölda fyrirtækja og einstaklinga við
               að finna notuð tæki og búnað erlendis. Teymið okkar býr yfir áratuga reynslu og sér
               um ferlið frá upphafi til enda.
-            </p>
-            <div className="mt-10 flex flex-nowrap gap-3 sm:gap-8">
+            </Reveal>
+            <Stagger className="mt-10 flex flex-nowrap gap-3 sm:gap-8">
               {TEAM.map((member) => (
-                <TeamCard key={member.name} name={member.name} image={member.image} />
+                <StaggerItem key={member.name}>
+                  <TeamCard name={member.name} image={member.image} />
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
 
           <div className="rounded-2xl bg-[#f0f4fa] p-8 md:p-10">

@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { ContactForm } from "@/components/ContactForm";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/hafa-samband.json — same <title>/<meta description> as every
 // other route on the live site (confirmed against the server-rendered HTML).
@@ -26,9 +27,9 @@ export default function HafaSambandPage() {
       </div>
       <section className="bg-white py-16 md:py-24">
         <Container>
-          <h2 className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">
+          <Reveal as="h2" className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">
             Sendu okkur fyrirspurn!
-          </h2>
+          </Reveal>
           <div className="mx-auto mt-10 max-w-xl">
             <ContactForm showPhone submitLabel="Senda!" />
           </div>

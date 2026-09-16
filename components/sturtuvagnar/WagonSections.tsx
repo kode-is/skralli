@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FeatureCard } from "@/components/FeatureCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { wagons, type WagonBlock } from "@/lib/sturtuvagnar";
 import type { Img } from "@/lib/types";
 
@@ -41,16 +42,22 @@ export function WagonSections({ blocks, images }: { blocks: WagonBlock[]; images
       {sections.map((section) => {
         if (section.items.length === 0) {
           return (
-            <h2 key={section.heading} className={`mt-16 first:mt-0 ${HEADING_CLASSES}`}>
+            <Reveal
+              key={section.heading}
+              as="h2"
+              className={`mt-16 first:mt-0 ${HEADING_CLASSES}`}
+            >
               {section.heading}
-            </h2>
+            </Reveal>
           );
         }
 
         if (section.items[0].type === "text") {
           return (
             <div key={section.heading} className="mt-16 first:mt-0">
-              <h2 className={HEADING_CLASSES}>{section.heading}</h2>
+              <Reveal as="h2" className={HEADING_CLASSES}>
+                {section.heading}
+              </Reveal>
               <div className="mx-auto mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-neutral-700">
                 {section.items.map((item, itemIndex) => (
                   <p key={itemIndex}>{item.text}</p>
@@ -73,48 +80,50 @@ export function WagonSections({ blocks, images }: { blocks: WagonBlock[]; images
 
         return (
           <div key={section.heading} className="mt-16 first:mt-0">
-            <h2 className={HEADING_CLASSES}>{section.heading}</h2>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Reveal as="h2" className={HEADING_CLASSES}>
+              {section.heading}
+            </Reveal>
+            <Stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {cards.map((card) => {
                 const wagon = wagons.find((w) => w.title === card.heading);
                 if (!wagon) {
                   // Defensive fallback only — scripts/gen-sturtuvagnar.mjs
                   // fails the build if a card ever has no matching product.
                   return (
-                    <FeatureCard
-                      key={card.heading}
-                      heading={card.heading}
-                      text={card.text}
-                      image={card.image}
-                    />
+                    <StaggerItem key={card.heading}>
+                      <FeatureCard heading={card.heading} text={card.text} image={card.image} />
+                    </StaggerItem>
                   );
                 }
                 return (
-                  <Link
-                    key={card.heading}
-                    href={`/sturtuvagnar/${wagon.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-md"
-                  >
-                    <div
-                      className="relative w-full overflow-hidden"
-                      style={{ aspectRatio: `${card.image.width} / ${card.image.height}` }}
+                  <StaggerItem key={card.heading}>
+                    <Link
+                      href={`/sturtuvagnar/${wagon.slug}`}
+                      className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] focus-visible:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
                     >
-                      <Image
-                        src={card.image.src}
-                        alt={card.image.alt}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-ui text-lg font-semibold text-neutral-900">{card.heading}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{card.text}</p>
-                    </div>
-                  </Link>
+                      <div
+                        className="relative w-full overflow-hidden"
+                        style={{ aspectRatio: `${card.image.width} / ${card.image.height}` }}
+                      >
+                        <Image
+                          src={card.image.src}
+                          alt={card.image.alt}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-ui text-lg font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-brand-dark">
+                          {card.heading}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-neutral-600">{card.text}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </Stagger>
           </div>
         );
       })}

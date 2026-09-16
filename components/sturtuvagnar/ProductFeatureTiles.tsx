@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 // design.dc.html 1e "Hjólagröfuvagnar — 7 eiginleikaflísar": a restyled
 // feature-tile grid for product pages only.
@@ -24,10 +25,12 @@ export function ProductFeatureTiles({ heading, items }: { heading: string; items
   return (
     <section className="bg-white pb-[100px]">
       <Container>
-        <h2 className="mb-6 text-[32px] font-semibold text-[#171717] md:mb-11 md:text-[50px]">{heading}</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <Reveal as="h2" className="mb-6 text-[32px] font-semibold text-[#171717] md:mb-11 md:text-[50px]">
+          {heading}
+        </Reveal>
+        <Stagger className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {items.map((item, index) => (
-            <div
+            <StaggerItem
               key={item}
               className={`flex min-h-[120px] flex-col justify-between rounded-[15px] border border-[#E3E9F2] bg-white p-[22px] ${
                 index === lastIndex ? "col-span-2" : ""
@@ -37,9 +40,9 @@ export function ProductFeatureTiles({ heading, items }: { heading: string; items
                 {String(index + 1).padStart(2, "0")}
               </span>
               <span className="font-ui text-base font-semibold text-[#171717]">{item}</span>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

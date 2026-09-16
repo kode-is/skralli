@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { SVGProps } from "react";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 import { site } from "@/lib/site";
 
 // docs/scrape/um-okkur.json blocks 10-16. The three checklist items repeat
@@ -76,10 +77,12 @@ export function GoalsSection() {
         </div>
 
         <div className="mt-8 md:mt-0">
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            {HEADING}
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
             {TEXT}
-          </p>
+          </Reveal>
           <ul className="mt-6 flex flex-col gap-3">
             {CHECKLIST.map((item) => (
               <li key={item} className="flex items-center gap-3">

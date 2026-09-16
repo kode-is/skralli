@@ -10,6 +10,13 @@ type StepCardProps = {
 };
 
 export function StepCard({ number, title, text, linkText, href }: StepCardProps) {
+  // `linkText` is the verbatim scrape string with its arrow included (e.g.
+  // "Senda fyrirspurn →") — split the arrow into its own span so it alone
+  // can slide on hover, without changing the link's visible text.
+  const arrowMatch = linkText.match(/^(.*\S)\s+(→)$/);
+  const label = arrowMatch ? arrowMatch[1] : linkText;
+  const arrow = arrowMatch ? arrowMatch[2] : null;
+
   return (
     <div className="flex flex-col rounded-2xl bg-[#f0f4fa] p-6 md:p-8">
       <div className="flex items-start gap-3">
@@ -19,9 +26,20 @@ export function StepCard({ number, title, text, linkText, href }: StepCardProps)
       <p className="mt-4 text-sm leading-relaxed text-neutral-600">{text}</p>
       <Link
         href={href}
-        className="mt-6 inline-flex w-fit items-center text-sm font-semibold text-brand-dark transition hover:underline"
+        className="group/link mt-6 inline-flex w-fit items-center text-sm font-semibold text-brand-dark transition hover:underline"
       >
-        {linkText}
+        {label}
+        {arrow ? (
+          <>
+            {" "}
+            <span
+              aria-hidden
+              className="inline-block transition-transform duration-300 group-hover/link:translate-x-1"
+            >
+              {arrow}
+            </span>
+          </>
+        ) : null}
       </Link>
     </div>
   );

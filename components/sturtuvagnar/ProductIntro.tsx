@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { InquiryCard } from "@/components/sturtuvagnar/InquiryCard";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 
 const PILL_BASE =
@@ -18,12 +19,19 @@ export function ProductIntro({ product, group }: { product: Wagon; group: WagonG
     <section className="pt-[28px] pb-[60px] md:pt-[100px] md:pb-[120px]">
       <Container className="grid gap-y-[60px] md:grid-cols-[1fr_400px] md:items-start md:gap-20">
         <div>
-          <h2 className="mb-5 text-[32px] leading-[1.1] font-semibold text-[#171717] md:mb-7 md:text-[50px] md:leading-[1.06]">
+          <Reveal
+            as="h2"
+            className="mb-5 text-[32px] leading-[1.1] font-semibold text-[#171717] md:mb-7 md:text-[50px] md:leading-[1.06]"
+          >
             Um {product.title}
-          </h2>
-          <p className="mb-4 max-w-[640px] text-pretty text-[17px] leading-[1.6] text-[#171717] md:mb-[22px] md:text-lg">
+          </Reveal>
+          <Reveal
+            as="p"
+            delay={0.1}
+            className="mb-4 max-w-[640px] text-pretty text-[17px] leading-[1.6] text-[#171717] md:mb-[22px] md:text-lg"
+          >
             {product.blurb}
-          </p>
+          </Reveal>
           {group.about.map((paragraph, index) => (
             <p
               key={index}

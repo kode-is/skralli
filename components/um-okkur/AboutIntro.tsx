@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/um-okkur.json blocks 6-11.
 const HEADING = "Við trúum á gæði og fagmennsku.";
@@ -16,10 +17,12 @@ export function AboutIntro() {
     <section className="bg-white pt-12 pb-16 md:pt-16 md:pb-20">
       <Container className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            {HEADING}
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 md:text-base">
             {TEXT}
-          </p>
+          </Reveal>
         </div>
         <div className="grid grid-cols-2 gap-4">
           {IMAGES.map((image, index) => (

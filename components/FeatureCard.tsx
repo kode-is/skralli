@@ -15,7 +15,7 @@ type FeatureCardProps = {
  */
 export function FeatureCard({ heading, text, image }: FeatureCardProps) {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none">
       {image ? (
         <div
           className="relative w-full overflow-hidden"
@@ -31,7 +31,9 @@ export function FeatureCard({ heading, text, image }: FeatureCardProps) {
         </div>
       ) : null}
       <div className="p-6">
-        <h3 className="font-ui text-lg font-semibold text-neutral-900">{heading}</h3>
+        <h3 className="font-ui text-lg font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-brand-dark">
+          {heading}
+        </h3>
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">{text}</p>
       </div>
     </div>

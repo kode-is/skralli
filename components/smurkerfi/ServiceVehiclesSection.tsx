@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Carousel } from "@/components/Carousel";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/smurkerfi.json blocks 41-50: six photos (each repeated four
@@ -71,13 +72,13 @@ export function ServiceVehiclesSection() {
             label="Vel útbúnir þjónustubílar"
           />
           <div>
-            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
               Vel útbúnir þjónustubílar
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
               Við mætum, bilanagreinum og gerum við
               <br />- hvar sem er.
-            </p>
+            </Reveal>
           </div>
         </div>
 

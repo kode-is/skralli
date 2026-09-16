@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { CategoryCard } from "@/components/CategoryCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { categories } from "@/lib/categories";
 
 /**
@@ -18,27 +19,33 @@ export function CategoriesSection() {
     <section className="bg-[#f0f4fa] pt-[100px] pb-16 md:pt-[175px] md:pb-[150px]">
       <Container>
         <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-          <h2 className="text-[32px] leading-[1.25] font-semibold text-neutral-900 md:text-[50px]">
+          <Reveal as="h2" className="text-[32px] leading-[1.25] font-semibold text-neutral-900 md:text-[50px]">
             Okkar vöruframboð
-          </h2>
+          </Reveal>
           <div className="mt-5 flex flex-col md:mt-0 md:items-end">
             <Link
               href="/thjonusta"
-              className="hidden w-fit items-center justify-center bg-brand-dark px-[30px] py-5 text-base leading-[1.2] font-semibold text-white transition hover:bg-brand-mid md:inline-flex"
+              className="hidden w-fit items-center justify-center bg-brand-dark px-[30px] py-5 text-base leading-[1.2] font-semibold text-white transition-colors duration-200 hover:bg-brand-mid md:inline-flex"
             >
               Skoðaðu úrvalið
             </Link>
-            <p className="text-right text-[15px] leading-[1.9] text-[#444] md:mt-[30px] md:text-lg">
+            <Reveal
+              as="p"
+              delay={0.1}
+              className="text-right text-[15px] leading-[1.9] text-[#444] md:mt-[30px] md:text-lg"
+            >
               Við leggjum áherslu á vörugæði og framúrskarandi þjónustu.
-            </p>
+            </Reveal>
           </div>
         </div>
 
-        <div className="mt-[50px] grid gap-10 sm:grid-cols-2 md:mt-[75px] lg:grid-cols-3">
+        <Stagger className="mt-[50px] grid gap-10 sm:grid-cols-2 md:mt-[75px] lg:grid-cols-3">
           {homeCategories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
+            <StaggerItem key={category.id}>
+              <CategoryCard category={category} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );
