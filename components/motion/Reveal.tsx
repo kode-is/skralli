@@ -16,6 +16,26 @@ const fadeUp = {
 // works at runtime; this cast just gives TypeScript a signature for that.
 const M = m as unknown as Record<string, typeof m.div>;
 
+// Applied to every Reveal/Stagger/StaggerItem/HeroReveal element. Branching
+// the rendered output itself on `useReducedMotion()` was tried and reverted:
+// the hook can't know the visitor's preference during SSR (it's `null` on
+// the server), so the server and client would render different element
+// trees (motion vs. plain) and React's hydration cannot safely reconcile
+// that — it left the server's animated, opacity:0 markup on screen
+// permanently instead of "patching up" to the client's intended output.
+// A CSS override sidesteps the hydration race entirely: globals.css forces
+// `.motion-fade` to opacity:1/transform:none with `!important` (beating
+// Framer Motion's inline styles) under `prefers-reduced-motion: reduce`,
+// which the browser applies at first paint regardless of SSR/hydration
+// timing. `MotionConfig reducedMotion="user"` (MotionProvider.tsx) still
+// handles skipping the transform *animation* for in-view/hover cases this
+// class doesn't cover.
+const REDUCED_MOTION_CLASS = "motion-fade";
+
+function withReducedMotionClass(className?: string) {
+  return className ? `${REDUCED_MOTION_CLASS} ${className}` : REDUCED_MOTION_CLASS;
+}
+
 type RevealProps = {
   children: ReactNode;
   delay?: number;
@@ -37,7 +57,7 @@ export function Reveal({ children, delay = 0, className, as = "div", ...rest }: 
   const Component = M[as];
   return (
     <Component
-      className={className}
+      className={withReducedMotionClass(className)}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
@@ -82,7 +102,7 @@ export function HeroReveal({ children, delay = 0, className, as = "div", ...rest
   const Component = M[as];
   return (
     <Component
-      className={className}
+      className={withReducedMotionClass(className)}
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: EASE, delay }}
@@ -109,7 +129,7 @@ export function StaggerItem({ children, className, as = "div", ...rest }: Reveal
   const Component = M[as];
   return (
     <Component
-      className={className}
+      className={withReducedMotionClass(className)}
       variants={fadeUp}
       transition={{ duration: 0.55, ease: EASE }}
       {...rest}

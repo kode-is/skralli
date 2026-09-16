@@ -53,4 +53,20 @@ html {
   .hero-video {
     display: none;
   }
+
+  /* components/motion/Reveal.tsx's Reveal/HeroReveal/StaggerItem: force
+     every fade-up element to its settled, fully visible state instead of
+     the whileInView/initial "hidden" (opacity:0, translateY) start point.
+     `!important` is required to beat Framer Motion's inline styles — a
+     media query is used instead of branching the render on
+     `useReducedMotion()` because that hook can't know the visitor's
+     preference during SSR, so server and client would render different
+     element trees that React's hydration can't safely reconcile (verified:
+     it left the server's opacity:0 markup on screen permanently instead of
+     "patching up" to match the client). This still applies at first paint
+     regardless of hydration timing. */
+  .motion-fade {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
