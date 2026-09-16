@@ -28,7 +28,7 @@ export function CategoryCard({ category }: { category: Category }) {
           alt={category.image.alt}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition duration-500 group-hover:scale-105"
+          className="object-cover transition duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
         />
       </div>
       {Icon ? (

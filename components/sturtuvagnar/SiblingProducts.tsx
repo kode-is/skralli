@@ -22,7 +22,7 @@ function SeeAllLink({ group, className }: { group: WagonGroup; className?: strin
     >
       <span>
         Sjá alla {group.title.toLowerCase()}{" "}
-        <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1">
+        <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none">
           →
         </span>
       </span>
@@ -93,7 +93,7 @@ function SiblingCard({
               StepCard.tsx for the full note). */}
           <span>
             Skoða nánar{" "}
-            <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+            <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none">
               →
             </span>
           </span>

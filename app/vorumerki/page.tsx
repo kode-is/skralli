@@ -68,7 +68,7 @@ export default function VorumerkiPage() {
                         Skoða nánar{" "}
                         <span
                           aria-hidden
-                          className="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                          className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none"
                         >
                           →
                         </span>

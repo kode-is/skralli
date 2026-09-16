@@ -42,7 +42,7 @@ export function StepCard({ number, title, text, linkText, href }: StepCardProps)
               {" "}
               <span
                 aria-hidden
-                className="inline-block transition-transform duration-300 group-hover/link:translate-x-1"
+                className="inline-block transition-transform duration-300 group-hover/link:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none"
               >
                 {arrow}
               </span>
