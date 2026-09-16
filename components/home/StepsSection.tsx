@@ -36,7 +36,7 @@ export function StepsSection() {
         </Reveal>
         <Stagger className="mt-10 grid gap-6 md:grid-cols-3">
           {STEPS.map((step) => (
-            <StaggerItem key={step.number}>
+            <StaggerItem key={step.number} className="[&>*]:h-full">
               <StepCard {...step} />
             </StaggerItem>
           ))}

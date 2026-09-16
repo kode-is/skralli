@@ -93,6 +93,18 @@ export function HeroReveal({ children, delay = 0, className, as = "div", ...rest
   );
 }
 
+/**
+ * StaggerItem sits between the grid and each card, so a card that relied on
+ * being the direct grid/flex item to get stretched to its row's height
+ * (equal-height cards in a row) loses that once wrapped, UNLESS either (a)
+ * the card component sets its own `h-full` (FeatureCard.tsx and the wagon
+ * product cards in WagonSections.tsx already do), or (b) the caller passes
+ * `className="[&>*]:h-full"` here to force StaggerItem's one child to fill
+ * it. Do the latter only when StaggerItem wraps exactly one full-card
+ * element with no `h-full` of its own — passing it where StaggerItem wraps
+ * multiple children (e.g. an image box with its own fixed height alongside
+ * a text block) will stomp on those children's own height utilities.
+ */
 export function StaggerItem({ children, className, as = "div", ...rest }: RevealProps) {
   const Component = M[as];
   return (

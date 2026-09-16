@@ -8,14 +8,18 @@ import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 type CardVariant = "wide" | "normal" | "compact";
 
 function SeeAllLink({ group, className }: { group: WagonGroup; className?: string }) {
+  // No display utility of its own (no `flex`/`inline-flex`): callers control
+  // visibility with their own unconditional "hidden"/"block" classes (see
+  // call sites below), and an unconditional "inline-flex" here would beat
+  // "hidden" in Tailwind's generated stylesheet order regardless of which
+  // one is applied last in the className string, making the link impossible
+  // to hide. The label+arrow stays on one line via the inner span (not
+  // flex), so no flex layout is needed for the hover slide either.
   return (
     <Link
       href={`/sturtuvagnar/${group.slug}`}
-      className={`group/link inline-flex items-center text-base font-semibold text-brand-dark transition-colors hover:text-brand-mid ${className ?? ""}`}
+      className={`group/link text-base font-semibold text-brand-dark transition-colors hover:text-brand-mid ${className ?? ""}`}
     >
-      {/* Single inner span: keeps the label+arrow as one flex item so
-          innerText doesn't insert a line break between them (see
-          StepCard.tsx for the full note). */}
       <span>
         Sjá alla {group.title.toLowerCase()}{" "}
         <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1">
@@ -179,7 +183,7 @@ export function SiblingProducts({
         </div>
         <Stagger className={`grid grid-cols-1 gap-[18px] ${gridClass}`}>
           {products.map((product) => (
-            <StaggerItem key={product.slug}>
+            <StaggerItem key={product.slug} className="[&>*]:h-full">
               <SiblingCard
                 product={product}
                 isCurrent={product.slug === currentSlug}

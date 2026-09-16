@@ -16,7 +16,7 @@ export function ChildCards({ items }: { items: ChildCard[] }) {
   return (
     <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
-        <StaggerItem key={item.href}>
+        <StaggerItem key={item.href} className="[&>*]:h-full">
           <Link
             href={item.href}
             className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] focus-visible:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none"

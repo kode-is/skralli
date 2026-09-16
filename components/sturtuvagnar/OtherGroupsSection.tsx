@@ -13,7 +13,7 @@ export function OtherGroupsSection() {
         </Reveal>
         <Stagger className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2">
           {wagonGroups.map((group) => (
-            <StaggerItem key={group.slug}>
+            <StaggerItem key={group.slug} className="[&>*]:h-full">
               {/* docs/scrape/sturtuvagnar.json "Aðrar vagntegundir" cards use
                   the same photo as each group's own hero (verified against
                   lib/sturtuvagnar.ts: src/alt match group.heroImage exactly

@@ -41,7 +41,7 @@ export function CategoriesSection() {
 
         <Stagger className="mt-[50px] grid gap-10 sm:grid-cols-2 md:mt-[75px] lg:grid-cols-3">
           {homeCategories.map((category) => (
-            <StaggerItem key={category.id}>
+            <StaggerItem key={category.id} className="[&>*]:h-full">
               <CategoryCard category={category} />
             </StaggerItem>
           ))}
