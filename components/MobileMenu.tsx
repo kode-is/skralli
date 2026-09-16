@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { AnimatePresence, m } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { navCta } from "@/lib/site";
 
@@ -109,61 +110,67 @@ export function MobileMenu({ nav }: MobileMenuProps) {
         )}
       </button>
 
-      {open ? (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Valmynd"
-          className="fixed inset-x-[30px] top-[95px] z-[60] rounded-3xl bg-neutral-100 px-8 py-8 shadow-xl"
-        >
-          <button
-            ref={closeButtonRef}
-            type="button"
-            aria-label="Loka valmynd"
-            onClick={close}
-            className="absolute right-8 top-8 flex h-6 w-6 items-center justify-center text-neutral-900 transition hover:text-brand-dark"
+      <AnimatePresence>
+        {open ? (
+          <m.div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Valmynd"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12, pointerEvents: "none" }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-[30px] top-[95px] z-[60] rounded-3xl bg-neutral-100 px-8 py-8 shadow-xl"
           >
-            <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
-              <path
-                d="M6 6l12 12M18 6L6 18"
-                stroke="currentColor"
-                strokeWidth={1.75}
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-          <nav className="flex flex-col items-center gap-6">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={close}
-                className="inline-flex items-center gap-1.5 font-ui text-lg font-medium text-neutral-900"
-              >
-                {item.text}
-                {item.text === "Þjónusta" ? (
-                  <svg viewBox="0 0 12 8" fill="none" className="h-2.5 w-2.5" aria-hidden="true">
-                    <path
-                      d="M1 1.5L6 6.5L11 1.5"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                ) : null}
-              </Link>
-            ))}
-          </nav>
-          <Link
-            href={navCta.href}
-            onClick={close}
-            className="mt-6 block rounded-md bg-brand-dark py-3 text-center text-base font-semibold text-white"
-          >
-            {navCta.text}
-          </Link>
-        </div>
-      ) : null}
+            <button
+              ref={closeButtonRef}
+              type="button"
+              aria-label="Loka valmynd"
+              onClick={close}
+              className="absolute right-8 top-8 flex h-6 w-6 items-center justify-center text-neutral-900 transition hover:text-brand-dark"
+            >
+              <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+                <path
+                  d="M6 6l12 12M18 6L6 18"
+                  stroke="currentColor"
+                  strokeWidth={1.75}
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+            <nav className="flex flex-col items-center gap-6">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={close}
+                  className="inline-flex items-center gap-1.5 font-ui text-lg font-medium text-neutral-900"
+                >
+                  {item.text}
+                  {item.text === "Þjónusta" ? (
+                    <svg viewBox="0 0 12 8" fill="none" className="h-2.5 w-2.5" aria-hidden="true">
+                      <path
+                        d="M1 1.5L6 6.5L11 1.5"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ) : null}
+                </Link>
+              ))}
+            </nav>
+            <Link
+              href={navCta.href}
+              onClick={close}
+              className="mt-6 block rounded-md bg-brand-dark py-3 text-center text-base font-semibold text-white"
+            >
+              {navCta.text}
+            </Link>
+          </m.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 }
