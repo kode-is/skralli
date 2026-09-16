@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import type { ReactNode } from "react";
 import type { Img } from "@/lib/types";
 import { Container } from "@/components/Container";
+import { HeroReveal } from "@/components/motion/Reveal";
 
 type PageHeroProps = {
   image: Img;
@@ -91,20 +94,28 @@ export function PageHero({
         {children ?? (
           <>
             {icon ? (
-              <div
+              <HeroReveal
                 aria-hidden="true"
                 className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-dark text-white"
               >
                 {icon}
-              </div>
+              </HeroReveal>
             ) : null}
-            <h1 className="text-[44px] leading-[1.05] font-semibold text-white md:text-[70px] md:leading-[1.02]">
+            <HeroReveal
+              as="h1"
+              delay={0.15}
+              className="text-[44px] leading-[1.05] font-semibold text-white md:text-[70px] md:leading-[1.02]"
+            >
               {title}
-            </h1>
+            </HeroReveal>
             {subtitle ? (
-              <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg">
+              <HeroReveal
+                as="p"
+                delay={0.3}
+                className="mx-auto mt-4 max-w-2xl text-base text-white/90 md:text-lg"
+              >
                 {subtitle}
-              </p>
+              </HeroReveal>
             ) : null}
           </>
         )}

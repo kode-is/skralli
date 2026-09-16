@@ -21,6 +21,10 @@ type RevealProps = {
   delay?: number;
   className?: string;
   as?: ElementType & string;
+  // Passed straight through to the rendered element (e.g. `id` for
+  // aria-labelledby wiring) — Reveal/Stagger/StaggerItem otherwise behave
+  // like the plain tag they replace.
+  [key: string]: unknown;
 };
 
 /**
@@ -29,7 +33,7 @@ type RevealProps = {
  * layout container (main, grid, hero image) in this — it animates opacity
  * and a 24px translateY only, so it must not be relied on for layout.
  */
-export function Reveal({ children, delay = 0, className, as = "div" }: RevealProps) {
+export function Reveal({ children, delay = 0, className, as = "div", ...rest }: RevealProps) {
   const Component = M[as];
   return (
     <Component
@@ -39,6 +43,7 @@ export function Reveal({ children, delay = 0, className, as = "div" }: RevealPro
       whileInView="visible"
       viewport={VIEWPORT}
       transition={{ duration: 0.6, ease: EASE, delay }}
+      {...rest}
     >
       {children}
     </Component>
@@ -51,7 +56,7 @@ export function Reveal({ children, delay = 0, className, as = "div" }: RevealPro
  * each card's wrapper classes on `StaggerItem`, never on an extra element
  * around it, so the DOM shape (and therefore card positions) is unchanged.
  */
-export function Stagger({ children, className, as = "div" }: RevealProps) {
+export function Stagger({ children, className, as = "div", ...rest }: RevealProps) {
   const Component = M[as];
   return (
     <Component
@@ -60,19 +65,42 @@ export function Stagger({ children, className, as = "div" }: RevealProps) {
       whileInView="visible"
       viewport={VIEWPORT}
       transition={{ staggerChildren: 0.08 }}
+      {...rest}
     >
       {children}
     </Component>
   );
 }
 
-export function StaggerItem({ children, className, as = "div" }: RevealProps) {
+/**
+ * Fade-up-on-mount wrapper for the hero title/subtitle/buttons (Hero.tsx,
+ * PageHero.tsx). Unlike `Reveal`, this always plays once on load via
+ * `initial`/`animate` — never `whileInView` — since hero content is already
+ * above the fold when the page mounts.
+ */
+export function HeroReveal({ children, delay = 0, className, as = "div", ...rest }: RevealProps) {
+  const Component = M[as];
+  return (
+    <Component
+      className={className}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: EASE, delay }}
+      {...rest}
+    >
+      {children}
+    </Component>
+  );
+}
+
+export function StaggerItem({ children, className, as = "div", ...rest }: RevealProps) {
   const Component = M[as];
   return (
     <Component
       className={className}
       variants={fadeUp}
       transition={{ duration: 0.55, ease: EASE }}
+      {...rest}
     >
       {children}
     </Component>
