@@ -27,6 +27,7 @@ Branch: `site-recreation`, PR: https://github.com/kode-is/skralli/pull/1
 
 ## Done
 
+- 2026-09-16 Motion and hover polish (from the skralli-v2 comparison): sections and card grids fade up on scroll with a stagger, hero text fades in on load, the Þjónusta and phone menus animate open, cards lift with an arrow nudge on hover, FAQ answers animate, the brand marquee pauses on hover, smooth scrolling. Built on the `motion` package with reduced-motion honoured; a before/after layout snapshot shows no element moved. Also: brand-strip logos now match the live per-logo boxes at every width, and the phone menu has a single close cross like live.
 - 2026-09-10 Product pages rebuilt from the Claude Design mockup (https://claude.ai/design/p/dc78159c-cb02-41d7-9046-b663634948ae): breadcrumb in the hero's bottom edge, fact strip (size/category/maker/origin/warranty/tipping angle, only where the data has it), sticky quote card with labelled fields and inline errors, numbered feature tiles, whole-group sibling cards with the current product marked, and on phones a collapsed quote card plus a sticky "Fá tilboð" bar. Copy is unchanged; the only new strings are the design's labels.
 - 2026-09-08 Dot bands redrawn to the live treatment (48 px tile, opacity 0.1, 100/75 px tall, flush with the next section) on all five pages; the sections that follow now start at the live offsets.
 - 2026-09-08 Home category cards rebuilt to the live geometry; the icon badge sits in front of the card body again, straddling the image edge.
