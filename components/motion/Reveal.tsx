@@ -1,0 +1,80 @@
+"use client";
+
+import { m } from "motion/react";
+import type { ElementType, ReactNode } from "react";
+
+const EASE = [0.21, 0.47, 0.32, 0.98] as const;
+const VIEWPORT = { once: true, margin: "-80px" } as const;
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
+
+// `m` (from LazyMotion's domAnimation feature set) is a proxy keyed by tag
+// name, same shape as `motion` — indexing it dynamically by an `as` prop
+// works at runtime; this cast just gives TypeScript a signature for that.
+const M = m as unknown as Record<string, typeof m.div>;
+
+type RevealProps = {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+  as?: ElementType & string;
+};
+
+/**
+ * Fade-up-on-scroll wrapper for section headings and their intro copy.
+ * Fires once, ~80px before the element reaches the viewport. Never wrap a
+ * layout container (main, grid, hero image) in this — it animates opacity
+ * and a 24px translateY only, so it must not be relied on for layout.
+ */
+export function Reveal({ children, delay = 0, className, as = "div" }: RevealProps) {
+  const Component = M[as];
+  return (
+    <Component
+      className={className}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={VIEWPORT}
+      transition={{ duration: 0.6, ease: EASE, delay }}
+    >
+      {children}
+    </Component>
+  );
+}
+
+/**
+ * Wraps a card grid: put the grid's own layout classes (grid, gap-*, etc.)
+ * directly on `Stagger` — it renders the `m.div` that IS the grid — and put
+ * each card's wrapper classes on `StaggerItem`, never on an extra element
+ * around it, so the DOM shape (and therefore card positions) is unchanged.
+ */
+export function Stagger({ children, className, as = "div" }: RevealProps) {
+  const Component = M[as];
+  return (
+    <Component
+      className={className}
+      initial="hidden"
+      whileInView="visible"
+      viewport={VIEWPORT}
+      transition={{ staggerChildren: 0.08 }}
+    >
+      {children}
+    </Component>
+  );
+}
+
+export function StaggerItem({ children, className, as = "div" }: RevealProps) {
+  const Component = M[as];
+  return (
+    <Component
+      className={className}
+      variants={fadeUp}
+      transition={{ duration: 0.55, ease: EASE }}
+    >
+      {children}
+    </Component>
+  );
+}

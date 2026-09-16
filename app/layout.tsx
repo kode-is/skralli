@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { figtree, inter, satoshi } from "./fonts";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MotionProvider } from "@/components/motion/MotionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,9 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Fara í efni
         </a>
-        <Header />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );
