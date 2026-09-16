@@ -62,12 +62,17 @@ export function BrandsSection() {
                       href={brand.href}
                       className="mt-1 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"
                     >
-                      Skoða nánar{" "}
-                      <span
-                        aria-hidden
-                        className="inline-block transition-transform duration-300 group-hover:translate-x-1"
-                      >
-                        →
+                      {/* Single inner span: keeps the label+arrow as one
+                          flex item so innerText doesn't insert a line break
+                          between them (see StepCard.tsx for the full note). */}
+                      <span>
+                        Skoða nánar{" "}
+                        <span
+                          aria-hidden
+                          className="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                        >
+                          →
+                        </span>
                       </span>
                     </Link>
                   </div>

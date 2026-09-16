@@ -13,9 +13,14 @@ function SeeAllLink({ group, className }: { group: WagonGroup; className?: strin
       href={`/sturtuvagnar/${group.slug}`}
       className={`group/link inline-flex items-center text-base font-semibold text-brand-dark transition-colors hover:text-brand-mid ${className ?? ""}`}
     >
-      Sjá alla {group.title.toLowerCase()}{" "}
-      <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1">
-        →
+      {/* Single inner span: keeps the label+arrow as one flex item so
+          innerText doesn't insert a line break between them (see
+          StepCard.tsx for the full note). */}
+      <span>
+        Sjá alla {group.title.toLowerCase()}{" "}
+        <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1">
+          →
+        </span>
       </span>
     </Link>
   );
@@ -79,9 +84,14 @@ function SiblingCard({
         <span
           className={`mt-4 inline-flex items-center font-ui font-semibold text-brand-dark group-hover:text-brand-mid group-hover:underline group-hover:underline-offset-[3px] ${linkTextClass}`}
         >
-          Skoða nánar{" "}
-          <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-            →
+          {/* Single inner span: keeps the label+arrow as one flex item so
+              innerText doesn't insert a line break between them (see
+              StepCard.tsx for the full note). */}
+          <span>
+            Skoða nánar{" "}
+            <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </span>
         </span>
       )}
