@@ -1,7 +1,7 @@
 "use client";
 
 import { m } from "motion/react";
-import type { ElementType, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 const VIEWPORT = { once: true, margin: "-80px" } as const;
@@ -14,7 +14,8 @@ const fadeUp = {
 // `m` (from LazyMotion's domAnimation feature set) is a proxy keyed by tag
 // name, same shape as `motion` — indexing it dynamically by an `as` prop
 // works at runtime; this cast just gives TypeScript a signature for that.
-const M = m as unknown as Record<string, typeof m.div>;
+type Tag = keyof HTMLElementTagNameMap;
+const M = m as unknown as Record<Tag, typeof m.div>;
 
 // Applied to every Reveal/Stagger/StaggerItem/HeroReveal element. Branching
 // the rendered output itself on `useReducedMotion()` was tried and reverted:
@@ -40,7 +41,7 @@ type RevealProps = {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: ElementType & string;
+  as?: Tag;
   // Passed straight through to the rendered element (e.g. `id` for
   // aria-labelledby wiring) — Reveal/Stagger/StaggerItem otherwise behave
   // like the plain tag they replace.

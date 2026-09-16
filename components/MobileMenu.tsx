@@ -17,7 +17,7 @@ export function MobileMenu({ nav }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   // Escape closes the menu and Tab/Shift+Tab is trapped inside this
   // container — the toggle button plus (while open) the floating card's
@@ -56,16 +56,12 @@ export function MobileMenu({ nav }: MobileMenuProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, close]);
 
-  // Move focus into the card when it opens: to the close button if it exists,
-  // otherwise to the first link.
+  // Move focus into the card when it opens, onto its first link. The live
+  // site's card has no close button of its own: the header toggle turns into
+  // the X (docs: .superpowers/tmp/live-mobile-open.jpg), and Escape closes.
   useEffect(() => {
     if (!open) return;
-    if (closeButtonRef.current) {
-      closeButtonRef.current.focus();
-    } else {
-      const firstLink = containerRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR);
-      firstLink?.focus();
-    }
+    cardRef.current?.querySelector<HTMLElement>(FOCUSABLE_SELECTOR)?.focus();
   }, [open]);
 
   // Lock background scroll while the card is open, restoring whatever the
@@ -113,6 +109,7 @@ export function MobileMenu({ nav }: MobileMenuProps) {
       <AnimatePresence>
         {open ? (
           <m.div
+            ref={cardRef}
             role="dialog"
             aria-modal="true"
             aria-label="Valmynd"
@@ -122,22 +119,6 @@ export function MobileMenu({ nav }: MobileMenuProps) {
             transition={{ duration: 0.2 }}
             className="fixed inset-x-[30px] top-[95px] z-[60] rounded-3xl bg-neutral-100 px-8 py-8 shadow-xl"
           >
-            <button
-              ref={closeButtonRef}
-              type="button"
-              aria-label="Loka valmynd"
-              onClick={close}
-              className="absolute right-8 top-8 flex h-6 w-6 items-center justify-center text-neutral-900 transition hover:text-brand-dark"
-            >
-              <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
-                <path
-                  d="M6 6l12 12M18 6L6 18"
-                  stroke="currentColor"
-                  strokeWidth={1.75}
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
             <nav className="flex flex-col items-center gap-6">
               {nav.map((item) => (
                 <Link
