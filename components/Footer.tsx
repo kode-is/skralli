@@ -99,10 +99,10 @@ export function Footer() {
               </a>
             </div>
             <Image
-              src="/images/home/34-5f7b6ec9.jpg"
-              alt="Fyrirmyndarfyrirtæki í rekstri 2025 — Viðskiptablaðið / Keldan"
+              src="/images/footer/fyrirmyndarfyrirtaeki-2026.png"
+              alt="Fyrirmyndarfyrirtæki í rekstri 2026 — Viðskiptablaðið / Keldan"
               width={151}
-              height={106}
+              height={107}
               className="mt-2"
             />
           </div>
