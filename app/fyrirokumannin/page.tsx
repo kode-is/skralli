@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { SeatCoversSection } from "@/components/fyrirokumannin/SeatCoversSection";
@@ -41,11 +40,7 @@ export default function FyrirOkumanninPage() {
         icon={CarIcon ? <CarIcon className="h-6 w-6" /> : null}
         pattern
       />
-      <div className="bg-white pt-8">
-        <Container>
-          <Breadcrumb items={[{ text: "Fyrir ökumanninn" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Fyrir ökumanninn" }]} />
       <SeatCoversSection />
       <FloorMatsSection />
       <ShoeTraySection />

@@ -77,11 +77,7 @@ export default function HifiFestibunadurPage() {
         icon={HifiIcon ? <HifiIcon className="h-6 w-6" /> : null}
         pattern
       />
-      <div className="bg-white pt-8">
-        <Container>
-          <Breadcrumb items={[{ text: "Hífi- & festibúnaður" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Hífi- & festibúnaður" }]} />
       <section className="bg-white py-10 md:py-14">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>

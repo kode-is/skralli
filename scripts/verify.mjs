@@ -76,16 +76,11 @@ const hifikedjurWidgetPatterns = (() => {
 // per-heading `range` — see scripts/gen-hifi.mjs's RANGE_LABELS for how
 // those verbatim strings were read off the live page), so none of them need
 // an IGNORE_MISSING entry any more (Task 12 fix round 1).
-// product-redesign task: every sturtuvagnar product/group page now renders
-// PageHero's hero-edge breadcrumb (Breadcrumb variant="hero"), which uses
-// "›" as its separator instead of the plain breadcrumb's "&gt;" (>) — see
-// components/Breadcrumb.tsx. The live site (and our own other 13 routes
-// using the plain variant) still uses ">", so it now shows up as "missing"
-// on these 30 routes even though the breadcrumb itself is fully present,
-// just with a different, intentionally redesigned glyph.
-const sturtuvagnarHeroBreadcrumbIgnored = Object.fromEntries(
-  ROUTES.filter((r) => r.startsWith("/sturtuvagnar/")).map((r) => [r, [exact(">")]]),
-);
+// Every page except the home page renders the skralli-v2 breadcrumb bar
+// (components/Breadcrumb.tsx), which separates crumbs with "›". The live
+// site uses ">", so that one glyph shows up as "missing" on every route
+// with a breadcrumb even though the trail itself is fully present.
+const breadcrumbGlyphIgnored = (route) => (route === "/" ? [] : [exact(">")]);
 
 const IGNORE_MISSING = {
   "/": [/^\d{1,3}$/],
@@ -99,7 +94,6 @@ const IGNORE_MISSING = {
     // breadcrumb from the real page title instead of reproducing the bug.
     exact("Hífikeðjur"),
   ],
-  ...sturtuvagnarHeroBreadcrumbIgnored,
 };
 
 // A browser's innerText joins adjacent cells of a real <table> row with a
@@ -165,7 +159,7 @@ for (const r of routes) {
   const local = await capture(page, LOCAL + r);
   const a = new Set(norm(live.text).split("\n")), b = new Set(norm(local.text).split("\n"));
   const missingAll = [...a].filter(x => !b.has(x)); const extra = [...b].filter(x => !a.has(x));
-  const ignorePatterns = IGNORE_MISSING[r] || [];
+  const ignorePatterns = [...(IGNORE_MISSING[r] || []), ...breadcrumbGlyphIgnored(r)];
   const missing = missingAll.filter(x => !ignorePatterns.some(re => re.test(x)));
   const ignored = missingAll.length - missing.length;
   const imgOk = local.images >= live.images;

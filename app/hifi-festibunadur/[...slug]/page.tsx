@@ -80,11 +80,7 @@ export default async function HifiSlugPage({ params }: { params: Promise<PagePar
         icon={HifiIcon ? <HifiIcon className="h-6 w-6" /> : undefined}
         pattern
       />
-      <div className="bg-white pt-8">
-        <Container>
-          <Breadcrumb items={breadcrumbItems} />
-        </Container>
-      </div>
+      <Breadcrumb items={breadcrumbItems} />
       <section className="bg-white py-10 md:py-14">
         <Container>
           {page.children ? (

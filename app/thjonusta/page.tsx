@@ -32,10 +32,10 @@ export default function ThjonustaPage() {
   return (
     <main id="main">
       <PageHero image={HERO_IMAGE} title="Þjónustur" />
+      <Breadcrumb items={[{ text: "Þjónustur" }]} />
       <section className="bg-[#f0f4fa] py-16 md:py-20">
         <Container>
-          <Breadcrumb items={[{ text: "Þjónustur" }]} />
-          <Stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
               <StaggerItem key={category.id} className="[&>*]:h-full">
                 <CategoryCard category={category} />

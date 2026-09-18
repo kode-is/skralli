@@ -65,12 +65,9 @@ export default async function SturtuvagnarSlugPage({
           image={record.heroImage}
           title={record.title}
           icon={<TrailerIcon className="h-6 w-6" />}
-          breadcrumb={
-            <Breadcrumb
-              variant="hero"
-              items={[{ text: "Sturtuvagnar", href: "/sturtuvagnar" }, { text: record.title }]}
-            />
-          }
+        />
+        <Breadcrumb
+          items={[{ text: "Sturtuvagnar", href: "/sturtuvagnar" }, { text: record.title }]}
         />
         <section className="bg-white py-10 md:py-14">
           <Container>
@@ -112,16 +109,13 @@ export default async function SturtuvagnarSlugPage({
           subtitle={heroSubtitle}
           height="h-[400px] md:h-[520px]"
           overlayClassName="bg-gradient-to-b from-[#001A28]/15 via-[#001A28]/45 via-55% to-[#001A28]/[.78]"
-          breadcrumb={
-            <Breadcrumb
-              variant="hero"
-              items={[
-                { text: "Sturtuvagnar", href: "/sturtuvagnar" },
-                { text: group.title, href: `/sturtuvagnar/${group.slug}` },
-                { text: record.title },
-              ]}
-            />
-          }
+        />
+        <Breadcrumb
+          items={[
+            { text: "Sturtuvagnar", href: "/sturtuvagnar" },
+            { text: group.title, href: `/sturtuvagnar/${group.slug}` },
+            { text: record.title },
+          ]}
         />
         <FactStrip product={record} group={group} />
         <ProductIntro product={record} group={group} />

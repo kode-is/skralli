@@ -20,11 +20,7 @@ export default function HafaSambandPage() {
         image={{ src: "/images/hafa-samband/01-7ea80875.jpeg", alt: "Vinir við vegin", width: 512, height: 341 }}
         title="Hafa Samband"
       />
-      <div className="bg-white pt-6">
-        <Container>
-          <Breadcrumb items={[{ text: "Hafa samband" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Hafa samband" }]} />
       <section className="bg-white py-16 md:py-24">
         <Container>
           <Reveal as="h2" className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">

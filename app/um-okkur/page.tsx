@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { StatsSection } from "@/components/StatsSection";
 import { AboutIntro } from "@/components/um-okkur/AboutIntro";
@@ -28,11 +27,7 @@ export default function UmOkkurPage() {
         }}
         title="Um okkur"
       />
-      <div className="bg-white pt-6">
-        <Container>
-          <Breadcrumb items={[{ text: "Um okkur" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Um okkur" }]} />
       <AboutIntro />
       <GoalsSection />
       <StatsSection />

@@ -44,12 +44,10 @@ export default async function BrandPage({
           the ContactCta band, regardless of how much copy a brand has (it's
           just as large on Gigant's 2 paragraphs as on Lilleseth's 5) — so
           this is a fixed section padding-bottom, not content-driven. */}
+      <Breadcrumb items={[{ text: "Vörumerki", href: "/vorumerki" }, { text: brand.name }]} />
       <section className="bg-white pt-16 pb-36 md:pb-40">
         <Container>
-          <Breadcrumb
-            items={[{ text: "Vörumerki", href: "/vorumerki" }, { text: brand.name }]}
-          />
-          <div className="mt-10 font-ui text-base leading-relaxed text-neutral-700">
+          <div className="font-ui text-base leading-relaxed text-neutral-700">
             {brand.subheading ? (
               <h4 className="font-ui text-xl font-semibold text-neutral-900 md:text-2xl">
                 {brand.subheading}
