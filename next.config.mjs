@@ -14,6 +14,18 @@ const nextConfig = {
   // Keep every *.vercel.app address (previews and the project's default
   // production alias) out of search engines. Only the real domain, once it
   // is attached, may be indexed.
+  // The live site answers on the bare domain and sends www there with a 308.
+  // Keep that once skralli.is is attached to this project.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.skralli.is" }],
+        destination: "https://skralli.is/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
