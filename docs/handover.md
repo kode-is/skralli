@@ -17,7 +17,6 @@ Branch: `site-recreation`, PR: https://github.com/kode-is/skralli/pull/1
 
 ## Post-launch suggestions (no decision needed now)
 
-- Downscale the full-resolution originals in `public/images` (128 MB) to about 2560 px; keep the sources elsewhere.
 - Rate-limit the contact action (Vercel Firewall or a per-IP throttle); the honeypot is the only bot defence today.
 - Unique title and description per category and brand page (21 routes share the site title).
 - Serve the hero video only on desktop, or a shorter compressed loop.
@@ -26,6 +25,7 @@ Branch: `site-recreation`, PR: https://github.com/kode-is/skralli/pull/1
 
 ## Done
 
+- 2026-09-19 Image loading: first visits after a deploy were slow because Vercel resizes images on demand, a new deployment starts with an empty image cache, and 45 sources were up to 24 megapixels. Sources are now capped at 2560 px (`npm run images:shrink`; 128 MB -> 66 MB, originals remain in git history; renders at serving size are visually identical), optimized variants are kept for 31 days with fewer widths, and `npm run images:warm <url>` visits every page at phone, laptop and desktop size after a deploy so no real visitor meets a cold image. Run the warm script after every production deploy.
 - 2026-09-19 Breadcrumb: every page now uses the skralli-v2 breadcrumb bar (tinted full-width bar flush under the hero, hairline border, "›" separators), at Einar's request. It replaces both the plain grey trail on 13 pages and the hero-edge variant on the 30 sturtuvagnar pages, so the open rollout question is closed. The verifier ignores the live site's ">" glyph on every route with a breadcrumb.
 - 2026-09-17 Footer: 2026 Fyrirmyndarfyrirtæki badge replaces the 2025 one. The footer logo was rendering as a dotted ghost because the four logo PNGs transcribed from the Drive connector on day one were corrupt (bad checksums, truncated); the footer now uses the live site's own blue logo at the live 178 px width and the corrupt files are removed. If Hlynur's Drive logo originals are wanted later, take them from the downloaded zip (item 4), not through the connector.
 - 2026-09-16 Motion and hover polish (from the skralli-v2 comparison): sections and card grids fade up on scroll with a stagger, hero text fades in on load, the Þjónusta and phone menus animate open, cards lift with an arrow nudge on hover, FAQ answers animate, the brand marquee pauses on hover, smooth scrolling. Built on the `motion` package with reduced-motion honoured; a before/after layout snapshot shows no element moved. Also: brand-strip logos now match the live per-logo boxes at every width, and the phone menu has a single close cross like live.

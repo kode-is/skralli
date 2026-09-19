@@ -16,7 +16,9 @@
     "scrape-mobile-diff": "node scripts/scrape-mobile-diff.mjs",
     "verify": "node scripts/verify.mjs",
     "gen-sturtuvagnar": "node scripts/gen-sturtuvagnar.mjs",
-    "gen-hifi": "node scripts/gen-hifi.mjs"
+    "gen-hifi": "node scripts/gen-hifi.mjs",
+    "images:shrink": "node scripts/shrink-images.mjs",
+    "images:warm": "node scripts/warm-images.mjs"
   },
   "dependencies": {
     "motion": "^13.4.0",
