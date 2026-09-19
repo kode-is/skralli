@@ -47,12 +47,15 @@ export function Hero() {
       {/* Live site plays a looping background video behind the hero title
           (https://framerusercontent.com/assets/Zuc7sp49I7PBk72pIJRKgtj2qw.mp4,
           downloaded to public/video/hero.mp4). The still image above stays as
-          the poster/fallback layer underneath until the video starts playing,
-          and for prefers-reduced-motion visitors (hidden via globals.css). */}
+          the fallback layer underneath until the video starts playing, and for
+          prefers-reduced-motion visitors (hidden via globals.css). The video
+          deliberately has NO poster attribute: a poster bypasses the image
+          optimizer, so it fetched the raw 1.5 MB PNG on every home page load
+          for a picture the optimized <Image> beneath already shows; a video
+          without a poster is transparent until its first frame. */}
       <video
         className="hero-video absolute inset-0 -z-10 h-full w-full object-cover"
         src="/video/hero.mp4"
-        poster="/images/home/01-087a3e5c.png"
         autoPlay
         muted
         loop
