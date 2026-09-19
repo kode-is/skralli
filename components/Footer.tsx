@@ -63,11 +63,11 @@ export function Footer() {
           <div className="order-2 flex flex-col items-center gap-4 md:order-1 md:items-start">
             <Link href="/" aria-label="Skralli - Forsíða">
               <Image
-                src="/logos/skralli-blue-on-white.png"
+                src="/logos/skralli-footer.png"
                 alt="Skralli"
                 width={537}
                 height={146}
-                className="h-10 w-auto"
+                className="h-auto w-[178px]"
               />
             </Link>
             <p className="font-ui text-neutral-900">{site.motto}</p>
@@ -99,10 +99,10 @@ export function Footer() {
               </a>
             </div>
             <Image
-              src="/images/home/34-5f7b6ec9.jpg"
-              alt="Fyrirmyndarfyrirtæki í rekstri 2025 — Viðskiptablaðið / Keldan"
+              src="/images/footer/fyrirmyndarfyrirtaeki-2026.png"
+              alt="Fyrirmyndarfyrirtæki í rekstri 2026 — Viðskiptablaðið / Keldan"
               width={151}
-              height={106}
+              height={107}
               className="mt-2"
             />
           </div>

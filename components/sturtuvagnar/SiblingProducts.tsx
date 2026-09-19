@@ -1,18 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { productSize } from "@/lib/product-facts";
 import type { Wagon, WagonGroup } from "@/lib/sturtuvagnar";
 
 type CardVariant = "wide" | "normal" | "compact";
 
 function SeeAllLink({ group, className }: { group: WagonGroup; className?: string }) {
+  // No display utility of its own (no `flex`/`inline-flex`): callers control
+  // visibility with their own unconditional "hidden"/"block" classes (see
+  // call sites below), and an unconditional "inline-flex" here would beat
+  // "hidden" in Tailwind's generated stylesheet order regardless of which
+  // one is applied last in the className string, making the link impossible
+  // to hide. The label+arrow stays on one line via the inner span (not
+  // flex), so no flex layout is needed for the hover slide either.
   return (
     <Link
       href={`/sturtuvagnar/${group.slug}`}
-      className={`text-base font-semibold text-brand-dark hover:text-brand-mid ${className ?? ""}`}
+      className={`group/link text-base font-semibold text-brand-dark transition-colors hover:text-brand-mid ${className ?? ""}`}
     >
-      Sjá alla {group.title.toLowerCase()} →
+      <span>
+        Sjá alla {group.title.toLowerCase()}{" "}
+        <span aria-hidden className="inline-block transition-transform duration-300 group-hover/link:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none">
+          →
+        </span>
+      </span>
     </Link>
   );
 }
@@ -73,9 +86,17 @@ function SiblingCard({
       )}
       {isCurrent ? null : (
         <span
-          className={`mt-4 inline-block font-ui font-semibold text-brand-dark group-hover:text-brand-mid group-hover:underline group-hover:underline-offset-[3px] ${linkTextClass}`}
+          className={`mt-4 inline-flex items-center font-ui font-semibold text-brand-dark group-hover:text-brand-mid group-hover:underline group-hover:underline-offset-[3px] ${linkTextClass}`}
         >
-          Skoða nánar →
+          {/* Single inner span: keeps the label+arrow as one flex item so
+              innerText doesn't insert a line break between them (see
+              StepCard.tsx for the full note). */}
+          <span>
+            Skoða nánar{" "}
+            <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none">
+              →
+            </span>
+          </span>
         </span>
       )}
     </div>
@@ -97,7 +118,7 @@ function SiblingCard({
   return (
     <Link
       href={`/sturtuvagnar/${product.slug}`}
-      className={`group transition hover:border-brand-mid focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-mid focus-visible:outline-offset-[3px] ${shellClass}`}
+      className={`group transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-mid hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-mid focus-visible:outline-offset-[3px] focus-visible:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none ${shellClass}`}
     >
       {image}
       {body}
@@ -136,7 +157,9 @@ export function SiblingProducts({
       <section className="bg-[#F0F4FA] py-[60px] md:py-[110px]">
         <Container>
           <div className="mb-[22px] flex items-end justify-between md:mb-11">
-            <h2 className="text-[32px] font-semibold text-[#171717] md:text-[50px]">Tegundir í boði</h2>
+            <Reveal as="h2" className="text-[32px] font-semibold text-[#171717] md:text-[50px]">
+              Tegundir í boði
+            </Reveal>
             <SeeAllLink group={group} className="hidden md:inline-block" />
           </div>
           <SiblingCard product={sibling} isCurrent={false} variant="wide" />
@@ -153,19 +176,22 @@ export function SiblingProducts({
     <section className="bg-[#F0F4FA] py-[60px] md:py-[110px]">
       <Container>
         <div className="mb-[22px] flex items-end justify-between md:mb-11">
-          <h2 className="text-[32px] font-semibold text-[#171717] md:text-[50px]">Tegundir í boði</h2>
+          <Reveal as="h2" className="text-[32px] font-semibold text-[#171717] md:text-[50px]">
+            Tegundir í boði
+          </Reveal>
           <SeeAllLink group={group} className="hidden md:inline-block" />
         </div>
-        <div className={`grid grid-cols-1 gap-[18px] ${gridClass}`}>
+        <Stagger className={`grid grid-cols-1 gap-[18px] ${gridClass}`}>
           {products.map((product) => (
-            <SiblingCard
-              key={product.slug}
-              product={product}
-              isCurrent={product.slug === currentSlug}
-              variant={variant}
-            />
+            <StaggerItem key={product.slug} className="[&>*]:h-full">
+              <SiblingCard
+                product={product}
+                isCurrent={product.slug === currentSlug}
+                variant={variant}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
         <SeeAllLink group={group} className="mt-6 block md:hidden" />
       </Container>
     </section>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/sturtuvagnar.json blocks 8-13.
@@ -16,15 +17,19 @@ const IMAGE: Img = {
 };
 
 const BUTTON_CLASSES =
-  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid";
+  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid";
 
 export function IntroSection() {
   return (
     <section className="bg-white py-16 md:py-20">
       <Container className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
         <div>
-          <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">{HEADING}</h3>
-          <p className="mt-4 text-base leading-relaxed text-neutral-600">{TEXT}</p>
+          <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+            {HEADING}
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-base leading-relaxed text-neutral-600">
+            {TEXT}
+          </Reveal>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/hafa-samband" className={BUTTON_CLASSES}>
               Hafa samband

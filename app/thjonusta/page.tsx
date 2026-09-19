@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { CategoryCard } from "@/components/CategoryCard";
+import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { categories } from "@/lib/categories";
 
 // docs/scrape/thjonusta.json — same <title>/<meta description> as every
@@ -31,14 +32,16 @@ export default function ThjonustaPage() {
   return (
     <main id="main">
       <PageHero image={HERO_IMAGE} title="Þjónustur" />
+      <Breadcrumb items={[{ text: "Þjónustur" }]} />
       <section className="bg-[#f0f4fa] py-16 md:py-20">
         <Container>
-          <Breadcrumb items={[{ text: "Þjónustur" }]} />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
-              <CategoryCard key={category.id} category={category} />
+              <StaggerItem key={category.id} className="[&>*]:h-full">
+                <CategoryCard category={category} />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </Container>
       </section>
       <ContactCta />

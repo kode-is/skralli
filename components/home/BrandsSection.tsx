@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { brands } from "@/lib/brands";
 import type { Img } from "@/lib/types";
 
@@ -25,28 +26,28 @@ export function BrandsSection() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
           <div>
-            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
               Kynntu þér vörumerkin okkar
-            </h2>
-            <p className="mt-4 max-w-sm text-sm text-neutral-600 md:text-base">
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-4 max-w-sm text-sm text-neutral-600 md:text-base">
               Við bjóðum eingöngu upp á vörur frá þekktum og viðurkenndum aðilum
-            </p>
+            </Reveal>
             <Link
               href="/vorumerki"
-              className="mt-8 inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid"
+              className="mt-8 inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid"
             >
               Skoða nánar
             </Link>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <Stagger className="flex flex-col gap-4">
             {FEATURED.map((featured) => {
               const brand = brands.find((b) => b.id === featured.id);
               if (!brand) return null;
               return (
-                <div
+                <StaggerItem
                   key={brand.id}
-                  className="flex items-center gap-6 rounded-2xl bg-[#f0f4fa] p-6"
+                  className="group flex items-center gap-6 rounded-2xl bg-[#f0f4fa] p-6 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
                 >
                   <Image
                     src={featured.image.src}
@@ -61,13 +62,24 @@ export function BrandsSection() {
                       href={brand.href}
                       className="mt-1 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"
                     >
-                      Skoða nánar →
+                      {/* Single inner span: keeps the label+arrow as one
+                          flex item so innerText doesn't insert a line break
+                          between them (see StepCard.tsx for the full note). */}
+                      <span>
+                        Skoða nánar{" "}
+                        <span
+                          aria-hidden
+                          className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none"
+                        >
+                          →
+                        </span>
+                      </span>
                     </Link>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </div>
       </Container>
     </section>

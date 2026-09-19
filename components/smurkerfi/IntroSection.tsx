@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/smurkerfi.json blocks 8-11.
 const IMAGE = { src: "/images/smurkerfi/02-0914980d.png", alt: "", width: 1200, height: 799 };
@@ -26,15 +27,20 @@ export function IntroSection() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">{HEADING}</h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
+            <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+              {HEADING}
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-4 max-w-xl text-sm leading-relaxed text-neutral-600 md:text-base">
               {TEXT}
-            </p>
+            </Reveal>
           </div>
         </div>
-        <h5 className="mt-14 text-center text-base font-semibold italic text-neutral-800 md:mt-16 md:text-lg">
+        <Reveal
+          as="h5"
+          className="mt-14 text-center text-base font-semibold italic text-neutral-800 md:mt-16 md:text-lg"
+        >
           {CALLOUT}
-        </h5>
+        </Reveal>
       </Container>
     </section>
   );

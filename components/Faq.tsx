@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, m } from "motion/react";
 import { useId, useState } from "react";
 
 export type FaqItem = { question: string; answer: string };
@@ -42,16 +43,26 @@ function FaqRow({ item }: { item: FaqItem }) {
         <ToggleIcon open={isOpen} />
         <span className="font-ui font-semibold text-neutral-900">{item.question}</span>
       </button>
-      {isOpen ? (
-        <div
-          id={answerId}
-          role="region"
-          aria-labelledby={questionId}
-          className="whitespace-pre-line pb-5 pl-9 pr-6 text-sm leading-relaxed text-neutral-600"
-        >
-          {item.answer}
-        </div>
-      ) : null}
+      <AnimatePresence initial={false}>
+        {isOpen ? (
+          <m.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden"
+          >
+            <div
+              id={answerId}
+              role="region"
+              aria-labelledby={questionId}
+              className="whitespace-pre-line pb-5 pl-9 pr-6 text-sm leading-relaxed text-neutral-600"
+            >
+              {item.answer}
+            </div>
+          </m.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 }

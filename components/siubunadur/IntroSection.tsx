@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { DotDivider } from "@/components/DotDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { Reveal } from "@/components/motion/Reveal";
 
 const BUTTON_CLASSES =
-  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid";
+  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid";
 
 // docs/scrape/siubunadur.json blocks 7-9. The live page embeds a YouTube
 // player in this section — not captured as a scrape block (the block
@@ -20,15 +21,15 @@ export function IntroSection() {
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <YouTubeEmbed videoId="K1e7uMqRDRw" params="v=K1e7uMqRDRw" title="Síubúnaður frá BMair" />
         <div>
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
             Fyrir heilbrigt vinnuumhverfi
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Lofthreinsitæki frá BMair tryggja hreint og heilnæmt andrúmsloft með því að fjarlægja úr
             loftinu ýmis skaðleg efni eins og ryk, frjókorn, myglugró, bakteríur og önnur mengandi
             efni. Við bjóðum einnig upp á margar tegundir filtera fyrir mismunandi þarfir, svo sem
             HEPA síur, kolsíur og aðrar sérhæfðar síur sem tryggja að loftgæðin séu alltaf í hámarki.
-          </p>
+          </Reveal>
           <Link href="/hafa-samband" className={`mt-6 ${BUTTON_CLASSES}`}>
             Hafa samband
           </Link>

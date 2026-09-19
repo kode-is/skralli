@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { FeatureCard } from "@/components/FeatureCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/oryggisrudur.json block 21: italic callout between the
@@ -41,19 +42,16 @@ export function UseCasesSection() {
   return (
     <section className="bg-white pt-14 pb-16 md:pt-16 md:pb-20">
       <Container>
-        <h5 className="text-center text-base font-semibold italic text-neutral-800 md:text-lg">
+        <Reveal as="h5" className="text-center text-base font-semibold italic text-neutral-800 md:text-lg">
           {CALLOUT}
-        </h5>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:mt-12">
+        </Reveal>
+        <Stagger className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:mt-12">
           {USE_CASES.map((useCase) => (
-            <FeatureCard
-              key={useCase.heading}
-              heading={useCase.heading}
-              text={useCase.text}
-              image={useCase.image}
-            />
+            <StaggerItem key={useCase.heading}>
+              <FeatureCard heading={useCase.heading} text={useCase.text} image={useCase.image} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { HeroReveal } from "@/components/motion/Reveal";
 import { site } from "@/lib/site";
 
 function MailIcon() {
@@ -46,12 +47,15 @@ export function Hero() {
       {/* Live site plays a looping background video behind the hero title
           (https://framerusercontent.com/assets/Zuc7sp49I7PBk72pIJRKgtj2qw.mp4,
           downloaded to public/video/hero.mp4). The still image above stays as
-          the poster/fallback layer underneath until the video starts playing,
-          and for prefers-reduced-motion visitors (hidden via globals.css). */}
+          the fallback layer underneath until the video starts playing, and for
+          prefers-reduced-motion visitors (hidden via globals.css). The video
+          deliberately has NO poster attribute: a poster bypasses the image
+          optimizer, so it fetched the raw 1.5 MB PNG on every home page load
+          for a picture the optimized <Image> beneath already shows; a video
+          without a poster is transparent until its first frame. */}
       <video
         className="hero-video absolute inset-0 -z-10 h-full w-full object-cover"
         src="/video/hero.mp4"
-        poster="/images/home/01-087a3e5c.png"
         autoPlay
         muted
         loop
@@ -62,14 +66,20 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/65 via-black/15 to-black/40" aria-hidden="true" />
 
       <Container className="w-full">
-        <h1 className="max-w-xl whitespace-pre-line text-4xl font-semibold leading-[1.1] text-white md:text-6xl">
+        <HeroReveal
+          as="h1"
+          className="max-w-xl whitespace-pre-line text-4xl font-semibold leading-[1.1] text-white md:text-6xl"
+        >
           {"Þinn\nsamstarfsaðili"}
-        </h1>
-        <p className="mt-4 max-w-sm text-sm text-white/90 md:text-base">
+        </HeroReveal>
+        <HeroReveal as="p" delay={0.15} className="mt-4 max-w-sm text-sm text-white/90 md:text-base">
           Sölu- og þjónustuaðili fyrir vinnuvélar, landbúnað og stóriðju
-        </p>
+        </HeroReveal>
 
-        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <HeroReveal
+          delay={0.3}
+          className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+        >
           <a
             href={`mailto:${site.email}`}
             className="inline-flex items-center gap-3 rounded-full bg-white/20 py-1.5 pl-1.5 pr-5 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/30"
@@ -88,7 +98,7 @@ export function Hero() {
             </span>
             {site.phone}
           </a>
-        </div>
+        </HeroReveal>
       </Container>
     </section>
   );

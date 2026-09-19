@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
+import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { brands } from "@/lib/brands";
 
 // docs/scrape/vorumerki.json — same <title>/<meta description> as every
@@ -35,14 +36,14 @@ export default function VorumerkiPage() {
         }}
         title="Vörumerki"
       />
+      <Breadcrumb items={[{ text: "Vörumerki" }]} />
       <section className="bg-white py-16 md:py-20">
         <Container>
-          <Breadcrumb items={[{ text: "Vörumerki" }]} />
-          <div className="mt-10 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {orderedBrands.map((brand) => {
               const image = brand.cardImage;
               return (
-                <div key={brand.id} className="flex flex-col">
+                <StaggerItem key={brand.id} className="flex flex-col">
                   <div className="flex h-44 items-center justify-center">
                     {image ? (
                       <Image
@@ -54,19 +55,30 @@ export default function VorumerkiPage() {
                       />
                     ) : null}
                   </div>
-                  <div className="mt-6 rounded-2xl bg-[#f0f4fa] p-6">
+                  <div className="group mt-6 rounded-2xl bg-[#f0f4fa] p-6 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none">
                     <h3 className="font-ui text-lg font-semibold text-neutral-900">{brand.name}</h3>
                     <Link
                       href={brand.href}
                       className="mt-2 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"
                     >
-                      Skoða nánar →
+                      {/* Single inner span: keeps the label+arrow as one
+                          flex item so innerText doesn't insert a line break
+                          between them (see StepCard.tsx for the full note). */}
+                      <span>
+                        Skoða nánar{" "}
+                        <span
+                          aria-hidden
+                          className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none"
+                        >
+                          →
+                        </span>
+                      </span>
                     </Link>
                   </div>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
         </Container>
       </section>
       <ContactCta />

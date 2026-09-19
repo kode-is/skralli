@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { AnimatePresence, m } from "motion/react";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { servicesMenu } from "@/lib/site";
 
@@ -91,7 +92,12 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
         onClick={openMenu}
         className="flex h-4 w-4 items-center justify-center text-white"
       >
-        <svg viewBox="0 0 12 8" fill="none" className="h-2.5 w-2.5" aria-hidden="true">
+        <svg
+          viewBox="0 0 12 8"
+          fill="none"
+          className={`h-2.5 w-2.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          aria-hidden="true"
+        >
           <path
             d="M1 1.5L6 6.5L11 1.5"
             stroke="currentColor"
@@ -102,37 +108,43 @@ export function ServicesMenu({ href, text }: ServicesMenuProps) {
         </svg>
       </button>
 
-      {open ? (
-        <nav
-          id={panelId}
-          aria-label={servicesMenu.heading}
-          className="absolute right-0 top-full z-50 mt-6 w-[850px] rounded-[15px] bg-white px-10 pt-[30px] pb-10"
-        >
-          <div className="flex gap-x-20">
-            <div className="w-[227px]">
-              <h6 className="font-ui text-base font-semibold text-black">{servicesMenu.heading}</h6>
-              <p className="mt-3 font-ui text-sm font-normal text-[#444]">{servicesMenu.description}</p>
+      <AnimatePresence>
+        {open ? (
+          <m.nav
+            id={panelId}
+            aria-label={servicesMenu.heading}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8, pointerEvents: "none" }}
+            transition={{ duration: 0.18 }}
+            className="absolute right-0 top-full z-50 mt-6 w-[850px] rounded-[15px] bg-white px-10 pt-[30px] pb-10"
+          >
+            <div className="flex gap-x-20">
+              <div className="w-[227px]">
+                <h6 className="font-ui text-base font-semibold text-black">{servicesMenu.heading}</h6>
+                <p className="mt-3 font-ui text-sm font-normal text-[#444]">{servicesMenu.description}</p>
+              </div>
+              <div className="flex gap-x-9">
+                {servicesMenu.columns.map((column, index) => (
+                  <ul key={index} className="w-[200px] space-y-[11px]">
+                    {column.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          onClick={() => closeNow(false)}
+                          className="block font-ui text-base font-normal text-[#444] transition hover:text-brand-dark"
+                        >
+                          {link.text}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ))}
+              </div>
             </div>
-            <div className="flex gap-x-9">
-              {servicesMenu.columns.map((column, index) => (
-                <ul key={index} className="w-[200px] space-y-[11px]">
-                  {column.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        onClick={() => closeNow(false)}
-                        className="block font-ui text-base font-normal text-[#444] transition hover:text-brand-dark"
-                      >
-                        {link.text}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ))}
-            </div>
-          </div>
-        </nav>
-      ) : null}
+          </m.nav>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 }

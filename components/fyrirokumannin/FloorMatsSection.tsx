@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { Carousel } from "@/components/Carousel";
 import { BulletList } from "@/components/BulletList";
 import { DotDivider } from "@/components/DotDivider";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/fyrirokumannin.json blocks 45-75: a second photo carousel
@@ -35,11 +36,13 @@ export function FloorMatsSection() {
     <section className="bg-white">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Gólfmottur</h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            Gólfmottur
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Slitsterkar gólfmottur sem þola mikla notkun. Sérsniðið að gólfinu í hverju tæki og
             renna þannig ekki til líkt og alhliða gólfmottur eiga til að gera.
-          </p>
+          </Reveal>
           <div className="hidden md:block">
             <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
             <BulletList items={ITEMS} className="mt-3" />

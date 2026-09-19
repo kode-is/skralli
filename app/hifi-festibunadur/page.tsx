@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/hifi-festibunadur.json — same <title>/<meta description> as
 // every other route on the live site.
@@ -76,22 +77,20 @@ export default function HifiFestibunadurPage() {
         icon={HifiIcon ? <HifiIcon className="h-6 w-6" /> : null}
         pattern
       />
-      <div className="bg-white pt-8">
-        <Container>
-          <Breadcrumb items={[{ text: "Hífi- & festibúnaður" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Hífi- & festibúnaður" }]} />
       <section className="bg-white py-10 md:py-14">
         <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
-            <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">Lyftu þungt með Lilleseth.</h3>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-neutral-600">
+            <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+              Lyftu þungt með Lilleseth.
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-4 max-w-md text-base leading-relaxed text-neutral-600">
               Skralli er með gott úrval af viðurkenndum hífibúnaði frá Lilleseth Kjetting AS. Keðjur með Grade 80
               og Grade 100 og margt fleira.
-            </p>
+            </Reveal>
             <Link
               href="/hafa-samband"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid"
+              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid"
             >
               Hafa samband
             </Link>

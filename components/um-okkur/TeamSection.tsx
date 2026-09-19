@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { TeamCard } from "@/components/TeamCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { team } from "@/lib/team";
 
 // docs/scrape/um-okkur.json blocks 29-59.
@@ -11,23 +12,28 @@ export function TeamSection() {
     <section className="bg-white py-16 md:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Teymið okkar</h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">{TEXT}</p>
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            Teymið okkar
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+            {TEXT}
+          </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((member) => (
-            <TeamCard
-              key={member.name}
-              variant="profile"
-              name={member.name}
-              role={member.role}
-              email={member.email}
-              phone={member.phone}
-              image={member.image}
-            />
+            <StaggerItem key={member.name}>
+              <TeamCard
+                variant="profile"
+                name={member.name}
+                role={member.role}
+                email={member.email}
+                phone={member.phone}
+                image={member.image}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

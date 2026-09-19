@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/fyrirokumannin.json blocks 81-83. The live page embeds a
 // YouTube player in this section — not captured as a scrape block (the
@@ -14,10 +15,12 @@ export function LightingSection() {
     <section className="bg-white py-16 md:py-20">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-3xl font-semibold text-neutral-900 md:text-4xl">Ljósabúnaður</h2>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+            Ljósabúnaður
+          </Reveal>
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Sérsniðnir ljósabogar frá Svíþjóð fyrir hús og ballest á vinnuvélar og dráttarvélar.
-          </p>
+          </Reveal>
           <p className="mt-4 text-sm font-semibold text-neutral-900">
             Hafðu samband til að vita meira um úrvalið fyrir þína vél.
           </p>

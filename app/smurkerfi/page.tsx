@@ -1,7 +1,6 @@
 import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { IntroSection } from "@/components/smurkerfi/IntroSection";
@@ -37,11 +36,7 @@ export default function SmurkerfiPage() {
         icon={DropletIcon ? <DropletIcon className="h-6 w-6" /> : null}
         pattern
       />
-      <div className="bg-white pt-8">
-        <Container>
-          <Breadcrumb items={[{ text: "Smurkerfi" }]} />
-        </Container>
-      </div>
+      <Breadcrumb items={[{ text: "Smurkerfi" }]} />
       <IntroSection />
       <FeaturesSection />
       <FaqSection />

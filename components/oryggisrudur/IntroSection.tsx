@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { DotDivider } from "@/components/DotDivider";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/oryggisrudur.json blocks 8-11.
@@ -13,7 +14,7 @@ const IMAGE: Img = {
 };
 
 const BUTTON_CLASSES =
-  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid";
+  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid";
 
 export function IntroSection() {
   return (
@@ -32,10 +33,12 @@ export function IntroSection() {
           />
         </div>
         <div>
-          <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">Hammerglass er málið!</h3>
+          <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+            Hammerglass er málið!
+          </Reveal>
           {/* Partial bold from docs/scrape/formatting.json's "strong" list
               for this route: three phrases inside this one paragraph. */}
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
+          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
             Skralli býður íslenskum sveitarfélögum, verktökum og fyrirtækjum{" "}
             <strong className="font-semibold text-neutral-900">óbrjótanlegt öryggi</strong> í
             samgöngumannvirkjum, ökutækjum og byggingum. Með Hammerglass færðu öruggar og{" "}
@@ -43,7 +46,7 @@ export function IntroSection() {
             henta við íslenskar aðstæður og veita{" "}
             <strong className="font-semibold text-neutral-900">hámarks vernd</strong> gegn
             utanaðkomandi hættum.
-          </p>
+          </Reveal>
           <Link href="/hafa-samband" className={`mt-8 ${BUTTON_CLASSES}`}>
             Hafa samband
           </Link>

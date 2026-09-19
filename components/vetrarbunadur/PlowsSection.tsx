@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { BulletList } from "@/components/BulletList";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 // docs/scrape/vetrarbunadur.json blocks 25-53.
@@ -54,7 +55,9 @@ export function PlowsSection() {
   return (
     <section className="bg-white py-10 md:py-14">
       <Container className="max-w-3xl">
-        <h3 className="font-ui text-2xl font-semibold text-neutral-900 md:text-3xl">Snjóplógar</h3>
+        <Reveal as="h3" className="font-ui text-2xl font-semibold text-neutral-900 md:text-3xl">
+          Snjóplógar
+        </Reveal>
         <ImageBlock image={PLOWS_IMAGE} />
         <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
           Gigant býður upp á tvær týpur af fjölplógum, HSV og LSV. Sammerkt með þeim báðum er

@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Faq } from "@/components/Faq";
+import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/smurkerfi.json blocks 35-40 (Q/A pairs as alternating text
 // blocks — the question ends with "?" and the next block is its answer).
@@ -25,9 +26,9 @@ export function FaqSection() {
   return (
     <section className="bg-[#f0f4fa] pt-[60px] pb-16 md:pt-[100px] md:pb-20">
       <Container>
-        <h2 className="text-center font-ui text-3xl font-bold text-neutral-900 md:text-4xl">
+        <Reveal as="h2" className="text-center font-ui text-3xl font-bold text-neutral-900 md:text-4xl">
           Spurt & Svarað
-        </h2>
+        </Reveal>
         <div className="mx-auto mt-10 max-w-3xl">
           <Faq items={ITEMS} />
         </div>

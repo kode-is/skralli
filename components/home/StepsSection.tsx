@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { DotDivider } from "@/components/DotDivider";
 import { StepCard } from "@/components/StepCard";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const STEPS = [
   {
@@ -30,14 +31,16 @@ export function StepsSection() {
   return (
     <section className="relative overflow-hidden bg-white pt-16 md:pt-24">
       <Container>
-        <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+        <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
           Okkar þjónusta við smurkerfi
-        </h3>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        </Reveal>
+        <Stagger className="mt-10 grid gap-6 md:grid-cols-3">
           {STEPS.map((step) => (
-            <StepCard key={step.number} {...step} />
+            <StaggerItem key={step.number} className="[&>*]:h-full">
+              <StepCard {...step} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </Container>
 
       {/* Decorative dot pattern (docs/scrape/home.json block 39, a 0x0 CSS

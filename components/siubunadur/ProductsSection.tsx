@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
 
 type Product = { heading: string; text: string; image: Img };
 
 const BUTTON_CLASSES =
-  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid";
+  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid";
 
 // docs/scrape/siubunadur.json blocks 21-44: six product rows, alternating
 // image side and background band per docs/reference/siubunadur.desktop.jpg.
@@ -74,10 +75,16 @@ export function ProductsSection() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-neutral-900 md:text-3xl">{product.heading}</h3>
-                <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-neutral-600 md:text-base">
+                <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+                  {product.heading}
+                </Reveal>
+                <Reveal
+                  as="p"
+                  delay={0.1}
+                  className="mt-4 whitespace-pre-line text-sm leading-relaxed text-neutral-600 md:text-base"
+                >
                   {product.text}
-                </p>
+                </Reveal>
                 <Link href="/hafa-samband" className={`mt-6 ${BUTTON_CLASSES}`}>
                   Hafa samband
                 </Link>

@@ -11,6 +11,15 @@
   --container-site: 1340px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-brand-mid);
+  color: #fff;
+}
+
 /* Brand strip marquee (BrandStrip.tsx): the track renders three identical
    copies of the logo list back to back (matching the live site, which keeps
    three sets of logos in the DOM), so translating by exactly -33.3333%
@@ -25,7 +34,16 @@
   animation: marquee 26s linear infinite;
 }
 
+/* Pause the marquee on hover so the logos it's currently showing can be read. */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .animate-marquee {
     animation-play-state: paused;
   }
@@ -34,5 +52,21 @@
      poster image visible instead of an autoplaying video. */
   .hero-video {
     display: none;
+  }
+
+  /* components/motion/Reveal.tsx's Reveal/HeroReveal/StaggerItem: force
+     every fade-up element to its settled, fully visible state instead of
+     the whileInView/initial "hidden" (opacity:0, translateY) start point.
+     `!important` is required to beat Framer Motion's inline styles — a
+     media query is used instead of branching the render on
+     `useReducedMotion()` because that hook can't know the visitor's
+     preference during SSR, so server and client would render different
+     element trees that React's hydration can't safely reconcile (verified:
+     it left the server's opacity:0 markup on screen permanently instead of
+     "patching up" to match the client). This still applies at first paint
+     regardless of hydration timing. */
+  .motion-fade {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

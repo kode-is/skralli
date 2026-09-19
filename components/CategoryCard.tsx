@@ -18,14 +18,17 @@ export function CategoryCard({ category }: { category: Category }) {
   const Icon = CATEGORY_ICONS[category.id];
 
   return (
-    <Link href={category.href} className="group relative block rounded-[15px] bg-white">
+    <Link
+      href={category.href}
+      className="group relative block rounded-[15px] bg-white transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] focus-visible:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
+    >
       <div className="relative h-[200px] w-full overflow-hidden rounded-t-[15px] md:h-[300px]">
         <Image
           src={category.image.src}
           alt={category.image.alt}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition duration-300 group-hover:scale-105"
+          className="object-cover transition duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
         />
       </div>
       {Icon ? (
@@ -34,7 +37,7 @@ export function CategoryCard({ category }: { category: Category }) {
         </span>
       ) : null}
       <div className="p-[30px] md:p-10">
-        <h5 className="font-ui text-base leading-relaxed font-semibold text-neutral-900 md:text-lg">
+        <h5 className="font-ui text-base leading-relaxed font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-brand-dark md:text-lg">
           {category.title}
         </h5>
         <p className="mt-[15px] text-[15px] leading-[1.9] text-[#444] md:mt-5 md:text-base">
