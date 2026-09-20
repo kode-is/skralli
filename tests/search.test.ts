@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "vitest";
 import { buildIndex } from "@/lib/search/build-index";
 import { search } from "@/lib/search/search";
 import type { SearchEntry, SearchResultGroup } from "@/lib/search/search";
+import { site } from "@/lib/site";
 
 let entries: SearchEntry[];
 
@@ -80,7 +81,9 @@ describe("contact details", () => {
     const { buildIndex } = await import("@/lib/search/build-index");
     const { search } = await import("@/lib/search/search");
     const entries = buildIndex();
-    for (const q of ["sími", "simanumer", "opnunartími", "862 4046", "Móhella"]) {
+    // The phone number comes from lib/site.ts rather than a literal, so
+    // changing it there cannot silently leave this asserting an old number.
+    for (const q of ["sími", "simanumer", "opnunartími", site.phoneLocal, "Móhella"]) {
       const pages = search(entries, q).find((g) => g.kind === "page");
       expect(pages?.items[0]?.url, q).toBe("/hafa-samband");
     }

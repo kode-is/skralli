@@ -29,6 +29,69 @@ function InstagramIcon() {
   );
 }
 
+/** Separator between the bottom-bar items; the row stacks on mobile, so it
+ *  only shows once the items sit on one line. */
+function Dot() {
+  return (
+    <span aria-hidden="true" className="hidden text-neutral-300 md:inline">
+      ·
+    </span>
+  );
+}
+
+function ContactRow({
+  icon,
+  label,
+  children,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f0f4fa] text-brand-dark">
+        {icon}
+      </span>
+      <span className="text-left">
+        <span className="block font-ui text-xs text-neutral-500">{label}</span>
+        <span className="block text-sm text-neutral-900">{children}</span>
+      </span>
+    </div>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
+      <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="m3 6 7 5 7-5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
+      <path
+        d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.6C3 11 9 17 15.4 17A1.5 1.5 0 0 0 17 15.5v-2l-3.5-1.5-1.6 1.8a11.6 11.6 0 0 1-4.7-4.7L9 7.5 7.5 4l-1-1Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden="true">
+      <circle cx="10" cy="10" r="7.25" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M10 6v4.3l2.8 1.7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function FooterLinkColumn({ column, className }: { column: FooterColumn; className?: string }) {
   return (
     <div className={className}>
@@ -57,10 +120,10 @@ export function Footer() {
       <Container>
         {/* Mobile shows only the "Fyrirtækið" column above the company
             block; "Vörumerki" and "Þjónusta" are desktop-only. On desktop
-            all four blocks sit left-to-right: company, then the three
-            columns. See docs/reference/home.desktop.jpg and
-            docs/reference/home.mobile.jpg. */}
-        <div className="flex flex-col items-center gap-12 text-center md:grid md:grid-cols-[1.3fr_1fr_1fr_1fr] md:items-start md:gap-8 md:text-left">
+            the blocks sit left-to-right: company identity, the three link
+            columns, then the contact details. See
+            docs/reference/home.desktop.jpg and docs/reference/home.mobile.jpg. */}
+        <div className="flex flex-col items-center gap-12 text-center md:grid md:grid-cols-[1.15fr_0.85fr_0.85fr_0.85fr_1.1fr] md:items-start md:gap-8 md:text-left">
           <div className="order-2 flex flex-col items-center gap-4 md:order-1 md:items-start">
             <Link href="/" aria-label="Skralli - Forsíða">
               <Image
@@ -75,9 +138,6 @@ export function Footer() {
             <div className="space-y-1 text-sm text-neutral-600">
               <p>{site.address}</p>
               <p>{site.kennitala}</p>
-              <p>{site.phoneLabel}</p>
-              <p>{site.email}</p>
-              <p>{site.hours}</p>
             </div>
             <div className="flex items-center gap-4 text-neutral-900">
               <a
@@ -111,21 +171,47 @@ export function Footer() {
           <FooterLinkColumn column={fyrirtaekid} className="order-1 md:order-2" />
           <FooterLinkColumn column={vorumerki} className="hidden md:order-3 md:block" />
           <FooterLinkColumn column={thjonusta} className="hidden md:order-4 md:block" />
+
+          {/* Phone, email and opening hours as labelled rows rather than more
+              lines in the address block, which ran to six stacked lines. */}
+          <div className="order-3 flex flex-col items-center gap-5 md:order-5 md:items-start">
+            <ContactRow icon={<MailIcon />} label="Netfang">
+              <a
+                href={`mailto:${site.email}`}
+                className="transition-colors duration-200 hover:text-brand-dark"
+              >
+                {site.email}
+              </a>
+            </ContactRow>
+            <ContactRow icon={<PhoneIcon />} label="Sími">
+              <a
+                href={site.phoneHref}
+                className="transition-colors duration-200 hover:text-brand-dark"
+              >
+                {site.phoneLocal}
+              </a>
+            </ContactRow>
+            <ContactRow icon={<ClockIcon />} label="Opnunartími">
+              {site.hoursValue}
+            </ContactRow>
+          </div>
         </div>
         {/* Not on the live site: required so a visitor can change or withdraw
             their cookie choice (components/analytics/CookieConsent.tsx). */}
-        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-start">
+        <div className="mt-12 flex flex-col items-center gap-2 border-t border-neutral-200 pt-6 text-center md:flex-row md:gap-x-3 md:text-left">
           <Link
             href="/personuvernd"
             className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid"
           >
             Persónuverndarstefna
           </Link>
+          <Dot />
           <CookieSettingsLink className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid" />
+          <Dot />
+          <p className="font-ui text-xs text-neutral-500">
+            © 2026 Skralli ehf. - Allur réttur áskilinn
+          </p>
         </div>
-        <p className="mt-4 text-center font-ui text-xs text-neutral-500 md:text-left">
-          © 2026 Skralli ehf. - Allur réttur áskilinn
-        </p>
       </Container>
     </footer>
   );

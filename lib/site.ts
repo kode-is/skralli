@@ -1,18 +1,26 @@
 // Site-wide constants scraped verbatim from docs/scrape/home.json (footer + nav blocks).
 // Cross-checked string-by-string against the scrape; see task-4-report.md for notes.
 
+// Each value is written once and the labelled variants derive from it, so the
+// footer, the hero pills, the privacy policy and the search index cannot drift
+// apart when a number changes.
+const phoneLocal = "546 3500";
+const hoursValue = "Mán - Fös 8 - 16";
+
 export const site = {
   name: "Skralli",
   tagline: "Þinn samstarfsaðili",
   motto: "Samvinna - Þjónusta - Áreiðanleiki",
   address: "Móhella 3F, 221 Hafnarfjörður",
   kennitala: "Kt. 580821-1460",
-  phoneLabel: "Símanúmer: 862 4046",
-  phone: "+354 862 4046",
-  phoneHref: "tel:+3548624046",
+  phoneLocal,
+  phoneLabel: `Símanúmer: ${phoneLocal}`,
+  phone: `+354 ${phoneLocal}`,
+  phoneHref: `tel:+354${phoneLocal.replace(/\s/g, "")}`,
   email: "skralli@skralli.is",
-  hours: "Opnunartími: Mán - Fös 08 - 16",
-  hoursSplit: ["Opnunartími:", "Mán - Fös", "08 - 16"],
+  hoursValue,
+  hours: `Opnunartími: ${hoursValue}`,
+  hoursSplit: ["Opnunartími:", "Mán - Fös", "8 - 16"],
   facebook: "https://www.facebook.com/skralliehf",
   instagram:
     "https://www.instagram.com/skralliehf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
