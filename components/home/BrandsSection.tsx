@@ -20,62 +20,89 @@ const FEATURED: { id: string; image: Img }[] = [
   },
 ];
 
+/** The live site's hover mark: Phosphor "arrow-up-right" (regular), white. */
+function ArrowUpRight({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
+    </svg>
+  );
+}
+
+/**
+ * "Kynntu þér vörumerkin okkar" — measured on the live home page.
+ *
+ * Each brand row is ONE link: 690 × 136 px, 10 px radius, #f0f4fa, with a
+ * 220 × 136 px cover image flush left and the name (Inter 22/600) plus
+ * "Skoða nánar →" (Figtree 16/600, brand dark) 30 px to its right; rows are
+ * 40 px apart. On phones the row stacks: 294 px image on top, 30 px padding.
+ *
+ * Hover: a 40 % black veil with a 60 px white arrow fades in over the IMAGE
+ * only. The row itself never lifts, shadows or recolours. At Einar's request
+ * the veil is triggered by hovering the image, not the whole row (the live
+ * site triggers it from anywhere on the row); keyboard focus on the row
+ * shows it too, so the affordance is not mouse-only.
+ */
 export function BrandsSection() {
   return (
     <section className="bg-white py-16 md:py-24">
       <Container>
-        <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
-          <div>
-            <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
+        <div className="grid gap-[25px] lg:grid-cols-[minmax(0,450px)_minmax(0,690px)] lg:justify-between lg:gap-0">
+          {/* Live centres this intro block on phones and left-aligns it from desktop. */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:pt-[25px] lg:text-left">
+            <Reveal
+              as="h2"
+              className="text-[32px] leading-[1.25] font-semibold text-neutral-900 md:text-[50px]"
+            >
               Kynntu þér vörumerkin okkar
             </Reveal>
-            <Reveal as="p" delay={0.1} className="mt-4 max-w-sm text-sm text-neutral-600 md:text-base">
+            <Reveal as="p" delay={0.1} className="mt-5 text-[15px] leading-[1.9] text-[#444] md:text-lg">
               Við bjóðum eingöngu upp á vörur frá þekktum og viðurkenndum aðilum
             </Reveal>
             <Link
               href="/vorumerki"
-              className="mt-8 inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid"
+              className="mt-5 inline-flex w-fit items-center justify-center bg-brand-dark px-[30px] py-5 text-[15px] leading-[1.2] font-semibold text-white transition-colors duration-200 hover:bg-brand-mid md:text-base"
             >
               Skoða nánar
             </Link>
           </div>
 
-          <Stagger className="flex flex-col gap-4">
+          <Stagger className="flex flex-col gap-10">
             {FEATURED.map((featured) => {
               const brand = brands.find((b) => b.id === featured.id);
               if (!brand) return null;
               return (
-                <StaggerItem
-                  key={brand.id}
-                  className="group flex items-center gap-6 rounded-2xl bg-[#f0f4fa] p-6 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-20px_rgba(0,83,128,0.35)] motion-reduce:transform-none motion-reduce:transition-none"
-                >
-                  <Image
-                    src={featured.image.src}
-                    alt={featured.image.alt}
-                    width={featured.image.width}
-                    height={featured.image.height}
-                    className="h-14 w-auto shrink-0 object-contain"
-                  />
-                  <div>
-                    <h3 className="font-ui text-lg font-semibold text-neutral-900">{brand.name}</h3>
-                    <Link
-                      href={brand.href}
-                      className="mt-1 inline-flex items-center text-sm font-semibold text-brand-dark transition hover:underline"
-                    >
-                      {/* Single inner span: keeps the label+arrow as one
-                          flex item so innerText doesn't insert a line break
-                          between them (see StepCard.tsx for the full note). */}
-                      <span>
-                        Skoða nánar{" "}
-                        <span
-                          aria-hidden
-                          className="inline-block transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:transform-none"
-                        >
-                          →
-                        </span>
+                <StaggerItem key={brand.id}>
+                  <Link
+                    href={brand.href}
+                    className="group/row flex flex-col overflow-hidden rounded-[10px] bg-[#f0f4fa] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-brand-mid md:flex-row"
+                  >
+                    <div className="group/image relative h-[294px] w-full shrink-0 md:h-[136px] md:w-[220px]">
+                      <Image
+                        src={featured.image.src}
+                        alt={featured.image.alt}
+                        fill
+                        sizes="(min-width: 768px) 220px, 100vw"
+                        className="object-cover"
+                      />
+                      <div
+                        aria-hidden="true"
+                        className="absolute inset-0 flex items-center justify-center bg-black/40 text-white opacity-0 transition-opacity duration-300 group-hover/image:opacity-100 group-focus-visible/row:opacity-100 motion-reduce:transition-none"
+                      >
+                        <ArrowUpRight className="h-[60px] w-[60px]" />
+                      </div>
+                    </div>
+                    <div className="p-[30px]">
+                      <h3 className="font-ui text-lg leading-[1.4] font-semibold text-black md:text-[22px]">
+                        {brand.name}
+                      </h3>
+                      {/* One inline span: label and arrow stay a single text
+                          run, so innerText has no line break between them. */}
+                      <span className="mt-4 block text-[15px] leading-[1.9] font-semibold text-brand-dark md:mt-[15px] md:text-base md:leading-[1.875]">
+                        Skoða nánar →
                       </span>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 </StaggerItem>
               );
             })}
