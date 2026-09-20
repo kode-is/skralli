@@ -123,6 +123,9 @@ export function Footer() {
           </Link>
           <CookieSettingsLink className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid" />
         </div>
+        <p className="mt-4 text-center font-ui text-xs text-neutral-500 md:text-left">
+          © 2026 Skralli ehf. - Allur réttur áskilinn
+        </p>
       </Container>
     </footer>
   );
