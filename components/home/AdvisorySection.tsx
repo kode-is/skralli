@@ -27,7 +27,7 @@ export function AdvisorySection() {
               að finna notuð tæki og búnað erlendis. Teymið okkar býr yfir áratuga reynslu og sér
               um ferlið frá upphafi til enda.
             </Reveal>
-            <Stagger className="mt-10 flex flex-nowrap gap-3 sm:gap-8">
+            <Stagger className="mt-10 grid max-w-xl grid-cols-3 gap-4 sm:gap-6">
               {TEAM.map((member) => (
                 <StaggerItem key={member.name}>
                   <TeamCard name={member.name} image={member.image} />
