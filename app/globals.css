@@ -30,8 +30,10 @@ html {
   }
 }
 
+/* Duration comes from --marquee-duration so a component can set its own speed:
+   this rule is unlayered, so it outranks Tailwind's animation-duration utilities. */
 .animate-marquee {
-  animation: marquee 26s linear infinite;
+  animation: marquee var(--marquee-duration, 26s) linear infinite;
 }
 
 /* Pause the marquee on hover so the logos it's currently showing can be read. */
