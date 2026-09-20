@@ -51,13 +51,17 @@ export function FloorMatsSection() {
           {/* docs/scrape/mobile-only.json's /fyrirokumannin entry: at phone
               widths the live site collapses both this section's and
               SeatCoversSection's per-vehicle "Fyrir" lists into one
-              condensed line, and this price into "16.800+vsk kr." — verbatim
-              text from that scrape, not a design guess. */}
+              condensed line — verbatim text from that scrape. The live
+              phone layout also showed the price as "16.800+vsk kr.", an
+              outdated figure that did not even agree with the desktop one
+              (16.800 + 24 % VAT is 20.832, not 21.700). Einar confirmed on
+              2026-09-20 that the price is 21.700 kr with VAT, so both
+              layouts now show the same line. */}
           <div className="md:hidden">
             <p className="mt-6 text-sm font-semibold text-neutral-900">
               Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
             </p>
-            <p className="mt-4 text-sm font-semibold text-neutral-900">16.800+vsk kr.</p>
+            <p className="mt-4 text-sm font-semibold text-neutral-900">21.700kr m/vsk.</p>
           </div>
         </div>
         <div className="md:order-first">
