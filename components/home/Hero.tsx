@@ -78,7 +78,7 @@ export function Hero() {
 
         <HeroReveal
           delay={0.3}
-          className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="mt-8 flex flex-wrap items-center gap-x-2 gap-y-4 sm:gap-4"
         >
           <a
             href={`mailto:${site.email}`}
