@@ -59,6 +59,19 @@ const CTA_HEADING = "Sendu okkur fyrirspurn";
 const CARDS_HEADING = "Tegundir í boði";
 const FEATURES_HEADING = "Af hverju hjólagröfuvagn frá Gigant?";
 
+// Paragraphs present in the scrape that Skralli asked to drop from the site.
+// Filtered here rather than edited out of docs/scrape/*.json so those stay a
+// faithful capture of the old live site, and out of lib/sturtuvagnar.ts so a
+// regenerate cannot quietly bring them back.
+//
+// - The registration sentence came off the fjórhjóla- og minigröfuvagnar
+//   group page. It reached the three GW product pages too, since
+//   ProductIntro renders the group's "about" paragraphs on every product in
+//   the group.
+const DROPPED_PARAGRAPHS = new Set([
+  "Vagnarnir eru ekki skráningsskyldir en hægt er að skrá það ef ljósapakki er keyptur sem aukabúnaður.",
+]);
+
 function toImg(block) {
   return { src: block.local, alt: block.alt || "", width: block.width, height: block.height };
 }
@@ -157,6 +170,7 @@ function parseFile(file) {
   const body = blocks.slice(8, -2);
   const wagonBlocks = body
     .filter((b) => b.type === "heading" || b.type === "text")
+    .filter((b) => !(b.type === "text" && DROPPED_PARAGRAPHS.has(b.text)))
     .map((b) => (b.type === "heading" ? { type: "heading", level: b.level, text: b.text } : { type: "text", text: b.text }));
   const images = body.filter((b) => b.type === "image").map(toImg);
 
