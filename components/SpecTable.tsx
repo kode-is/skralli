@@ -1,6 +1,14 @@
+import { rowId } from "@/lib/search/row-id";
+
 type SpecTableProps = {
   headers: string[];
   rows: string[][];
+  /** This table's index within its page's `tables` array (lib/hifi.ts) —
+   * the same order lib/search/build-index.ts iterates in — so each row's
+   * `id={rowId(tableIndex, rowIndex, row[0])}` matches the `row` search
+   * entry's url fragment (`#row-...`) and `:target` (app/globals.css) can
+   * highlight the row a search result links to. */
+  tableIndex: number;
   /** id of the heading (H2/H3) immediately above this table, wired via
    * `aria-labelledby` so the table has an accessible name without a visible
    * `<caption>` — a caption's text would duplicate the heading's text in the
@@ -19,7 +27,7 @@ type SpecTableProps = {
  * background #f7f7f8); no zebra striping, matching the reference
  * screenshots' plain white rows.
  */
-export function SpecTable({ headers, rows, ariaLabelledBy }: SpecTableProps) {
+export function SpecTable({ headers, rows, tableIndex, ariaLabelledBy }: SpecTableProps) {
   return (
     <div className="overflow-x-auto rounded-2xl border border-[#e0e0e0]">
       <table
@@ -41,7 +49,11 @@ export function SpecTable({ headers, rows, ariaLabelledBy }: SpecTableProps) {
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className="border-t border-[#e0e0e0]">
+            <tr
+              key={rowIndex}
+              id={rowId(tableIndex, rowIndex, row[0] ?? "")}
+              className="border-t border-[#e0e0e0]"
+            >
               {row.map((cell, cellIndex) => (
                 <td key={cellIndex} className="px-4 py-3 text-neutral-700">
                   {cell.split("\n").map((line, lineIndex) => (

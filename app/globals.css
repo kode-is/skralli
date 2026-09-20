@@ -39,6 +39,20 @@ html {
   animation-play-state: paused;
 }
 
+/* Site search (components/search/SearchDialog.tsx): a `row` result links to
+   its SpecTable <tr id="row-...">; :target highlights the row it lands on,
+   and the scroll-margin keeps it clear of the sticky-ish header/breadcrumb
+   above instead of landing flush against the top of the viewport. */
+tr:target {
+  background: #fff7d6;
+  outline: 2px solid #fac748;
+  outline-offset: -2px;
+}
+
+tr[id^="row-"] {
+  scroll-margin-top: 120px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
