@@ -26,7 +26,7 @@ export default function HafaSambandPage() {
           <Reveal as="h2" className="text-center text-3xl font-semibold text-neutral-900 md:text-4xl">
             Sendu okkur fyrirspurn!
           </Reveal>
-          <div className="mx-auto mt-10 max-w-xl">
+          <div className="mx-auto mt-10 max-w-[600px]">
             <ContactForm showPhone submitLabel="Senda!" />
           </div>
         </Container>

@@ -24,13 +24,23 @@ type ContactFormProps = {
    * message.
    */
   variant?: "default" | "card";
+  /**
+   * Field background. "tinted" (#f0f4fa) is for forms sitting on white, like
+   * /hafa-samband; "white" is for forms inside a tinted card, like the home
+   * page's "Hafa samband" card and the product quote card. A tinted field on
+   * a tinted card is invisible, which is the bug this prop fixes.
+   */
+  fieldTone?: "tinted" | "white";
 };
 
 const SUCCESS_TEXT =
   "Takk fyrir! Við höfum móttekið fyrirspurnina og svörum innan 1 klst á opnunartíma.";
 
-const fieldClass =
-  "w-full rounded-md border border-transparent bg-[#f0f4fa] px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-500 focus:border-brand-dark focus:outline-none";
+// Measured on skralli.is: fields are 62 px tall (20 px padding around a 22 px
+// line of 16 px Figtree), 10 px radius, no border, 15 px apart.
+const FIELD_BASE =
+  "block w-full rounded-[10px] border border-transparent px-5 py-[19px] text-base leading-[22px] text-black placeholder:text-[#8a8f98] focus:border-brand-dark focus:outline-none";
+const TONE_CLASS = { tinted: "bg-[#f0f4fa]", white: "bg-white" } as const;
 
 // Map validation error messages to field names for aria-invalid/aria-describedby
 const ERROR_MESSAGE_TO_FIELD: Record<string, "nafn" | "netfang" | "skilabod"> = {
@@ -42,10 +52,11 @@ const ERROR_MESSAGE_TO_FIELD: Record<string, "nafn" | "netfang" | "skilabod"> = 
 const CARD_LABEL_CLASS = "mb-1.5 block font-ui text-xs font-semibold text-[#171717]";
 
 const CARD_FIELD_BASE =
-  "w-full rounded-md border bg-[#F0F4FA] font-ui text-[15px] text-[#171717] placeholder:text-neutral-500 outline-none focus:border-brand-mid focus:bg-white focus:ring-[3px] focus:ring-brand-mid/[.18]";
+  "block w-full rounded-[10px] border font-ui text-base text-[#171717] placeholder:text-[#8a8f98] outline-none focus:border-brand-mid focus:ring-[3px] focus:ring-brand-mid/[.18]";
 
-function cardFieldClass(hasError: boolean, extra: string) {
-  return `${CARD_FIELD_BASE} ${extra} ${hasError ? "border-[#C0392B] bg-[#FFF7F7]" : "border-[#E3E9F2]"}`;
+function cardFieldClass(hasError: boolean, tone: "tinted" | "white", extra: string) {
+  const state = hasError ? "border-[#C0392B] bg-[#FFF7F7]" : `border-transparent ${TONE_CLASS[tone]}`;
+  return `${CARD_FIELD_BASE} ${extra} ${state}`;
 }
 
 export function ContactForm({
@@ -53,6 +64,7 @@ export function ContactForm({
   submitLabel,
   defaultMessage,
   variant = "default",
+  fieldTone = "tinted",
 }: ContactFormProps) {
   const [nafn, setNafn] = useState("");
   const [netfang, setNetfang] = useState("");
@@ -131,7 +143,7 @@ export function ContactForm({
               autoComplete="name"
               value={nafn}
               onChange={onChange(setNafn)}
-              className={cardFieldClass(errorField === "nafn", "h-[46px] px-3.5")}
+              className={cardFieldClass(errorField === "nafn", fieldTone, "h-[54px] px-5")}
               aria-invalid={errorField === "nafn"}
               aria-describedby={errorField === "nafn" ? "contact-error-message" : undefined}
             />
@@ -152,7 +164,7 @@ export function ContactForm({
               autoComplete="email"
               value={netfang}
               onChange={onChange(setNetfang)}
-              className={cardFieldClass(errorField === "netfang", "h-[46px] px-3.5")}
+              className={cardFieldClass(errorField === "netfang", fieldTone, "h-[54px] px-5")}
               aria-invalid={errorField === "netfang"}
               aria-describedby={errorField === "netfang" ? "contact-error-message" : undefined}
             />
@@ -175,7 +187,7 @@ export function ContactForm({
               autoComplete="tel"
               value={simi}
               onChange={onChange(setSimi)}
-              className={cardFieldClass(false, "h-[46px] px-3.5")}
+              className={cardFieldClass(false, fieldTone, "h-[54px] px-5")}
             />
           </div>
         ) : null}
@@ -189,7 +201,7 @@ export function ContactForm({
             rows={4}
             value={skilabod}
             onChange={onChange(setSkilabod)}
-            className={cardFieldClass(errorField === "skilabod", "h-[92px] resize-none px-3.5 py-3")}
+            className={cardFieldClass(errorField === "skilabod", fieldTone, "h-[108px] resize-none px-5 py-4")}
             aria-invalid={errorField === "skilabod"}
             aria-describedby={errorField === "skilabod" ? "contact-error-message" : undefined}
           />
@@ -211,7 +223,7 @@ export function ContactForm({
             onChange={onChange(setWebsite)}
           />
         </div>
-        <div role="status" aria-live="polite" className={hasFieldError ? "sr-only" : "min-h-[1.5rem]"}>
+        <div role="status" aria-live="polite" className={hasFieldError ? "sr-only" : undefined}>
           {error ? (
             <p id="contact-error-message" className="font-ui text-xs font-medium text-[#C0392B]">
               {error}
@@ -221,7 +233,7 @@ export function ContactForm({
         <button
           type="submit"
           disabled={isPending}
-          className="w-full rounded-none bg-brand-dark px-[30px] py-5 text-base font-semibold text-white transition hover:bg-brand-mid disabled:cursor-not-allowed disabled:opacity-70"
+          className="h-[62px] w-full rounded-[10px] bg-brand-dark px-[30px] text-base font-semibold text-white transition-colors duration-200 hover:bg-brand-mid disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isPending ? "Sendi..." : submitLabel}
         </button>
@@ -230,7 +242,7 @@ export function ContactForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
+    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-[15px]">
       {/*
         The live /hafa-samband form (the wide, showPhone variant) puts Nafn
         and Netfang side by side on a two-column row (docs/reference/
@@ -239,7 +251,7 @@ export function ContactForm({
         already distinguishes those two call sites, so it doubles as the
         layout signal here rather than adding another prop.
       */}
-      <div className={showPhone ? "grid gap-4 sm:grid-cols-2" : "space-y-4"}>
+      <div className={showPhone ? "grid gap-[15px] sm:grid-cols-2 sm:gap-3.5" : "flex flex-col gap-[15px]"}>
         <div>
           <label htmlFor="contact-nafn" className="sr-only">
             Nafn
@@ -252,7 +264,7 @@ export function ContactForm({
             autoComplete="name"
             value={nafn}
             onChange={onChange(setNafn)}
-            className={fieldClass}
+            className={`${FIELD_BASE} ${TONE_CLASS[fieldTone]}`}
             aria-invalid={errorField === "nafn"}
             aria-describedby={errorField === "nafn" ? "contact-error-message" : undefined}
           />
@@ -269,7 +281,7 @@ export function ContactForm({
             autoComplete="email"
             value={netfang}
             onChange={onChange(setNetfang)}
-            className={fieldClass}
+            className={`${FIELD_BASE} ${TONE_CLASS[fieldTone]}`}
             aria-invalid={errorField === "netfang"}
             aria-describedby={errorField === "netfang" ? "contact-error-message" : undefined}
           />
@@ -288,7 +300,7 @@ export function ContactForm({
             autoComplete="tel"
             value={simi}
             onChange={onChange(setSimi)}
-            className={fieldClass}
+            className={`${FIELD_BASE} ${TONE_CLASS[fieldTone]}`}
           />
         </div>
       ) : null}
@@ -301,9 +313,10 @@ export function ContactForm({
           name="message"
           placeholder="Skilaboð"
           rows={5}
+          style={{ height: showPhone ? 118 : 143 }}
           value={skilabod}
           onChange={onChange(setSkilabod)}
-          className={fieldClass}
+          className={`${FIELD_BASE} ${TONE_CLASS[fieldTone]}`}
           aria-invalid={errorField === "skilabod"}
           aria-describedby={errorField === "skilabod" ? "contact-error-message" : undefined}
         />
@@ -320,13 +333,14 @@ export function ContactForm({
           onChange={onChange(setWebsite)}
         />
       </div>
-      <div role="status" aria-live="polite" className="min-h-[1.5rem]">
+      {/* Always mounted so screen readers hear updates; takes no room when empty. */}
+      <div role="status" aria-live="polite" className={error ? undefined : "-mt-[15px]"}>
         {error ? <p id="contact-error-message" className="text-sm font-medium text-red-600">{error}</p> : null}
       </div>
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-mid disabled:cursor-not-allowed disabled:opacity-70"
+        className="h-[62px] w-full rounded-[10px] bg-brand-dark px-6 text-base font-semibold text-white transition-colors duration-200 hover:bg-brand-mid disabled:cursor-not-allowed disabled:opacity-70"
       >
         {isPending ? "Sendi..." : submitLabel}
       </button>
