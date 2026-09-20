@@ -2,6 +2,7 @@ import { pageMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
+import { ContactMapSection } from "@/components/ContactMapSection";
 import { StatsSection } from "@/components/StatsSection";
 import { AboutIntro } from "@/components/um-okkur/AboutIntro";
 import { GoalsSection } from "@/components/um-okkur/GoalsSection";
@@ -32,6 +33,7 @@ export default function UmOkkurPage() {
       <GoalsSection />
       <StatsSection />
       <TeamSection />
+      <ContactMapSection />
       <ContactCta />
     </main>
   );
