@@ -4,6 +4,7 @@
 // docs/scrape/*.json from disk (Node fs), so this must only run server-side
 // (the route handler) or in tests/build scripts — never from the browser.
 import { existsSync, readFileSync } from "node:fs";
+import { site } from "@/lib/site";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sitemap from "@/app/sitemap";
@@ -135,6 +136,20 @@ function sitemapPathnames(): string[] {
  * for why brand routes are excluded here too, beyond what the brief said
  * literally.
  */
+// The phone number, address and opening hours sit in the footer of every
+// page, so computeBoilerplate() rightly strips them from page text — which
+// left "sími" or "opnunartími" finding nothing. They belong to the contact
+// page, so they are attached there as keywords.
+const CONTACT_KEYWORDS = [
+  "sími símanúmer hringja netfang tölvupóstur heimilisfang staðsetning opnunartími opið kennitala fyrirspurn tilboð",
+  site.phone,
+  site.phoneLabel,
+  site.email,
+  site.address,
+  site.hours,
+  site.kennitala,
+].join(" ");
+
 function buildPageEntries(): SearchEntry[] {
   const productUrls = new Set(wagons.map((w) => `/sturtuvagnar/${w.slug}`));
   const brandUrls = new Set(brands.map((b) => b.href as string));
@@ -162,6 +177,7 @@ function buildPageEntries(): SearchEntry[] {
       title: page.title,
       url: page.pathname,
       subtitle: kindLabel(page.pathname),
+      keywords: page.pathname === "/hafa-samband" ? CONTACT_KEYWORDS : undefined,
       headings: headings || undefined,
       text: text || undefined,
     };

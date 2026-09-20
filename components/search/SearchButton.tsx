@@ -34,13 +34,18 @@ export function SearchButton() {
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
-      const isModK = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
+      if (event.isComposing) return; // never react mid IME composition
+      // Exactly Cmd+K or Ctrl+K: no Alt/Shift, so other apps' chords pass through.
+      const isModK =
+        (event.metaKey || event.ctrlKey) && !event.altKey && !event.shiftKey && event.key.toLowerCase() === "k";
       if (isModK) {
         event.preventDefault();
         openDialog();
         return;
       }
-      if (event.key === "/" && !isTypingTarget(event.target)) {
+      // A bare "/" only: Ctrl+/, Alt+/ and Cmd+/ belong to the browser or OS.
+      const bareSlash = event.key === "/" && !event.ctrlKey && !event.metaKey && !event.altKey;
+      if (bareSlash && !isTypingTarget(event.target)) {
         event.preventDefault();
         openDialog();
       }

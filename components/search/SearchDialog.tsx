@@ -27,7 +27,10 @@ const KIND_LABELS: Record<SearchKind, string> = {
 
 const EXAMPLE_QUERIES = ["smurkerfi", "hífikeðjur", "GW-100"];
 
-const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+// Includes `input`: the combobox input is the dialog's first tab stop, so
+// leaving it out let Shift+Tab escape to the page behind the modal.
+const FOCUSABLE_SELECTOR =
+  'input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 // Fetched once per page session (not once per open) — a module-level cache
 // so re-opening search after the first time never re-fetches.
@@ -56,11 +59,12 @@ function loadIndex(): Promise<SearchEntry[]> {
   return cachedPromise;
 }
 
-/** Row results are the only entries whose url has a `#fragment` — see
- * navigateTo()'s comment for why those need a real navigation instead of
- * router.push()/next/link's client-side transition. */
-function hasFragment(url: string): boolean {
-  return url.includes("#");
+/** Only `row` results need a real navigation instead of router.push()/
+ * next/link's client-side transition — see navigateTo()'s comment. Keyed on
+ * the kind, not on "url contains #": FAQ results also carry a fragment
+ * (`/smurkerfi#spurt-og-svarad`) and must stay client-side navigations. */
+function needsRealNavigation(entry: SearchEntry): boolean {
+  return entry.kind === "row";
 }
 
 function escapeRegExp(s: string): string {
@@ -154,6 +158,7 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
   // Escape closes from anywhere in the dialog; Tab is trapped inside it.
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
+      if (event.isComposing) return; // Escape here cancels an IME candidate, not the dialog
       if (event.key === "Escape") {
         close();
         return;
@@ -211,15 +216,16 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
   );
 
   const navigateTo = useCallback(
-    (url: string) => {
-      if (hasFragment(url)) {
+    (entry: SearchEntry) => {
+      const url = entry.url;
+      if (needsRealNavigation(entry)) {
         // `router.push()` updates `location.hash` but — confirmed by hand
         // against this exact flow — Chromium doesn't re-run the "scroll to
         // the fragment" algorithm for a History-API hash change to a
         // *different* route, so `:target` (app/globals.css's row
         // highlight) never engages even though the URL and scroll position
         // are both correct. A real navigation does trigger it natively, and
-        // this only affects `row` results (the only entries with a `#...`),
+        // this only affects `row` results,
         // a secondary path where losing the SPA transition is an acceptable
         // trade for the highlight actually working.
         window.location.assign(url);
@@ -257,7 +263,7 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
         const active = options.find((o) => o.entry.id === activeId);
         if (active) {
           event.preventDefault();
-          navigateTo(active.entry.url);
+          navigateTo(active.entry);
         }
         break;
       }
@@ -388,7 +394,7 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
                         const optionClassName = `block rounded-lg px-3 py-2 ${isActive ? "bg-[#f0f4fa]" : ""}`;
                         return (
                           <li key={entry.id}>
-                            {hasFragment(entry.url) ? (
+                            {needsRealNavigation(entry) ? (
                               // Plain <a>, not next/link: see navigateTo()'s
                               // comment — a real navigation is what makes
                               // `:target` (the row highlight) engage.

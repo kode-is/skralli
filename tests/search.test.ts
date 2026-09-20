@@ -74,3 +74,15 @@ describe("lib/search/search (against the real index)", () => {
     expect(search(entries, "   ")).toEqual([]);
   });
 });
+
+describe("contact details", () => {
+  it("finds the contact page for phone, opening hours and address words", async () => {
+    const { buildIndex } = await import("@/lib/search/build-index");
+    const { search } = await import("@/lib/search/search");
+    const entries = buildIndex();
+    for (const q of ["sími", "simanumer", "opnunartími", "862 4046", "Móhella"]) {
+      const pages = search(entries, q).find((g) => g.kind === "page");
+      expect(pages?.items[0]?.url, q).toBe("/hafa-samband");
+    }
+  });
+});
