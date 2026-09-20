@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Script from "next/script";
 import { AnimatePresence, m } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
@@ -111,7 +112,10 @@ gtag('config', '${GA_MEASUREMENT_ID}');`}
             <h2 className="font-ui text-base font-semibold text-[#171717]">Vafrakökur</h2>
             <p className="mt-2 font-ui text-sm leading-[1.6] text-[#444444]">
               Við notum Google Analytics til að mæla umferð um vefinn og bæta hann. Engar vafrakökur eru
-              settar nema þú samþykkir, og þú getur breytt valinu hvenær sem er neðst á síðunni.
+              settar nema þú samþykkir, og þú getur breytt valinu hvenær sem er neðst á síðunni.{" "}
+              <Link href="/personuvernd" className="font-medium text-brand-dark underline underline-offset-2">
+                Persónuverndarstefna
+              </Link>
             </p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <button

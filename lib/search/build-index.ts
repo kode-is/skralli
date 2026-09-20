@@ -4,6 +4,7 @@
 // docs/scrape/*.json from disk (Node fs), so this must only run server-side
 // (the route handler) or in tests/build scripts — never from the browser.
 import { existsSync, readFileSync } from "node:fs";
+import { privacyPolicy } from "@/lib/privacy";
 import { site } from "@/lib/site";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -75,6 +76,16 @@ type ParsedPage = {
 };
 
 function parseScrapePage(pathname: string): ParsedPage {
+  if (pathname === privacyPolicy.path) {
+    // Site-only page: no scrape file exists, its copy lives in lib/privacy.ts.
+    return {
+      pathname,
+      title: privacyPolicy.title,
+      headingTexts: privacyPolicy.sections.map((section) => section.title),
+      bodyTexts: [privacyPolicy.intro, ...privacyPolicy.sections.flatMap((section) => [...section.paragraphs])],
+      usedFallback: false,
+    };
+  }
   const scrape = loadScrape(pathname);
   if (!scrape) {
     return { pathname, title: fallbackTitle(pathname), headingTexts: [], bodyTexts: [], usedFallback: true };
