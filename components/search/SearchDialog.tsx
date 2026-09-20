@@ -56,6 +56,13 @@ function loadIndex(): Promise<SearchEntry[]> {
   return cachedPromise;
 }
 
+/** Row results are the only entries whose url has a `#fragment` — see
+ * navigateTo()'s comment for why those need a real navigation instead of
+ * router.push()/next/link's client-side transition. */
+function hasFragment(url: string): boolean {
+  return url.includes("#");
+}
+
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -205,6 +212,19 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
 
   const navigateTo = useCallback(
     (url: string) => {
+      if (hasFragment(url)) {
+        // `router.push()` updates `location.hash` but — confirmed by hand
+        // against this exact flow — Chromium doesn't re-run the "scroll to
+        // the fragment" algorithm for a History-API hash change to a
+        // *different* route, so `:target` (app/globals.css's row
+        // highlight) never engages even though the URL and scroll position
+        // are both correct. A real navigation does trigger it natively, and
+        // this only affects `row` results (the only entries with a `#...`),
+        // a secondary path where losing the SPA transition is an acceptable
+        // trade for the highlight actually working.
+        window.location.assign(url);
+        return;
+      }
       router.push(url);
       close();
     },
@@ -353,26 +373,48 @@ export function SearchDialog({ onClose, returnFocusRef }: SearchDialogProps) {
                       {group.items.map((entry) => {
                         const domId = optionDomId(entry.id);
                         const isActive = entry.id === activeId;
+                        const optionContent = (
+                          <>
+                            <span className="block truncate font-ui text-[15px] font-semibold text-[#171717]">
+                              {highlightTitle(entry.title, query)}
+                            </span>
+                            {entry.subtitle ? (
+                              <span className="block truncate font-ui text-[13px] text-[#4a5568]">
+                                {entry.subtitle}
+                              </span>
+                            ) : null}
+                          </>
+                        );
+                        const optionClassName = `block rounded-lg px-3 py-2 ${isActive ? "bg-[#f0f4fa]" : ""}`;
                         return (
                           <li key={entry.id}>
-                            <Link
-                              id={domId}
-                              role="option"
-                              aria-selected={isActive}
-                              href={entry.url}
-                              onMouseEnter={() => setActiveId(entry.id)}
-                              onClick={close}
-                              className={`block rounded-lg px-3 py-2 ${isActive ? "bg-[#f0f4fa]" : ""}`}
-                            >
-                              <span className="block truncate font-ui text-[15px] font-semibold text-[#171717]">
-                                {highlightTitle(entry.title, query)}
-                              </span>
-                              {entry.subtitle ? (
-                                <span className="block truncate font-ui text-[13px] text-[#4a5568]">
-                                  {entry.subtitle}
-                                </span>
-                              ) : null}
-                            </Link>
+                            {hasFragment(entry.url) ? (
+                              // Plain <a>, not next/link: see navigateTo()'s
+                              // comment — a real navigation is what makes
+                              // `:target` (the row highlight) engage.
+                              <a
+                                id={domId}
+                                role="option"
+                                aria-selected={isActive}
+                                href={entry.url}
+                                onMouseEnter={() => setActiveId(entry.id)}
+                                className={optionClassName}
+                              >
+                                {optionContent}
+                              </a>
+                            ) : (
+                              <Link
+                                id={domId}
+                                role="option"
+                                aria-selected={isActive}
+                                href={entry.url}
+                                onMouseEnter={() => setActiveId(entry.id)}
+                                onClick={close}
+                                className={optionClassName}
+                              >
+                                {optionContent}
+                              </Link>
+                            )}
                           </li>
                         );
                       })}
