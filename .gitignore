@@ -51,3 +51,6 @@ scrape.log
 mobile-diff.log
 verify.log
 docs/verify-report.md
+
+# local dev-server config for the Claude Code preview pane
+/.claude/launch.json
