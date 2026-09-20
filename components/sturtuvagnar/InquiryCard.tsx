@@ -42,7 +42,7 @@ export function InquiryCard({ productTitle }: { productTitle: string }) {
       >
         <div>
           <div className="font-sans text-lg font-semibold text-[#171717]">Fá tilboð í {productTitle}</div>
-          <div className="mt-1 font-ui text-[13px] text-[#444444]">Fast verð í verkið</div>
+          <div className="mt-1 font-ui text-[13px] text-[#444444]">Vörunafnið fylgir sjálfkrafa</div>
         </div>
         <span aria-hidden="true" className="font-ui text-[22px] font-semibold text-brand-dark">
           {expanded ? "－" : "＋"}
@@ -58,7 +58,7 @@ export function InquiryCard({ productTitle }: { productTitle: string }) {
       >
         <h3 className="mb-2.5 font-sans text-2xl font-semibold text-[#171717]">Fá tilboð í {productTitle}</h3>
         <p className="mb-6 font-ui text-sm text-[#444444]">
-          Við bjóðum fast verð í verkið. Vörunafnið fylgir fyrirspurninni sjálfkrafa.
+          Vörunafnið fylgir fyrirspurninni sjálfkrafa.
         </p>
         <ContactForm
           variant="card"

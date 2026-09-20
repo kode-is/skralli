@@ -80,10 +80,6 @@ export const wagonGroups: WagonGroup[] = [
         "text": "Vagnarnir fást í mörgum litum. Hardox® kassi, rafmagnssturta með fjarstýringu, sjálfvirk vör, ljósapakki og fleira af aukabúnaði í boði."
       },
       {
-        "type": "text",
-        "text": "Vagnarnir eru ekki skráningsskyldir en hægt er að skrá það ef ljósapakki er keyptur sem aukabúnaður."
-      },
-      {
         "type": "heading",
         "level": 2,
         "text": "Tegundir í boði"
@@ -143,8 +139,7 @@ export const wagonGroups: WagonGroup[] = [
     ],
     "about": [
       "Flaggskipin meðal fjórhjóla- og minigröfuvagna. Sterkir sturtuvagnar með veltihásingu fullkomnir í öll þau verkefni þar sem þörf er á því að geta flutt mikið af efni á erfiða slóða eða þar sem aðgengi er þröngt. Sem staðalbúnaður fylgir handlæst afturvör og tvívirk handdæla sem tryggir skjóta losun upp í u.þ.b. 50 gráðu sturtuhalla. Vagnarnir eru sandblásnir og lakkaðir með sérstöku tvíþættu lakki.",
-      "Vagnarnir fást í mörgum litum. Hardox® kassi, rafmagnssturta með fjarstýringu, sjálfvirk vör, ljósapakki og fleira af aukabúnaði í boði.",
-      "Vagnarnir eru ekki skráningsskyldir en hægt er að skrá það ef ljósapakki er keyptur sem aukabúnaður."
+      "Vagnarnir fást í mörgum litum. Hardox® kassi, rafmagnssturta með fjarstýringu, sjálfvirk vör, ljósapakki og fleira af aukabúnaði í boði."
     ]
   },
   {
