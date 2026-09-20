@@ -73,12 +73,19 @@ export function TeamCard({ image, name, role, email, phone, variant = "compact" 
 
   return (
     <div className="flex flex-col items-center gap-3 text-center">
+      {/*
+       * aspect-[6/5] against the 3:2 source photos: object-cover fits by
+       * height, so the box's narrower ratio crops exactly 10% off each side
+       * (1.2 / 1.4997 = 0.80 of the source width stays visible) while the
+       * rendered width is unchanged — the frame grows taller instead.
+       */}
       <Image
         src={image.src}
         alt={image.alt || name}
         width={image.width}
         height={image.height}
-        className="h-[63px] w-[96px] rounded-xl object-cover md:h-[90px] md:w-[136px]"
+        sizes="(min-width: 768px) 180px, 30vw"
+        className="aspect-[6/5] h-auto w-full rounded-xl object-cover"
       />
       <div>
         <p className="font-semibold text-neutral-900">{name}</p>
