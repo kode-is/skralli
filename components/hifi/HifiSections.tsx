@@ -67,13 +67,23 @@ function SideImage({ image }: { image: Img }) {
  * `headingId` is the id of the H2/H3 immediately above it, wired to the
  * table via `aria-labelledby` instead of a visible `<caption>` (which would
  * duplicate the heading's text in the page's innerText and confuse verify). */
-function TableBlock({ table, headingId }: { table: HifiTable; headingId: string }) {
+function TableBlock({
+  table,
+  tableIndex,
+  headingId,
+}: {
+  table: HifiTable;
+  tableIndex: number;
+  headingId: string;
+}) {
   const image = table.images?.[0];
-  if (!image) return <SpecTable headers={table.headers} rows={table.rows} ariaLabelledBy={headingId} />;
+  if (!image) {
+    return <SpecTable headers={table.headers} rows={table.rows} tableIndex={tableIndex} ariaLabelledBy={headingId} />;
+  }
   return (
     <div className="grid items-start gap-8 md:grid-cols-2 md:gap-12">
       <SideImage image={image} />
-      <SpecTable headers={table.headers} rows={table.rows} ariaLabelledBy={headingId} />
+      <SpecTable headers={table.headers} rows={table.rows} tableIndex={tableIndex} ariaLabelledBy={headingId} />
     </div>
   );
 }
@@ -276,7 +286,7 @@ export function HifiSections({
                     {text}
                   </p>
                 ))}
-                <TableBlock table={table} headingId={headingId} />
+                <TableBlock table={table} tableIndex={tables.indexOf(table)} headingId={headingId} />
               </div>,
             );
           } else if (entry.body.length > 0) {
@@ -308,7 +318,7 @@ export function HifiSections({
             ) : null}
             {sectionTable && sectionHeadingId ? (
               <div className="mt-6">
-                <TableBlock table={sectionTable} headingId={sectionHeadingId} />
+                <TableBlock table={sectionTable} tableIndex={tables.indexOf(sectionTable)} headingId={sectionHeadingId} />
               </div>
             ) : null}
             {nodes.length ? <div className="mt-10 space-y-10">{nodes}</div> : null}
