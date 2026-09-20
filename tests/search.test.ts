@@ -86,3 +86,17 @@ describe("contact details", () => {
     }
   });
 });
+
+describe("privacy policy", () => {
+  it("is in the sitemap and findable by search", async () => {
+    const { default: sitemap } = await import("@/app/sitemap");
+    expect(sitemap().map((e) => e.url)).toContain("https://skralli.is/personuvernd");
+    const { buildIndex } = await import("@/lib/search/build-index");
+    const { search } = await import("@/lib/search/search");
+    const entries = buildIndex();
+    for (const q of ["persónuvernd", "personuverndarstefna", "vafrakökur"]) {
+      const pages = search(entries, q).find((g) => g.kind === "page");
+      expect(pages?.items.map((i) => i.url), q).toContain("/personuvernd");
+    }
+  });
+});

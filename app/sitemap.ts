@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { ROUTES } from "@/lib/routes";
+import { ROUTES, SITE_ONLY_ROUTES } from "@/lib/routes";
 
 const SITE_URL = "https://skralli.is";
 
@@ -7,7 +7,7 @@ const SITE_URL = "https://skralli.is";
 // The live sitemap omits the 7 category pages and /404 (50 URLs); this one
 // lists every real route instead — strictly better than live.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.filter((route) => route !== "/404").map((route) => ({
+  return [...ROUTES, ...SITE_ONLY_ROUTES].filter((route) => route !== "/404").map((route) => ({
     url: `${SITE_URL}${route}`,
   }));
 }

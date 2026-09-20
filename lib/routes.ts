@@ -29,3 +29,8 @@ export const ROUTES = [
   "/hifi-festibunadur/aukabunadur", "/hifi-festibunadur/bordastrekkjarar",
   "/404",
 ];
+
+// Pages that exist only on the new site, not on the Framer original. They are
+// kept out of ROUTES on purpose: ROUTES mirrors scripts/routes.mjs, which the
+// live-comparison verifier walks, and these pages have no live counterpart.
+export const SITE_ONLY_ROUTES = ["/personuvernd"];

@@ -114,7 +114,13 @@ export function Footer() {
         </div>
         {/* Not on the live site: required so a visitor can change or withdraw
             their cookie choice (components/analytics/CookieConsent.tsx). */}
-        <div className="mt-10 flex justify-center md:justify-start">
+        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-start">
+          <Link
+            href="/personuvernd"
+            className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid"
+          >
+            Persónuverndarstefna
+          </Link>
           <CookieSettingsLink className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid" />
         </div>
       </Container>
