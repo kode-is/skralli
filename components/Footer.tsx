@@ -1,3 +1,4 @@
+import { CookieSettingsLink } from "@/components/analytics/CookieSettingsLink";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
@@ -110,6 +111,11 @@ export function Footer() {
           <FooterLinkColumn column={fyrirtaekid} className="order-1 md:order-2" />
           <FooterLinkColumn column={vorumerki} className="hidden md:order-3 md:block" />
           <FooterLinkColumn column={thjonusta} className="hidden md:order-4 md:block" />
+        </div>
+        {/* Not on the live site: required so a visitor can change or withdraw
+            their cookie choice (components/analytics/CookieConsent.tsx). */}
+        <div className="mt-10 flex justify-center md:justify-start">
+          <CookieSettingsLink className="font-ui text-xs text-neutral-500 underline underline-offset-2 transition-colors duration-200 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid" />
         </div>
       </Container>
     </footer>
