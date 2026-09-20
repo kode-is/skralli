@@ -36,10 +36,10 @@ export function AdvisorySection() {
             </Stagger>
           </div>
 
-          <div className="rounded-2xl bg-[#f0f4fa] p-8 md:p-10">
+          <div className="w-full max-w-[450px] justify-self-end rounded-[10px] bg-[#f0f4fa]/90 p-8 md:p-[50px]">
             <h3 className="text-center font-ui text-xl font-semibold text-neutral-900">Hafa samband</h3>
             <div className="mt-6">
-              <ContactForm submitLabel="Senda" />
+              <ContactForm submitLabel="Senda" fieldTone="white" />
             </div>
           </div>
         </div>

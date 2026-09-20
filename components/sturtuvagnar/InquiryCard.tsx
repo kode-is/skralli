@@ -52,7 +52,7 @@ export function InquiryCard({ productTitle }: { productTitle: string }) {
       <div
         id="inquiry-card"
         ref={cardRef}
-        className={`mt-3.5 rounded-[15px] border border-[#E3E9F2] p-6 md:mt-0 md:block md:p-8 ${
+        className={`mt-3.5 rounded-[15px] bg-[#f0f4fa] p-6 md:mt-0 md:block md:p-8 ${
           expanded ? "block" : "hidden"
         }`}
       >
@@ -62,6 +62,7 @@ export function InquiryCard({ productTitle }: { productTitle: string }) {
         </p>
         <ContactForm
           variant="card"
+          fieldTone="white"
           showPhone
           submitLabel="Senda!"
           defaultMessage={`Fyrirspurn um ${productTitle}`}
