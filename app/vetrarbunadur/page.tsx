@@ -4,8 +4,13 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { IntroSection } from "@/components/vetrarbunadur/IntroSection";
-import { ChainsSection } from "@/components/vetrarbunadur/ChainsSection";
+import { LillesethSection } from "@/components/vetrarbunadur/LillesethSection";
+import { ChainLinesSection } from "@/components/vetrarbunadur/ChainLinesSection";
+import { WhyLillesethSection } from "@/components/vetrarbunadur/WhyLillesethSection";
+import { SpikesSection } from "@/components/vetrarbunadur/SpikesSection";
+import { ChainInquirySection } from "@/components/vetrarbunadur/ChainInquirySection";
 import { PlowsSection } from "@/components/vetrarbunadur/PlowsSection";
+import { GigantMoreSection } from "@/components/vetrarbunadur/GigantMoreSection";
 
 // docs/scrape/vetrarbunadur.json — same <title>/<meta description> as every
 // other route on the live site.
@@ -37,8 +42,15 @@ export default function VetrarbunadurPage() {
       />
       <Breadcrumb items={[{ text: "Vetrarbúnaður" }]} />
       <IntroSection />
-      <ChainsSection />
+      {/* Lilleseth snow chains first: they are the page's lead product. */}
+      <LillesethSection />
+      <ChainLinesSection />
+      <WhyLillesethSection />
+      <SpikesSection />
+      <ChainInquirySection />
+      {/* Gigant snow clearing and gritting. */}
       <PlowsSection />
+      <GigantMoreSection />
       <ContactCta />
     </main>
   );
