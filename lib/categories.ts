@@ -82,7 +82,7 @@ export const categories: Category[] = [
   {
     id: "vetrarbunadur",
     title: "Vetrarbúnaður",
-    blurb: "Snjókeðjur, snjóplógar og vængjaskóflur í miklu úrvali",
+    blurb: "Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali",
     href: "/vetrarbunadur",
     image: { src: "/images/thjonusta/08-e6009210.jpeg", alt: "", width: 384, height: 512 },
     onHome: false,

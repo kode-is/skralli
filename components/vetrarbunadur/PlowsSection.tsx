@@ -1,96 +1,123 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { BulletList } from "@/components/BulletList";
-import { Reveal } from "@/components/motion/Reveal";
-import type { Img } from "@/lib/types";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { gigantBanner, plowModels, plows } from "@/lib/vetrarbunadur";
+import { CheckIcon, PlusIcon } from "./icons";
 
-// docs/scrape/vetrarbunadur.json blocks 25-53.
-const PLOWS_IMAGE: Img = { src: "/images/vetrarbunadur/02-c1a583fc.webp", alt: "", width: 1440, height: 681 };
-const LSV_IMAGE: Img = { src: "/images/vetrarbunadur/03-3c6d3d08.jpg", alt: "", width: 1440, height: 1440 };
-const HSV_IMAGE: Img = { src: "/images/vetrarbunadur/04-b60cdacb.webp", alt: "", width: 1440, height: 1440 };
-
-const LSV_ACCESSORIES = [
-  "Volvo BM krókar",
-  "L-30 krókar (minni Volvo BM krókar)",
-  "2 x blikkljós",
-  "2x LED ljós á hornum",
-  "2x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
-  "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
-  "Stjórnbox fyrir superswing",
-  "2x akkúmulatorar sem gefa eftir ef lent er á föstu. (Ekki hægt með superwing)",
-];
-
-const HSV_STANDARD = [
-  "3ja punkta festing",
-  "Superswing - Hægt sé að stilla plóg sem skekkjanlegt beint blað",
-  "2x LED ljós á hornum",
-];
-
-const HSV_ACCESSORIES = [
-  "Stjórnbox fyrir superswing",
-  "Volvo BM krókar",
-  "L-30 krókar (minni Volvo BM krókar)",
-  "2 x blikkljós",
-  "2 x stoðfætur með hringlaga plöttum til að fylgja eftir landslagi",
-];
-
-function ImageBlock({ image }: { image: Img }) {
-  return (
-    <div
-      className="relative mt-8 w-full overflow-hidden rounded-2xl"
-      style={{ aspectRatio: `${image.width} / ${image.height}` }}
-    >
-      <Image
-        src={image.src}
-        alt={image.alt}
-        fill
-        sizes="(min-width: 768px) 60vw, 100vw"
-        className="object-cover"
-      />
-    </div>
-  );
-}
-
+/**
+ * Gigant half of the page: a full-bleed photo band that marks the switch
+ * from chains to snow clearing, then the two plow models (docs/scrape/
+ * vetrarbunadur.json blocks 25-53) as side-by-side cards with their specs
+ * pulled out of the running text into a grid.
+ */
 export function PlowsSection() {
   return (
-    <section className="bg-white py-10 md:py-14">
-      <Container className="max-w-3xl">
-        <Reveal as="h3" className="font-ui text-2xl font-semibold text-neutral-900 md:text-3xl">
-          Snjóplógar
-        </Reveal>
-        <ImageBlock image={PLOWS_IMAGE} />
-        <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
-          Gigant býður upp á tvær týpur af fjölplógum, HSV og LSV. Sammerkt með þeim báðum er
-          útsláttarbúnaður á skerablaði er úr HARDOX ásamt því að allir boltar og öxlar eru úr
-          ryðfríu stáli. LSV er fyrir minni vélar, nettur og þægilegur og hægt að fá með sama
-          búnaði og stærri HSV plógarnir.
-        </p>
-        <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
-          HSV kemur með öllu því sem verktakinn óskar sér og hentar til dæmis vel á stóra traktóra
-          og milli og meðalstórar hjólaskóflur.
-        </p>
+    <>
+      <section id="snjoplogar" className="relative scroll-mt-6 overflow-hidden">
+        <div className="relative h-[440px] md:h-[560px]">
+          <Image
+            src={gigantBanner.image.src}
+            alt={gigantBanner.image.alt}
+            fill
+            sizes="100vw"
+            className="object-cover object-[60%_center]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/5 md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent"
+          />
+          <Container className="relative flex h-full flex-col justify-end pb-10 md:justify-center md:pb-0">
+            <Reveal as="p" className="font-ui text-[11px] font-semibold tracking-[.12em] text-brand-light uppercase md:text-xs">
+              {gigantBanner.eyebrow}
+            </Reveal>
+            <Reveal
+              as="h2"
+              delay={0.05}
+              className="mt-3 max-w-xl text-[34px] leading-[1.08] font-semibold text-white md:text-[56px] md:leading-[1.04]"
+            >
+              {gigantBanner.heading}
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-4 max-w-lg text-base leading-[1.6] text-white/90 md:text-lg">
+              {gigantBanner.text}
+            </Reveal>
+          </Container>
+        </div>
+      </section>
 
-        <h5 className="mt-10 font-ui text-lg font-semibold text-neutral-900">LSV fjölplógur</h5>
-        <ImageBlock image={LSV_IMAGE} />
-        <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
-          LSV er 91,5 cm á hæð og kemur í breiddunum 200cm, 250cm og 280cm. Eru með veltibúnaði og
-          30 gráðu vinnuvinkil á vængjum. 3ja punkta og SMS festing hluti af staðalbúnaði.
-        </p>
-        <p className="mt-4 text-sm font-semibold text-neutral-900">Fáanlegur aukabúnaður:</p>
-        <BulletList items={LSV_ACCESSORIES} className="mt-3" />
+      <section className="bg-white py-16 md:py-24">
+        <Container>
+          <div className="grid gap-6 md:grid-cols-[1fr_1.2fr] md:gap-16">
+            <Reveal as="h3" className="text-[32px] leading-[1.15] font-semibold text-[#171717] md:text-[50px] md:leading-[1.08]">
+              {plows.heading}
+            </Reveal>
+            <div>
+              {plows.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="mb-4 text-base leading-[1.65] text-[#444444] md:text-[17px]">
+                  {paragraph}
+                </p>
+              ))}
+              <p className="font-ui text-[15px] font-semibold text-[#171717] md:text-base">{plows.shapes}</p>
+            </div>
+          </div>
 
-        <h5 className="mt-10 font-ui text-lg font-semibold text-neutral-900">Snjóplógur HSV</h5>
-        <ImageBlock image={HSV_IMAGE} />
-        <p className="mt-6 text-sm leading-relaxed text-neutral-600 md:text-base">
-          HSV er 122 cm á hæð og kemur í breiddunum 280cm, 320cm og 360cm. Þessir plógar eru með
-          veltibúnað og 35 gráðu vinnuvinkil á vængjum. HSV er gerður til þess að standast
-          væntingar jafnvel kröfuhörðustu verktaka.
-        </p>
-        <p className="mt-4 text-sm font-semibold text-neutral-900">Staðalbúnaður:</p>
-        <BulletList items={HSV_STANDARD} className="mt-3" />
-        <p className="mt-6 text-sm font-semibold text-neutral-900">Fáanlegur aukabúnaður:</p>
-        <BulletList items={HSV_ACCESSORIES} className="mt-3" />
-      </Container>
-    </section>
+          <Stagger className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2 md:gap-8">
+            {plowModels.map((plow) => (
+              <StaggerItem
+                key={plow.name}
+                className="flex flex-col overflow-hidden rounded-[20px] border border-[#E3E9F2] bg-white"
+              >
+                <div className="relative aspect-[4/3] w-full bg-[#f0f4fa]">
+                  <Image
+                    src={plow.image.src}
+                    alt={plow.image.alt}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6 md:p-8">
+                  <p className="font-ui text-[11px] font-semibold tracking-[.12em] text-brand-dark uppercase md:text-xs">
+                    {plow.tag}
+                  </p>
+                  <h4 className="mt-2 text-[26px] leading-tight font-semibold text-[#171717] md:text-[32px]">{plow.name}</h4>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-[#444444] md:text-base">{plow.text}</p>
+
+                  <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-[14px] border border-[#E3E9F2] bg-[#E3E9F2]">
+                    {plow.specs.map((spec) => (
+                      <div key={spec.label} className="bg-white px-4 py-3.5 md:px-5 md:py-4">
+                        <dt className="font-ui text-[10px] font-semibold tracking-[.1em] text-brand-dark uppercase md:text-[11px]">
+                          {spec.label}
+                        </dt>
+                        <dd className="mt-1 font-ui text-[15px] font-semibold text-[#171717] md:text-[17px]">{spec.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <p className="mt-7 font-ui text-sm font-semibold text-[#171717]">{plows.standardLabel}</p>
+                  <ul className="mt-3 space-y-2">
+                    {plow.standard.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#444444]">
+                        <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent-green" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-6 font-ui text-sm font-semibold text-[#171717]">{plows.accessoriesLabel}</p>
+                  <ul className="mt-3 space-y-2">
+                    {plow.accessories.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#444444]">
+                        <PlusIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-mid" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Container>
+      </section>
+    </>
   );
 }
