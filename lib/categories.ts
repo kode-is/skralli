@@ -1,7 +1,7 @@
 // Product categories scraped verbatim from docs/scrape/home.json (blocks 43-66)
 // and docs/scrape/thjonusta.json (Vetrarbúnaður, blocks 30-33).
 // Order drives both the home page's "Okkar vöruframboð" grid and the
-// /thjonusta index (Vetrarbúnaður leads but is hidden on home).
+// /thjonusta index (Öryggisrúður is listed last and hidden on home).
 
 import type { Img } from "./types";
 
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     blurb: "Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali",
     href: "/vetrarbunadur",
     image: { src: "/images/thjonusta/08-e6009210.jpeg", alt: "", width: 384, height: 512 },
-    onHome: false,
+    onHome: true,
   },
   {
     id: "smurkerfi",
@@ -85,6 +85,6 @@ export const categories: Category[] = [
       width: 512,
       height: 384,
     },
-    onHome: true,
+    onHome: false,
   },
 ];
