@@ -1,11 +1,11 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { accessories, spikeTypes } from "@/lib/vetrarbunadur";
-import { SPIKE_ICONS } from "./icons";
 
 // The three spike types and four accessories are the live page's lists
 // (docs/scrape/vetrarbunadur.json blocks 15-24); the redesign gives each
-// spike type an illustration and a line of explanation.
+// spike type a close-up photo and a line of explanation.
 export function SpikesSection() {
   return (
     <section id="broddar" className="scroll-mt-6 bg-white py-16 md:py-24">
@@ -18,18 +18,23 @@ export function SpikesSection() {
         </Reveal>
 
         <Stagger className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3 md:gap-7">
-          {spikeTypes.items.map((spike) => {
-            const Icon = SPIKE_ICONS[spike.icon];
-            return (
-              <StaggerItem key={spike.title} className="rounded-[20px] border border-[#E3E9F2] bg-white p-6 md:p-8">
-                <div className="flex h-36 items-center justify-center rounded-[14px] bg-[#f0f4fa] text-brand-dark md:h-40">
-                  <Icon className="h-24 w-48 md:h-28 md:w-56" />
-                </div>
-                <h3 className="mt-6 font-ui text-lg font-semibold text-[#171717] md:text-xl">{spike.title}</h3>
+          {spikeTypes.items.map((spike) => (
+            <StaggerItem key={spike.title} className="overflow-hidden rounded-[20px] border border-[#E3E9F2] bg-white">
+              <div className="relative aspect-[3/2] w-full bg-[#f0f4fa]">
+                <Image
+                  src={spike.image.src}
+                  alt={spike.image.alt}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="font-ui text-lg font-semibold text-[#171717] md:text-xl">{spike.title}</h3>
                 <p className="mt-2 text-[15px] leading-[1.6] text-[#444444] md:text-base">{spike.text}</p>
-              </StaggerItem>
-            );
-          })}
+              </div>
+            </StaggerItem>
+          ))}
         </Stagger>
 
         <div className="mt-16 grid gap-8 rounded-[20px] bg-[#f0f4fa] p-6 md:mt-20 md:grid-cols-[1fr_2fr] md:items-center md:gap-12 md:p-10">

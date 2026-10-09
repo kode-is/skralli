@@ -3,12 +3,7 @@
 // icon sits next to a visible text label.
 
 import type { SVGProps } from "react";
-import type {
-  BenefitIconName,
-  GigantIconName,
-  SpikeIconName,
-  VehicleIconName,
-} from "@/lib/vetrarbunadur";
+import type { BenefitIconName, GigantIconName, VehicleIconName } from "@/lib/vetrarbunadur";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
@@ -87,70 +82,6 @@ export const VEHICLE_ICONS: Record<VehicleIconName, (props: IconProps) => React.
   loader: LoaderIcon,
   truck: TruckIcon,
   atv: AtvIcon,
-};
-
-// ---------------------------------------------------------------- spike types
-// 96x48 side view: a short length of chain lying on an ice line, with the
-// grip element (square edges, U-studs or spikes) biting into it.
-
-function IceLine({ y = 36 }: { y?: number }) {
-  return (
-    <>
-      <path d={`M2 ${y}h92`} strokeWidth={2} opacity="0.55" />
-      <path
-        d={[10, 24, 38, 52, 66, 80].map((x) => `M${x} ${y + 4}l-4 5`).join("")}
-        strokeWidth={1.4}
-        opacity="0.3"
-      />
-    </>
-  );
-}
-
-// Two links seen from the side (long stadiums) joined by an edge-on link.
-function ChainRow({ y, rx }: { y: number; rx: number }) {
-  return (
-    <>
-      <rect x="30" y={y + 3.5} width="36" height="5" rx="2.5" fill="currentColor" stroke="none" opacity="0.4" />
-      <rect x="6" y={y} width="32" height="12" rx={rx} strokeWidth={3.4} />
-      <rect x="58" y={y} width="32" height="12" rx={rx} strokeWidth={3.4} />
-    </>
-  );
-}
-
-function SquareSpikeIcon(props: IconProps) {
-  // Square-profile links resting straight on the ice: the edges do the gripping.
-  return (
-    <Svg viewBox="0 0 96 48" {...props}>
-      <IceLine y={35} />
-      <ChainRow y={21} rx={1.5} />
-    </Svg>
-  );
-}
-
-function UbroddIcon(props: IconProps) {
-  return (
-    <Svg viewBox="0 0 96 48" {...props}>
-      <IceLine y={37} />
-      <ChainRow y={16} rx={2.5} />
-      <path d="M13 28v11h18V28M65 28v11h18V28" strokeWidth={3.2} />
-    </Svg>
-  );
-}
-
-function StudSpikeIcon(props: IconProps) {
-  return (
-    <Svg viewBox="0 0 96 48" {...props}>
-      <IceLine y={36} />
-      <ChainRow y={16} rx={6} />
-      <path d="M12 28l3.5 11 3.5-11M25 28l3.5 11 3.5-11M64 28l3.5 11 3.5-11M77 28l3.5 11 3.5-11" strokeWidth={2.6} />
-    </Svg>
-  );
-}
-
-export const SPIKE_ICONS: Record<SpikeIconName, (props: IconProps) => React.ReactElement> = {
-  square: SquareSpikeIcon,
-  ubrodd: UbroddIcon,
-  spike: StudSpikeIcon,
 };
 
 // ---------------------------------------------------------------- benefits

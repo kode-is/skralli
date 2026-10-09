@@ -11,7 +11,6 @@
 import type { Img } from "./types";
 
 export type VehicleIconName = "tractor" | "loader" | "truck" | "atv";
-export type SpikeIconName = "square" | "ubrodd" | "spike";
 export type BenefitIconName = "fit" | "noTools" | "shield" | "steel";
 export type GigantIconName = "spreader" | "wagon" | "scraper";
 
@@ -157,24 +156,40 @@ export const whyLilleseth = {
   ] satisfies Benefit[],
 };
 
-export type SpikeType = { icon: SpikeIconName; title: string; text: string };
+export type SpikeType = { image: Img; title: string; text: string };
 
+// Close-ups cropped from Lilleseth product photos supplied by Skralli.
 export const spikeTypes = {
   heading: "Gerðir brodda",
   text: "Broddarnir ráða gripinu. Við hjálpum þér að velja rétta gerð fyrir þínar aðstæður.",
   items: [
     {
-      icon: "square",
+      image: {
+        src: "/images/vetrarbunadur/broddar-flatkantur.webp",
+        alt: "Nærmynd af snjókeðju með flatkanti",
+        width: 600,
+        height: 400,
+      },
       title: "Flatkantur / fírkant",
       text: "Ferkantaðir hlekkir með skörpum köntum sem bíta í ís og þjappaðan snjó.",
     },
     {
-      icon: "ubrodd",
+      image: {
+        src: "/images/vetrarbunadur/broddar-u-broddar.webp",
+        alt: "Nærmynd af snjókeðju með U-broddum",
+        width: 600,
+        height: 400,
+      },
       title: "U-broddar",
       text: "U-laga gripbroddar á ferkantaðri keðju gefa besta gripið og mesta slitþolið, líka á dekkjum með háu munstri.",
     },
     {
-      icon: "spike",
+      image: {
+        src: "/images/vetrarbunadur/broddar-gaddar.webp",
+        alt: "Nærmynd af snjókeðju með göddum",
+        width: 600,
+        height: 400,
+      },
       title: "Gaddar",
       text: "Sterkir gaddar á snúinni keðju fyrir erfiðustu aðstæður. 9 mm keðja er með 10 mm göddum og 11 mm keðja með 13 mm göddum.",
     },
