@@ -36,7 +36,7 @@ export const lilleseth = {
   heading: "Snjókeðjur frá Lilleseth",
   paragraphs: [
     "Lilleseth er norskt rótgróið fjölskyldufyrirtæki stofnað 1947 og sérhæfir sig í snjókeðjum fyrir bíla og tæki af öllum gerðum. Allar keðjur eru sérsniðnar og einfaldar í uppsetningu og eru því sérstaklega þægilegar í notkun.",
-    "Lilleseth er með breiðasta úrval snjókeðja í Noregi. Keðjurnar eru sniðnar að dekkjastærðinni, fara vel með dekkin og eru settar á án verkfæra.",
+    "Keðjurnar eru sniðnar að dekkjastærðinni, fara vel með dekkin og eru settar á án verkfæra.",
   ],
   primaryCta: { href: "#fyrirspurn", text: "Fá tilboð í keðjur" },
   secondaryCta: { href: "/vorumerki/lilleseth-kjetting", text: "Nánar um Lilleseth" },
