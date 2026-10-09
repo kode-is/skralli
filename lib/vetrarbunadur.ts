@@ -19,7 +19,7 @@ export type GigantIconName = "spreader" | "wagon" | "scraper";
 export const jumpNavLabel = "Á þessari síðu";
 export const jumpLinks = [
   { href: "#snjokedjur", text: "Snjókeðjur" },
-  { href: "#kedjulinur", text: "Keðjulínur" },
+  { href: "#kedjulinur", text: "Keðjutýpur" },
   { href: "#broddar", text: "Gerðir brodda" },
   { href: "#fyrirspurn", text: "Finndu réttu keðjuna" },
   { href: "#snjoplogar", text: "Snjóplógar" },
@@ -45,7 +45,7 @@ export const lilleseth = {
     { value: "75+", label: "Ára reynsla" },
     { value: "3", label: "Gerðir brodda" },
   ],
-  statsNote: "Breiðasta úrval snjókeðja í Noregi",
+  statsNote: "Snjókeðjur sem henta þér",
 };
 
 export type Vehicle = { icon: VehicleIconName; title: string; text: string };
@@ -71,7 +71,7 @@ export const vehicles: Vehicle[] = [
   {
     icon: "atv",
     title: "Vagnar og minni tæki",
-    text: "Vagnar, fjórhjól og snjóblásarar.",
+    text: "Vagnar, fjórhjól og annar búnaður.",
   },
 ];
 
@@ -87,7 +87,7 @@ export type ChainLine = {
 };
 
 export const chainLines = {
-  heading: "Keðjulínur",
+  heading: "Keðjutýpur",
   text: "Fjórar línur sem ná yfir flest tæki. Við sérpöntum keðjur eftir dekkjastærð og aðstæðum.",
   sizesLabel: "Þykkt",
   fitsLabel: "Hentar fyrir",
@@ -108,7 +108,7 @@ export const chainLines = {
       text: "Snúin og sterkbyggð gaddakeðja sem flýtur jafnt yfir dekkið og gefur jafnan og mjúkan akstur. Öflugt og slitsterkt grip fyrir landbúnað, vinnuvélar, skógarvinnu og snjómokstur.",
       sizes: ["8", "9"],
       fits: ["Dráttarvélar", "Vinnuvélar", "Skógarvélar"],
-      points: ["Fer vel með dekkin", "Einföld uppsetning án verkfæra", "Einnig fyrir tvöföld dekk"],
+      points: ["Fer vel með dekkin", "Einföld uppsetning án verkfæra", "Einnig fyrir hjólagröfur"],
     },
     {
       name: "Arctic Grip",
@@ -119,11 +119,11 @@ export const chainLines = {
       points: ["Hálfþétt, ofurþétt eða stýriskeðja", "Nákvæm passa og fljótleg uppsetning", "Einnig fyrir tvöföld dekk"],
     },
     {
-      name: "Snjóblásarakeðjur",
+      name: "Fjórhjólakeðjur",
       kicker: "Fyrir minni tæki",
       text: "Ferkantaðar keðjur með U-broddum sem grípa vel, jafnvel á dekkjum með háu munstri. Sniðnar að dekkjastærð og settar á án verkfæra.",
       sizes: ["5,7"],
-      fits: ["Snjóblásarar"],
+      fits: ["Liðléttingar", "Fjórhjól", "Lyftarar"],
       points: ["Grípa vel á háu munstri", "Sett á án verkfæra"],
     },
   ] satisfies ChainLine[],
@@ -276,7 +276,7 @@ export const plowModels: Plow[] = [
     image: { src: "/images/vetrarbunadur/04-b60cdacb.webp", alt: "HSV snjóplógur á dráttarvél", width: 1200, height: 1200 },
     specs: [
       { label: "Hæð", value: "122 cm" },
-      { label: "Breiddir", value: "280 · 320 · 360 cm" },
+      { label: "Breiddir", value: "280 · 320 cm" },
       { label: "Vinnuvinkill", value: "35°" },
       { label: "Festing", value: "3ja punkta" },
     ],

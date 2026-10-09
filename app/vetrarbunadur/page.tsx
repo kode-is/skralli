@@ -36,7 +36,7 @@ export default function VetrarbunadurPage() {
       <PageHero
         image={HERO_IMAGE}
         title="Vetrarbúnaður"
-        subtitle="Snjókeðjur, snjóplógar og vængjaskóflur í miklu úrvali"
+        subtitle="Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali"
         icon={SnowflakeIcon ? <SnowflakeIcon className="h-6 w-6" /> : null}
         pattern
       />
