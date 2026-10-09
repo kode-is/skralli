@@ -1,7 +1,7 @@
 // Product categories scraped verbatim from docs/scrape/home.json (blocks 43-66)
 // and docs/scrape/thjonusta.json (Vetrarbúnaður, blocks 30-33).
-// Order matches both the home page's "Okkar vöruframboð" grid and the
-// /thjonusta index (which appends Vetrarbúnaður at the end).
+// Order drives both the home page's "Okkar vöruframboð" grid and the
+// /thjonusta index (Vetrarbúnaður leads but is hidden on home).
 
 import type { Img } from "./types";
 
@@ -17,12 +17,12 @@ export type Category = {
 
 export const categories: Category[] = [
   {
-    id: "siubunadur",
-    title: "Síubúnaður",
-    blurb: "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi",
-    href: "/siubunadur",
-    image: { src: "/images/home/21-212e4fb5.png", alt: "", width: 512, height: 238 },
-    onHome: true,
+    id: "vetrarbunadur",
+    title: "Vetrarbúnaður",
+    blurb: "Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali",
+    href: "/vetrarbunadur",
+    image: { src: "/images/thjonusta/08-e6009210.jpeg", alt: "", width: 384, height: 512 },
+    onHome: false,
   },
   {
     id: "smurkerfi",
@@ -46,16 +46,11 @@ export const categories: Category[] = [
     onHome: true,
   },
   {
-    id: "oryggisrudur",
-    title: "Öryggisrúður",
-    blurb: "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður",
-    href: "/oryggisrudur",
-    image: {
-      src: "/images/home/24-a996c2c4.jpg",
-      alt: "Starfsmaður Skralla að setja upp Hammerglass-rúðu",
-      width: 512,
-      height: 384,
-    },
+    id: "siubunadur",
+    title: "Síubúnaður",
+    blurb: "Lofthreinsitæki frá BMair - bylting í heilbrigðu vinnuumhverfi",
+    href: "/siubunadur",
+    image: { src: "/images/home/21-212e4fb5.png", alt: "", width: 512, height: 238 },
     onHome: true,
   },
   {
@@ -80,11 +75,16 @@ export const categories: Category[] = [
     onHome: true,
   },
   {
-    id: "vetrarbunadur",
-    title: "Vetrarbúnaður",
-    blurb: "Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali",
-    href: "/vetrarbunadur",
-    image: { src: "/images/thjonusta/08-e6009210.jpeg", alt: "", width: 384, height: 512 },
-    onHome: false,
+    id: "oryggisrudur",
+    title: "Öryggisrúður",
+    blurb: "Óbrjótanlegar og eldhamlandi rúður sem þola erfiðustu aðstæður",
+    href: "/oryggisrudur",
+    image: {
+      src: "/images/home/24-a996c2c4.jpg",
+      alt: "Starfsmaður Skralla að setja upp Hammerglass-rúðu",
+      width: 512,
+      height: 384,
+    },
+    onHome: true,
   },
 ];
