@@ -189,6 +189,17 @@ ItemCode so a renamed product's old links still resolve and 301 to the new
 slug. Sitemap gains the store routes from the cached catalog; product pages
 emit `Product`/`Offer` JSON-LD with price and availability.
 
+Store navigation (Einar, 2026-10-17, after Ölgerðin's shop): `/verslun`
+and `/verslun/[flokkur]` share a two-column layout with a left category
+tree (`StoreTree`): a "Vöruflokkar" header, one row per StoreCategory
+with its CategoryIcons glyph, expandable to the DK groups inside it
+(subcategories), the current branch highlighted, and a "Vörumerki" row at
+the bottom. The tree is a server component built from the cached catalog
+(so counts and empty groups are accurate) and sticks on scroll on desktop;
+under 900 px it collapses into a "Vöruflokkar" toggle above the grid. The
+filter chips from the first prototype are dropped; the tree is the filter.
+Product pages keep the full-width layout.
+
 Existing pages: each mapped þjónusta page gets a server component
 `StoreProductsStrip` (up to 8 products from its category, "Sjá allt í
 vefverslun" link) placed above `ContactCta`. The header gains a cart icon
