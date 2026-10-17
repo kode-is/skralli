@@ -238,11 +238,43 @@ returns current prices/stock and flags lines that changed or sold out. Max
 99 per line. No account needed.
 
 Checkout form at `/karfa/greida`: name, email, phone, kennitala (optional,
-used to match an existing DK customer), delivery choice (**[call]** "Sækja
-í Móhellu 3F, Hafnarfirði — 0 kr." or "Senda með Póstinum — fast gjald
-`SHIPPING_FLAT_ISK`" with address fields), note, checkbox accepting
-`/verslun/skilmalar`. Honeypot and the same validation style as the contact
-form (`lib/email/contact.ts`).
+used to match an existing DK customer), delivery choice (see "Delivery"
+below), note, checkbox accepting `/verslun/skilmalar`. Honeypot and the
+same validation style as the contact form (`lib/email/contact.ts`).
+
+Delivery (Einar, 2026-10-17: home delivery goes with Flytjandi/Eimskip,
+not Pósturinn, and the price should be computed from the address):
+- Options: "Sækja í Móhellu 3F, Hafnarfirði — 0 kr."; "Heimkeyrsla með
+  Flytjanda (Eimskip)" priced from postal code + weight; and **[call]**
+  "Sækja á afgreiðslustað Flytjanda" (cheaper, no last-mile), same
+  calculation without the home-delivery surcharge.
+- Price is computed the moment a valid postal code is entered (server
+  action `quoteShipping(zip, lines)`), shown next to the option and added
+  to the total before the Straumur redirect. Weight = Σ `NetWeight` × qty
+  from DK, volume = Σ `UnitVolume` × qty, chargeable weight = max(weight,
+  volume × 350 kg/m³) as Eimskip bills. **[Hlynur]** fills NetWeight (and
+  UnitVolume for bulky items) in DK; a product with no weight falls back to
+  a per-category default and is listed by the probe script.
+- Phase 2 implementation **[call]**: a zone table in code
+  (`lib/store/shipping.ts`): postal code → Flytjandi zone, zone × weight
+  band → price from Skralli's Eimskip contract rates, plus the surcharges
+  Eimskip itemises (olíugjald, afgreiðslugjald, EFS). Eimskip's public
+  calculator (eimskip.is/thjonusta/akstur-innanlands/reiknivel) is only a
+  website form (`/webapi/domestic-calculator/step1`, anti-forgery token,
+  HTML response, list prices, "not a formal quote") and is not an API we
+  may build on. Eimskip does issue API keys to business customers (their
+  WooCommerce plugin configures "EIMSKIP > API KEYS"); if Eimskip confirms a
+  quote endpoint for contract customers, the zone table is replaced by a
+  live call behind the same `quoteShipping` interface, cached per
+  (zip, weight band) for a day. **[Einar]** ask sala.innanlands@eimskip.is.
+- Rates change twice a year (Eimskip announced +2.8 % on 2026-07-01), so
+  the table carries a `validFrom` and the probe script warns when it is
+  older than six months.
+- The order line sent to DK uses `DK_SHIPPING_ITEMCODE` with the computed
+  price, and `Text2` records zone, weight and the chosen option so Hlynur
+  can book the shipment in myEimskip. Booking the shipment automatically
+  (Eimskip API or Dropp, which covers Flytjandi postal codes) is a Phase 3
+  candidate, not Phase 2.
 
 Server action `startCheckout(form, lines)`:
 1. Live-quote lines from DK (uncached). If DK is unreachable → return
@@ -319,6 +351,7 @@ at step 4 even if DK failed (we have their money; they get their receipt).
 | Duplicate webhook | `payfacReference` SETNX. |
 | Amount mismatch (tampered return, partial) | Logged, Checkout marked `failed`, alert email; not fulfilled. |
 | Price changed between cart and checkout | Checkout always re-quotes from DK and shows the diff before redirecting. |
+| Postal code outside Flytjandi coverage | Home delivery option hidden; pickup and Flytjandi depot remain. |
 | Sold out between checkout and payment | Order is still created (DK allows negative stock or back-order); confirmation says "sérpöntun" for that line. Over-selling is accepted and handled by Hlynur, matching how DK's own webshop module behaves **[call]**. |
 | Redis unavailable | `startCheckout` fails closed; webhook returns 500 so Straumur retries. |
 
@@ -408,8 +441,9 @@ Phase 3 — Mínar síður (sketch, separate design)
 3. Catalog freshness: 1 h ISR floor + DK webhooks; live reads only at cart
    quote and checkout.
 4. Stock shown as four states, never as numbers; over-selling accepted.
-5. Flat delivery: pickup free or Pósturinn flat fee; fee amount and item
-   code from env.
+5. Delivery: pickup free, or Flytjandi (Eimskip) priced from postal code
+   and DK weight via a contract-rate zone table; live Eimskip quote if
+   they expose one.
 6. Descriptions as plain text in Phase 1.
 7. Customer matched by kennitala, then email; else created in group "vefur".
 8. Our own Resend emails, not DK's order email.
@@ -420,7 +454,10 @@ Phase 3 — Mínar síður (sketch, separate design)
 ## 16. Open items for Einar / Hlynur
 
 - Real DK token (blocks Phase 0).
-- Which DK groups map to which store categories; delivery fee and item code.
+- Which DK groups map to which store categories; delivery item code.
+- Skralli's Eimskip contract rate card (zones × weight bands) and whether
+  Eimskip offers a price-quote API to contract customers.
+- Product weights (NetWeight) in DK for everything sold online.
 - How a card-paid web order should be booked in DK (settlement fields vs.
   text), and whether DK assigns customer numbers on create.
 - Straumur agreement: terminal identifier, whether Apple Pay / Icelandic
