@@ -6,6 +6,12 @@ can be overturned; everything marked **[Hlynur]** needs the client. Nothing
 is implemented yet. Next step after approval: an implementation plan
 (superpowers:writing-plans) for Phase 0 and 1.
 
+Agreed with Einar on 2026-10-17, after the clickable prototype
+(`docs/plans/2026-10-17-vefverslun-prototype.html`, open it straight in a
+browser): the page set and flow, Flytjandi home delivery priced from postal
+code and weight (§8), and a left category tree on store pages (§6), with
+details to be tuned during implementation. Still open: §16.
+
 Grounding: the dk Plus REST API was mapped from its Swagger spec and probed
 live against DK's public demo company; Straumur's hosted-checkout docs were
 read. Raw findings: side-session note `vefverslun-dk-recon.md` and the
