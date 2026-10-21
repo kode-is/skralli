@@ -3,8 +3,8 @@
 Status: draft written 2026-10-17 from sensible defaults (Einar skipped the
 brainstorm questions). Everything marked **[call]** is Claude's decision and
 can be overturned; everything marked **[Hlynur]** needs the client. Nothing
-is implemented yet. Next step: an implementation plan
-(superpowers:writing-plans) covering the whole build (§14).
+is implemented yet. Implementation plan for the whole build:
+`docs/plans/2026-10-21-vefverslun-implementation.md`.
 
 Agreed with Einar on 2026-10-17, after the clickable prototype
 (`docs/plans/2026-10-17-vefverslun-prototype.html`, open it straight in a
