@@ -3,10 +3,17 @@ import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
+import { JumpNav } from "@/components/fyrirokumannin/JumpNav";
 import { SeatCoversSection } from "@/components/fyrirokumannin/SeatCoversSection";
+import { IconBand } from "@/components/fyrirokumannin/IconBand";
 import { FloorMatsSection } from "@/components/fyrirokumannin/FloorMatsSection";
 import { ShoeTraySection } from "@/components/fyrirokumannin/ShoeTraySection";
-import { LightingSection } from "@/components/fyrirokumannin/LightingSection";
+import { LightsBanner } from "@/components/fyrirokumannin/LightsBanner";
+import { BarGuide } from "@/components/fyrirokumannin/BarGuide";
+import { LightMakersSection } from "@/components/fyrirokumannin/LightMakersSection";
+import { LightsInquirySection } from "@/components/fyrirokumannin/LightsInquirySection";
+import { BUILD_ICONS, DOT_PATTERN_STYLE, FIT_ICONS } from "@/components/fyrirokumannin/icons";
+import { buildBand, fitBand } from "@/lib/fyrirokumannin";
 
 // docs/scrape/fyrirokumannin.json — same <title>/<meta description> as
 // every other route on the live site.
@@ -41,10 +48,18 @@ export default function FyrirOkumanninPage() {
         pattern
       />
       <Breadcrumb items={[{ text: "Fyrir ökumanninn" }]} />
+      <JumpNav />
+      {/* In the cab: PeBe seat covers, mats and shoe trays. */}
       <SeatCoversSection />
+      <IconBand heading={fitBand.heading} items={fitBand.items} icons={FIT_ICONS} />
       <FloorMatsSection />
       <ShoeTraySection />
-      <LightingSection />
+      {/* On the machine: MittX and Entrax light bars. */}
+      <LightsBanner />
+      <BarGuide />
+      <IconBand heading={buildBand.heading} items={buildBand.items} icons={BUILD_ICONS} style={DOT_PATTERN_STYLE} />
+      <LightMakersSection />
+      <LightsInquirySection />
       <ContactCta />
     </main>
   );
