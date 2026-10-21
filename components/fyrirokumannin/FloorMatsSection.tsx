@@ -1,81 +1,68 @@
+import Link from "next/link";
 import { Container } from "@/components/Container";
-import { Carousel } from "@/components/Carousel";
-import { BulletList } from "@/components/BulletList";
-import { DotDivider } from "@/components/DotDivider";
-import { Reveal } from "@/components/motion/Reveal";
-import type { Img } from "@/lib/types";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { contactHref, floorMats } from "@/lib/fyrirokumannin";
+import { Gallery } from "./Gallery";
+import { VEHICLE_ICONS } from "./icons";
 
-// docs/scrape/fyrirokumannin.json blocks 45-75: a second photo carousel
-// (5 unique photos, each repeated 4x — 5 dots in docs/reference/
-// fyrirokumannin.desktop.jpg's pagination) on the left, heading/copy/list
-// on the right. docs/reference/fyrirokumannin.mobile.jpg stacks these in
-// the opposite order from the DOM's visual desktop side (text above,
-// carousel below), unlike SeatCoversSection where DOM order already
-// matches both breakpoints — so the carousel is placed second in markup
-// (matching the JSON's own block order) and pulled to the left column
-// only at the md breakpoint via `md:order-first`.
-const CAROUSEL_IMAGES: Img[] = [
-  { src: "/images/fyrirokumannin/32-b915af96.png", alt: "", width: 6000, height: 4000 },
-  { src: "/images/fyrirokumannin/33-ae952cb3.png", alt: "", width: 4000, height: 6000 },
-  { src: "/images/fyrirokumannin/34-5dae7337.png", alt: "", width: 4000, height: 6000 },
-  { src: "/images/fyrirokumannin/35-b9bddba2.png", alt: "", width: 4000, height: 6000 },
-  { src: "/images/fyrirokumannin/36-c679b572.png", alt: "", width: 4000, height: 6000 },
-];
-
-const PREV_ARROW: Img = { src: "/images/smurkerfi/35-8ea812bc.svg", alt: "Back Arrow", width: 40, height: 40 };
-const NEXT_ARROW: Img = { src: "/images/smurkerfi/36-192ac70b.svg", alt: "Next Arrow", width: 40, height: 40 };
-
-// block 73 "Dráttarvélar" has no `list` annotation in the scrape, but
-// docs/scrape/formatting.json's raw `lists` array confirms it as the 4th
-// item of this same list, and docs/reference/fyrirokumannin.desktop.jpg
-// shows it bulleted alongside the other three.
-const ITEMS = ["Vinnubíla", "Vörubíla", "Vinnuvélar", "Dráttarvélar"];
-
+/**
+ * Floor mats: the mat outlines in a gallery (shown whole, not cropped),
+ * then the four vehicle types as tiles and the single price in a dark
+ * panel. Gallery left on desktop, below the copy on phones. The tiles stack
+ * icon over label so "Dráttarvélar" fits even in the narrow tablet column.
+ */
 export function FloorMatsSection() {
   return (
-    <section className="bg-white">
-      <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+    <section id="golfmottur" className="scroll-mt-6 bg-[#f0f4fa] py-16 md:py-24">
+      <Container className="grid items-start gap-10 md:grid-cols-[1.05fr_1fr] md:gap-16">
         <div>
-          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
-            Gólfmottur
+          <Reveal as="p" className="font-ui text-[11px] font-semibold tracking-[.12em] text-brand-dark uppercase md:text-xs">
+            {floorMats.eyebrow}
           </Reveal>
-          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
-            Slitsterkar gólfmottur sem þola mikla notkun. Sérsniðið að gólfinu í hverju tæki og
-            renna þannig ekki til líkt og alhliða gólfmottur eiga til að gera.
+          <Reveal
+            as="h2"
+            delay={0.05}
+            className="mt-3 text-[32px] leading-[1.1] font-semibold text-[#171717] md:text-[50px] md:leading-[1.06]"
+          >
+            {floorMats.heading}
           </Reveal>
-          <div className="hidden md:block">
-            <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
-            <BulletList items={ITEMS} className="mt-3" />
-            <p className="mt-4 text-sm font-semibold text-neutral-900">21.700kr m/vsk.</p>
-          </div>
-          {/* docs/scrape/mobile-only.json's /fyrirokumannin entry: at phone
-              widths the live site collapses both this section's and
-              SeatCoversSection's per-vehicle "Fyrir" lists into one
-              condensed line — verbatim text from that scrape. The live
-              phone layout also showed the price as "16.800+vsk kr.", an
-              outdated figure that did not even agree with the desktop one
-              (16.800 + 24 % VAT is 20.832, not 21.700). Einar confirmed on
-              2026-09-20 that the price is 21.700 kr with VAT, so both
-              layouts now show the same line. */}
-          <div className="md:hidden">
-            <p className="mt-6 text-sm font-semibold text-neutral-900">
-              Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
-            </p>
-            <p className="mt-4 text-sm font-semibold text-neutral-900">21.700kr m/vsk.</p>
+          <Reveal as="p" delay={0.1} className="mt-5 max-w-[580px] text-base leading-[1.65] text-[#444444] md:text-[17px]">
+            {floorMats.text}
+          </Reveal>
+
+          <p className="mt-8 font-ui text-sm font-semibold text-[#171717]">{floorMats.fitsLabel}</p>
+          <Stagger as="ul" className="mt-3 grid grid-cols-2 gap-3">
+            {floorMats.fits.map((fit) => {
+              const Icon = VEHICLE_ICONS[fit.icon];
+              return (
+                <StaggerItem as="li" key={fit.text} className="flex min-w-0 flex-col items-start gap-3 rounded-[15px] bg-white p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f0f4fa] text-brand-dark">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <span className="font-ui text-[15px] font-semibold text-[#171717] md:text-base">{fit.text}</span>
+                </StaggerItem>
+              );
+            })}
+          </Stagger>
+
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-5 rounded-[20px] bg-brand-dark px-6 py-5 text-white md:px-7 md:py-6">
+            <div>
+              <p className="font-ui text-[11px] font-semibold tracking-[.12em] text-white/60 uppercase">{floorMats.priceLabel}</p>
+              <p className="mt-1 font-stat text-[26px] leading-none font-bold whitespace-nowrap lg:text-[34px]">{floorMats.price}</p>
+            </div>
+            <Link
+              href={contactHref}
+              className="inline-flex w-fit items-center justify-center rounded-md border border-white px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-brand-dark"
+            >
+              {floorMats.cta}
+            </Link>
           </div>
         </div>
+
         <div className="md:order-first">
-          <Carousel
-            images={CAROUSEL_IMAGES}
-            prevArrow={PREV_ARROW}
-            nextArrow={NEXT_ARROW}
-            label="Gólfmottur"
-          />
+          <Gallery images={floorMats.images} label={floorMats.heading} fit="contain" />
         </div>
       </Container>
-
-      {/* docs/scrape/fyrirokumannin.json block 75. */}
-      <DotDivider className="mt-[60px]" />
     </section>
   );
 }
