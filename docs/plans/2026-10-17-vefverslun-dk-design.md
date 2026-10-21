@@ -3,14 +3,19 @@
 Status: draft written 2026-10-17 from sensible defaults (Einar skipped the
 brainstorm questions). Everything marked **[call]** is Claude's decision and
 can be overturned; everything marked **[Hlynur]** needs the client. Nothing
-is implemented yet. Next step after approval: an implementation plan
-(superpowers:writing-plans) for Phase 0 and 1.
+is implemented yet. Next step: an implementation plan
+(superpowers:writing-plans) covering the whole build (§14).
 
 Agreed with Einar on 2026-10-17, after the clickable prototype
 (`docs/plans/2026-10-17-vefverslun-prototype.html`, open it straight in a
-browser): the page set and flow, Flytjandi home delivery priced from postal
-code and weight (§8), and a left category tree on store pages (§6), with
-details to be tuned during implementation. Still open: §16.
+browser): the page set and flow, and a left category tree on store pages
+(§6), with details to be tuned during implementation.
+
+Changed by Einar on 2026-10-21: no shipping-price calculation. Customers
+pick up in Móhella, and orders from outside the capital area are sent with
+Flytjandi (§8). The whole store is built first; Straumur is asked to open a
+payment gateway for Skralli only when the build is ready (§14). Still open:
+§16.
 
 Grounding: the dk Plus REST API was mapped from its Swagger spec and probed
 live against DK's public demo company; Straumur's hosted-checkout docs were
@@ -43,7 +48,7 @@ Goals
 
 Non-goals (this design)
 - No CMS, no admin UI, no product database of our own.
-- No B2B pricing, invoices or customer login (Phase 3 sketch only).
+- No B2B pricing, invoices or customer login ("Mínar síður" sketch only).
 - No shipping-rate integration (flat options), no multi-currency.
 - No Shopify/Stripe. Stripe does not onboard Icelandic merchants and
   Shopify would replace DK as the catalog. The Vercel Marketplace lists only
@@ -63,7 +68,8 @@ Anti-goals (failure even if it "works")
 - **DK_API_KEY on Vercel is a placeholder** (an 11-character `[WORD]`
   string; DK answers "Token is not valid"). A real token (GUID) must be
   created in dk Plus (Vefþjónusta → aðgangslyklar) and set for Production,
-  Preview and `.env.local`. Phase 0 blocks on this.
+  Preview and `.env.local` before launch. Development uses DK's demo
+  company meanwhile (§14).
 - dk Plus API: `https://api.dkplus.is`, header `Authorization: bearer <token>`,
   JSON, 20–170 ms latency. Product flag `ShowItemInWebShop`, retail price
   `UnitPrice1WithTax`, HTML descriptions `ExtraDesc1/2`, per-warehouse
@@ -124,7 +130,6 @@ type StoreProduct = {
   stock: { qty: number; state: "in_stock" | "low" | "backorder" | "sold_out"; deliveryDays?: number };
   images: { id: number; alt: string; hash: string }[]; // DK attachments with ShowOnWeb
   unit?: string;               // UnitCode
-  weightKg?: number;           // NetWeight, for later shipping tiers
   modified: string;            // RecordModified
 };
 
@@ -141,7 +146,7 @@ type Checkout = {                                             // Redis: checkout
   id: string;                  // ULID; also Straumur `reference`
   status: "pending" | "paid" | "fulfilled" | "failed" | "expired";
   lines: { itemCode: string; name: string; qty: number; unitPriceIsk: number; vatPercent: number }[];
-  delivery: { method: "pickup" | "post"; priceIsk: number; address?: Address };
+  delivery: { method: "pickup" | "flytjandi"; address?: Address };
   customer: { name: string; email: string; phone: string; kennitala?: string; note?: string };
   totalIsk: number;
   straumur?: { checkoutReference: string; payfacReference?: string };
@@ -212,7 +217,7 @@ vefverslun" link) placed above `ContactCta`. The header gains a cart icon
 with a count badge next to the search button; nav and footer gain
 "Vefverslun". The home grid is untouched.
 
-Descriptions **[call]**: Phase 1 renders `ExtraDesc1/2` as plain-text
+Descriptions **[call]**: at launch the page renders `ExtraDesc1/2` as plain-text
 paragraphs (tags stripped, no new dependency). If Hlynur wants bold/lists,
 adopt a pinned, well-established sanitiser (e.g. `sanitize-html`, low risk)
 with a small allowlist. Never `dangerouslySetInnerHTML` raw DK HTML.
@@ -234,7 +239,7 @@ and the product is listed in the build-time warning.
   catalog (`/Product/page/{n}/200?onweb=true&inactive=false&include=…`)
   is cached under `dk-products`; category pages and the strip derive from
   it in memory. A product page fetches its own item under `dk-product:<code>`.
-- Push: Phase 1 registers a DK webhook (`POST /admin/webhook`, options
+- Push: the build registers a DK webhook (`POST /admin/webhook`, options
   `Product` + `ProductTransactions` + `SalesOrder`, `AuthorizationScheme:
   Bearer`, `AuthorizationValue: DK_WEBHOOK_SECRET`, `FailureEmail`). Our
   handler checks the bearer, reads the ItemCodes in `Objects[]`, calls
@@ -259,39 +264,23 @@ used to match an existing DK customer), delivery choice (see "Delivery"
 below), note, checkbox accepting `/verslun/skilmalar`. Honeypot and the
 same validation style as the contact form (`lib/email/contact.ts`).
 
-Delivery (Einar, 2026-10-17: home delivery goes with Flytjandi/Eimskip,
-not Pósturinn, and the price should be computed from the address):
-- Options: "Sækja í Móhellu 3F, Hafnarfirði — 0 kr."; "Heimkeyrsla með
-  Flytjanda (Eimskip)" priced from postal code + weight; and **[call]**
-  "Sækja á afgreiðslustað Flytjanda" (cheaper, no last-mile), same
-  calculation without the home-delivery surcharge.
-- Price is computed the moment a valid postal code is entered (server
-  action `quoteShipping(zip, lines)`), shown next to the option and added
-  to the total before the Straumur redirect. Weight = Σ `NetWeight` × qty
-  from DK, volume = Σ `UnitVolume` × qty, chargeable weight = max(weight,
-  volume × 350 kg/m³) as Eimskip bills. **[Hlynur]** fills NetWeight (and
-  UnitVolume for bulky items) in DK; a product with no weight falls back to
-  a per-category default and is listed by the probe script.
-- Phase 2 implementation **[call]**: a zone table in code
-  (`lib/store/shipping.ts`): postal code → Flytjandi zone, zone × weight
-  band → price from Skralli's Eimskip contract rates, plus the surcharges
-  Eimskip itemises (olíugjald, afgreiðslugjald, EFS). Eimskip's public
-  calculator (eimskip.is/thjonusta/akstur-innanlands/reiknivel) is only a
-  website form (`/webapi/domestic-calculator/step1`, anti-forgery token,
-  HTML response, list prices, "not a formal quote") and is not an API we
-  may build on. Eimskip does issue API keys to business customers (their
-  WooCommerce plugin configures "EIMSKIP > API KEYS"); if Eimskip confirms a
-  quote endpoint for contract customers, the zone table is replaced by a
-  live call behind the same `quoteShipping` interface, cached per
-  (zip, weight band) for a day. **[Einar]** ask sala.innanlands@eimskip.is.
-- Rates change twice a year (Eimskip announced +2.8 % on 2026-07-01), so
-  the table carries a `validFrom` and the probe script warns when it is
-  older than six months.
-- The order line sent to DK uses `DK_SHIPPING_ITEMCODE` with the computed
-  price, and `Text2` records zone, weight and the chosen option so Hlynur
-  can book the shipment in myEimskip. Booking the shipment automatically
-  (Eimskip API or Dropp, which covers Flytjandi postal codes) is a Phase 3
-  candidate, not Phase 2.
+Delivery (Einar, 2026-10-21; replaces the 2026-10-17 price-calculation
+idea):
+- Two options, no shipping price is calculated on the site:
+  - "Sækja í Móhellu 3F, Hafnarfirði" — always available.
+  - "Senda út á land með Flytjanda" — offered only when the postal code is
+    outside the capital area. **[call]** capital area = 101–162, 170–172,
+    200–212, 220–225, 270–276, kept as one list in `lib/store/delivery.ts`.
+- **[call]** the freight is paid by the recipient on delivery
+  ("viðtakandi greiðir"), so the order total is goods only and checkout
+  says so next to the option. **[Hlynur]** confirm, or tell us a flat fee
+  to add instead.
+- Address fields (address, postal code, town) appear when shipping is
+  chosen. A capital-area postal code shows a short note that orders there
+  are picked up in Móhella.
+- The DK order gets no shipping line. `Text2` says "Senda með Flytjanda –
+  viðtakandi greiðir" plus the address, so Hlynur books the shipment in
+  myEimskip as today.
 
 Server action `startCheckout(form, lines)`:
 1. Live-quote lines from DK (uncached). If DK is unreachable → return
@@ -336,8 +325,7 @@ failure):
    checkout.id`, `CustomerOrderNumber: payfacReference`, `Text1: "Vefverslun
    — greitt með korti (Straumur <payfacReference>)"`, `Text2: delivery +
    note`, `Warehouse`, `Lines[{ItemCode, Quantity, UnitPriceWithTax, Text}]`
-   from the Checkout snapshot plus one delivery line `DK_SHIPPING_ITEMCODE`
-   when posted. Payment settlement fields (`SettledType`, `SettledAmount`)
+   from the Checkout snapshot. Payment settlement fields (`SettledType`, `SettledAmount`)
    are set if the live DK accepts them; otherwise the paid status lives in
    `Text1` and Hlynur settles in DK. **[Hlynur/DK support]** confirm how a
    card-paid web order should be booked in their DK setup.
@@ -368,7 +356,6 @@ at step 4 even if DK failed (we have their money; they get their receipt).
 | Duplicate webhook | `payfacReference` SETNX. |
 | Amount mismatch (tampered return, partial) | Logged, Checkout marked `failed`, alert email; not fulfilled. |
 | Price changed between cart and checkout | Checkout always re-quotes from DK and shows the diff before redirecting. |
-| Postal code outside Flytjandi coverage | Home delivery option hidden; pickup and Flytjandi depot remain. |
 | Sold out between checkout and payment | Order is still created (DK allows negative stock or back-order); confirmation says "sérpöntun" for that line. Over-selling is accepted and handled by Hlynur, matching how DK's own webshop module behaves **[call]**. |
 | Redis unavailable | `startCheckout` fails closed; webhook returns 500 so Straumur retries. |
 
@@ -393,7 +380,7 @@ at step 4 even if DK failed (we have their money; they get their receipt).
 - Structured logs with `checkoutId` on every step; Vercel log drain not
   required initially.
 - Alert emails (above) are the only alerting.
-- `npm run dk:probe` (Phase 0 script) prints catalog counts, unmapped
+- `npm run dk:probe` (step 1 script) prints catalog counts, unmapped
   groups, products without images, and a sample product, so data problems
   are visible before they reach the site.
 - `vercel.json`/`vercel.ts` crons: `dk-retry` every 10 min, `reconcile`
@@ -408,42 +395,53 @@ at step 4 even if DK failed (we have their money; they get their receipt).
   fixtures from the demo company.
 - Playwright: cart → checkout → (mock Straumur redirect) → return page, and
   the webhook endpoint with a signed fixture.
-- Manual acceptance per phase (below) against Straumur staging, then one
+- Manual acceptance per build step (§14) against Straumur staging, then one
   real low-value purchase on live before announcing.
 
-## 14. Phases
+## 14. Build order
 
-Phase 0 — Grunnur (no visible change)
-- Real DK token on Vercel (Production + Preview) and in `.env.local`.
-- `lib/dk/client.ts`, types, `scripts/dk-probe.mjs`.
-- **[Hlynur]**: flag products `ShowItemInWebShop`, check prices/stock,
-  upload product photos as attachments with ShowOnWeb, confirm the DK
-  group → category map, create "vefur" customer group/salesperson and a
-  delivery item, open a Straumur test agreement and share staging keys.
-- Done: the probe lists Skralli's real web products with price, stock and
-  images, and the mapping covers every flagged product.
+Einar, 2026-10-21: build everything first, then ask Straumur to open a
+payment gateway for Skralli. So there is one launch, with cart and card
+payment, not a catalog-only release first.
 
-Phase 1 — Vörulisti
-- `/verslun`, category and product pages, `StoreProductsStrip` on mapped
-  þjónustur, nav/footer links, search rows, sitemap, JSON-LD, image proxy,
-  ISR + DK webhook revalidation, maintenance state.
-- Product CTA is "Senda fyrirspurn" (prefills the existing contact form
-  with the product) until Phase 2 ships, so the catalog is useful on day
-  one and Hlynur can review data quality on the live site.
-- Done: live on skralli.is; a price/stock change in DK is visible within a
-  minute via webhook and within an hour without.
+Step 1 — Grunnur
+- `lib/dk/client.ts`, types, mapping, `scripts/dk-probe.mjs`.
+- Develop against DK's public demo company (the demo key printed in DK's
+  own Swagger description) so the build is not blocked on Skralli's token.
+  The real `DK_API_KEY` replaces it before launch.
 
-Phase 2 — Karfa og greiðsla
-- Upstash Redis integration (official Marketplace, low risk), cart, cart
-  page, checkout form, `startCheckout`, Straumur hosted checkout, webhook,
-  return page, `fulfil`, emails, retry cron, reconcile cron, terms page,
-  personuvernd paragraph, analytics events (`add_to_cart`,
-  `begin_checkout`, `purchase`) through the existing consent gate.
-- Done: a real card purchase on live produces a DK sales order with the
-  right customer, both emails arrive, and killing DK mid-test produces the
-  alert email and a successful retry.
+Step 2 — Vörulisti
+- `/verslun`, category pages with the category tree, product pages,
+  `StoreProductsStrip` on mapped þjónustur, nav/footer links, cart icon,
+  search rows, sitemap, JSON-LD, image proxy, ISR + DK webhook
+  revalidation, maintenance state.
 
-Phase 3 — Mínar síður (sketch, separate design)
+Step 3 — Karfa og pöntun
+- Upstash Redis via the official Vercel Marketplace integration (low
+  risk), cart, cart page with live DK quote, checkout form with the two
+  delivery options, `startCheckout`, return page, `fulfil` (DK customer +
+  sales order), Resend emails, retry and reconcile crons, terms page,
+  personuvernd paragraph, analytics events through the consent gate.
+
+Step 4 — Greiðsla (Straumur)
+- Straumur client, hosted-checkout redirect, signed webhook, status
+  fallback, all behind `lib/payments/straumur.ts`.
+- Until Straumur opens the gateway, a local mock implements the documented
+  contract (create checkout → redirect → signed Authorization webhook), and
+  the store runs end to end on Preview against it. `STORE_ENABLED=false` on
+  Production keeps `/verslun` hidden and out of the sitemap until launch.
+
+Launch checklist
+- Real DK token on Production and Preview; Hlynur has flagged products,
+  added photos, created the "vefur" customer group and confirmed the
+  category map.
+- Straumur has opened the payment gateway for Skralli: staging keys first
+  for one full test on Preview, then live API key, terminal identifier,
+  HMAC key and webhook key.
+- One real low-value purchase on skralli.is lands in DK with both emails
+  sent; then `STORE_ENABLED=true`.
+
+Later — Mínar síður (sketch, separate design)
 - Magic-link login by email (Resend), matched to a DK customer by
   email/kennitala; order and invoice history from
   `/Customer/{n}/order|invoice`; saved address; B2B customers see their
@@ -458,27 +456,25 @@ Phase 3 — Mínar síður (sketch, separate design)
 3. Catalog freshness: 1 h ISR floor + DK webhooks; live reads only at cart
    quote and checkout.
 4. Stock shown as four states, never as numbers; over-selling accepted.
-5. Delivery: pickup free, or Flytjandi (Eimskip) priced from postal code
-   and DK weight via a contract-rate zone table; live Eimskip quote if
-   they expose one.
-6. Descriptions as plain text in Phase 1.
+5. Delivery: pickup in Móhella, or Flytjandi outside the capital area with
+   freight paid by the recipient; no shipping price on the site.
+6. Descriptions as plain text at launch.
 7. Customer matched by kennitala, then email; else created in group "vefur".
 8. Our own Resend emails, not DK's order email.
-9. Phase 1 ships without a cart, with an inquiry CTA.
+9. One launch with cart and payment, gated by `STORE_ENABLED`; built
+   against DK's demo company and a Straumur mock until the real keys exist.
 10. Design doc location `docs/plans/` as requested (repo convention so far
     is `docs/superpowers/specs/`; move if preferred).
 
 ## 16. Open items for Einar / Hlynur
 
-- Real DK token (blocks Phase 0).
-- Which DK groups map to which store categories; delivery item code.
-- Skralli's Eimskip contract rate card (zones × weight bands) and whether
-  Eimskip offers a price-quote API to contract customers.
-- Product weights (NetWeight) in DK for everything sold online.
+- Real DK token (needed before launch, not before building).
+- Which DK groups map to which store categories.
+- Whether the recipient pays Flytjandi freight, or a flat fee is added.
 - How a card-paid web order should be booked in DK (settlement fields vs.
   text), and whether DK assigns customer numbers on create.
-- Straumur agreement: terminal identifier, whether Apple Pay / Icelandic
-  wallets are enabled on the contract.
+- Straumur: open a payment gateway for Skralli once the build is ready,
+  with Kode as technical contact; Apple Pay / Google Pay on the contract.
 - Terms/returns text for `/verslun/skilmalar`.
 
 ## Appendix A — DK endpoints used
@@ -512,7 +508,7 @@ TotalQuantityInWarehouse, Warehouses, Attachments, RecordModified.
 | Start | `POST {host}/api/v1/hostedcheckout` (`X-API-Key`) |
 | Status | `GET {host}/api/v1/hostedcheckout/status/{checkoutReference}` → New/Completed/Expired |
 | Events in | Authorization webhook → `/api/straumur/webhook` (bearer + `hmacSignature`, idempotent on `payfacReference`) |
-| Later | `/refund`, `/reverse` for returns (Phase 2 ops, done from Straumur's portal initially) |
+| Later | `/refund`, `/reverse` for returns (done from Straumur's portal initially) |
 
 Hosts: staging `https://checkout-api.staging.straumur.is`, live
 `https://greidslugatt.straumur.is`. Docs: https://docs.straumur.is

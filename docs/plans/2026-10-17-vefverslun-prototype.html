@@ -259,7 +259,7 @@
             <div class="qty"><button data-q="-1">−</button><span id="pq">1</span><button data-q="1">+</button></div>
             <button class="btn p" style="flex:1" id="addMain">Setja í körfu</button>
           </div>
-          <p class="fine">Sækja í Móhellu 3F án kostnaðar · Heimkeyrsla með Flytjanda, verð eftir póstnúmeri · 14 daga skilaréttur</p>
+          <p class="fine">Sækja í Móhellu 3F · Sent með Flytjanda út á land · 14 daga skilaréttur</p>
         </div>
         <div class="desc">
           <h3 style="margin:28px 0 6px;font:600 20px Inter,sans-serif">Um vöruna</h3>
@@ -313,9 +313,8 @@
         <div class="summary" style="margin-bottom:20px">
           <h3 style="margin:0 0 16px;font:600 18px Inter,sans-serif">Afhending</h3>
           <label class="radio on" id="r1"><input type="radio" name="d" checked><div><b>Sækja í Móhellu 3F, Hafnarfirði – 0 kr.</b><small>Tilbúið til afhendingar næsta virka dag. Opið mán–fös 8–16.</small></div></label>
-          <label class="radio" id="r2"><input type="radio" name="d"><div><b>Heimkeyrsla með Flytjanda (Eimskip) – <span id="shipHome">sláðu inn póstnúmer</span></b><small>Verð reiknast af póstnúmeri og þyngd pöntunarinnar (<span id="shipKg">4,2</span> kg). 1–3 virkir dagar.</small></div></label>
-          <label class="radio" id="r3"><input type="radio" name="d"><div><b>Sækja á afgreiðslustað Flytjanda – <span id="shipDepot">sláðu inn póstnúmer</span></b><small>Næsti afgreiðslustaður: <span id="depotName">—</span>. Ódýrara en heimkeyrsla.</small></div></label>
-          <div id="addr" style="display:none;margin-top:12px"><div class="two"><div class="field"><label>Heimilisfang</label><input placeholder="Dæmigata 12"></div><div class="field"><label>Póstnúmer</label><input id="zip" placeholder="600" maxlength="3" inputmode="numeric" value="600"></div></div><p class="fine" id="zipNote" style="margin:0">Sendingarkostnaður: byggður á gjaldskrá Flytjanda fyrir svæði og þyngd. Dæmi: 10 kg frá Hafnarfirði til Akureyrar kostar 12.326 kr. á lista­verði Eimskips (okt. 2026) – samningsverð Skralla er lægra.</p></div>
+          <label class="radio" id="r2"><input type="radio" name="d"><div><b>Senda út á land með Flytjanda</b><small>Fyrir pantanir utan höfuðborgarsvæðisins. Sendingarkostnaður greiðist af viðtakanda við afhendingu.</small></div></label>
+          <div id="addr" style="display:none;margin-top:12px"><div class="two"><div class="field"><label>Heimilisfang</label><input placeholder="Dæmigata 12"></div><div class="field"><label>Póstnúmer</label><input id="zip" placeholder="600" maxlength="3" inputmode="numeric" value="600"></div></div><p class="fine" id="zipNote" style="margin:0"></p></div>
           <div class="field" style="margin-top:8px"><label>Athugasemd (valfrjálst)</label><textarea rows="2" placeholder="T.d. tegund dráttarvélar"></textarea></div>
         </div>
       </div>
@@ -439,12 +438,12 @@
 const IMG={"motta.png":"../../public/images/fyrirokumannin/32-b915af96.png","aklaedi.jpg":"../../public/images/fyrirokumannin/02-a5d3e9bb.jpeg","skobakki.jpg":"../../public/images/fyrirokumannin/55-d2881ae9.jpg","stroffa.jpg":"../../public/images/hifi-festibunadur__stroffur/02-07f1d253.jpg","aukabunadur.jpg":"../../public/images/hifi-festibunadur__aukabunadur/02-6d00818a.jpg","hifikedja.jpg":"../../public/images/hifi-festibunadur/03-9bc801b8.jpg","vetur.jpg":"../../public/images/thjonusta/08-e6009210.jpeg","sia.png":"../../public/images/home/21-212e4fb5.png","smur.jpg":"../../public/images/home/22-d2d92984.jpeg","okumadur.jpg":"../../public/images/home/26-94902b25.jpeg","hifi.png":"../../public/images/home/25-cf51054e.png"};
 function toggleSelect(el){el.classList.toggle('selected');}
 const P = [
-  {c:"PB-GM-200", n:"Pebe gólfmottur í dráttarvél", s:"Pebe · John Deere 6R", p:16800, o:19900, st:"in", kg:4.2,  img:"motta.png"},
-  {c:"PB-SA-110", n:"Pebe sætisáklæði, Grammer", s:"Pebe · slitsterkt efni", p:24900, st:"low", kg:2.1, img:"aklaedi.jpg"},
-  {c:"SK-BAKKI",  n:"Skóbakki úr gúmmíi", s:"50×35 sm", p:7900, st:"in", kg:1.8, img:"skobakki.jpg"},
-  {c:"HS-2T-2M",  n:"Hringstroffa 2 t / 2 m", s:"Lilleseth · CE-vottuð", p:6450, st:"in", kg:0.9, img:"stroffa.jpg"},
-  {c:"HK-G8-8",   n:"Hífikeðja G8 8 mm, 1 m", s:"Lilleseth · WLL 2 t", p:12300, st:"back", kg:14.5, img:"hifikedja.jpg"},
-  {c:"KR-OL-10",  n:"Krókur með öryggislás 10 mm", s:"Lilleseth", p:3950, st:"out", kg:0.6, img:"aukabunadur.jpg"},
+  {c:"PB-GM-200", n:"Pebe gólfmottur í dráttarvél", s:"Pebe · John Deere 6R", p:16800, o:19900, st:"in",  img:"motta.png"},
+  {c:"PB-SA-110", n:"Pebe sætisáklæði, Grammer", s:"Pebe · slitsterkt efni", p:24900, st:"low", img:"aklaedi.jpg"},
+  {c:"SK-BAKKI",  n:"Skóbakki úr gúmmíi", s:"50×35 sm", p:7900, st:"in", img:"skobakki.jpg"},
+  {c:"HS-2T-2M",  n:"Hringstroffa 2 t / 2 m", s:"Lilleseth · CE-vottuð", p:6450, st:"in", img:"stroffa.jpg"},
+  {c:"HK-G8-8",   n:"Hífikeðja G8 8 mm, 1 m", s:"Lilleseth · WLL 2 t", p:12300, st:"back", img:"hifikedja.jpg"},
+  {c:"KR-OL-10",  n:"Krókur með öryggislás 10 mm", s:"Lilleseth", p:3950, st:"out", img:"aukabunadur.jpg"},
 ];
 const ST = {in:["in","Á lager"], low:["low","Fá eintök eftir"], back:["back","Sérpöntun · ~10 dagar"], out:["out","Uppselt"]};
 const kr = n => n.toLocaleString("is-IS").replace(/,/g,".") + " kr.";
@@ -453,9 +452,6 @@ function save(){ try { localStorage.setItem("proto-cart",JSON.stringify(cart)); 
 function card(x){const [cls,txt]=ST[x.st];return `<div class="card"><a href="#vara" class="img" style="display:block;background-image:url(${IMG[x.img]})"></a><div class="body"><h5><a href="#vara">${x.n}</a></h5><p class="blurb">${x.s}</p><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:auto"><span class="price">${kr(x.p)}${x.o?`<s>${kr(x.o)}</s>`:""}</span><span class="badge ${cls}">${txt}</span></div><button class="btn ${x.st==="out"?"":"p"} sm" ${x.st==="out"?"disabled":""} data-add="${x.c}">${x.st==="out"?"Láta mig vita":"Setja í körfu"}</button></div></div>`;}
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1400);}
 function add(c,q=1){cart[c]=(cart[c]||0)+q;save();toast("Sett í körfu");}
-const ZONES=[[/^(1\d\d|2[0-7]\d)$/,"Höfuðborgarsvæðið",0,1],[/^(2[89]\d|3\d\d|8\d\d)$/,"Suður- og Vesturland",1,2],[/^(4\d\d|5\d\d)$/,"Vestfirðir / Norðvesturland",2,3],[/^(6\d\d|7\d\d)$/,"Norður- og Austurland",3,3]];
-const DEPOTS={0:"Klettagarðar 15, Reykjavík",1:"Selfoss / Borgarnes",2:"Ísafjörður / Blönduós",3:"Akureyri / Reyðarfjörður"};
-function shipQuote(zip,kg){const z=ZONES.find(z=>z[0].test(zip));if(!z)return null;const band=kg<=5?0:kg<=15?1:kg<=30?2:3;const base=[[1900,2900,4200,6900],[3900,6400,9800,14900],[4900,8200,12400,18900],[5400,9400,14600,22900]][z[2]][band];const home=[1500,2900,3900,3900][z[2]];return {zone:z[1],depot:DEPOTS[z[2]],depotPrice:base,homePrice:base+home};}
 function render(){
   const n=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cartN").textContent=n;
   document.getElementById("newGrid").innerHTML=P.slice(0,4).map(card).join("");
@@ -469,14 +465,13 @@ function render(){
   document.getElementById("sumVat").textContent=kr(Math.round(sum-sum/1.24));
   document.getElementById("sumTotal").textContent=kr(sum);
   document.getElementById("toCheckout").disabled=!lines.length;
-  const kg=lines.reduce((a,l)=>a+(l.kg||1.5)*l.q,0);document.getElementById("shipKg").textContent=kg.toLocaleString("is-IS");
-  const zip=(document.getElementById("zip").value||"").trim();const q=/^\d{3}$/.test(zip)?shipQuote(zip,kg):null;
-  document.getElementById("shipHome").textContent=q?kr(q.homePrice):"sláðu inn póstnúmer";document.getElementById("shipDepot").textContent=q?kr(q.depotPrice):"sláðu inn póstnúmer";document.getElementById("depotName").textContent=q?q.depot+" ("+q.zone+")":"—";
-  const ship=document.getElementById("r2").classList.contains("on")?(q?q.homePrice:0):document.getElementById("r3").classList.contains("on")?(q?q.depotPrice:0):0;
-  const rows=lines.map(l=>`<div class="r"><span>${l.n} × ${l.q}</span><span>${kr(l.p*l.q)}</span></div>`).join("");
-  document.getElementById("coLines").innerHTML=rows;document.getElementById("okLines").innerHTML=rows;
-  document.getElementById("coShip").textContent=kr(ship);document.getElementById("okShip").textContent=document.getElementById("r2").classList.contains("on")?"Heimkeyrsla með Flytjanda – "+kr(ship):document.getElementById("r3").classList.contains("on")?"Sótt á afgreiðslustað Flytjanda – "+kr(ship):"Sækja í Móhellu 3F, Hafnarfirði";
-  document.getElementById("coTotal").textContent=kr(sum+ship);document.getElementById("stTotal").textContent=kr(sum+ship);document.getElementById("stShip").textContent=kr(ship);document.getElementById("okTotal").textContent=kr(sum+ship);
+  const zip=(document.getElementById("zip").value||"").trim();
+  const capital=/^(1[0-5]\d|16[0-2]|17[0-2]|20\d|21[0-2]|22[0-5]|27[0-6])$/.test(zip);
+  const shipSel=document.getElementById("r2").classList.contains("on");
+  document.getElementById("zipNote").textContent=!shipSel?"":(!/^\d{3}$/.test(zip)?"Sláðu inn póstnúmer.":capital?"Pantanir á höfuðborgarsvæðinu eru sóttar í Móhellu 3F.":"Við sendum með Flytjanda. Viðtakandi greiðir sendingarkostnað.");
+  const ship=0;
+  document.getElementById("coShip").textContent=shipSel?"Greitt við afhendingu":"0 kr.";document.getElementById("okShip").textContent=shipSel?"Sent með Flytjanda – viðtakandi greiðir sendingu":"Sækja í Móhellu 3F, Hafnarfirði";
+  document.getElementById("coTotal").textContent=kr(sum+ship);document.getElementById("stTotal").textContent=kr(sum+ship);document.getElementById("stShip").textContent=shipSel?"Greitt við afhendingu":"0 kr.";document.getElementById("okTotal").textContent=kr(sum+ship);
 }
 function go(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("on",s.id==="s-"+id));document.querySelectorAll(".proto button").forEach(b=>b.classList.toggle("on",b.dataset.go===id));window.scrollTo(0,0);
   if(id==="pontun"){document.getElementById("confirming").style.display="block";document.getElementById("confirmed").style.display="none";setTimeout(()=>{document.getElementById("confirming").style.display="none";document.getElementById("confirmed").style.display="block";},1800);}
@@ -490,7 +485,7 @@ document.addEventListener("click",e=>{
   const dec=e.target.closest("[data-dec]");if(dec){cart[dec.dataset.dec]--;if(cart[dec.dataset.dec]<=0)delete cart[dec.dataset.dec];save();return;}
   const q=e.target.closest("[data-q]");if(q){const el=document.getElementById("pq");el.textContent=Math.max(1,Math.min(99,+el.textContent+ +q.dataset.q));return;}
   if(e.target.id==="addMain"){add("PB-GM-200",+document.getElementById("pq").textContent);return;}
-  const r=e.target.closest(".radio");if(r&&r.querySelector("input[name=d]")){document.querySelectorAll(".radio").forEach(x=>x.classList.remove("on"));r.classList.add("on");document.getElementById("addr").style.display=r.id==="r1"?"none":"block";render();}
+  const r=e.target.closest(".radio");if(r&&r.querySelector("input[name=d]")){document.querySelectorAll(".radio").forEach(x=>x.classList.remove("on"));r.classList.add("on");document.getElementById("addr").style.display=r.id==="r2"?"block":"none";render();}
 });
 document.addEventListener("input",e=>{if(e.target.id==="zip")render();});
 render();
