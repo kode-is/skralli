@@ -4,10 +4,12 @@ type YouTubeEmbedProps = {
   /** Extra query string appended to the embed URL, e.g. "v=<id>" or "iv_load_policy=3". */
   params?: string;
   className?: string;
+  /** CSS aspect-ratio of the player; "9 / 16" for videos uploaded upright. */
+  aspect?: string;
 };
 
 /**
- * 16:9 lazy-loaded YouTube player embedded on /siubunadur and
+ * Lazy-loaded YouTube player (16:9 unless `aspect` says otherwise) embedded on /siubunadur and
  * /fyrirokumannin. Neither route's scrape captured a block for its video —
  * the block scraper only walks Framer's own DOM nodes (headings, text,
  * images, links) and an <iframe> falls outside that — so this is a small
@@ -18,14 +20,14 @@ type YouTubeEmbedProps = {
  * SVG (the YouTube facade's own play icon — not reproduced here since the
  * iframe already renders it).
  */
-export function YouTubeEmbed({ videoId, title, params, className }: YouTubeEmbedProps) {
+export function YouTubeEmbed({ videoId, title, params, className, aspect = "16 / 9" }: YouTubeEmbedProps) {
   const src = `https://www.youtube.com/embed/${videoId}${params ? `?${params}` : ""}`;
   return (
     <div
       className={`relative w-full overflow-hidden rounded-2xl bg-neutral-900${
         className ? ` ${className}` : ""
       }`}
-      style={{ aspectRatio: "16 / 9" }}
+      style={{ aspectRatio: aspect }}
     >
       {/* YouTube's own thumbnail, shown behind the iframe while it loads —
           the live site renders the same i.ytimg.com poster as a real <img>

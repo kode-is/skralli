@@ -1,69 +1,81 @@
+import Link from "next/link";
 import { Container } from "@/components/Container";
-import { Carousel } from "@/components/Carousel";
-import { BulletList } from "@/components/BulletList";
-import { Reveal } from "@/components/motion/Reveal";
-import type { Img } from "@/lib/types";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { seatCovers } from "@/lib/fyrirokumannin";
+import { Gallery } from "./Gallery";
+import { VEHICLE_ICONS } from "./icons";
 
-// docs/scrape/fyrirokumannin.json blocks 7-44: heading/copy/price-list on
-// the left, a photo carousel on the right (docs/reference/
-// fyrirokumannin.desktop.jpg — 7 dots in the pagination, matching the 7
-// unique photos below, each repeated 4x in the scrape for the live
-// infinite-scroll carousel).
-const CAROUSEL_IMAGES: Img[] = [
-  { src: "/images/fyrirokumannin/02-a5d3e9bb.jpeg", alt: "", width: 3024, height: 4032 },
-  { src: "/images/fyrirokumannin/03-9926b7eb.jpg", alt: "", width: 3543, height: 5315 },
-  { src: "/images/fyrirokumannin/04-826b8643.jpeg", alt: "", width: 2736, height: 3648 },
-  { src: "/images/fyrirokumannin/05-aed3f052.jpeg", alt: "", width: 2653, height: 3441 },
-  { src: "/images/fyrirokumannin/06-33611083.jpeg", alt: "", width: 3024, height: 4032 },
-  { src: "/images/fyrirokumannin/07-cb83398b.jpeg", alt: "", width: 3024, height: 4032 },
-  { src: "/images/fyrirokumannin/08-1d1531ef.jpeg", alt: "", width: 3024, height: 4032 },
-];
+const PRIMARY_BUTTON =
+  "inline-flex w-fit items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid";
+const SECONDARY_BUTTON =
+  "inline-flex w-fit items-center justify-center gap-1.5 rounded-md border border-[#cfd8e6] px-6 py-3 text-sm font-semibold text-[#171717] transition-colors duration-200 hover:border-brand-dark hover:text-brand-dark";
 
-const PREV_ARROW: Img = { src: "/images/smurkerfi/35-8ea812bc.svg", alt: "Back Arrow", width: 40, height: 40 };
-const NEXT_ARROW: Img = { src: "/images/smurkerfi/36-192ac70b.svg", alt: "Next Arrow", width: 40, height: 40 };
-
-const PRICE_LIST = [
-  "Vinnubíla - frá 70.629kr m/vsk.",
-  "Vörubíla - 46.872kr m/vsk.",
-  "Vinnuvélar - 43.400kr m/vsk.",
-  "Dráttarvélar - 43.400kr m/vsk.",
-];
-
+/**
+ * Seat covers open the page the way Lilleseth opens /vetrarbunadur: copy and
+ * two CTAs beside the photos, then the four vehicle groups as tiles, here
+ * carrying the prices.
+ *
+ * Each tile's text is one inline run, "Vinnubíla - frá 70.629kr m/vsk.", so
+ * it stays the live line for npm run verify: the vehicle and price are
+ * inline-blocks that wrap onto two visual lines, and the " - " between them
+ * is kept in the text but drawn at zero size.
+ */
 export function SeatCoversSection() {
   return (
-    <section className="bg-white py-14 md:py-16">
-      <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-        <div>
-          <Reveal as="h2" className="text-3xl font-semibold text-neutral-900 md:text-4xl">
-            Sætisáklæði
-          </Reveal>
-          <Reveal as="p" delay={0.1} className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
-            Vönduð sætisáklæði, sérsniðin fyrir hvern framleiðanda. Stílhrein og nákvæm hönnun sem
-            sér til þess að efnið færist ekki til þegar er verið að fara oft inn í og úr
-            ökutækinu. Áklæðin gera ráð fyrir því hvort sætin séu með loftpúða, höfuðpúða eða
-            innbyggð borð.
-          </Reveal>
-          <p className="mt-4 text-sm leading-relaxed text-neutral-600 md:text-base">
-            Veldu tau eða leðurlíki.
-          </p>
-          <div className="hidden md:block">
-            <p className="mt-6 text-sm font-semibold text-neutral-900">Fyrir</p>
-            <BulletList items={PRICE_LIST} className="mt-3" />
+    <section id="saetisaklaedi" className="scroll-mt-6 bg-white pt-12 pb-16 md:pt-16 md:pb-24">
+      <Container>
+        <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-16">
+          <div>
+            <Reveal as="p" className="font-ui text-[11px] font-semibold tracking-[.12em] text-brand-dark uppercase md:text-xs">
+              {seatCovers.eyebrow}
+            </Reveal>
+            <Reveal
+              as="h2"
+              delay={0.05}
+              className="mt-3 text-[32px] leading-[1.1] font-semibold text-[#171717] md:text-[50px] md:leading-[1.06]"
+            >
+              {seatCovers.heading}
+            </Reveal>
+            <Reveal as="p" delay={0.1} className="mt-5 max-w-[580px] text-[17px] leading-[1.6] text-[#171717] md:text-lg">
+              {seatCovers.text}
+            </Reveal>
+            <p className="mt-4 font-ui text-[15px] font-semibold text-brand-dark md:text-base">{seatCovers.materials}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href={seatCovers.primaryCta.href} className={PRIMARY_BUTTON}>
+                {seatCovers.primaryCta.text}
+              </Link>
+              <Link href={seatCovers.secondaryCta.href} className={SECONDARY_BUTTON}>
+                {seatCovers.secondaryCta.text}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
-          {/* docs/scrape/mobile-only.json's /fyrirokumannin entry: at phone
-              widths the live site replaces this per-vehicle price list (and
-              FloorMatsSection's) with one condensed line — verbatim text
-              from that scrape, not a design guess. */}
-          <p className="mt-6 text-sm font-semibold text-neutral-900 md:hidden">
-            Fyrir vinnubíla, vörubíla, vinnuvélar og dráttarvélar
-          </p>
+
+          <Gallery images={seatCovers.images} label={seatCovers.heading} />
         </div>
-        <Carousel
-          images={CAROUSEL_IMAGES}
-          prevArrow={PREV_ARROW}
-          nextArrow={NEXT_ARROW}
-          label="Sætisáklæði"
-        />
+
+        <h3 className="mt-16 font-ui text-lg font-semibold text-[#171717] md:mt-20 md:text-xl">{seatCovers.pricesLabel}</h3>
+        <Stagger as="ul" className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {seatCovers.prices.map((row) => {
+            const Icon = VEHICLE_ICONS[row.icon];
+            return (
+              <StaggerItem
+                as="li"
+                key={row.vehicle}
+                className="flex gap-4 rounded-[15px] border border-[#E3E9F2] bg-white p-5 lg:flex-col lg:gap-5 lg:p-6"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f0f4fa] text-brand-dark">
+                  <Icon className="h-7 w-7" />
+                </span>
+                <p>
+                  <span className="inline-block w-full font-ui text-base font-semibold text-[#171717]">{row.vehicle}</span>
+                  <span className="text-[0px]"> - </span>
+                  <span className="mt-1 inline-block w-full font-stat text-xl font-bold text-brand-dark md:text-[22px]">{row.price}</span>
+                </p>
+              </StaggerItem>
+            );
+          })}
+        </Stagger>
       </Container>
     </section>
   );

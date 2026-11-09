@@ -173,27 +173,31 @@ export function Footer() {
           <FooterLinkColumn column={thjonusta} className="hidden md:order-4 md:block" />
 
           {/* Phone, email and opening hours as labelled rows rather than more
-              lines in the address block, which ran to six stacked lines. */}
-          <div className="order-3 flex flex-col items-center gap-5 md:order-5 md:items-start">
-            <ContactRow icon={<MailIcon />} label="Netfang">
-              <a
-                href={`mailto:${site.email}`}
-                className="transition-colors duration-200 hover:text-brand-dark"
-              >
-                {site.email}
-              </a>
-            </ContactRow>
-            <ContactRow icon={<PhoneIcon />} label="Sími">
-              <a
-                href={site.phoneHref}
-                className="transition-colors duration-200 hover:text-brand-dark"
-              >
-                {site.phoneLocal}
-              </a>
-            </ContactRow>
-            <ContactRow icon={<ClockIcon />} label="Opnunartími">
-              {site.hoursValue}
-            </ContactRow>
+              lines in the address block, which ran to six stacked lines.
+              On phones the group is centred as one block with the rows
+              left-aligned inside it, so the icons line up (VALA #11). */}
+          <div className="order-3 flex justify-center md:order-5 md:justify-start">
+            <div className="flex flex-col items-start gap-5">
+              <ContactRow icon={<MailIcon />} label="Netfang">
+                <a
+                  href={`mailto:${site.email}`}
+                  className="transition-colors duration-200 hover:text-brand-dark"
+                >
+                  {site.email}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<PhoneIcon />} label="Sími">
+                <a
+                  href={site.phoneHref}
+                  className="transition-colors duration-200 hover:text-brand-dark"
+                >
+                  {site.phoneLocal}
+                </a>
+              </ContactRow>
+              <ContactRow icon={<ClockIcon />} label="Opnunartími">
+                {site.hoursValue}
+              </ContactRow>
+            </div>
           </div>
         </div>
         {/* Not on the live site: required so a visitor can change or withdraw
