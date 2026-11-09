@@ -47,14 +47,14 @@ export function BrandOverview({ brand }: { brand: Brand }) {
 
         <Reveal as="aside" delay={0.1} aria-label={`Staðreyndir um ${brand.name}`} className="lg:pt-2">
           <div className="rounded-[20px] border border-[#E3E9F2] bg-[#f0f4fa] p-6 md:p-8">
-            <div className="flex h-28 items-center justify-center rounded-[14px] bg-white px-6">
+            <div className="flex h-40 items-center justify-center rounded-[14px] bg-white px-6">
               <Image
                 src={brand.cardImage.src}
                 alt={brand.cardImage.alt}
                 width={brand.cardImage.width}
                 height={brand.cardImage.height}
                 sizes="260px"
-                className="h-auto max-h-16 w-auto max-w-[75%] object-contain"
+                className="h-auto max-h-28 w-auto max-w-[75%] object-contain"
               />
             </div>
             <dl className="mt-6 divide-y divide-[#dce5f0] font-ui text-sm">

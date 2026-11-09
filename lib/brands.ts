@@ -280,7 +280,7 @@ export const brands: Brand[] = [
     href: "/vorumerki/um-beka",
     site: "https://www.groeneveld-beka.com/en/",
     logo: "/images/home/04-6904d068.png",
-    cardImage: { src: "/images/home/31-8e2b1073.svg", alt: "Groeneveld-BEKA merki", width: 264, height: 288 },
+    cardImage: { src: "/images/vorumerki/logos/um-beka.png", alt: "Groeneveld-BEKA merki", width: 744, height: 800 },
     seoTitle: "Groeneveld-BEKA sjálfvirk smurkerfi | Skralli",
     seoDescription:
       "Sjálfvirk smurkerfi frá Groeneveld-BEKA fyrir vinnuvélar, landbúnað og iðnað. Skralli sér um uppsetningu, þjónustu, viðgerðir og varahluti um land allt.",

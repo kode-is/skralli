@@ -10,6 +10,22 @@ import type { Brand } from "@/lib/brands";
  * photo up full-bleed behind the title, which turned the smaller ones
  * (Lilleseth is 757 px wide) into a blur and hid the product itself.
  */
+// The frame follows the photo's own shape, clamped between 4:5 portrait and
+// 16:10 landscape, so a cover crop only trims the edges. A fixed 4:3 frame
+// showed barely half of the portrait Groeneveld-BEKA photo (VALA #12).
+// Portrait frames are capped at 560 px tall by narrowing them.
+const MIN_RATIO = 4 / 5;
+const MAX_RATIO = 16 / 10;
+const MAX_HEIGHT = 560;
+
+function frameStyle(brand: Brand) {
+  const ratio = Math.min(MAX_RATIO, Math.max(MIN_RATIO, brand.image.width / brand.image.height));
+  return {
+    aspectRatio: ratio.toFixed(3),
+    maxWidth: ratio < 1 ? `${Math.round(MAX_HEIGHT * ratio)}px` : undefined,
+  };
+}
+
 export function BrandHero({ brand }: { brand: Brand }) {
   const primaryService = brand.services[0];
   return (
@@ -56,9 +72,10 @@ export function BrandHero({ brand }: { brand: Brand }) {
         </div>
         <HeroReveal
           delay={0.15}
-          className={`relative aspect-[4/3] w-full overflow-hidden rounded-[20px] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] ${
+          className={`relative w-full justify-self-center overflow-hidden rounded-[20px] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] md:justify-self-end ${
             brand.imageContain ? "bg-white" : "bg-white/10"
           }`}
+          style={frameStyle(brand)}
         >
           <Image
             src={brand.image.src}
