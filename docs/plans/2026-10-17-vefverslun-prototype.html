@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skralli vefverslun · frumgerð</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--dark:#005380;--mid:#01A8DC;--light:#83D4F3;--green:#0A8754;--yellow:#FAC748;--ink:#171717;--muted:#444;--line:#e5e7eb;--bg:#f6f8fa;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer}
+  .ui{font-family:Inter,system-ui,sans-serif}
+  /* prototype chrome */
+  .proto{position:sticky;top:0;z-index:60;background:#111;color:#ddd;font:12px/1 Inter,sans-serif;display:flex;gap:6px;align-items:center;padding:8px 14px;flex-wrap:wrap}
+  .proto b{color:#fff;margin-right:8px}
+  .proto button{background:#222;border:1px solid #333;color:#ddd;border-radius:6px;padding:6px 10px}
+  .proto button.on{background:var(--mid);border-color:var(--mid);color:#fff}
+  .note{background:#fff7d6;border-left:4px solid var(--yellow);padding:10px 14px;font:13px/1.5 Inter,sans-serif;color:#5a4600;margin:0}
+  .note code{background:#fff;padding:1px 5px;border-radius:4px}
+  /* site chrome */
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+  header.site{background:var(--dark);color:#fff}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:22px 24px}
+  header.site nav{display:flex;gap:30px;align-items:center}
+  header.site nav a{font-size:16px}
+  header.site nav a.now{text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--light)}
+  .cta{border:1px solid rgba(255,255,255,.7);border-radius:6px;padding:10px 24px;font:600 14px Inter,sans-serif;color:#fff;background:transparent}
+  .cartbtn{position:relative;background:transparent;border:0;color:#fff;display:flex;align-items:center;gap:8px;font:600 14px Inter,sans-serif}
+  .cartbtn .n{position:absolute;top:-8px;right:-10px;background:var(--yellow);color:#111;border-radius:999px;min-width:20px;height:20px;font:700 12px/20px Inter,sans-serif;text-align:center;padding:0 5px}
+  .hero{position:relative;height:300px;background:#123 center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+  .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
+  .hero>div{position:relative}
+  .hero h1{font-size:44px;font-weight:600;margin:0 0 10px}
+  .hero p{margin:0;font-size:18px;opacity:.9}
+  .crumb{background:#eaf5fb;border-bottom:1px solid #d3e8f2;font:14px Inter,sans-serif;color:var(--muted)}
+  .crumb .wrap{padding:14px 24px}
+  .crumb span{margin:0 8px;color:#999}
+  section{padding:56px 0}
+  h2{font-size:32px;font-weight:600;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:17px;line-height:1.7;margin:0 0 32px;max-width:720px}
+  .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+  .card{background:#fff;border-radius:15px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -20px rgba(0,83,128,.35)}
+  .card .img{height:220px;background:#eee center/cover}
+  .card .body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .card h5{font:600 17px Inter,sans-serif;margin:0}
+  .card .blurb{color:var(--muted);font-size:15px;line-height:1.6;margin:0}
+  .price{font:700 20px Inter,sans-serif;color:var(--dark)}
+  .price s{color:#999;font-weight:400;font-size:15px;margin-left:8px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font:600 12px Inter,sans-serif;border-radius:999px;padding:4px 10px}
+  .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+  .in{background:#e6f4ee;color:var(--green)}
+  .low{background:#fff3d6;color:#8a5a00}
+  .back{background:#e8f4fb;color:var(--dark)}
+  .out{background:#f1f1f1;color:#666}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:12px 22px;font:600 15px Inter,sans-serif;border:1px solid transparent}
+  .btn.p{background:var(--dark);color:#fff}
+  .btn.p:hover{background:#00436a}
+  .btn.s{background:#fff;color:var(--dark);border-color:var(--dark)}
+  .btn.g{background:var(--green);color:#fff}
+  .btn[disabled]{background:#ddd;color:#888;cursor:not-allowed}
+  .btn.sm{padding:9px 14px;font-size:14px}
+  .count{color:var(--muted);font:14px Inter,sans-serif}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:500 14px Inter,sans-serif;color:var(--muted)}
+  .chip.on{background:var(--dark);color:#fff;border-color:var(--dark)}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+  select,input,textarea{font:15px Inter,sans-serif;border:1px solid #cfd8dd;border-radius:8px;padding:11px 12px;background:#fff;width:100%}
+  label{display:block;font:600 13px Inter,sans-serif;color:var(--muted);margin:0 0 6px}
+  .field{margin-bottom:16px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  /* product page */
+  .pdp{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+  .gallery .main{height:460px;border-radius:15px;background:#eee center/cover}
+  .gallery .thumbs{display:flex;gap:10px;margin-top:10px}
+  .gallery .thumbs div{width:84px;height:84px;border-radius:10px;background:#ddd center/cover;border:2px solid transparent}
+  .gallery .thumbs div.on{border-color:var(--dark)}
+  .eyebrow{font:600 13px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
+  .pdp h1{font-size:36px;font-weight:600;margin:6px 0 6px}
+  .sku{color:#777;font:13px Inter,sans-serif}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:24px 0;background:#fff}
+  .facts div{padding:14px 16px;border-right:1px solid var(--line)}
+  .facts div:last-child{border-right:0}
+  .facts small{display:block;font:600 11px Inter,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#888;margin-bottom:4px}
+  .facts b{font:600 15px Inter,sans-serif}
+  .buy{background:#fff;border:1px solid var(--line);border-radius:15px;padding:24px;margin-top:20px}
+  .buy .row{display:flex;gap:12px;align-items:center}
+  .qty{display:inline-flex;border:1px solid #cfd8dd;border-radius:8px;overflow:hidden}
+  .qty button{width:40px;border:0;background:#fff;font-size:18px}
+  .qty span{min-width:44px;text-align:center;line-height:42px;font:600 15px Inter,sans-serif;border-left:1px solid #cfd8dd;border-right:1px solid #cfd8dd}
+  .fine{color:#777;font:13px/1.6 Inter,sans-serif;margin:14px 0 0}
+  .desc p{color:var(--muted);line-height:1.8;font-size:16px}
+  /* cart */
+  .cart{display:grid;grid-template-columns:1.4fr .8fr;gap:32px;align-items:start}
+  .lines{background:#fff;border-radius:15px;border:1px solid var(--line)}
+  .line{display:grid;grid-template-columns:84px 1fr auto auto;gap:18px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .line:last-child{border-bottom:0}
+  .line .th{width:84px;height:84px;border-radius:10px;background:#eee center/cover}
+  .line h5{margin:0 0 4px;font:600 16px Inter,sans-serif}
+  .line .sub2{color:#777;font:13px Inter,sans-serif;margin:0}
+  .line .tot{font:700 16px Inter,sans-serif;min-width:92px;text-align:right}
+  .summary{background:#fff;border-radius:15px;border:1px solid var(--line);padding:24px}
+  .summary .r{display:flex;justify-content:space-between;font:15px Inter,sans-serif;color:var(--muted);padding:8px 0}
+  .summary .r.t{border-top:1px solid var(--line);margin-top:8px;padding-top:16px;font:700 20px Inter,sans-serif;color:var(--ink)}
+  .radio{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;background:#fff}
+  .radio.on{border-color:var(--dark);box-shadow:0 0 0 1px var(--dark) inset}
+  .radio input{width:auto;margin-top:3px}
+  .radio b{font:600 15px Inter,sans-serif;display:block}
+  .radio small{color:#777;font:13px Inter,sans-serif}
+  .strip{background:#fff;border-top:1px solid var(--line)}
+  .empty{text-align:center;padding:48px 24px;color:var(--muted)}
+  /* flow */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+  .step .k{font:700 12px Inter,sans-serif;color:var(--mid);text-transform:uppercase;letter-spacing:.06em}
+  .step b{display:block;margin:6px 0 6px;font:600 16px Inter,sans-serif}
+  .step p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .phase{border-radius:12px;padding:18px;color:#fff}
+  .phase b{display:block;font:600 18px Inter,sans-serif;margin-bottom:8px}
+  .phase ul{margin:0;padding-left:18px;font-size:14px;line-height:1.7}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:12px 18px;border-radius:10px;font:600 14px Inter,sans-serif;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.show{opacity:1}
+  .shop{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
+  .tree{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;position:sticky;top:60px}
+  .tree .hd{background:var(--dark);color:#fff;font:600 15px Inter,sans-serif;padding:16px 20px;display:flex;gap:12px;align-items:center}
+  .tree ul{list-style:none;margin:0;padding:6px 0}
+  .tree li>a{display:flex;align-items:center;gap:12px;padding:12px 20px;font:500 15px Inter,sans-serif;color:var(--ink)}
+  .tree li>a:hover{background:#f3f8fb;color:var(--dark)}
+  .tree li.on>a{color:var(--dark);font-weight:600;background:#eaf5fb}
+  .tree li>a .ic{width:22px;height:22px;color:#7a8a94;flex:none}
+  .tree li.on>a .ic{color:var(--dark)}
+  .tree li>a .chev{margin-left:auto;color:#9aa;transition:transform .2s}
+  .tree li.on>a .chev{transform:rotate(180deg)}
+  .tree ul ul{display:none;padding:0 0 8px}
+  .tree li.on>ul{display:block}
+  .tree ul ul li a{padding:8px 20px 8px 54px;font:400 14px Inter,sans-serif;color:var(--muted)}
+  .tree ul ul li.on a{color:var(--dark);font-weight:600}
+  .tree .brands{border-top:1px solid var(--line)}
+  .tree-toggle{display:none}
+  @media (max-width:900px){.shop{grid-template-columns:1fr}.tree{position:static}.tree ul.top{display:none}.tree.open ul.top{display:block}.tree-toggle{display:block;margin-left:auto;background:none;border:0;color:#fff;font-size:20px}}
+  .screen{display:none}.screen.on{display:block}
+  footer.site{background:var(--dark);color:#fff;padding:40px 0;font-size:14px;opacity:.95}
+  footer.site .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer.site b{display:block;margin-bottom:10px;font:600 15px Inter,sans-serif}
+  footer.site a{display:block;opacity:.85;margin-bottom:6px}
+  .fb{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-top:28px}
+  .fb h4{margin:0 0 10px;font:600 16px Inter,sans-serif}
+  .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+  .opt{border:1px solid var(--line);border-radius:10px;padding:14px;cursor:pointer;background:#fff;font:14px/1.5 Inter,sans-serif}
+  .opt.selected,.opt:hover{border-color:var(--dark);box-shadow:0 0 0 1px var(--dark) inset}
+  @media (max-width:900px){.pdp,.cart{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.phases{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}header.site nav{display:none}}
+</style>
+</head>
+<body>
+
+<div class="proto">
+  <b>Frumgerð · Skralli vefverslun</b>
+  <button data-go="verslun">/verslun</button>
+  <button data-go="flokkur">/verslun/fyrir-okumanninn (veftré)</button>
+  <button data-go="vara">/verslun/vara/…</button>
+  <button data-go="karfa">/karfa</button>
+  <button data-go="greida">/karfa/greida</button>
+  <button data-go="straumur">Straumur (utan síðu)</button>
+  <button data-go="pontun">/pontun/…</button>
+  <button data-go="strip">Strimill á /fyrirokumannin</button>
+  <button data-go="vidhald">DK niðri</button>
+  <button data-go="flaedi">Flæði &amp; áfangar</button>
+</div>
+<p class="note">Smelltu á hnappana að ofan eða á tengla í frumgerðinni. Vörur, verð og lagerstaða eru <code>sýnidæmi</code> – í raun koma þau úr dk Plus. Karfan virkar (reyndu „Setja í körfu“).</p>
+
+<header class="site"><div class="wrap">
+  <a href="#verslun"><img src="../../public/logos/skralli-header.png" alt="Skralli" style="height:36px;display:block"></a>
+  <nav>
+    <a href="#">Heim</a><a href="#">Þjónusta</a><a href="#verslun" class="now">Vefverslun</a><a href="#">Um okkur</a>
+    <button class="cartbtn" data-go="karfa">🛒 Karfa <span class="n" id="cartN">0</span></button>
+    <a class="cta" href="#">Hafa samband</a>
+  </nav>
+</div></header>
+
+<!-- ============ /verslun ============ -->
+<div class="screen on" id="s-verslun">
+  <div class="hero" style="background-image:url(../../public/images/home/26-94902b25.jpeg)"><div><h1>Vefverslun</h1><p>Vörur á lager frá Skralla – pantaðu og sæktu í Móhellu eða fáðu sent heim</p></div></div>
+  <div class="crumb"><div class="wrap">Heim <span>›</span> Vefverslun</div></div>
+  <section><div class="wrap"><div class="shop"><aside class="tree" id="tree-root"><div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h16"/></svg> Vöruflokkar <button class="tree-toggle" onclick="this.closest('.tree').classList.toggle('open')">☰</button></div><ul class="top">
+  <li class=""><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1 9H8zM6 13h12l1 7H5z"/></svg> Fyrir ökumanninn <span class="chev">⌄</span></a><ul>
+    <li class=""><a href="#flokkur">Gólfmottur</a></li><li><a href="#flokkur">Sætisáklæði</a></li><li><a href="#flokkur">Skóbakkar</a></li><li><a href="#flokkur">Ljósabúnaður</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8a4 4 0 1 0 8 0M12 3l3 3M12 3 9 6"/></svg> Hífi- &amp; festibúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Stroffur</a></li><li><a href="#flokkur">Hífikeðjur</a></li><li><a href="#flokkur">Krókar og aukabúnaður</a></li><li><a href="#flokkur">Bindikeðjur og strekkjarar</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg> Vetrarbúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Broddar</a></li><li><a href="#flokkur">Keðjustrekkjarar</a></li><li><a href="#flokkur">Fylgihlutir</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Síubúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Síur</a></li><li><a href="#flokkur">Rekstrarvörur</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7 7 12a7 7 0 0 1-14 0c0-5 7-12 7-12z"/></svg> Smurkerfi – rekstrarvörur <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Feiti</a></li><li><a href="#flokkur">Slöngur og tengi</a></li><li><a href="#flokkur">Varahlutir</a></li></ul></li>
+  <li class="brands"><a href="#"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9h9v9l-9 9z"/><circle cx="16" cy="8" r="1.5"/></svg> Vörumerki</a></li>
+</ul></aside><div>
+    <h2>Vöruflokkar</h2>
+    <p class="sub">Flokkarnir speglast af vöruflokkum í dk. Það sem Skralli selur eftir tilboði – sturtuvagnar, snjóplógar og öryggisrúður – er áfram á þjónustusíðunum.</p>
+    <div class="grid">
+      <a class="card" href="#flokkur"><div class="img" style="background-image:url(../../public/images/home/26-94902b25.jpeg)"></div><div class="body"><h5>Fyrir ökumanninn</h5><p class="blurb">Sætisáklæði, gólfmottur, skóbakkar og ljósabúnaður</p><span class="count">14 vörur</span></div></a>
+      <a class="card" href="#flokkur"><div class="img" style="background-image:url(../../public/images/home/25-cf51054e.png)"></div><div class="body"><h5>Hífi- &amp; festibúnaður</h5><p class="blurb">Stroffur, hífikeðjur, krókar og strekkjarar</p><span class="count">38 vörur</span></div></a>
+      <a class="card" href="#flokkur"><div class="img" style="background-image:url(../../public/images/thjonusta/08-e6009210.jpeg)"></div><div class="body"><h5>Vetrarbúnaður</h5><p class="blurb">Broddar, keðjustrekkjarar og fylgihlutir fyrir snjókeðjur</p><span class="count">9 vörur</span></div></a>
+      <a class="card" href="#flokkur"><div class="img" style="background-image:url(../../public/images/home/21-212e4fb5.png)"></div><div class="body"><h5>Síubúnaður</h5><p class="blurb">Síur og rekstrarvörur fyrir BMair lofthreinsitæki</p><span class="count">6 vörur</span></div></a>
+      <a class="card" href="#flokkur"><div class="img" style="background-image:url(../../public/images/home/22-d2d92984.jpeg)"></div><div class="body"><h5>Smurkerfi – rekstrarvörur</h5><p class="blurb">Feiti, slöngur og varahlutir í BEKA-MAX og Groeneveld</p><span class="count">11 vörur</span></div></a>
+    </div>
+    <h2 style="margin-top:48px">Nýtt í verslun</h2>
+    <div class="grid" id="newGrid"></div>
+  </div></div></div></section>
+</div>
+
+<!-- ============ /verslun/[flokkur] ============ -->
+<div class="screen" id="s-flokkur">
+  <div class="hero" style="height:240px;background-image:url(../../public/images/home/26-94902b25.jpeg)"><div><h1>Fyrir ökumanninn</h1><p>Sætisáklæði, gólfmottur, skóbakkar og ljósabúnaður</p></div></div>
+  <div class="crumb"><div class="wrap">Heim <span>›</span> <a href="#verslun">Vefverslun</a> <span>›</span> Fyrir ökumanninn</div></div>
+  <section><div class="wrap"><div class="shop"><aside class="tree" id="tree-oku"><div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h16"/></svg> Vöruflokkar <button class="tree-toggle" onclick="this.closest('.tree').classList.toggle('open')">☰</button></div><ul class="top">
+  <li class="on"><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1 9H8zM6 13h12l1 7H5z"/></svg> Fyrir ökumanninn <span class="chev">⌄</span></a><ul>
+    <li class=""><a href="#flokkur">Gólfmottur</a></li><li><a href="#flokkur">Sætisáklæði</a></li><li><a href="#flokkur">Skóbakkar</a></li><li><a href="#flokkur">Ljósabúnaður</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8a4 4 0 1 0 8 0M12 3l3 3M12 3 9 6"/></svg> Hífi- &amp; festibúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Stroffur</a></li><li><a href="#flokkur">Hífikeðjur</a></li><li><a href="#flokkur">Krókar og aukabúnaður</a></li><li><a href="#flokkur">Bindikeðjur og strekkjarar</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg> Vetrarbúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Broddar</a></li><li><a href="#flokkur">Keðjustrekkjarar</a></li><li><a href="#flokkur">Fylgihlutir</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg> Síubúnaður <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Síur</a></li><li><a href="#flokkur">Rekstrarvörur</a></li></ul></li>
+  <li><a href="#flokkur"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 7 7 12a7 7 0 0 1-14 0c0-5 7-12 7-12z"/></svg> Smurkerfi – rekstrarvörur <span class="chev">⌄</span></a><ul><li><a href="#flokkur">Feiti</a></li><li><a href="#flokkur">Slöngur og tengi</a></li><li><a href="#flokkur">Varahlutir</a></li></ul></li>
+  <li class="brands"><a href="#"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9h9v9l-9 9z"/><circle cx="16" cy="8" r="1.5"/></svg> Vörumerki</a></li>
+</ul></aside><div>
+    <div class="toolbar">
+      <div><h2 style="font-size:24px;margin:0">Fyrir ökumanninn</h2><span class="count">14 vörur</span></div>
+      <div style="display:flex;gap:10px;align-items:center"><span class="count">Raða:</span><select style="width:auto"><option>Nýjast</option><option>Verð, lægst</option><option>Verð, hæst</option><option>Heiti A–Ö</option></select></div>
+    </div>
+    <div class="grid" id="catGrid"></div>
+    <p class="fine" style="margin-top:28px">Ertu með spurningu um passa fyrir þitt tæki? <a href="#" style="color:var(--dark);font-weight:600">Sjá þjónustusíðuna Fyrir ökumanninn</a> eða hringdu í 546 3500.</p>
+  </div></div></div></section>
+</div>
+
+<!-- ============ /verslun/vara/[slug] ============ -->
+<div class="screen" id="s-vara">
+  <div class="crumb"><div class="wrap">Heim <span>›</span> <a href="#verslun">Vefverslun</a> <span>›</span> <a href="#flokkur">Fyrir ökumanninn</a> <span>›</span> Pebe gólfmottur í dráttarvél</div></div>
+  <section><div class="wrap">
+    <div class="pdp">
+      <div class="gallery">
+        <div class="main" style="background-image:url(../../public/images/fyrirokumannin/32-b915af96.png)"></div>
+        <div class="thumbs"><div class="on" style="background-image:url(../../public/images/fyrirokumannin/32-b915af96.png)"></div><div style="background-image:url(../../public/images/fyrirokumannin/55-d2881ae9.jpg)"></div><div style="background-image:url(../../public/images/fyrirokumannin/02-a5d3e9bb.jpeg)"></div></div>
+        <p class="fine">Myndir koma úr viðhengjum vörunnar í dk (merkt „sýna á vef“).</p>
+      </div>
+      <div>
+        <span class="eyebrow">Fyrir ökumanninn · Pebe</span>
+        <h1>Pebe gólfmottur í dráttarvél</h1>
+        <div class="sku">Vörunúmer PB-GM-200 · Framleitt í Þýskalandi</div>
+        <div class="facts">
+          <div><small>Framleiðandi</small><b>Pebe</b></div>
+          <div><small>Hentar</small><b>John Deere 6R</b></div>
+          <div><small>Þyngd</small><b>4,2 kg</b></div>
+        </div>
+        <div class="buy">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <span class="price">16.800 kr. <s>19.900 kr.</s></span>
+            <span class="badge in">Á lager í Hafnarfirði</span>
+          </div>
+          <p class="fine" style="margin:6px 0 16px">Verð með vsk. Tilboðsverð gildir til 31. október.</p>
+          <div class="row">
+            <div class="qty"><button data-q="-1">−</button><span id="pq">1</span><button data-q="1">+</button></div>
+            <button class="btn p" style="flex:1" id="addMain">Setja í körfu</button>
+          </div>
+          <p class="fine">Sækja í Móhellu 3F · Sent með Flytjanda út á land · 14 daga skilaréttur</p>
+        </div>
+        <div class="desc">
+          <h3 style="margin:28px 0 6px;font:600 20px Inter,sans-serif">Um vöruna</h3>
+          <p>Sérsniðnar gólfmottur úr slitsterku gúmmíi með upphækkuðum brúnum sem halda bleytu og möl frá gólfi dráttarvélarinnar. Passa nákvæmlega í stýrishús John Deere 6R og festast án verkfæra.</p>
+          <p class="fine">Þessi texti er „ExtraDesc1“ vörunnar í dk, sýndur sem venjulegur texti í 1. áfanga.</p>
+        </div>
+      </div>
+    </div>
+  </div></section>
+  <section class="strip"><div class="wrap">
+    <h2 style="font-size:26px">Fleira í Fyrir ökumanninn</h2>
+    <div class="grid" id="sibGrid"></div>
+  </div></section>
+</div>
+
+<!-- ============ /karfa ============ -->
+<div class="screen" id="s-karfa">
+  <div class="crumb"><div class="wrap">Heim <span>›</span> <a href="#verslun">Vefverslun</a> <span>›</span> Karfa</div></div>
+  <section><div class="wrap">
+    <h2>Karfan þín</h2>
+    <p class="sub">Verð og lagerstaða eru sótt í dk um leið og karfan opnast – ef eitthvað hefur breyst sést það hér.</p>
+    <div class="cart">
+      <div class="lines" id="cartLines"></div>
+      <div class="summary">
+        <div class="r"><span>Vörur</span><span id="sumItems">0 kr.</span></div>
+        <div class="r"><span>Sending</span><span>Valin í næsta skrefi</span></div>
+        <div class="r"><span>Þar af vsk (24%)</span><span id="sumVat">0 kr.</span></div>
+        <div class="r t"><span>Samtals</span><span id="sumTotal">0 kr.</span></div>
+        <button class="btn p" style="width:100%;margin-top:16px" data-go="greida" id="toCheckout">Ganga frá kaupum</button>
+        <a class="btn s" style="width:100%;margin-top:10px" href="#flokkur">Halda áfram að versla</a>
+        <p class="fine">Greitt með korti í öruggri greiðslusíðu Straums. Skralli sér aldrei kortanúmerið.</p>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ /karfa/greida ============ -->
+<div class="screen" id="s-greida">
+  <div class="crumb"><div class="wrap"><a href="#karfa">Karfa</a> <span>›</span> Greiða</div></div>
+  <section><div class="wrap">
+    <h2>Ganga frá kaupum</h2>
+    <p class="sub">Eitt skref. Þegar þú smellir á „Greiða með korti“ ferð þú á greiðslusíðu Straums og kemur svo aftur hingað.</p>
+    <div class="cart">
+      <div>
+        <div class="summary" style="margin-bottom:20px">
+          <h3 style="margin:0 0 16px;font:600 18px Inter,sans-serif">Upplýsingar um kaupanda</h3>
+          <div class="two"><div class="field"><label>Nafn</label><input placeholder="Jón Jónsson"></div><div class="field"><label>Kennitala (valfrjálst)</label><input placeholder="010180-1234"></div></div>
+          <div class="two"><div class="field"><label>Netfang</label><input placeholder="jon@dæmi.is"></div><div class="field"><label>Símanúmer</label><input placeholder="555 1234"></div></div>
+          <p class="fine" style="margin:0">Kennitalan tengir pöntunina við viðskiptamannareikning þinn í kerfi Skralla ef hann er til.</p>
+        </div>
+        <div class="summary" style="margin-bottom:20px">
+          <h3 style="margin:0 0 16px;font:600 18px Inter,sans-serif">Afhending</h3>
+          <label class="radio on" id="r1"><input type="radio" name="d" checked><div><b>Sækja í Móhellu 3F, Hafnarfirði – 0 kr.</b><small>Tilbúið til afhendingar næsta virka dag. Opið mán–fös 8–16.</small></div></label>
+          <label class="radio" id="r2"><input type="radio" name="d"><div><b>Senda út á land með Flytjanda</b><small>Fyrir pantanir utan höfuðborgarsvæðisins. Sendingarkostnaður greiðist af viðtakanda við afhendingu.</small></div></label>
+          <div id="addr" style="display:none;margin-top:12px"><div class="two"><div class="field"><label>Heimilisfang</label><input placeholder="Dæmigata 12"></div><div class="field"><label>Póstnúmer</label><input id="zip" placeholder="600" maxlength="3" inputmode="numeric" value="600"></div></div><p class="fine" id="zipNote" style="margin:0"></p></div>
+          <div class="field" style="margin-top:8px"><label>Athugasemd (valfrjálst)</label><textarea rows="2" placeholder="T.d. tegund dráttarvélar"></textarea></div>
+        </div>
+      </div>
+      <div class="summary">
+        <h3 style="margin:0 0 12px;font:600 18px Inter,sans-serif">Pöntunin</h3>
+        <div id="coLines"></div>
+        <div class="r"><span>Sending</span><span id="coShip">0 kr.</span></div>
+        <div class="r t"><span>Samtals</span><span id="coTotal">0 kr.</span></div>
+        <label style="display:flex;gap:10px;align-items:flex-start;margin:16px 0;font:14px/1.5 Inter,sans-serif;color:var(--muted);text-transform:none"><input type="checkbox" style="width:auto;margin-top:3px" checked> Ég samþykki <a href="#" style="color:var(--dark);text-decoration:underline">skilmála og skilarétt</a></label>
+        <button class="btn p" style="width:100%" data-go="straumur">Greiða með korti →</button>
+        <p class="fine">Verð eru staðfest í dk rétt áður en greiðslusíðan opnast.</p>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ Straumur (utan síðu) ============ -->
+<div class="screen" id="s-straumur">
+  <section style="background:#0f1f2e;min-height:560px;color:#fff"><div class="wrap" style="max-width:520px">
+    <p class="note" style="margin-bottom:24px;background:#1b2b3b;border-color:var(--yellow);color:#ffe9a8">Þetta er greiðslusíða Straums (hosted checkout) – ekki hluti af skralli.is. Útlitið ræðst af Straumi; hægt er að velja þema og sýna vörulista.</p>
+    <div style="background:#fff;color:#111;border-radius:16px;padding:28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><b style="font:700 18px Inter,sans-serif">Skralli ehf.</b><span class="ui" style="color:#666;font-size:13px">straumur</span></div>
+      <div class="r ui" style="display:flex;justify-content:space-between;font-size:14px;color:#555;padding:6px 0"><span>Pebe gólfmottur í dráttarvél × 1</span><span>16.800 kr.</span></div>
+      <div class="r ui" style="display:flex;justify-content:space-between;font-size:14px;color:#555;padding:6px 0"><span>Sending</span><span id="stShip">0 kr.</span></div>
+      <div class="r ui" style="display:flex;justify-content:space-between;font:700 20px Inter,sans-serif;padding:12px 0 18px;border-top:1px solid #eee;margin-top:6px"><span>Samtals</span><span id="stTotal">16.800 kr.</span></div>
+      <div class="field"><label>Kortanúmer</label><input placeholder="4111 1111 1111 1111"></div>
+      <div class="two"><div class="field"><label>Gildistími</label><input placeholder="MM/ÁÁ"></div><div class="field"><label>CVC</label><input placeholder="123"></div></div>
+      <button class="btn g" style="width:100%" data-go="pontun" id="pay">Greiða</button>
+      <p class="fine" style="text-align:center">🍎 Apple Pay og Google Pay ef samningur leyfir</p>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ /pontun/[id] ============ -->
+<div class="screen" id="s-pontun">
+  <section><div class="wrap" style="max-width:720px">
+    <div id="confirming" class="summary" style="text-align:center;padding:48px">
+      <div style="font-size:40px">⏳</div>
+      <h2 style="font-size:26px">Við staðfestum greiðsluna…</h2>
+      <p class="sub" style="margin:0 auto">Síðan athugar staðfestingu frá Straumi á 2 sekúndna fresti í allt að mínútu. Afturhvarf á síðuna er aldrei tekið sem sönnun um greiðslu.</p>
+    </div>
+    <div id="confirmed" class="summary" style="display:none">
+      <div style="text-align:center;padding:12px 0 24px"><div style="font-size:44px;color:var(--green)">✔</div><h2 style="font-size:30px">Takk fyrir pöntunina!</h2><p class="sub" style="margin:0 auto">Pöntun <b>nr. 10432</b> er skráð í kerfi Skralla. Staðfesting hefur verið send á <b>jon@dæmi.is</b>.</p></div>
+      <div id="okLines"></div>
+      <div class="r t"><span>Greitt með korti</span><span id="okTotal">0 kr.</span></div>
+      <div class="radio" style="margin-top:20px"><div><b id="okShip">Sækja í Móhellu 3F, Hafnarfirði</b><small>Við látum vita með tölvupósti þegar pöntunin er tilbúin / sendingin farin af stað með Flytjanda.</small></div></div>
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><a class="btn s" href="#verslun">Aftur í verslun</a><a class="btn s" href="#">Skilmálar og skilaréttur</a></div>
+      <p class="fine">Bak við tjöldin: Straumur sendi vefkall → pöntun stofnuð í dk (viðskiptamaður fundinn á kennitölu/netfangi eða stofnaður í hópnum „vefur“) → tölvupóstar sendir → lagerstaða vörunnar endurnýjuð á vefnum.</p>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ strimill á /fyrirokumannin ============ -->
+<div class="screen" id="s-strip">
+  <div class="hero" style="height:240px;background-image:url(../../public/images/home/26-94902b25.jpeg)"><div><h1>Fyrir ökumanninn</h1><p>Sætisáklæði, gólfmottur, ljósabúnaður og fleira - sérsniðið að þínu tæki</p></div></div>
+  <div class="crumb"><div class="wrap">Heim <span>›</span> Fyrir ökumanninn</div></div>
+  <section><div class="wrap"><div style="background:#fff;border-radius:15px;padding:40px;color:#999;text-align:center;border:1px dashed #ccc">… óbreytt efni þjónustusíðunnar (sætisáklæði, gólfmottur, skóbakkar, ljós) …</div></div></section>
+  <section class="strip"><div class="wrap">
+    <div class="toolbar"><div><h2 style="font-size:28px">Kaupa í vefverslun</h2><p class="sub" style="margin:0">Vörur úr þessum flokki sem eru á lager og hægt að panta beint.</p></div><a class="btn s" href="#flokkur">Sjá allt í vefverslun →</a></div>
+    <div class="grid" id="stripGrid"></div>
+    <p class="fine">Strimillinn er einn „server component“ sem hvert kortlagt þjónustusíða fær fyrir ofan „Hafa samband“-kaflann. Sturtuvagnar, öryggisrúður og plógar fá hann ekki.</p>
+  </div></section>
+</div>
+
+<!-- ============ DK niðri ============ -->
+<div class="screen" id="s-vidhald">
+  <div class="hero" style="height:240px;background-image:url(../../public/images/home/26-94902b25.jpeg)"><div><h1>Vefverslun</h1></div></div>
+  <section><div class="wrap" style="max-width:720px">
+    <div class="summary empty">
+      <div style="font-size:40px">🛠</div>
+      <h2 style="font-size:26px">Vefverslunin er í viðhaldi</h2>
+      <p class="sub" style="margin:0 auto 20px">Ekki næst í lagerkerfið í augnablikinu. Vörulistinn birtist aftur sjálfkrafa um leið og tengingin kemst á. Þú getur alltaf hringt í 546 3500 eða sent fyrirspurn.</p>
+      <a class="btn p" href="#">Hafa samband</a>
+    </div>
+    <p class="fine">Þetta sést aðeins ef dk svarar ekki <i>og</i> engin skyndiminnisútgáfa er til (t.d. rétt eftir útgáfu). Venjulega sést síðasta þekkta útgáfan af vörulistanum og enginn verður var við neitt. Í körfu/greiðslu er einfaldlega ekki hægt að hefja greiðslu meðan dk er niðri.</p>
+  </div></section>
+</div>
+
+<!-- ============ flæði & áfangar ============ -->
+<div class="screen" id="s-flaedi">
+  <section><div class="wrap">
+    <h2>Hvað gerist við kaup</h2>
+    <p class="sub">dk er eina vöru- og pantanakerfið. Straumur er eina heimildin um hvort greitt var. Lítill Redis-geymir man bara hvað var í gangi.</p>
+    <div class="flow">
+      <div class="step"><div class="k">1 · Karfa</div><b>Verð sótt í dk</b><p>Karfan geymir aðeins vörunúmer og fjölda í vafranum. Verð og lager eru sótt beint í dk þegar hún opnast.</p></div>
+      <div class="step"><div class="k">2 · Greiða</div><b>Pöntun lögð í bið</b><p>Þjónninn staðfestir verð í dk, vistar „checkout“ með 30 daga líftíma og býr til greiðslusíðu hjá Straumi.</p></div>
+      <div class="step"><div class="k">3 · Straumur</div><b>Kortið greitt utan síðu</b><p>Kaupandi greiðir á síðu Straums. Straumur sendir vefkall (webhook) með undirskrift – það er hin eiginlega staðfesting.</p></div>
+      <div class="step"><div class="k">4 · dk</div><b>Sölupöntun stofnuð</b><p>Viðskiptamaður fundinn eða stofnaður, sölupöntun með línum og tilvísun í greiðslu skráð. Mistakist dk: endurreynt á 10 mín fresti og viðvörunarpóstur sendur.</p></div>
+      <div class="step"><div class="k">5 · Staðfesting</div><b>Tölvupóstar &amp; lager</b><p>Kaupandi og Skralli fá póst með pöntunarnúmeri úr dk. Lagerstaða vörunnar á vefnum endurnýjuð.</p></div>
+    </div>
+    <h2 style="margin-top:48px">Áfangar</h2>
+    <div class="phases">
+      <div class="phase" style="background:#334155"><b>0 · Grunnur</b><ul><li>Raunverulegur dk-lykill á Vercel</li><li>dk-klient + prófunarskrifta</li><li>Hlynur merkir vörur, setur myndir, staðfestir flokkakort</li><li>Straumur prófunarsamningur</li></ul></div>
+      <div class="phase" style="background:var(--dark)"><b>1 · Vörulisti</b><ul><li>/verslun, flokkar, vörusíður</li><li>Strimill á þjónustusíðum, leit, sitemap</li><li>Endurnýjun um dk-vefköll</li><li>Hnappur: „Senda fyrirspurn“</li></ul></div>
+      <div class="phase" style="background:var(--mid)"><b>2 · Karfa &amp; greiðsla</b><ul><li>Karfa, greiðsluform, Straumur</li><li>Pöntun skrifuð í dk, endurreynslu-biðröð</li><li>Staðfestingarpóstar, skilmálar</li><li>Ein raunveruleg prufukaup</li></ul></div>
+      <div class="phase" style="background:var(--green)"><b>3 · Mínar síður (síðar)</b><ul><li>Innskráning með tölvupósti</li><li>Pantana- og reikningasaga úr dk</li><li>Fyrirtækjaverð / greiða með reikningi</li></ul></div>
+    </div>
+    <div class="fb">
+      <h4>Hvað finnst þér? Smelltu til að merkja – og skrifaðu svo í spjallið.</h4>
+      <div class="opts" data-multiselect>
+        <div class="opt" data-choice="phase1-inquiry" onclick="toggleSelect(this)">1. áfangi með „Senda fyrirspurn“ fyrst (vörulisti í loftið áður en karfan kemur)</div>
+        <div class="opt" data-choice="phase1-cart" onclick="toggleSelect(this)">Sleppa millistiginu – fara beint í körfu og greiðslu</div>
+        <div class="opt" data-choice="layout-ok" onclick="toggleSelect(this)">Útlit vörusíðu og körfu er á réttri leið</div>
+        <div class="opt" data-choice="layout-change" onclick="toggleSelect(this)">Ég vil breyta útlitinu (skrifa hvað)</div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<footer class="site"><div class="wrap">
+  <div><b>Skralli</b><span>Móhella 3F, 221 Hafnarfjörður<br>546 3500 · skralli@skralli.is</span></div>
+  <div><b>Fyrirtækið</b><a href="#">Heim</a><a href="#">Um okkur</a><a href="#">Þjónusta</a><a href="#verslun">Vefverslun</a></div>
+  <div><b>Vefverslun</b><a href="#flokkur">Fyrir ökumanninn</a><a href="#flokkur">Hífi- &amp; festibúnaður</a><a href="#">Skilmálar og skilaréttur</a></div>
+</div></footer>
+
+<div class="toast" id="toast">Sett í körfu</div>
+
+<script>
+// Standalone copy of the brainstorm prototype (2026-10-17). Open this file
+// directly in a browser from docs/plans/; images resolve to public/images.
+const IMG={"motta.png":"../../public/images/fyrirokumannin/32-b915af96.png","aklaedi.jpg":"../../public/images/fyrirokumannin/02-a5d3e9bb.jpeg","skobakki.jpg":"../../public/images/fyrirokumannin/55-d2881ae9.jpg","stroffa.jpg":"../../public/images/hifi-festibunadur__stroffur/02-07f1d253.jpg","aukabunadur.jpg":"../../public/images/hifi-festibunadur__aukabunadur/02-6d00818a.jpg","hifikedja.jpg":"../../public/images/hifi-festibunadur/03-9bc801b8.jpg","vetur.jpg":"../../public/images/thjonusta/08-e6009210.jpeg","sia.png":"../../public/images/home/21-212e4fb5.png","smur.jpg":"../../public/images/home/22-d2d92984.jpeg","okumadur.jpg":"../../public/images/home/26-94902b25.jpeg","hifi.png":"../../public/images/home/25-cf51054e.png"};
+function toggleSelect(el){el.classList.toggle('selected');}
+const P = [
+  {c:"PB-GM-200", n:"Pebe gólfmottur í dráttarvél", s:"Pebe · John Deere 6R", p:16800, o:19900, st:"in",  img:"motta.png"},
+  {c:"PB-SA-110", n:"Pebe sætisáklæði, Grammer", s:"Pebe · slitsterkt efni", p:24900, st:"low", img:"aklaedi.jpg"},
+  {c:"SK-BAKKI",  n:"Skóbakki úr gúmmíi", s:"50×35 sm", p:7900, st:"in", img:"skobakki.jpg"},
+  {c:"HS-2T-2M",  n:"Hringstroffa 2 t / 2 m", s:"Lilleseth · CE-vottuð", p:6450, st:"in", img:"stroffa.jpg"},
+  {c:"HK-G8-8",   n:"Hífikeðja G8 8 mm, 1 m", s:"Lilleseth · WLL 2 t", p:12300, st:"back", img:"hifikedja.jpg"},
+  {c:"KR-OL-10",  n:"Krókur með öryggislás 10 mm", s:"Lilleseth", p:3950, st:"out", img:"aukabunadur.jpg"},
+];
+const ST = {in:["in","Á lager"], low:["low","Fá eintök eftir"], back:["back","Sérpöntun · ~10 dagar"], out:["out","Uppselt"]};
+const kr = n => n.toLocaleString("is-IS").replace(/,/g,".") + " kr.";
+let cart = {}; try { cart = JSON.parse(localStorage.getItem("proto-cart")||"{}"); } catch {}
+function save(){ try { localStorage.setItem("proto-cart",JSON.stringify(cart)); } catch {} render(); }
+function card(x){const [cls,txt]=ST[x.st];return `<div class="card"><a href="#vara" class="img" style="display:block;background-image:url(${IMG[x.img]})"></a><div class="body"><h5><a href="#vara">${x.n}</a></h5><p class="blurb">${x.s}</p><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:auto"><span class="price">${kr(x.p)}${x.o?`<s>${kr(x.o)}</s>`:""}</span><span class="badge ${cls}">${txt}</span></div><button class="btn ${x.st==="out"?"":"p"} sm" ${x.st==="out"?"disabled":""} data-add="${x.c}">${x.st==="out"?"Láta mig vita":"Setja í körfu"}</button></div></div>`;}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1400);}
+function add(c,q=1){cart[c]=(cart[c]||0)+q;save();toast("Sett í körfu");}
+function render(){
+  const n=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cartN").textContent=n;
+  document.getElementById("newGrid").innerHTML=P.slice(0,4).map(card).join("");
+  document.getElementById("catGrid").innerHTML=P.map(card).join("");
+  document.getElementById("sibGrid").innerHTML=P.slice(1,4).map(card).join("");
+  document.getElementById("stripGrid").innerHTML=P.slice(0,4).map(card).join("");
+  const lines=Object.entries(cart).map(([c,q])=>({...P.find(p=>p.c===c),q}));
+  const sum=lines.reduce((a,l)=>a+l.p*l.q,0);
+  document.getElementById("cartLines").innerHTML=lines.length?lines.map(l=>`<div class="line"><div class="th" style="background-image:url(${IMG[l.img]})"></div><div><h5>${l.n}</h5><p class="sub2">${l.c} · ${kr(l.p)} stk · <span class="badge ${ST[l.st][0]}" style="padding:2px 8px">${ST[l.st][1]}</span></p></div><div class="qty"><button data-dec="${l.c}">−</button><span>${l.q}</span><button data-inc="${l.c}">+</button></div><div class="tot">${kr(l.p*l.q)}</div></div>`).join(""):`<div class="empty">Karfan er tóm. <a href="#flokkur" style="color:var(--dark);font-weight:600">Skoða vörur</a></div>`;
+  document.getElementById("sumItems").textContent=kr(sum);
+  document.getElementById("sumVat").textContent=kr(Math.round(sum-sum/1.24));
+  document.getElementById("sumTotal").textContent=kr(sum);
+  document.getElementById("toCheckout").disabled=!lines.length;
+  const zip=(document.getElementById("zip").value||"").trim();
+  const capital=/^(1[0-5]\d|16[0-2]|17[0-2]|20\d|21[0-2]|22[0-5]|27[0-6])$/.test(zip);
+  const shipSel=document.getElementById("r2").classList.contains("on");
+  document.getElementById("zipNote").textContent=!shipSel?"":(!/^\d{3}$/.test(zip)?"Sláðu inn póstnúmer.":capital?"Pantanir á höfuðborgarsvæðinu eru sóttar í Móhellu 3F.":"Við sendum með Flytjanda. Viðtakandi greiðir sendingarkostnað.");
+  const ship=0;
+  document.getElementById("coShip").textContent=shipSel?"Greitt við afhendingu":"0 kr.";document.getElementById("okShip").textContent=shipSel?"Sent með Flytjanda – viðtakandi greiðir sendingu":"Sækja í Móhellu 3F, Hafnarfirði";
+  document.getElementById("coTotal").textContent=kr(sum+ship);document.getElementById("stTotal").textContent=kr(sum+ship);document.getElementById("stShip").textContent=shipSel?"Greitt við afhendingu":"0 kr.";document.getElementById("okTotal").textContent=kr(sum+ship);
+}
+function go(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("on",s.id==="s-"+id));document.querySelectorAll(".proto button").forEach(b=>b.classList.toggle("on",b.dataset.go===id));window.scrollTo(0,0);
+  if(id==="pontun"){document.getElementById("confirming").style.display="block";document.getElementById("confirmed").style.display="none";setTimeout(()=>{document.getElementById("confirming").style.display="none";document.getElementById("confirmed").style.display="block";},1800);}
+  if(id==="straumur"&&!Object.keys(cart).length){add("PB-GM-200");}
+}
+document.addEventListener("click",e=>{
+  const g=e.target.closest("[data-go]");if(g){go(g.dataset.go);return;}
+  const a=e.target.closest("a[href^='#']");if(a){const id=a.getAttribute("href").slice(1);if(document.getElementById("s-"+id)){e.preventDefault();go(id);}else e.preventDefault();return;}
+  const ad=e.target.closest("[data-add]");if(ad){add(ad.dataset.add);return;}
+  const inc=e.target.closest("[data-inc]");if(inc){add(inc.dataset.inc);return;}
+  const dec=e.target.closest("[data-dec]");if(dec){cart[dec.dataset.dec]--;if(cart[dec.dataset.dec]<=0)delete cart[dec.dataset.dec];save();return;}
+  const q=e.target.closest("[data-q]");if(q){const el=document.getElementById("pq");el.textContent=Math.max(1,Math.min(99,+el.textContent+ +q.dataset.q));return;}
+  if(e.target.id==="addMain"){add("PB-GM-200",+document.getElementById("pq").textContent);return;}
+  const r=e.target.closest(".radio");if(r&&r.querySelector("input[name=d]")){document.querySelectorAll(".radio").forEach(x=>x.classList.remove("on"));r.classList.add("on");document.getElementById("addr").style.display=r.id==="r2"?"block":"none";render();}
+});
+document.addEventListener("input",e=>{if(e.target.id==="zip")render();});
+render();
+</script>
+</body>
+</html>
