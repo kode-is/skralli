@@ -54,7 +54,7 @@ export const team: Member[] = [
     image: { src: "/images/um-okkur/09-1fa8df66.jpg", alt: "", width: 393, height: 261 },
   },
   {
-    role: "Markaðssvið",
+    role: "Verkefnastjórnun",
     name: "Hlynur Ísak Vilmundarson",
     email: "hlynur@skralli.is",
     phone: "776 4836",
