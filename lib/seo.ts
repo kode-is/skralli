@@ -31,14 +31,19 @@ const OG_IMAGE = {
   alt: "Skralli - Þinn samstarfsaðili",
 };
 
+type OgImage = { url: string; width: number; height: number; alt: string };
+
 export function pageMetadata({
   title,
   description,
   path,
+  image = OG_IMAGE,
 }: {
   title: string;
   description: string;
   path: string;
+  /** Page-specific share image; defaults to the home hero still. */
+  image?: OgImage;
 }): Metadata {
   const url = new URL(path, SITE_URL).toString();
   return {
@@ -52,13 +57,13 @@ export function pageMetadata({
       url,
       siteName: "Skralli",
       locale: "is_IS",
-      images: [OG_IMAGE],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [OG_IMAGE],
+      images: [image],
     },
     robots: {
       "max-image-preview": "large",

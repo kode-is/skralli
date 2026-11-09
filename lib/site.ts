@@ -71,7 +71,7 @@ export const footerColumns = [
       { text: "Groeneveld-Beka", href: "/vorumerki/um-beka" },
       { text: "Lilleseth", href: "/vorumerki/lilleseth-kjetting" },
       { text: "Gigant", href: "/vorumerki/gigant" },
-      { text: "Pebe", href: "/vorumerki/pebe" },
+      { text: "PeBe", href: "/vorumerki/pebe" },
       { text: "Hammerglass", href: "/vorumerki/hammerglass" },
       { text: "BMair", href: "/vorumerki/bmair" },
     ],

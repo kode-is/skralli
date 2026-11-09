@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { Container } from "@/components/Container";
 import { ContactCta } from "@/components/ContactCta";
-import { PageHero } from "@/components/PageHero";
+import { JsonLd } from "@/components/JsonLd";
+import { BrandHero } from "@/components/vorumerki/BrandHero";
+import { BrandOverview } from "@/components/vorumerki/BrandOverview";
+import { BrandProductLines } from "@/components/vorumerki/BrandProductLines";
+import { BrandHighlights } from "@/components/vorumerki/BrandHighlights";
+import { BrandFaq } from "@/components/vorumerki/BrandFaq";
+import { OtherBrands } from "@/components/vorumerki/OtherBrands";
 import { pageMetadata } from "@/lib/seo";
 import { brands } from "@/lib/brands";
+import { brandPageJsonLd } from "@/lib/structured-data";
 
 type BrandPageParams = { slug: string };
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return brands.map((brand) => ({ slug: brand.id }));
@@ -21,7 +29,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const brand = brands.find((item) => item.id === slug);
   if (!brand) return {};
-  return pageMetadata({ title: brand.title, description: brand.description, path: brand.href });
+  return pageMetadata({
+    title: brand.seoTitle,
+    description: brand.seoDescription,
+    path: brand.href,
+    image: { url: brand.image.src, width: brand.image.width, height: brand.image.height, alt: brand.image.alt },
+  });
 }
 
 export default async function BrandPage({
@@ -35,43 +48,14 @@ export default async function BrandPage({
 
   return (
     <main id="main">
-      {/* Title band: the page's single content image as a full-bleed
-          background, matching the reference screenshots — PageHero's
-          default height is 420/560px; these bands measure 438/479px. */}
-      <PageHero image={brand.image} title={brand.name} height="h-[438px] md:h-[479px]" />
-      {/* Every reference screenshot shows a large, near-constant gap of
-          ~140px (mobile) / ~210px (desktop) between the last paragraph and
-          the ContactCta band, regardless of how much copy a brand has (it's
-          just as large on Gigant's 2 paragraphs as on Lilleseth's 5) — so
-          this is a fixed section padding-bottom, not content-driven. */}
+      <JsonLd data={brandPageJsonLd(brand)} />
+      <BrandHero brand={brand} />
       <Breadcrumb items={[{ text: "Vörumerki", href: "/vorumerki" }, { text: brand.name }]} />
-      <section className="bg-white pt-16 pb-36 md:pb-40">
-        <Container>
-          <div className="font-ui text-base leading-relaxed text-neutral-700">
-            {brand.subheading ? (
-              <h4 className="font-ui text-xl font-semibold text-neutral-900 md:text-2xl">
-                {brand.subheading}
-              </h4>
-            ) : null}
-            {brand.body.map((block, index) =>
-              block.type === "list" ? (
-                <ul key={index} className="mt-4 list-disc space-y-1 pl-5 first:mt-0">
-                  {block.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p
-                  key={index}
-                  className={block.bold ? "mt-8 font-bold first:mt-0" : "mt-8 first:mt-0"}
-                >
-                  {block.text}
-                </p>
-              ),
-            )}
-          </div>
-        </Container>
-      </section>
+      <BrandOverview brand={brand} />
+      <BrandProductLines brand={brand} />
+      <BrandHighlights brand={brand} />
+      <BrandFaq brand={brand} />
+      <OtherBrands current={brand} />
       <ContactCta />
     </main>
   );
