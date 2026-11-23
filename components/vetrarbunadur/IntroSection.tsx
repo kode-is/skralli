@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { intro, jumpLinks, jumpNavLabel } from "@/lib/vetrarbunadur";
+import { intro, jumpLinks } from "@/lib/vetrarbunadur";
+import { JumpNav } from "./JumpNav";
 
 // The heading and paragraph are docs/scrape/vetrarbunadur.json blocks 8-9
 // (the live page wraps them in a no-op Framer link to "./", rendered here as
@@ -16,23 +17,9 @@ export function IntroSection() {
         <Reveal as="p" delay={0.1} className="mt-4 max-w-3xl text-base leading-[1.65] text-[#444444] md:mt-5 md:text-lg">
           {intro.text}
         </Reveal>
-        <nav aria-label={jumpNavLabel} className="mt-7 md:mt-9">
-          <ul className="flex flex-wrap gap-2 md:gap-2.5">
-            {jumpLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[#E3E9F2] bg-white px-4 py-2 font-ui text-[13px] font-medium text-[#171717] transition-colors duration-200 hover:border-brand-dark hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mid md:text-sm"
-                >
-                  {link.text}
-                  <span aria-hidden="true" className="text-brand-dark">
-                    ↓
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="mt-7 md:mt-9">
+          <JumpNav links={jumpLinks} />
+        </div>
       </Container>
     </section>
   );

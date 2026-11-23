@@ -3,12 +3,9 @@ import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
+import { snowChainsCta } from "@/lib/snjokedjur";
 import { IntroSection } from "@/components/vetrarbunadur/IntroSection";
 import { LillesethSection } from "@/components/vetrarbunadur/LillesethSection";
-import { ChainLinesSection } from "@/components/vetrarbunadur/ChainLinesSection";
-import { WhyLillesethSection } from "@/components/vetrarbunadur/WhyLillesethSection";
-import { SpikesSection } from "@/components/vetrarbunadur/SpikesSection";
-import { ChainInquirySection } from "@/components/vetrarbunadur/ChainInquirySection";
 import { PlowsSection } from "@/components/vetrarbunadur/PlowsSection";
 import { GigantMoreSection } from "@/components/vetrarbunadur/GigantMoreSection";
 
@@ -42,12 +39,8 @@ export default function VetrarbunadurPage() {
       />
       <Breadcrumb items={[{ text: "Vetrarbúnaður" }]} />
       <IntroSection />
-      {/* Lilleseth snow chains first: they are the page's lead product. */}
-      <LillesethSection />
-      <ChainLinesSection />
-      <WhyLillesethSection />
-      <SpikesSection />
-      <ChainInquirySection />
+      {/* Lilleseth snow chains first, leading to their own page at /snjokedjur. */}
+      <LillesethSection primaryCta={snowChainsCta} />
       {/* Gigant snow clearing and gritting. */}
       <PlowsSection />
       <GigantMoreSection />

@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { servicesMenu } from "@/lib/site";
-import { ROUTES } from "@/lib/routes";
+import { ROUTES, SITE_ONLY_ROUTES } from "@/lib/routes";
 
 describe("servicesMenu", () => {
   it("has the heading and description verbatim", () => {
@@ -10,10 +10,10 @@ describe("servicesMenu", () => {
     );
   });
 
-  it("has two columns totalling the seven live-site links in order", () => {
+  it("has two columns totalling the eight service links in order", () => {
     expect(servicesMenu.columns).toHaveLength(2);
     const links = servicesMenu.columns.flat();
-    expect(links).toHaveLength(7);
+    expect(links).toHaveLength(8);
     expect(links.map((link) => link.text)).toEqual([
       "Smurkerfi",
       "Sturtuvagnar",
@@ -22,6 +22,7 @@ describe("servicesMenu", () => {
       "Fyrir ökumanninn",
       "Hífi- & festibúnaður",
       "Vetrarbúnaður",
+      "Snjókeðjur",
     ]);
     expect(links.map((link) => link.href)).toEqual([
       "/smurkerfi",
@@ -31,12 +32,13 @@ describe("servicesMenu", () => {
       "/fyrirokumannin",
       "/hifi-festibunadur",
       "/vetrarbunadur",
+      "/snjokedjur",
     ]);
   });
 
   it("every link href exists in lib/routes.ts", () => {
     for (const link of servicesMenu.columns.flat()) {
-      expect(ROUTES).toContain(link.href);
+      expect([...ROUTES, ...SITE_ONLY_ROUTES]).toContain(link.href);
     }
   });
 });

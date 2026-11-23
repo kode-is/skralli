@@ -26,7 +26,8 @@ export function ChainLinesSection() {
           {chainLines.items.map((line) => (
             <StaggerItem
               key={line.name}
-              className="flex flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_1px_2px_rgba(16,24,40,0.04)]"
+              id={line.id}
+              className="flex scroll-mt-6 flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_1px_2px_rgba(16,24,40,0.04)]"
             >
               <div className="relative bg-brand-dark px-6 pt-6 pb-7 text-white md:px-8 md:pt-8 md:pb-9" style={CHAIN_PATTERN_STYLE}>
                 <div className="flex min-h-[26px] items-center justify-between gap-4">

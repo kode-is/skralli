@@ -6,6 +6,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { privacyPolicy } from "@/lib/privacy";
 import { site } from "@/lib/site";
+import { SNOW_CHAINS_PATH, snowChainsSearch } from "@/lib/snjokedjur";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sitemap from "@/app/sitemap";
@@ -86,6 +87,10 @@ function parseScrapePage(pathname: string): ParsedPage {
       usedFallback: false,
     };
   }
+  if (pathname === SNOW_CHAINS_PATH) {
+    // Site-only page: no scrape file exists, its copy lives in lib/vetrarbunadur.ts.
+    return { pathname, ...snowChainsSearch, usedFallback: false };
+  }
   const scrape = loadScrape(pathname);
   if (!scrape) {
     return { pathname, title: fallbackTitle(pathname), headingTexts: [], bodyTexts: [], usedFallback: true };
@@ -121,6 +126,7 @@ const CATEGORY_PAGES = new Set([
   "/smurkerfi",
   "/oryggisrudur",
   "/vetrarbunadur",
+  "/snjokedjur",
   "/fyrirokumannin",
   "/siubunadur",
   "/hifi-festibunadur",

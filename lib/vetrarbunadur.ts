@@ -18,9 +18,6 @@ export type GigantIconName = "spreader" | "wagon" | "scraper";
 export const jumpNavLabel = "Á þessari síðu";
 export const jumpLinks = [
   { href: "#snjokedjur", text: "Snjókeðjur" },
-  { href: "#kedjulinur", text: "Keðjutýpur" },
-  { href: "#broddar", text: "Gerðir brodda" },
-  { href: "#fyrirspurn", text: "Finndu réttu keðjuna" },
   { href: "#snjoplogar", text: "Snjóplógar" },
   { href: "#halkuvarnir", text: "Hálkuvarnir" },
 ];
@@ -47,27 +44,37 @@ export const lilleseth = {
   statsNote: "Snjókeðjur sem henta þér",
 };
 
-export type Vehicle = { icon: VehicleIconName; title: string; text: string };
+/** `id` is the vehicle's section anchor on /snjokedjur. */
+export type Vehicle = {
+  id: "drattarvelar" | "vinnuvelar" | "vorubilar" | "minni-taeki";
+  icon: VehicleIconName;
+  title: string;
+  text: string;
+};
 
 export const vehiclesHeading = "Keðjur fyrir öll tæki";
 
 export const vehicles: Vehicle[] = [
   {
+    id: "drattarvelar",
     icon: "tractor",
     title: "Dráttarvélar",
     text: "Fyrir snjómokstur, landbúnað og akstur á ísilögðum vegum.",
   },
   {
+    id: "vinnuvelar",
     icon: "loader",
     title: "Vinnuvélar",
     text: "Hjólaskóflur, búkollur, hjólagröfur og jarðýtur.",
   },
   {
+    id: "vorubilar",
     icon: "truck",
     title: "Vörubílar og rútur",
     text: "Vörubílar, rútur og flutningabílar, einnig á tvöföld dekk.",
   },
   {
+    id: "minni-taeki",
     icon: "atv",
     title: "Vagnar og minni tæki",
     text: "Vagnar, fjórhjól og annar búnaður.",
@@ -75,6 +82,8 @@ export const vehicles: Vehicle[] = [
 ];
 
 export type ChainLine = {
+  /** Anchor of the line's card on /snjokedjur. */
+  id: string;
   name: string;
   kicker: string;
   badge?: string;
@@ -93,6 +102,7 @@ export const chainLines = {
   cta: "Fá tilboð",
   items: [
     {
+      id: "easy-on",
       name: "Easy On",
       kicker: "Léttkeðja",
       badge: "Mest selda keðjan",
@@ -102,6 +112,7 @@ export const chainLines = {
       points: ["Létt og fer vel með dekkin", "Sniðin að dekkjastærð", "Sett á án verkfæra"],
     },
     {
+      id: "combi-grip",
       name: "Combi-Grip",
       kicker: "Fljótandi gaddakeðja",
       text: "Snúin og sterkbyggð gaddakeðja sem flýtur jafnt yfir dekkið og gefur jafnan og mjúkan akstur. Öflugt og slitsterkt grip fyrir landbúnað, vinnuvélar, skógarvinnu og snjómokstur.",
@@ -110,6 +121,7 @@ export const chainLines = {
       points: ["Fer vel með dekkin", "Einföld uppsetning án verkfæra", "Einnig fyrir hjólagröfur"],
     },
     {
+      id: "arctic-grip",
       name: "Arctic Grip",
       kicker: "Gaddakeðja fyrir flutninga",
       text: "Fyrir vörubíla, rútur og flutningabíla. Snúin keðja úr gegnhertu stálblendi með öflugum göddum og sterkum, seighertum krók sem gefur gott grip á hálum vetrarvegum.",
@@ -118,6 +130,7 @@ export const chainLines = {
       points: ["Hálfþétt, ofurþétt eða stýriskeðja", "Nákvæm passa og fljótleg uppsetning", "Einnig fyrir tvöföld dekk"],
     },
     {
+      id: "fjorhjolakedjur",
       name: "Fjórhjólakeðjur",
       kicker: "Fyrir minni tæki",
       text: "Ferkantaðar keðjur með U-broddum sem grípa vel, jafnvel á dekkjum með háu munstri. Sniðnar að dekkjastærð og settar á án verkfæra.",

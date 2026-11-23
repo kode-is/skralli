@@ -51,6 +51,7 @@ export const servicesMenu = {
       { text: "Fyrir ökumanninn", href: "/fyrirokumannin" },
       { text: "Hífi- & festibúnaður", href: "/hifi-festibunadur" },
       { text: "Vetrarbúnaður", href: "/vetrarbunadur" },
+      { text: "Snjókeðjur", href: "/snjokedjur" },
     ],
   ],
 } as const;
@@ -83,6 +84,7 @@ export const footerColumns = [
       { text: "Sturtuvagnar", href: "/sturtuvagnar" },
       { text: "Öryggisrúður", href: "/oryggisrudur" },
       { text: "Vetrarbúnaður", href: "/vetrarbunadur" },
+      { text: "Snjókeðjur", href: "/snjokedjur" },
       { text: "Fyrir ökumanninn", href: "/fyrirokumannin" },
       { text: "Hífi- & festibúnaður", href: "/hifi-festibunadur" },
       { text: "Síubúnaður", href: "/siubunadur" },
