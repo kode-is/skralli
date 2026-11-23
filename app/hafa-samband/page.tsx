@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
@@ -6,13 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ContactMapSection } from "@/components/ContactMapSection";
 import { Reveal } from "@/components/motion/Reveal";
 
-// docs/scrape/hafa-samband.json — same <title>/<meta description> as every
-// other route on the live site (confirmed against the server-rendered HTML).
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/hafa-samband",
-});
+export const metadata = routeMetadata("/hafa-samband");
 
 export default function HafaSambandPage() {
   return (

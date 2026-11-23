@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
@@ -7,13 +7,7 @@ import { IntroSection } from "@/components/siubunadur/IntroSection";
 import { SuitabilitySection } from "@/components/siubunadur/SuitabilitySection";
 import { ProductsSection } from "@/components/siubunadur/ProductsSection";
 
-// docs/scrape/siubunadur.json — same <title>/<meta description> as every
-// other route on the live site.
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/siubunadur",
-});
+export const metadata = routeMetadata("/siubunadur");
 
 // docs/scrape/siubunadur.json block 1. Scraped at a 512x238 thumbnail; the
 // actual downloaded file is 1752x815 (same ~2.15:1 aspect), so that's what

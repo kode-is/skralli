@@ -12,7 +12,7 @@ import { InquiryProvider } from "@/components/sturtuvagnar/InquiryContext";
 import { MobileQuoteBar } from "@/components/sturtuvagnar/MobileQuoteBar";
 import { ProductFeatureTiles } from "@/components/sturtuvagnar/ProductFeatureTiles";
 import { SiblingProducts } from "@/components/sturtuvagnar/SiblingProducts";
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { wagonGroups, wagons, groupFeatures, type WagonGroup, type Wagon } from "@/lib/sturtuvagnar";
 
 type PageParams = { slug: string };
@@ -42,11 +42,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const record = findRecord(slug);
   if (!record) return {};
-  return pageMetadata({
-    title: record.pageTitle,
-    description: record.description,
-    path: `/sturtuvagnar/${record.slug}`,
-  });
+  return routeMetadata(`/sturtuvagnar/${record.slug}`);
 }
 
 export default async function SturtuvagnarSlugPage({

@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
@@ -7,13 +7,7 @@ import { IntroSection } from "@/components/sturtuvagnar/IntroSection";
 import { FeaturesSection } from "@/components/sturtuvagnar/FeaturesSection";
 import { OtherGroupsSection } from "@/components/sturtuvagnar/OtherGroupsSection";
 
-// docs/scrape/sturtuvagnar.json — same <title>/<meta description> as every
-// other route on the live site (confirmed against the server-rendered HTML).
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/sturtuvagnar",
-});
+export const metadata = routeMetadata("/sturtuvagnar");
 
 // docs/scrape/sturtuvagnar.json block 1: same photo as the home page's
 // "Sturtuvagnar" category card (lib/categories.ts), used full-bleed as the

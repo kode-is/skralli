@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
@@ -8,13 +8,7 @@ import { AboutIntro } from "@/components/um-okkur/AboutIntro";
 import { GoalsSection } from "@/components/um-okkur/GoalsSection";
 import { TeamSection } from "@/components/um-okkur/TeamSection";
 
-// docs/scrape/um-okkur.json — same <title>/<meta description> as every other
-// route on the live site (confirmed against the server-rendered HTML).
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/um-okkur",
-});
+export const metadata = routeMetadata("/um-okkur");
 
 export default function UmOkkurPage() {
   return (

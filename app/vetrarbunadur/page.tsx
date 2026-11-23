@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
@@ -12,13 +12,7 @@ import { ChainInquirySection } from "@/components/vetrarbunadur/ChainInquirySect
 import { PlowsSection } from "@/components/vetrarbunadur/PlowsSection";
 import { GigantMoreSection } from "@/components/vetrarbunadur/GigantMoreSection";
 
-// docs/scrape/vetrarbunadur.json — same <title>/<meta description> as every
-// other route on the live site.
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/vetrarbunadur",
-});
+export const metadata = routeMetadata("/vetrarbunadur");
 
 // docs/scrape/vetrarbunadur.json block 1 (same photo used as the
 // /thjonusta hero — docs/scrape/thjonusta.json). Scraped at a 384x512

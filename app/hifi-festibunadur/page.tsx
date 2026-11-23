@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
@@ -9,13 +9,7 @@ import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
 import { Reveal } from "@/components/motion/Reveal";
 
-// docs/scrape/hifi-festibunadur.json — same <title>/<meta description> as
-// every other route on the live site.
-export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
-  description: "Skralli - Innflutningur & Ráðgjöf. Við erum hér til að þjónusta þig.",
-  path: "/hifi-festibunadur",
-});
+export const metadata = routeMetadata("/hifi-festibunadur");
 
 // docs/scrape/hifi-festibunadur.json block 1: same photo as the home page's
 // hífi- & festibúnaður category card (lib/categories.ts),

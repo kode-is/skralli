@@ -7,13 +7,8 @@ import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
 import { HifiSections } from "@/components/hifi/HifiSections";
-import { pageMetadata } from "@/lib/seo";
+import { routeMetadata } from "@/lib/page-meta";
 import { hifiPages, type HifiPage } from "@/lib/hifi";
-
-// Site-wide <title>/<meta description> pattern: every hífi- og festibúnaður
-// route (docs/scrape/hifi-festibunadur*.json) shares the one <title>, with
-// each page's own scraped description.
-const PAGE_TITLE = "Skralli - Þinn samstarfsaðili";
 
 const HifiIcon = CATEGORY_ICONS["hifi-festibunadur"];
 
@@ -53,11 +48,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = findPage(slug);
   if (!page) return {};
-  return pageMetadata({
-    title: PAGE_TITLE,
-    description: page.description,
-    path: `/hifi-festibunadur/${page.path.join("/")}`,
-  });
+  return routeMetadata(`/hifi-festibunadur/${page.path.join("/")}`);
 }
 
 export default async function HifiSlugPage({ params }: { params: Promise<PageParams> }) {

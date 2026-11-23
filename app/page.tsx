@@ -8,7 +8,7 @@ import { StatsSection } from "@/components/StatsSection";
 import { BrandsSection } from "@/components/home/BrandsSection";
 
 export const metadata = pageMetadata({
-  title: "Skralli - Þinn samstarfsaðili",
+  title: "Skralli - Smurkerfi, sturtuvagnar og vetrarbúnaður",
   description:
     "Skralli aðstoðar þig við að finna réttu lausnina fyrir þig. Hvort sem það er að finna lausn fyrir smurtæki eða finna rétta sætisáklæðið, Við getum aðstoðað þig.",
   path: "/",
