@@ -209,10 +209,40 @@ export const spikeTypes = {
   ] satisfies SpikeType[],
 };
 
+export type Accessory = { name: string; image: Img };
+
+// Product photos from lilleseth.no, used with Lilleseth's permission.
 export const accessories = {
   heading: "Aukahlutir",
   text: "Við bjóðum upp á breitt úrval af varahlutum og verkfærum fyrir snjókeðjur.",
-  items: ["Keðjuefni", "Viðgerðahlekkir", "Strekkjarar", "Verkfæri / keðjutangir"],
+  items: [
+    {
+      name: "Keðjuefni",
+      image: { src: "/images/vetrarbunadur/aukahlutir/kedjuefni.webp", alt: "Keðjuefni frá Lilleseth", width: 800, height: 800 },
+    },
+    {
+      name: "Viðgerðahlekkir",
+      image: {
+        src: "/images/vetrarbunadur/aukahlutir/vidgerdahlekkir.webp",
+        alt: "Tveir viðgerðahlekkir fyrir snjókeðjur",
+        width: 800,
+        height: 800,
+      },
+    },
+    {
+      name: "Strekkjarar",
+      image: {
+        src: "/images/vetrarbunadur/aukahlutir/strekkjarar.webp",
+        alt: "Gúmmístrekkjarar fyrir snjókeðjur",
+        width: 800,
+        height: 800,
+      },
+    },
+    {
+      name: "Verkfæri / keðjutangir",
+      image: { src: "/images/vetrarbunadur/aukahlutir/kedjutong.webp", alt: "Keðjutöng frá Lilleseth", width: 800, height: 800 },
+    },
+  ] satisfies Accessory[],
 };
 
 export const inquiry = {
@@ -324,12 +354,18 @@ export const plowModels: Plow[] = [
   },
 ];
 
+export type GigantModelTable = { caption: string; headers: string[]; rows: string[][] };
+
 export type GigantProduct = {
   icon: GigantIconName;
   name: string;
   text: string;
   specs: { value: string; label: string }[];
   points: string[];
+  /** Model comparison, from gigantprodukter.no/produkter/vinter. */
+  models?: GigantModelTable;
+  /** Optional extras, listed as Tilleggsutstyr by Gigant. */
+  accessories?: string[];
 };
 
 export const gigantMore = {
@@ -338,14 +374,33 @@ export const gigantMore = {
   items: [
     {
       icon: "spreader",
-      name: "Sanddreifarar GSS",
+      name: "Sand- og saltdreifarar GSS",
       text: "Sjálfhlaðandi sanddreifarar fyrir dráttarvélar og hjólaskóflur. Dreifa sandi, salti eða möl. Sandblásnir og lakkaðir með tveggja þátta lakki sem þolir veturinn.",
       specs: [
         { value: "4", label: "stærðir" },
         { value: "2.500 l", label: "mest" },
         { value: "210 cm", label: "breidd" },
+        { value: "2,2-2,8 m", label: "dreifibreidd" },
       ],
-      points: ["Þrepalaus vökvastýring", "Yfirbreiðsla fylgir", "BM-festing fáanleg"],
+      points: ["Stillanleg dreifibreidd", "Vökvadrifnir", "3ja punkta eða BM-festing", "Vökvaúttak 1×2 aðgerðir"],
+      models: {
+        caption: "Stærðir sand- og saltdreifara GSS",
+        headers: ["Gerð", "Rúmmál", "Eigin þyngd"],
+        rows: [
+          ["GSS-10", "1.000 l", "620 kg"],
+          ["GSS-15", "1.500 l", "690 kg"],
+          ["GSS-20", "2.000 l", "780 kg"],
+          ["GSS-25", "2.500 l", "930 kg"],
+        ],
+      },
+      accessories: [
+        "Yfirbreiðsla",
+        "Stjórnbox með þrepalausri vökvastýringu",
+        "3ja punkta sjálfhlaðandi festing með vökvakerfi",
+        "BM-festing, stór",
+        "BM-festing, lítil (Zettelmeyer)",
+        "Fluid Film olíumeðferð",
+      ],
     },
     {
       icon: "wagon",
@@ -354,8 +409,35 @@ export const gigantMore = {
       specs: [
         { value: "7 m³", label: "GSS-70" },
         { value: "10 m³", label: "GSS-100" },
+        { value: "2,8 m", label: "mesta dreifibreidd" },
       ],
-      points: ["Hannaður í samstarfi við notendur", "Fyrir sveitarfélög og verktaka"],
+      points: [
+        "Hannaður í samstarfi við notendur",
+        "Fyrir sveitarfélög og verktaka",
+        "Loftbremsur með ABS og vökvabremsur",
+        "Fjaðrandi 10,5 tonna öxlar",
+        "Stillanleg dreifibreidd",
+        "Hleðsluhæð 240 cm",
+        "Hliðar úr 5 mm S355 stáli",
+        "LED-ljós, vinnuljós og blikkljós",
+        "Sóluð og negld 445/45R19,5 dekk",
+      ],
+      models: {
+        caption: "Stærðir dreifivagna GSS",
+        headers: ["Gerð", "GSS-70", "GSS-100"],
+        rows: [
+          ["Rúmmál", "7 m³", "10 m³"],
+          ["Heildarþyngd", "15.000 kg", "21.000 kg"],
+          ["Eigin þyngd", "3.500 kg", "4.500 kg"],
+          ["Öxlar", "1", "2"],
+        ],
+      },
+      accessories: [
+        "Yfirbreiðsla",
+        "K-80 kúlutengi",
+        "Stjórnbox með þrepalausri stýringu á dreifibreidd",
+        "Fluid Film olíumeðferð",
+      ],
     },
     {
       icon: "scraper",

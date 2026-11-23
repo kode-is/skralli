@@ -9,9 +9,8 @@ type DetailsFaqProps = {
 };
 
 /**
- * FAQ on native <details>: unlike components/Faq.tsx (which mounts an answer
- * only once it is opened), every answer is in the server-rendered HTML, so
- * crawlers read it and it matches the page's FAQPage JSON-LD.
+ * FAQ on native <details>: every answer is in the server-rendered HTML even
+ * while it is closed, so crawlers read it and it can match FAQPage JSON-LD.
  */
 export function DetailsFaq({ heading, items, surface = "tinted" }: DetailsFaqProps) {
   const isWhite = surface === "white";
@@ -45,7 +44,7 @@ export function DetailsFaq({ heading, items, surface = "tinted" }: DetailsFaqPro
                   +
                 </span>
               </summary>
-              <p className="px-6 pb-6 text-[15px] leading-[1.7] text-[#444444]">{item.answer}</p>
+              <p className="px-6 pb-6 text-[15px] leading-[1.7] whitespace-pre-line text-[#444444]">{item.answer}</p>
             </details>
           ))}
         </div>

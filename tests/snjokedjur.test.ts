@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import sitemap from "@/app/sitemap";
 import { brands } from "@/lib/brands";
@@ -11,7 +13,7 @@ import {
   vehicleSections,
 } from "@/lib/snjokedjur";
 import { snowChainsJsonLd } from "@/lib/structured-data";
-import { chainLines, vehicles } from "@/lib/vetrarbunadur";
+import { accessories, chainLines, gigantMore, vehicles } from "@/lib/vetrarbunadur";
 
 describe("/snjokedjur content", () => {
   it("keeps the search title and description short enough to show whole", () => {
@@ -54,6 +56,30 @@ describe("/snjokedjur content", () => {
   it("gives jump links unique targets", () => {
     const hrefs = snowChainsJumpLinks.map((link) => link.href);
     expect(new Set(hrefs).size).toBe(hrefs.length);
+  });
+});
+
+describe("winter equipment content", () => {
+  it("has a real photo with alt text for every chain accessory", () => {
+    expect(accessories.items.map((item) => item.name)).toEqual([
+      "Keðjuefni",
+      "Viðgerðahlekkir",
+      "Strekkjarar",
+      "Verkfæri / keðjutangir",
+    ]);
+    for (const item of accessories.items) {
+      expect(item.image.alt, item.name).toBeTruthy();
+      expect(existsSync(join(process.cwd(), "public", item.image.src)), item.image.src).toBe(true);
+    }
+  });
+
+  it("lists all Gigant spreader models with a value for every column", () => {
+    const models = gigantMore.items.flatMap((product) => product.models ?? []);
+    expect(models[0].rows.map((row) => row[0])).toEqual(["GSS-10", "GSS-15", "GSS-20", "GSS-25"]);
+    expect(models[1].headers.slice(1)).toEqual(["GSS-70", "GSS-100"]);
+    for (const table of models) {
+      for (const row of table.rows) expect(row).toHaveLength(table.headers.length);
+    }
   });
 });
 
