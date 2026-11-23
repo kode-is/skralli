@@ -10,9 +10,9 @@ import {
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { Container } from "@/components/Container";
+import { DetailsFaq } from "@/components/DetailsFaq";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { SnowChainFaq } from "@/components/snjokedjur/SnowChainFaq";
 import { VehicleChainsSection } from "@/components/snjokedjur/VehicleChainsSection";
 import { ChainInquirySection } from "@/components/vetrarbunadur/ChainInquirySection";
 import { ChainLinesSection } from "@/components/vetrarbunadur/ChainLinesSection";
@@ -51,7 +51,7 @@ export default function SnjokedjurPage() {
       <WhyLillesethSection />
       <SpikesSection />
       <ChainInquirySection />
-      <SnowChainFaq />
+      <DetailsFaq heading={snowChainsFaq.heading} items={snowChainsFaq.items} surface="white" />
     </main>
   );
 }

@@ -39,13 +39,16 @@ describe("/snjokedjur content", () => {
     }
   });
 
-  it("places every approved fit of every chain line in a vehicle group", () => {
-    const listed = new Set(
-      vehicleSections.flatMap((section) => section.lines.flatMap((line) => line.fits.map((fit) => `${line.id}:${fit}`))),
-    );
-    for (const line of chainLines.items) {
-      for (const fit of line.fits) expect(listed.has(`${line.id}:${fit}`), `${line.name}: ${fit}`).toBe(true);
-    }
+  it("shows every chain line in at least one vehicle group", () => {
+    const listed = new Set(vehicleSections.flatMap((section) => section.lines.map((line) => line.id)));
+    expect([...listed].sort()).toEqual(chainLines.items.map((line) => line.id).sort());
+  });
+
+  it("focuses the smallest group on fjórhjól and lyftarar", () => {
+    const section = vehicleSections.find((item) => item.id === "fjorhjol")!;
+    expect(section.heading).toBe("Snjókeðjur fyrir fjórhjól og lyftara");
+    const fits = new Set(section.lines.flatMap((line) => line.fits));
+    expect([...fits].sort()).toEqual(["Fjórhjól", "Lyftarar"]);
   });
 
   it("gives jump links unique targets", () => {

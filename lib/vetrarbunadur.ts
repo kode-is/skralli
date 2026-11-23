@@ -46,7 +46,7 @@ export const lilleseth = {
 
 /** `id` is the vehicle's section anchor on /snjokedjur. */
 export type Vehicle = {
-  id: "drattarvelar" | "vinnuvelar" | "vorubilar" | "minni-taeki";
+  id: "drattarvelar" | "vinnuvelar" | "vorubilar" | "fjorhjol";
   icon: VehicleIconName;
   title: string;
   text: string;
@@ -74,10 +74,10 @@ export const vehicles: Vehicle[] = [
     text: "Vörubílar, rútur og flutningabílar, einnig á tvöföld dekk.",
   },
   {
-    id: "minni-taeki",
+    id: "fjorhjol",
     icon: "atv",
-    title: "Vagnar og minni tæki",
-    text: "Vagnar, fjórhjól og annar búnaður.",
+    title: "Fjórhjól og lyftarar",
+    text: "Fjórhjól, lyftarar og annar búnaður.",
   },
 ];
 

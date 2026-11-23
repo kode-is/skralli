@@ -4,7 +4,8 @@
 // new; every FAQ answer is assembled from the approved sentences.
 //
 // The vehicle grouping follows how lilleseth.no organises its chains by use
-// (landbruk, anlegg, transport, skog). Skralli sells the common types for each
+// (landbruk, anlegg, transport, skog, ATV and truck, the Norwegian word for a
+// forklift). Skralli sells the common types for each
 // vehicle, so each group lists the approved lines rather than a full catalogue.
 
 import {
@@ -25,7 +26,7 @@ export const SNOW_CHAINS_PATH = "/snjokedjur";
 export const snowChainsMeta = {
   title: "Snjókeðjur frá Lilleseth fyrir öll tæki | Skralli",
   description:
-    "Snjókeðjur frá Lilleseth fyrir dráttarvélar, vinnuvélar, vörubíla, rútur, vagna og fjórhjól. Sendu okkur dekkjastærðina og við finnum réttu keðjuna.",
+    "Snjókeðjur frá Lilleseth fyrir dráttarvélar, vinnuvélar, vörubíla, rútur, fjórhjól og lyftara. Sendu okkur dekkjastærðina og við finnum réttu keðjuna.",
 };
 
 export const snowChainsHero = {
@@ -49,10 +50,7 @@ const VEHICLE_GROUPS: Record<Vehicle["id"], { heading: string; fits: string[] }>
     heading: "Snjókeðjur fyrir vörubíla og rútur",
     fits: ["Vörubílar", "Rútur", "Flutningabílar"],
   },
-  "minni-taeki": {
-    heading: "Snjókeðjur fyrir vagna og minni tæki",
-    fits: ["Vagnar", "Fjórhjól", "Liðléttingar", "Lyftarar"],
-  },
+  fjorhjol: { heading: "Snjókeðjur fyrir fjórhjól og lyftara", fits: ["Fjórhjól", "Lyftarar"] },
 };
 
 export type VehicleChainLine = Pick<ChainLine, "id" | "name" | "kicker" | "sizes"> & {
