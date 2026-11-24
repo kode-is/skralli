@@ -27,6 +27,7 @@ export function HifiHero({
   subtitle,
   image,
   icon,
+  alsoKnownAs = [],
   eyebrow = "Hífi- & festibúnaður",
   coverPhoto = false,
 }: {
@@ -35,6 +36,8 @@ export function HifiHero({
   image: Img;
   /** Decorative category glyph beside the eyebrow. */
   icon?: ReactNode;
+  /** Other names for this product category. */
+  alsoKnownAs?: string[];
   eyebrow?: string;
   /** For a full scene photo, which should fill the frame. */
   coverPhoto?: boolean;
@@ -61,6 +64,11 @@ export function HifiHero({
           {subtitle ? (
             <HeroReveal as="p" delay={0.2} className="mt-5 max-w-xl text-lg leading-[1.55] text-white/90 md:text-xl">
               {subtitle}
+            </HeroReveal>
+          ) : null}
+          {alsoKnownAs.length ? (
+            <HeroReveal as="p" delay={0.25} className="mt-3 font-ui text-sm text-white/75">
+              Einnig þekkt sem: {alsoKnownAs.join(", ")}
             </HeroReveal>
           ) : null}
           <HeroReveal delay={0.3} className="mt-8 flex flex-wrap gap-3">

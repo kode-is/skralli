@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import type { HifiBlock, HifiTable } from "@/lib/hifi";
+import { sectionTerms } from "@/lib/hifi-terms";
 import type { Img } from "@/lib/types";
 import { photoFit } from "./catalog";
 import { FilterableSpecTable } from "./FilterableSpecTable";
@@ -190,6 +191,9 @@ export function HifiSections({
                 <Reveal as="h2" id={`${sectionId}-titill`} className="text-[28px] leading-[1.15] font-semibold text-[#171717] md:text-[40px] md:leading-[1.1]">
                   {section.heading}
                 </Reveal>
+              ) : null}
+              {section.heading && sectionTerms(section.heading).length ? (
+                <p className="mt-2 font-ui text-sm text-[#5b6472]">Einnig þekkt sem: {sectionTerms(section.heading).join(", ")}</p>
               ) : null}
               {section.lead.length ? (
                 <div className="mt-3 max-w-3xl space-y-3 text-base leading-[1.65] text-[#444444] md:text-lg">

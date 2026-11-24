@@ -9,6 +9,7 @@ import { HifiInquiry } from "@/components/hifi/HifiInquiry";
 import { HifiSections } from "@/components/hifi/HifiSections";
 import { pageMetadata } from "@/lib/seo";
 import { hifiPages, type HifiPage } from "@/lib/hifi";
+import { pageTerms } from "@/lib/hifi-terms";
 
 // Site-wide <title>/<meta description> pattern: every hífi- og festibúnaður
 // route (docs/scrape/hifi-festibunadur*.json) shares the one <title>, with
@@ -77,6 +78,7 @@ export default async function HifiSlugPage({ params }: { params: Promise<PagePar
         title={page.title}
         subtitle={page.subtitle}
         image={page.heroImage!}
+        alsoKnownAs={pageTerms(page.path)}
         icon={HifiIcon ? <HifiIcon className="h-5 w-5" /> : undefined}
       />
       <Breadcrumb items={breadcrumbItems} />
