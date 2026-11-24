@@ -17,7 +17,6 @@ export type GigantIconName = "spreader" | "wagon" | "scraper";
 /** In-page jump links shown under the intro. */
 export const jumpNavLabel = "Á þessari síðu";
 export const jumpLinks = [
-  { href: "#snjokedjur", text: "Snjókeðjur" },
   { href: "#snjoplogar", text: "Snjóplógar" },
   { href: "#halkuvarnir", text: "Hálkuvarnir" },
 ];

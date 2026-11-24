@@ -45,7 +45,7 @@ export default function SnjokedjurPage() {
           <JumpNav links={snowChainsJumpLinks} />
         </Container>
       </div>
-      <LillesethSection showVehicles={false} />
+      <LillesethSection />
       <VehicleChainsSection />
       <ChainLinesSection />
       <WhyLillesethSection />
