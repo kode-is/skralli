@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Container } from "@/components/Container";
 import { HeroReveal } from "@/components/motion/Reveal";
 import type { Img } from "@/lib/types";
@@ -25,12 +26,15 @@ export function HifiHero({
   title,
   subtitle,
   image,
+  icon,
   eyebrow = "Hífi- & festibúnaður",
   coverPhoto = false,
 }: {
   title: string;
   subtitle?: string;
   image: Img;
+  /** Decorative category glyph beside the eyebrow. */
+  icon?: ReactNode;
   eyebrow?: string;
   /** For a full scene photo, which should fill the frame. */
   coverPhoto?: boolean;
@@ -43,8 +47,13 @@ export function HifiHero({
       />
       <Container className="relative grid items-center gap-10 pt-32 pb-14 md:grid-cols-[1.05fr_1fr] md:gap-16 md:pt-44 md:pb-20">
         <div>
-          <HeroReveal as="p" className="font-ui text-[11px] font-semibold tracking-[.14em] text-white/70 uppercase md:text-xs">
-            {eyebrow}
+          <HeroReveal className="flex items-center gap-3">
+            {icon ? (
+              <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-white/15 text-white">
+                {icon}
+              </span>
+            ) : null}
+            <p className="font-ui text-[11px] font-semibold tracking-[.14em] text-white/70 uppercase md:text-xs">{eyebrow}</p>
           </HeroReveal>
           <HeroReveal as="h1" delay={0.1} className="mt-3 text-[40px] leading-[1.06] font-semibold md:text-[64px] md:leading-[1.03]">
             {title}

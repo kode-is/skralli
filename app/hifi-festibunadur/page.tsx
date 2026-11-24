@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
+import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
 import { HifiHero } from "@/components/hifi/HifiHero";
 import { HifiInquiry } from "@/components/hifi/HifiInquiry";
@@ -59,6 +60,8 @@ const CHILD_CARDS: ChildCard[] = [
   },
 ];
 
+const HifiIcon = CATEGORY_ICONS["hifi-festibunadur"];
+
 export default function HifiFestibunadurPage() {
   return (
     <main id="main">
@@ -66,6 +69,7 @@ export default function HifiFestibunadurPage() {
         title="Hífi- & festibúnaður"
         subtitle="Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
         image={HERO_IMAGE}
+        icon={HifiIcon ? <HifiIcon className="h-5 w-5" /> : undefined}
         eyebrow="Lilleseth Kjetting"
         coverPhoto
       />

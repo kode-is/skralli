@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb, type BreadcrumbItem } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
+import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
 import { HifiHero } from "@/components/hifi/HifiHero";
 import { HifiInquiry } from "@/components/hifi/HifiInquiry";
@@ -13,6 +14,8 @@ import { hifiPages, type HifiPage } from "@/lib/hifi";
 // route (docs/scrape/hifi-festibunadur*.json) shares the one <title>, with
 // each page's own scraped description.
 const PAGE_TITLE = "Skralli - Þinn samstarfsaðili";
+
+const HifiIcon = CATEGORY_ICONS["hifi-festibunadur"];
 
 type PageParams = { slug: string[] };
 
@@ -70,7 +73,12 @@ export default async function HifiSlugPage({ params }: { params: Promise<PagePar
 
   return (
     <main id="main">
-      <HifiHero title={page.title} subtitle={page.subtitle} image={page.heroImage!} />
+      <HifiHero
+        title={page.title}
+        subtitle={page.subtitle}
+        image={page.heroImage!}
+        icon={HifiIcon ? <HifiIcon className="h-5 w-5" /> : undefined}
+      />
       <Breadcrumb items={breadcrumbItems} />
       {page.children ? (
         <section id="vorur" className="scroll-mt-6 bg-[#f0f4fa] py-14 md:py-20">
