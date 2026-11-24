@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { CategoryCard } from "@/components/CategoryCard";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { categories } from "@/lib/categories";
+import { SnowChainsBanner } from "./SnowChainsBanner";
 
 /**
  * "Okkar vöruframboð" — measured on the live home page: section padding
@@ -46,6 +47,7 @@ export function CategoriesSection() {
             </StaggerItem>
           ))}
         </Stagger>
+        <SnowChainsBanner />
       </Container>
     </section>
   );

@@ -389,6 +389,7 @@ export const brands: Brand[] = [
     origin: { country: "Noregur", town: "Skarnes" },
     category: "Snjókeðjur, hífi- og festibúnaður",
     services: [
+      { text: "Snjókeðjur", href: "/snjokedjur" },
       { text: "Vetrarbúnaður", href: "/vetrarbunadur" },
       { text: "Hífi- & festibúnaður", href: "/hifi-festibunadur" },
     ],
@@ -433,7 +434,7 @@ export const brands: Brand[] = [
       {
         title: "Snjókeðjur",
         text: "Easy On, Combi-Grip, Arctic Grip og fjórhjólakeðjur fyrir dráttarvélar, vinnuvélar, vörubíla og rútur.",
-        href: "/vetrarbunadur#snjokedjur",
+        href: "/snjokedjur",
         cta: "Skoða snjókeðjur",
         image: {
           src: "/images/vetrarbunadur/broddar-gaddar.webp",
@@ -442,9 +443,9 @@ export const brands: Brand[] = [
           height: 400,
         },
         links: [
-          { text: "Keðjutýpur", href: "/vetrarbunadur#kedjulinur" },
-          { text: "Gerðir brodda", href: "/vetrarbunadur#broddar" },
-          { text: "Finndu réttu keðjuna", href: "/vetrarbunadur#fyrirspurn" },
+          { text: "Keðjutýpur", href: "/snjokedjur#kedjulinur" },
+          { text: "Gerðir brodda", href: "/snjokedjur#broddar" },
+          { text: "Finndu réttu keðjuna", href: "/snjokedjur#fyrirspurn" },
         ],
       },
       {

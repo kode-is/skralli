@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { BRAND_INDEX_ORDER, brands, orderedBrands } from "@/lib/brands";
-import { ROUTES } from "@/lib/routes";
+import { ROUTES, SITE_ONLY_ROUTES } from "@/lib/routes";
 import { brandIndexJsonLd, brandPageJsonLd } from "@/lib/structured-data";
 
-const routes = new Set(ROUTES);
+const routes = new Set([...ROUTES, ...SITE_ONLY_ROUTES]);
 const pathOf = (href: string) => href.split("#")[0];
 
 describe("lib/brands SEO content", () => {

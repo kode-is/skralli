@@ -5,7 +5,8 @@ import { accessories, spikeTypes } from "@/lib/vetrarbunadur";
 
 // The three spike types and four accessories are the live page's lists
 // (docs/scrape/vetrarbunadur.json blocks 15-24); the redesign gives each
-// spike type a close-up photo and a line of explanation.
+// spike type a close-up photo and a line of explanation, and each accessory
+// a Lilleseth product photo.
 export function SpikesSection() {
   return (
     <section id="broddar" className="scroll-mt-6 bg-white py-16 md:py-24">
@@ -42,11 +43,21 @@ export function SpikesSection() {
             <h3 className="font-ui text-xl font-semibold text-[#171717] md:text-2xl">{accessories.heading}</h3>
             <p className="mt-2 text-[15px] leading-[1.6] text-[#444444] md:text-base">{accessories.text}</p>
           </div>
-          <ul className="grid grid-cols-2 gap-3 md:gap-4">
-            {accessories.items.map((item, index) => (
-              <li key={item} className="flex min-h-[88px] flex-col justify-between rounded-[15px] bg-white p-4 md:p-5">
-                <span className="font-ui text-xs font-semibold text-brand-dark">{String(index + 1).padStart(2, "0")}</span>
-                <span className="font-ui text-[15px] font-semibold text-[#171717] md:text-base">{item}</span>
+          <ul className="grid grid-cols-2 gap-3 md:gap-4 xl:grid-cols-4">
+            {accessories.items.map((item) => (
+              <li key={item.name} className="flex flex-col overflow-hidden rounded-[15px] bg-white">
+                <div className="relative aspect-square w-full bg-white">
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(min-width: 1280px) 180px, (min-width: 768px) 25vw, 50vw"
+                    className="object-contain p-3 md:p-4"
+                  />
+                </div>
+                <p className="flex-1 border-t border-[#E3E9F2] px-4 py-3 font-ui text-sm font-semibold text-[#171717] md:text-[15px]">
+                  {item.name}
+                </p>
               </li>
             ))}
           </ul>

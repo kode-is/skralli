@@ -41,12 +41,13 @@ function TractorIcon(props: IconProps) {
 function LoaderIcon(props: IconProps) {
   return (
     <Svg {...props}>
-      <circle cx="8" cy="17" r="3" />
-      <circle cx="18" cy="17" r="3" />
-      <path d="M11 17h4" />
-      <path d="M5.5 14h16v-3h-2.5V5h-5.5v6" />
-      <path d="M13.5 9.5 6.5 11.5" />
-      <path d="M2 9.5h3.2l1.3 4.5H2.6Z" />
+      <circle cx="10.9" cy="18" r="3" />
+      <circle cx="19" cy="18" r="3" />
+      <path d="M13.9 18h2.1" />
+      <path d="M8.6 14.2H22v2.2" />
+      <path d="M12.2 14.2V5.2h5.6l1.3 5.2h2.9v3.8" />
+      <path d="M12.2 9.2 7.3 12.4" />
+      <path d="M1.5 17h5.6c.7-2.6-.1-5.2-2.2-6.8H2.8c.4 2.5 0 4.8-1.3 6.8Z" />
     </Svg>
   );
 }
@@ -67,12 +68,16 @@ function TruckIcon(props: IconProps) {
 function AtvIcon(props: IconProps) {
   return (
     <Svg {...props}>
-      <circle cx="6" cy="16.5" r="3.2" />
-      <circle cx="18" cy="16.5" r="3.2" />
-      <path d="M9.2 16.5h5.6" />
-      <path d="M3 13.3 5.8 10.5h12.4l2.8 2.8" />
-      <path d="M9 10.5l1-2.2h4.5" />
-      <path d="M16 10.5l1.6-3.5h2.2" />
+      <circle cx="5.6" cy="17.6" r="3.9" />
+      <circle cx="5.6" cy="17.6" r="1.2" />
+      <circle cx="18.4" cy="17.6" r="3.9" />
+      <circle cx="18.4" cy="17.6" r="1.2" />
+      <path d="M1.5 13.2c.8-1.7 2.3-2.6 4.1-2.6H9" />
+      <path d="M15 10.6h3.4c1.8 0 3.3.9 4.1 2.6" />
+      <path d="M9 10.6l1.6 5h2.8l1.6-5" />
+      <path d="M6.6 8.2h5.8c.9 0 1.4.9 1 1.7l-.4.7H9" />
+      <path d="M15 10.6l2.1-5.6" />
+      <path d="M15.2 5h4.2" />
     </Svg>
   );
 }

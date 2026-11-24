@@ -96,6 +96,51 @@ export function brandPageJsonLd(brand: Brand) {
   };
 }
 
+export function snowChainsJsonLd({
+  title,
+  description,
+  path,
+  faq,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  faq: { question: string; answer: string }[];
+}) {
+  const url = absolute(path);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: title,
+        description,
+        inLanguage: "is",
+        about: { "@id": absolute("/vorumerki/lilleseth-kjetting#brand") },
+        breadcrumb: { "@id": `${url}#breadcrumb` },
+        publisher: { "@id": ORGANIZATION_ID },
+      },
+      breadcrumbList(`${url}#breadcrumb`, [
+        { name: "Vetrarbúnaður", path: "/vetrarbunadur" },
+        { name: "Snjókeðjur", path },
+      ]),
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        isPartOf: { "@id": `${url}#webpage` },
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
+      organization(),
+    ],
+  };
+}
+
 export function brandIndexJsonLd({
   title,
   description,

@@ -1,4 +1,7 @@
 export async function expandAccordions(page) {
+  // The site's own FAQs are native <details>, whose closed text innerText skips.
+  await page.$$eval("details", (rows) => rows.forEach((row) => (row.open = true)));
+
   // Framer accordions react to real pointer/tap gestures, not a synthetic
   // element.click() dispatched from page.evaluate — that leaves the answer
   // text unrendered. Playwright's ElementHandle.click() drives the mouse for

@@ -3,12 +3,9 @@ import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
+import { Container } from "@/components/Container";
+import { SnowChainsBanner } from "@/components/home/SnowChainsBanner";
 import { IntroSection } from "@/components/vetrarbunadur/IntroSection";
-import { LillesethSection } from "@/components/vetrarbunadur/LillesethSection";
-import { ChainLinesSection } from "@/components/vetrarbunadur/ChainLinesSection";
-import { WhyLillesethSection } from "@/components/vetrarbunadur/WhyLillesethSection";
-import { SpikesSection } from "@/components/vetrarbunadur/SpikesSection";
-import { ChainInquirySection } from "@/components/vetrarbunadur/ChainInquirySection";
 import { PlowsSection } from "@/components/vetrarbunadur/PlowsSection";
 import { GigantMoreSection } from "@/components/vetrarbunadur/GigantMoreSection";
 
@@ -36,18 +33,18 @@ export default function VetrarbunadurPage() {
       <PageHero
         image={HERO_IMAGE}
         title="Vetrarbúnaður"
-        subtitle="Snjókeðjur, snjóplógar og vetrarbúnaður í miklu úrvali"
+        subtitle="Snjóplógar, hálkuvarnir og vetrarbúnaður í miklu úrvali"
         icon={SnowflakeIcon ? <SnowflakeIcon className="h-6 w-6" /> : null}
         pattern
       />
       <Breadcrumb items={[{ text: "Vetrarbúnaður" }]} />
       <IntroSection />
-      {/* Lilleseth snow chains first: they are the page's lead product. */}
-      <LillesethSection />
-      <ChainLinesSection />
-      <WhyLillesethSection />
-      <SpikesSection />
-      <ChainInquirySection />
+      {/* Snow chains live on /snjokedjur; this page only links to them. */}
+      <div className="bg-white pb-16 md:pb-24">
+        <Container>
+          <SnowChainsBanner />
+        </Container>
+      </div>
       {/* Gigant snow clearing and gritting. */}
       <PlowsSection />
       <GigantMoreSection />
