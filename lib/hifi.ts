@@ -107,7 +107,7 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 2,
-        "text": "H-lás"
+        "text": "D-lás"
       },
       {
         "type": "heading",
@@ -214,7 +214,7 @@ export const hifiPages: HifiPage[] = [
         ]
       },
       {
-        "heading": "H-lás",
+        "heading": "D-lás",
         "headers": [
           "Vörunúmer",
           "Vöruheiti",

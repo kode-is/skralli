@@ -372,11 +372,16 @@ for (const page of hifiPages) {
     page.blocks = page.blocks.filter((b) => !(b.type === "heading" && b.text === "Grade 120"));
   }
   for (const block of page.blocks) {
+    // Every product in this section is a D-lás.
+    if (block.type === "heading" && block.text === "H-lás") block.text = "D-lás";
     if (block.type === "text") {
       for (const [from, to] of COPY_FIXES) block.text = block.text.replace(from, to);
     }
   }
-  for (const table of page.tables ?? []) table.rows = table.rows.map((row) => row.map(fixLength));
+  for (const table of page.tables ?? []) {
+    if (table.heading === "H-lás") table.heading = "D-lás";
+    table.rows = table.rows.map((row) => row.map(fixLength));
+  }
 }
 
 // Sanity-check the numbers the controller derived from the scrape by hand.

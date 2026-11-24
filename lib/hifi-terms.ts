@@ -17,7 +17,7 @@ const PAGE_TERMS: Record<string, Terms> = {
 
 const SECTION_TERMS: Record<string, string[]> = {
   Keðjutalíur: ["Talíur", "Púllarar"],
-  "H-lás": ["Lásar"],
+  "D-lás": ["Lásar"],
   Öryggiskrókur: ["Öryggiskrókar", "Sjálflæsandi öryggiskrókar"],
   "Kranakrókur lokaður": ["Kranakrókur með loku"],
   Ásuðukrókur: ["Gröfukrókar til ásuðu"],
