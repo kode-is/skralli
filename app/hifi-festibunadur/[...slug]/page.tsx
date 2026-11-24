@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PageHero } from "@/components/PageHero";
 import { Breadcrumb, type BreadcrumbItem } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
-import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
+import { HifiHero } from "@/components/hifi/HifiHero";
+import { HifiInquiry } from "@/components/hifi/HifiInquiry";
 import { HifiSections } from "@/components/hifi/HifiSections";
 import { pageMetadata } from "@/lib/seo";
 import { hifiPages, type HifiPage } from "@/lib/hifi";
+import { pageTerms } from "@/lib/hifi-terms";
 
 // Site-wide <title>/<meta description> pattern: every hífi- og festibúnaður
 // route (docs/scrape/hifi-festibunadur*.json) shares the one <title>, with
@@ -73,24 +74,24 @@ export default async function HifiSlugPage({ params }: { params: Promise<PagePar
 
   return (
     <main id="main">
-      <PageHero
-        image={page.heroImage!}
+      <HifiHero
         title={page.title}
         subtitle={page.subtitle}
-        icon={HifiIcon ? <HifiIcon className="h-6 w-6" /> : undefined}
-        pattern
+        image={page.heroImage!}
+        alsoKnownAs={pageTerms(page.path)}
+        icon={HifiIcon ? <HifiIcon className="h-5 w-5" /> : undefined}
       />
       <Breadcrumb items={breadcrumbItems} />
-      <section className="bg-white py-10 md:py-14">
-        <Container>
-          {page.children ? (
+      {page.children ? (
+        <section id="vorur" className="scroll-mt-6 bg-[#f0f4fa] py-14 md:py-20">
+          <Container>
             <ChildCards items={buildChildCards(page)} />
-          ) : (
-            <HifiSections blocks={page.blocks} images={page.images} tables={page.tables} />
-          )}
-        </Container>
-      </section>
-      <ContactCta />
+          </Container>
+        </section>
+      ) : (
+        <HifiSections blocks={page.blocks} images={page.images} tables={page.tables} heroSrc={page.heroImage?.src} />
+      )}
+      <HifiInquiry category={page.title} />
     </main>
   );
 }

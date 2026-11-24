@@ -1,12 +1,12 @@
 import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Container } from "@/components/Container";
-import { ContactCta } from "@/components/ContactCta";
 import { CATEGORY_ICONS } from "@/components/CategoryIcons";
 import { ChildCards, type ChildCard } from "@/components/hifi/ChildCards";
+import { HifiHero } from "@/components/hifi/HifiHero";
+import { HifiInquiry } from "@/components/hifi/HifiInquiry";
 import { Reveal } from "@/components/motion/Reveal";
 
 // docs/scrape/hifi-festibunadur.json — same <title>/<meta description> as
@@ -30,12 +30,7 @@ const HERO_IMAGE = {
   height: 3460,
 };
 
-const LILLESETH_IMAGE = {
-  src: "/images/hifi-festibunadur/02-bf8db647.webp",
-  alt: "",
-  width: 1200,
-  height: 1372,
-};
+const LILLESETH_LOGO = "/images/vorumerki/logos/lilleseth-kjetting.png";
 
 const CHILD_CARDS: ChildCard[] = [
   {
@@ -70,51 +65,46 @@ const HifiIcon = CATEGORY_ICONS["hifi-festibunadur"];
 export default function HifiFestibunadurPage() {
   return (
     <main id="main">
-      <PageHero
-        image={HERO_IMAGE}
+      <HifiHero
         title="Hífi- & festibúnaður"
         subtitle="Vottaður hífi- og festibúnaður sem uppfyllir öll skilyrði um öryggi og endingu"
-        icon={HifiIcon ? <HifiIcon className="h-6 w-6" /> : null}
-        pattern
+        image={HERO_IMAGE}
+        icon={HifiIcon ? <HifiIcon className="h-5 w-5" /> : undefined}
+        eyebrow="Lilleseth Kjetting"
+        coverPhoto
       />
       <Breadcrumb items={[{ text: "Hífi- & festibúnaður" }]} />
-      <section className="bg-white py-10 md:py-14">
-        <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+      <section id="vorur" className="scroll-mt-6 bg-[#f0f4fa] py-14 md:py-20">
+        <Container>
+          <Reveal as="h2" className="mb-8 text-[30px] leading-[1.12] font-semibold text-[#171717] md:mb-10 md:text-[44px] md:leading-[1.08]">
+            Vöruflokkar
+          </Reveal>
+          <ChildCards items={CHILD_CARDS} />
+        </Container>
+      </section>
+      <section className="bg-white py-14 md:py-20">
+        <Container className="grid items-center gap-8 md:grid-cols-[1fr_320px] md:gap-16">
           <div>
-            <Reveal as="h3" className="text-2xl font-semibold text-neutral-900 md:text-3xl">
+            <Reveal as="h2" className="text-[30px] leading-[1.12] font-semibold text-[#171717] md:text-[44px] md:leading-[1.08]">
               Lyftu þungt með Lilleseth.
             </Reveal>
-            <Reveal as="p" delay={0.1} className="mt-4 max-w-md text-base leading-relaxed text-neutral-600">
+            <Reveal as="p" delay={0.1} className="mt-4 max-w-2xl text-base leading-[1.65] text-[#444444] md:text-lg">
               Skralli er með gott úrval af viðurkenndum hífibúnaði frá Lilleseth Kjetting AS. Keðjur með Grade 80
               og Grade 100 og margt fleira.
             </Reveal>
             <Link
-              href="/hafa-samband"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand-dark px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-mid"
+              href="/vorumerki/lilleseth-kjetting"
+              className="mt-6 inline-flex items-center gap-1.5 font-ui text-sm font-semibold text-brand-dark hover:underline md:text-[15px]"
             >
-              Hafa samband
+              Nánar um Lilleseth Kjetting <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <div
-            className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl"
-            style={{ aspectRatio: `${LILLESETH_IMAGE.width} / ${LILLESETH_IMAGE.height}` }}
-          >
-            <Image
-              src={LILLESETH_IMAGE.src}
-              alt={LILLESETH_IMAGE.alt}
-              fill
-              sizes="(min-width: 768px) 40vw, 90vw"
-              className="object-cover"
-            />
+          <div className="relative h-28 w-full max-w-[320px] md:h-36">
+            <Image src={LILLESETH_LOGO} alt="Lilleseth Kjetting" fill sizes="320px" className="object-contain object-left md:object-center" />
           </div>
         </Container>
       </section>
-      <section className="bg-white pb-10 md:pb-14">
-        <Container>
-          <ChildCards items={CHILD_CARDS} />
-        </Container>
-      </section>
-      <ContactCta />
+      <HifiInquiry category="Hífi- & festibúnaður" />
     </main>
   );
 }

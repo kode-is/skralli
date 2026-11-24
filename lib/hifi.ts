@@ -107,7 +107,7 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 2,
-        "text": "H-lás"
+        "text": "D-lás"
       },
       {
         "type": "heading",
@@ -214,7 +214,7 @@ export const hifiPages: HifiPage[] = [
         ]
       },
       {
-        "heading": "H-lás",
+        "heading": "D-lás",
         "headers": [
           "Vörunúmer",
           "Vöruheiti",
@@ -469,7 +469,7 @@ export const hifiPages: HifiPage[] = [
       },
       {
         "type": "text",
-        "text": "Mikið úrval af keðjustrekkjurum til á lager. Fást bæði með og án læsingu í krókum."
+        "text": "Mikið úrval af keðjustrekkjurum til á lager. Fást bæði með og án læsingar í krókum."
       },
       {
         "type": "heading",
@@ -514,7 +514,7 @@ export const hifiPages: HifiPage[] = [
         "level": 3,
         "text": "Breidd í boði",
         "range": {
-          "min": "6 mm",
+          "min": "8 mm",
           "max": "13 mm"
         }
       },
@@ -532,8 +532,8 @@ export const hifiPages: HifiPage[] = [
         "level": 3,
         "text": "Leyfilegt vinnuálag (WLL)",
         "range": {
-          "min": "4.0 tonn",
-          "max": "21.6 tonn"
+          "min": "2.8 tonn",
+          "max": "9.5 tonn"
         }
       }
     ],
@@ -912,11 +912,6 @@ export const hifiPages: HifiPage[] = [
       {
         "type": "heading",
         "level": 3,
-        "text": "Grade 120"
-      },
-      {
-        "type": "heading",
-        "level": 3,
         "text": "Lengdir í boði",
         "range": {
           "min": "2 metrar",
@@ -929,7 +924,7 @@ export const hifiPages: HifiPage[] = [
         "text": "Leyfilegt vinnuálag (WLL)",
         "range": {
           "min": "2.8 tonn",
-          "max": "10.6 tonn"
+          "max": "9.5 tonn"
         }
       },
       {
@@ -1297,7 +1292,7 @@ export const hifiPages: HifiPage[] = [
       },
       {
         "type": "text",
-        "text": "Flatstroffur með öryggistuðul upp á 7:1. Einfaldar stroffur með styrkt augu í hvorum enda."
+        "text": "Flatstroffur með öryggisstuðul upp á 7:1. Einfaldar stroffur með styrkt augu í hvorum enda."
       },
       {
         "type": "heading",
@@ -1313,7 +1308,7 @@ export const hifiPages: HifiPage[] = [
         "level": 3,
         "text": "Lengd í boði",
         "range": {
-          "min": "1 metrar",
+          "min": "1 metri",
           "max": "14 metrar"
         }
       }
@@ -1333,7 +1328,7 @@ export const hifiPages: HifiPage[] = [
             "830101",
             "Flatstroffa fjólublá",
             "1 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "830102",
@@ -1387,7 +1382,7 @@ export const hifiPages: HifiPage[] = [
             "830201",
             "Flatstroffa græn",
             "2 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "830202",
@@ -1441,7 +1436,7 @@ export const hifiPages: HifiPage[] = [
             "830301",
             "Flatstroffa gul",
             "3 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "830302",
@@ -1501,7 +1496,7 @@ export const hifiPages: HifiPage[] = [
             "830501",
             "Flatstroffa rauð",
             "5 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "830502",
@@ -1631,19 +1626,19 @@ export const hifiPages: HifiPage[] = [
             "820105",
             "Hringstroffa fjólublá",
             "1 tonn",
-            "0.5 meter"
+            "0.5 metrar"
           ],
           [
             "820110",
             "Hringstroffa fjólublá",
             "1 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "820115",
             "Hringstroffa fjólublá",
             "1 tonn",
-            "1.5 meter"
+            "1.5 metrar"
           ],
           [
             "820120",
@@ -1685,13 +1680,13 @@ export const hifiPages: HifiPage[] = [
             "820205",
             "Hringstroffa græn",
             "2 tonn",
-            "0.5 meter"
+            "0.5 metrar"
           ],
           [
             "820210",
             "Hringstroffa græn",
             "2 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "8202100",
@@ -1703,7 +1698,7 @@ export const hifiPages: HifiPage[] = [
             "820215",
             "Hringstroffa græn",
             "2 tonn",
-            "1.5 meter"
+            "1.5 metrar"
           ],
           [
             "820220",
@@ -1751,13 +1746,13 @@ export const hifiPages: HifiPage[] = [
             "820310",
             "Hringstroffa gul",
             "3 tonn",
-            "1 meter"
+            "1 metri"
           ],
           [
             "820315",
             "Hringstroffa gul",
             "3 tonn",
-            "1.5 meter"
+            "1.5 metrar"
           ],
           [
             "820320",
@@ -1799,7 +1794,7 @@ export const hifiPages: HifiPage[] = [
             "820515",
             "Hringstroffa rauð",
             "5 tonn",
-            "1.5 meter"
+            "1.5 metrar"
           ],
           [
             "820520",

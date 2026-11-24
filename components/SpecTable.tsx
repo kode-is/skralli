@@ -3,59 +3,58 @@ import { rowId } from "@/lib/search/row-id";
 type SpecTableProps = {
   headers: string[];
   rows: string[][];
-  /** This table's index within its page's `tables` array (lib/hifi.ts) —
-   * the same order lib/search/build-index.ts iterates in — so each row's
-   * `id={rowId(tableIndex, rowIndex, row[0])}` matches the `row` search
-   * entry's url fragment (`#row-...`) and `:target` (app/globals.css) can
-   * highlight the row a search result links to. */
+  /** Index in the page's `tables`, the order lib/search/build-index.ts uses,
+   * so each row id matches the `#row-...` fragment of its search result. */
   tableIndex: number;
-  /** id of the heading (H2/H3) immediately above this table, wired via
-   * `aria-labelledby` so the table has an accessible name without a visible
-   * `<caption>` — a caption's text would duplicate the heading's text in the
-   * page's innerText and read as "extra" content to scripts/verify.mjs. */
+  /** id of the heading above this table, used as its accessible name. */
   ariaLabelledBy?: string;
+  /** Rows to show. All rows are always in the HTML; omitted means show all. */
+  isRowVisible?: (row: string[]) => boolean;
 };
 
 /**
- * Product-spec table (Task 12's Hífi- og festibúnaður sub-pages). A plain
- * semantic `<table>` rather than the two responsive DOM trees Framer ships
- * on the live site (a desktop table plus a separate mobile "Table" widget
- * with search/filter/export chrome — see scripts/gen-hifi.mjs's comment on
- * hifikedjur's duplicate content) — wrapped in `overflow-x-auto` so a wide
- * table scrolls within its own box instead of the page. Colors match
- * docs/scrape/formatting.json's table styling (border #e0e0e0, header
- * background #f7f7f8); no zebra striping, matching the reference
- * screenshots' plain white rows.
+ * Product-spec table. From `md` up it is a normal table. On phones each row
+ * becomes a labeled block, so every column stays visible without sideways
+ * scrolling. Explicit ARIA roles keep the table semantics that browsers drop
+ * when table elements get a non-table `display`. Column labels come from CSS
+ * `attr()` so they are not repeated in the page text.
  */
-export function SpecTable({ headers, rows, tableIndex, ariaLabelledBy }: SpecTableProps) {
+export function SpecTable({ headers, rows, tableIndex, ariaLabelledBy, isRowVisible }: SpecTableProps) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-[#e0e0e0]">
-      <table
-        aria-labelledby={ariaLabelledBy}
-        className="w-full min-w-[560px] border-collapse font-ui text-left text-sm"
-      >
-        <thead className="bg-[#f7f7f8]">
-          <tr>
+    <div className="overflow-hidden rounded-2xl border border-[#E3E9F2] bg-white">
+      <table role="table" aria-labelledby={ariaLabelledBy} className="w-full border-collapse font-ui text-left text-sm max-md:block">
+        <thead role="rowgroup" className="bg-[#f0f4fa] max-md:sr-only">
+          <tr role="row">
             {headers.map((header) => (
-              <th
-                key={header}
-                scope="col"
-                className="whitespace-nowrap px-4 py-3 font-semibold text-neutral-900"
-              >
+              <th key={header} role="columnheader" scope="col" className="px-5 py-3.5 font-semibold whitespace-nowrap text-[#171717]">
                 {header}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody role="rowgroup" className="max-md:block">
           {rows.map((row, rowIndex) => (
             <tr
               key={rowIndex}
+              role="row"
               id={rowId(tableIndex, rowIndex, row[0] ?? "")}
-              className="border-t border-[#e0e0e0]"
+              className={`border-t border-[#E3E9F2] transition-colors first:border-t-0 hover:bg-[#f7f9fc] max-md:grid max-md:grid-cols-2 max-md:gap-x-4 max-md:gap-y-0.5 max-md:px-4 max-md:py-3 md:first:border-t ${
+                isRowVisible && !isRowVisible(row) ? "!hidden" : ""
+              }`}
             >
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex} className="px-4 py-3 text-neutral-700">
+                <td
+                  key={cellIndex}
+                  role="cell"
+                  data-label={headers[cellIndex]}
+                  className={`md:px-5 md:py-3.5 ${
+                    cellIndex === 0
+                      ? "font-semibold text-brand-dark max-md:col-span-2 max-md:text-[15px]"
+                      : cellIndex === 1
+                        ? "text-[#171717] max-md:col-span-2"
+                        : "text-[#444444] max-md:mt-1 max-md:font-medium max-md:text-[#171717] max-md:before:mr-1.5 max-md:before:text-xs max-md:before:font-normal max-md:before:text-[#5b6472] max-md:before:content-[attr(data-label)]"
+                  }`}
+                >
                   {cell.split("\n").map((line, lineIndex) => (
                     <span key={lineIndex}>
                       {lineIndex > 0 ? <br /> : null}

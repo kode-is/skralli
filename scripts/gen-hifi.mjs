@@ -102,14 +102,14 @@ const STROFFUR_CHILDREN = ["hringstroffur", "flatstroffur", "drattastroffur"];
 const RANGE_LABELS = {
   "/hifi-festibunadur/hifikedjur": {
     "Lengdir í boði": { min: "2 metrar", max: "6 metrar" },
-    "Leyfilegt vinnuálag (WLL)": { min: "2.8 tonn", max: "10.6 tonn" },
+    "Leyfilegt vinnuálag (WLL)": { min: "2.8 tonn", max: "9.5 tonn" },
   },
   "/hifi-festibunadur/bindikedjur-strekkjarar": {
     "Þyngdarþol í boði": { min: "4 tonn", max: "21 tonn" },
     "Stærðir í boði": { min: "6 mm", max: "16 mm" },
-    "Breidd í boði": { min: "6 mm", max: "13 mm" },
+    "Breidd í boði": { min: "8 mm", max: "13 mm" },
     "Lengd í boði": { min: "2 metrar", max: "6 metrar" },
-    "Leyfilegt vinnuálag (WLL)": { min: "4.0 tonn", max: "21.6 tonn" },
+    "Leyfilegt vinnuálag (WLL)": { min: "2.8 tonn", max: "9.5 tonn" },
   },
   "/hifi-festibunadur/stroffur/hringstroffur": {
     "Þyngdarþol í boði": { min: "1 tonn", max: "10 tonn" },
@@ -117,7 +117,7 @@ const RANGE_LABELS = {
   },
   "/hifi-festibunadur/stroffur/flatstroffur": {
     "Þyngdarþol í boði": { min: "1 tonn", max: "8 tonn" },
-    "Lengd í boði": { min: "1 metrar", max: "14 metrar" },
+    "Lengd í boði": { min: "1 metri", max: "14 metrar" },
   },
 };
 
@@ -358,6 +358,31 @@ const files = readdirSync(SCRAPE_DIR)
   .sort();
 
 const hifiPages = files.map(parseFile).sort((a, b) => a.path.join("/").localeCompare(b.path.join("/")));
+
+// Approved corrections to the scraped copy. The ranges above were also
+// corrected to match each page's table. Hífikeðjur's table has no Grade 120.
+const COPY_FIXES = [
+  ["öryggistuðul", "öryggisstuðul"],
+  ["án læsingu", "án læsingar"],
+];
+const fixLength = (cell) =>
+  cell.replace(/^1 meter$/, "1 metri").replace(/^(0\.5|1\.5) meter$/, "$1 metrar");
+for (const page of hifiPages) {
+  if (page.id === "hifikedjur") {
+    page.blocks = page.blocks.filter((b) => !(b.type === "heading" && b.text === "Grade 120"));
+  }
+  for (const block of page.blocks) {
+    // Every product in this section is a D-lás.
+    if (block.type === "heading" && block.text === "H-lás") block.text = "D-lás";
+    if (block.type === "text") {
+      for (const [from, to] of COPY_FIXES) block.text = block.text.replace(from, to);
+    }
+  }
+  for (const table of page.tables ?? []) {
+    if (table.heading === "H-lás") table.heading = "D-lás";
+    table.rows = table.rows.map((row) => row.map(fixLength));
+  }
+}
 
 // Sanity-check the numbers the controller derived from the scrape by hand.
 const totalTables = hifiPages.reduce((n, p) => n + (p.tables?.length ?? 0), 0);

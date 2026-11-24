@@ -12,6 +12,7 @@ import sitemap from "@/app/sitemap";
 import { brands } from "@/lib/brands";
 import { faqItems } from "@/lib/faq";
 import { hifiPages, type HifiTable } from "@/lib/hifi";
+import { searchTerms } from "@/lib/hifi-terms";
 import { wagonGroups, wagons } from "@/lib/sturtuvagnar";
 import { rowId } from "./row-id";
 import type { SearchEntry } from "./types";
@@ -177,9 +178,12 @@ function buildPageEntries(): SearchEntry[] {
   }
 
   return parsed.map((page) => {
-    const headings = page.headingTexts.filter((t) => !boilerplate.has(t)).join(" ");
-    const text = page.bodyTexts
-      .filter((t) => !boilerplate.has(t))
+    // Lifting pages use their corrected copy, not the raw scrape.
+    const hifiPage = hifiPages.find((p) => `/hifi-festibunadur/${p.path.join("/")}` === page.pathname);
+    const hifiHeadings = hifiPage?.blocks.flatMap((b) => (b.type === "heading" ? [b.text] : []));
+    const hifiText = hifiPage?.blocks.flatMap((b) => (b.type === "text" ? [b.text] : []));
+    const headings = (hifiHeadings ?? page.headingTexts.filter((t) => !boilerplate.has(t))).join(" ");
+    const text = (hifiText ?? page.bodyTexts.filter((t) => !boilerplate.has(t)))
       .join(" ")
       .slice(0, 240);
     return {
@@ -188,7 +192,11 @@ function buildPageEntries(): SearchEntry[] {
       title: page.title,
       url: page.pathname,
       subtitle: kindLabel(page.pathname),
-      keywords: page.pathname === "/hafa-samband" ? CONTACT_KEYWORDS : undefined,
+      keywords: hifiPage
+        ? searchTerms(hifiPage.path, hifiHeadings ?? []) || undefined
+        : page.pathname === "/hafa-samband"
+          ? CONTACT_KEYWORDS
+          : undefined,
       headings: headings || undefined,
       text: text || undefined,
     };
@@ -241,7 +249,7 @@ function buildRowEntries(): SearchEntry[] {
           title: firstCell,
           url: `${pageUrl}#${fragment}`,
           subtitle: [row.slice(1).join(" · "), page.title].filter(Boolean).join(" · "),
-          keywords: row.join(" "),
+          keywords: [row.join(" "), searchTerms(page.path, [table.heading])].join(" ").trim(),
         });
       });
     });
